@@ -1,0 +1,74 @@
+
+Important setup notes
+=====================
+-> Be an admin on your Windows/Mac
+-> Use latest Windows/MacOS operating system
+-> Office machine? make sure anti-virus and company policies are not blocking installation of Appium and associated softwares
+-> If practicing using an Android emulator, use a powerful processor and sufficient RAM
+-> Avoid using phone from Chinese manufacturers that may restrict Appium due to their security limitations
+
+Install UiAutomator2 driver (using Appium CLI)
+===========================================
+Command to get help: appium driver --help (or -h)
+Command to list drivers: appium driver list
+Command to install driver: appium driver install UiAutomator2
+
+
+Install Android Studio
+====================================================================
+- Android Studio download link: https://developer.android.com/studio
+
+
+Set ANDROID_HOME environment variables
+======================================
+On macOS 10.15 Catalina and later, default shell is zsh: 
+--------------------------------------------------------
+-> Navigate to home directory: cd ~/
+-> Open zshrc file: open -e .zshrc
+-> Add below entries:
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH="${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/cmdline-tools:${PATH}"
+-> source .zshrc
+-> echo $ANDROID_HOME
+-> echo $PATH
+
+
+Verify installation using appium-doctor
+==========================================
+Command to install appium-doctor: npm install -g appium-doctor
+Command to get appium-doctor help: appium-doctor --help
+Command to check Android setup: appium-doctor --android 
+
+
+Emulator Setup: Create AVD and start it
+==========================================
+Open Android Studio
+Click Configure option
+Click "Virtual Device Manager" option
+Click "Create Virtual Device" button
+Select the phone model
+Download the Image for desired OS version if not already downloaded
+Start AVD
+
+Emulator Setup: Create driver session using Appium CLI
+=======================================================
+Download link for dummy app:
+https://github.com/appium/appium/tree/master/packages/appium/sample-code/apps/ApiDemos-debug.apk
+[Also available for download from the lecture's resources section]
+
+
+Real Device Setup: Enable USB debugging on Android mobile
+============================================================
+On your phone,
+Go to Settings
+Click System option
+Click "About Phone" option
+Click on "Build Number" 7 to 8 times
+Go back to Settings
+Open Developer Options
+Enable "USB Debugging"
+
+Real Device Setup: Create driver session using Appium CLI
+==========================================================
+https://github.com/appium/appium/tree/master/packages/appium/sample-code/apps/ApiDemos-debug.apk
+[Also available for download from the lecture's resources section]

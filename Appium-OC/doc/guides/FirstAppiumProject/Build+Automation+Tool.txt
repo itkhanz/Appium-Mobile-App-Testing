@@ -1,0 +1,5 @@
+1. Dependency management
+2. Test execution
+3. Build Lifecycle Management (validate, compile, package, verify, install, deploy)
+4. Supports CI/CD
+5. Parallel Execution
