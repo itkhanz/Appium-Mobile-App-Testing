@@ -1,4 +1,4 @@
-package com.itkhanz.practice.firstAppiumProject;
+package com.itkhanz.practice.firstappiumproject;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;

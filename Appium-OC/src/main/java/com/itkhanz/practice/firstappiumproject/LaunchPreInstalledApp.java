@@ -1,4 +1,4 @@
-package com.itkhanz.practice.firstAppiumProject;
+package com.itkhanz.practice.firstappiumproject;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -9,15 +9,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class LaunchEmulatorAuto {
+public class LaunchPreInstalledApp {
     public static void main(String[] args) throws MalformedURLException {
         URL url = new URL("http://0.0.0.0:4723");   //Appium Server URL and port
 
         //Creating android Session
-        //createAndroidSession(url);
+        createAndroidSession(url);
 
         //Creating iOS Session
-        createIOSSession(url);
+        //createIOSSession(url);
     }
 
     private static void createAndroidSession(URL url){
@@ -25,11 +25,6 @@ public class LaunchEmulatorAuto {
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,"Android");
         caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"pixel_5");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"UiAutomator2");
-
-        //launch avd emulator automatically
-        //For getting the avd name, click on emulator settings and show details, then the name is displayed in AvdId
-        caps.setCapability("avd", "Pixel_5");
-        caps.setCapability("avdLaunchTimeout", 180000); //180 seconds timout for avd to boot up and launch successfully
 
         //For getting android udid, run command: adb devices
         caps.setCapability(MobileCapabilityType.UDID ,"emulator-5554");
@@ -55,9 +50,6 @@ public class LaunchEmulatorAuto {
         caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"iPhone 14");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"XCUITest");
 
-        //set Simulator Timeout
-        caps.setCapability("simulatorStartupTimeout", 180000);  //timeout for simulator set to launch automatically 180s
-
         //For getting iOS udid, run command: xcrun simctl list
         caps.setCapability(MobileCapabilityType.UDID ,"6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F");
 
@@ -71,4 +63,5 @@ public class LaunchEmulatorAuto {
 
         AppiumDriver driver = new IOSDriver(url, caps);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.itkhanz.practice.firstAppiumProject;
+package com.itkhanz.practice.firstappiumproject;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -8,7 +8,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 
 public class CreateDriverSession {
     public static void main(String[] args) throws MalformedURLException {
@@ -36,6 +35,7 @@ public class CreateDriverSession {
     }
 
     private static DesiredCapabilities getSessionCaps(String platformName, String deviceName, String automationName, String udid, String appPath){
+        //https://appium.io/docs/en/2.0/guides/caps/
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,platformName);
         caps.setCapability(MobileCapabilityType.DEVICE_NAME ,deviceName);
