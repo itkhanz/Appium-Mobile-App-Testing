@@ -31,7 +31,7 @@ public class AndroidGestures {
         //driver = DriverFactory.initializeDriver("Android", Apps.MAPS);
     }
 
-    /*@Test
+    /*@AfterTest
     public void tearDown() {
         driver.quit();
     }*/
@@ -285,5 +285,36 @@ public class AndroidGestures {
             currentElementListIDs = elementList.stream().map(el -> ((RemoteWebElement)el).getId()).collect(Collectors.toList());
 
         } while (!elementListIDs.containsAll(currentElementListIDs));
+    }
+
+    /**
+     * The following code uses UiScrollable(), scrollIntoView(), UiSelector(), and scrollable() to scroll down to an element until it is visible using Appium.
+     * https://developer.android.com/training/testing/other-components/ui-automator
+     * https://developer.android.com/reference/androidx/test/uiautomator/UiSelector
+     * https://developer.android.com/reference/androidx/test/uiautomator/UiScrollable
+     * https://developer.android.com/reference/androidx/test/uiautomator/UiObject
+     * https://www.browserstack.com/guide/scroll-in-appium
+     *
+     */
+    @Test
+    public void test_scroll_until_element_is_visible() {
+        driver.findElement(AppiumBy.accessibilityId("Views")).click();
+
+        //UiScrollable is a UiCollection and provides support for searching for items in scrollable layout elements. This class can be used with horizontally or vertically scrollable controls.
+        //scrollIntoView Perform a forward scroll action to move through the scrollable layout element until a visible item that matches the UiObject is found.
+
+        //scroll down to the element and click
+        /*driver.findElement(AppiumBy.androidUIAutomator(
+                "new UiScrollable(new UiSelector().scrollable(true).instance(0))" +
+                                ".scrollIntoView(new UiSelector().textContains(\"WebView\").instance(0))")
+                )
+                .click();*/
+
+        //You can also choose to just pass the method of UiSelector class without creating the object of it
+        driver.findElement(AppiumBy.androidUIAutomator(
+                        "new UiScrollable(scrollable(true).instance(0))" +
+                                ".scrollIntoView(textContains(\"WebView\").instance(0))")
+                )
+                .click();
     }
 }
