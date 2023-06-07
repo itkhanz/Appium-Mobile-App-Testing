@@ -22,6 +22,12 @@
 
 ## Native Apps Automation
 
+## Mobile App Gestures
+
+## Automating Android Gestures
+
+## Automating iOS Gestures
+
 
 
 
