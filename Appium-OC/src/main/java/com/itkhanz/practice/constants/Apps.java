@@ -7,7 +7,8 @@ package com.itkhanz.practice.constants;
 public enum Apps {
     APIDEMOS("APIDemos"),
     UIKITCATALOG("UIKitCatalog"),
-    MAPS("GoogleMaps")
+    MAPS("GoogleMaps"),
+    IOSMAPS("iOSMaps")
     ;
     public String appName;
 

@@ -1,6 +1,7 @@
 package com.itkhanz.practice.utils;
 
 import com.itkhanz.practice.constants.Apps;
+import com.itkhanz.practice.constants.Platform;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -14,15 +15,15 @@ import java.util.Map;
 
 public class DriverFactory {
 
-    public static AppiumDriver initializeDriver(String platformName, Apps appName) throws MalformedURLException {
+    public static AppiumDriver initializeDriver(Platform platform, Apps appName) throws MalformedURLException {
         URL url = new URL("http://0.0.0.0:4723");   //Appium Server URL and port
         Map<String, String> appCapabilities = getAppCapabilities(appName);
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("newCommandTimeout", 300);
 
-        switch(platformName) {
-            case "Android":
-                caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,"Android");
+        switch(platform) {
+            case ANDROID:
+                caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,platform.platformName);
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"pixel_5");
                 caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"UiAutomator2");
                 caps.setCapability(MobileCapabilityType.UDID ,"emulator-5554");
@@ -36,8 +37,8 @@ public class DriverFactory {
                 //caps.setCapability("app", appCapabilities.get("app"));
                 //caps.setCapability("avdLaunchTimeout", 180000);
                 return new AndroidDriver(url, caps);
-            case "iOS":
-                caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,"iOS");
+            case IOS:
+                caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,platform.platformName);
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"iPhone 14");
                 caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"XCUITest");
                 caps.setCapability(MobileCapabilityType.UDID ,"6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F");
@@ -50,7 +51,7 @@ public class DriverFactory {
                 //caps.setCapability("simulatorStartupTimeout", 180000);
                 return new IOSDriver(url, caps);
             default:
-                throw new RuntimeException("Unable to create session with platform: " + platformName);
+                throw new RuntimeException("Unable to create session with platform: " + platform.platformName);
         }
     }
 
@@ -67,11 +68,13 @@ public class DriverFactory {
                         "appActivity", "io.appium.android.apis.ApiDemos",
                         "appUrl", System.getProperty("user.dir") + "/src/main/resources/apps/UIKitCatalog-iphonesimulator.app");
             case UIKITCATALOG:
-                return Map.of("bundleId","i6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F",
+                return Map.of("bundleId","com.example.apple-samplecode.UICatalog",
                         "appUrl", System.getProperty("user.dir") + "/src/main/resources/apps/UIKitCatalog-iphonesimulator.app");
             case MAPS:
                 return Map.of("appPackage","com.google.android.apps.maps",
                         "appActivity", "com.google.android.maps.MapsActivity");
+            case IOSMAPS:
+                return Map.of("bundleId","com.apple.Maps");
             default:
                 throw new RuntimeException("Invalid app: " + appName);
         }

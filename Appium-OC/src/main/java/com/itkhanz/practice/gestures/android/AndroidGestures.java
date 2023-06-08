@@ -1,7 +1,9 @@
 package com.itkhanz.practice.gestures.android;
 
 import com.google.common.collect.ImmutableMap;
+import com.itkhanz.practice.annotations.TestMetaData;
 import com.itkhanz.practice.constants.Apps;
+import com.itkhanz.practice.constants.Platform;
 import com.itkhanz.practice.utils.DriverFactory;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
@@ -26,9 +28,8 @@ public class AndroidGestures {
 
     @BeforeTest
     public void setup() throws MalformedURLException {
-        driver = DriverFactory.initializeDriver("Android", Apps.APIDEMOS);
-        //driver = DriverFactory.initializeDriver("iOS", Apps.UIKITCATALOG);
-        //driver = DriverFactory.initializeDriver("Android", Apps.MAPS);
+        driver = DriverFactory.initializeDriver(Platform.ANDROID, Apps.APIDEMOS);
+        //driver = DriverFactory.initializeDriver(Platform.ANDROID, Apps.MAPS);
     }
 
     /*@AfterTest
@@ -139,6 +140,7 @@ public class AndroidGestures {
      * @throws InterruptedException
      */
     @Test
+    @TestMetaData(app = Apps.MAPS, platform = Platform.ANDROID)
     public void test_pinchCloseGesture() throws InterruptedException {
         //IMPORTANT: Change the app in BeforeTest to initialize the drivers session for MAPS app
         //Since the locators are not loaded for maps in appium inspector so we are not using elementID to perform this gesture
@@ -317,4 +319,32 @@ public class AndroidGestures {
                 )
                 .click();
     }
+
+    public WebElement scrollToId_Android(AppiumDriver driver,String id) {
+        return driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
+                + ".scrollIntoView(new UiSelector().resourceIdMatches(\".*id.*\"))"));
+
+    }
+
+
+        //**********************************************
+        //Below are few methods based on UiAutomator2
+        //**********************************************
+        /*// scrollForward (moves exactly one view)
+        public void scrollForward_Android(AppiumDriver driver) {
+            driver.findElement(
+                    AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollForward()"));
+        }
+
+        // scrollToBeginning (moves exactly by one view. 10 scrolls max)
+        public void scrollToEnd_Android(AppiumDriver driver,int noOfScrolls) {
+            driver.findElement(
+                    AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd("+noOfScrolls+")"));
+        }
+
+        // scrollToEnd (moves exactly by one view. 10 scrolls max)
+        public void scrollToBeginning_Android(AppiumDriver driver,int noOfScrolls) {
+            driver.findElement(AppiumBy
+                    .androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollToBeginning("+noOfScrolls+")"));
+        }*/
 }
