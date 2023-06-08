@@ -1,0 +1,20 @@
+package com.itkhanz.practice.tests;
+
+import com.itkhanz.practice.constants.App;
+import com.itkhanz.practice.constants.PlatformOS;
+import com.itkhanz.practice.utils.DriverManager;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class GesturesTest {
+
+    @Test
+    public void test_setup() {
+        AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.ANDROID, App.MYDEMOAPPANDROID, null, null);
+        WebElement element = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView"));
+        Assert.assertEquals(element.getText(), "Products");
+    }
+}
