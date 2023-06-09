@@ -4,7 +4,9 @@ import com.itkhanz.practice.constants.App;
 import com.itkhanz.practice.constants.PlatformOS;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -54,50 +56,79 @@ public class DriverManager {
 
         URL url = new URL(getFormattedUrl(port));   //Appium Server URL and port
 
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("newCommandTimeout", 300);
-
-        Map<String, String> appCapabilities = getAppCapabilities(appName);
-
-        Properties deviceProperties = getDeviceProperties(platformOS);
-        String udidDevice;
-        if (udid != null && !udid.isBlank()) {
-            udidDevice = udid;
-        } else  {
-            //If no udid is provided then the default device from properties file are setup for emulator/simulator
-            udidDevice = deviceProperties.getProperty("UDID");
-        }
+        Map<String, String> appCapabilities = getAppCapabilities(appName);  //app specific capabilities
+        Properties deviceProperties = getDeviceProperties(platformOS);      //device specific capabilities
+        String udidDevice = getDeviceUdid(udid,deviceProperties);           //UDID of the device to be initialzed
 
         switch(platformOS) {
             case ANDROID:
-                caps.setCapability(MobileCapabilityType.PLATFORM_NAME , platformOS.platformName);
-                //caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"pixel_5");
-                caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"UiAutomator2");
-                caps.setCapability(MobileCapabilityType.UDID ,udidDevice);
-                caps.setCapability("appPackage", appCapabilities.get("appPackage"));
-                caps.setCapability("appActivity", appCapabilities.get("appActivity"));
-                caps.setCapability("autoGrantPermissions", "true");
-                //caps.setCapability("avd", "Pixel_5"); //automatically launches the android emulator with given avdID
-                //caps.setCapability("avdLaunchTimeout", 180000);
-                //caps.setCapability("app", appCapabilities.get("app"));    //Install the app if not pre-installed
-                driver = new AndroidDriver(url, caps);
+                driver = new AndroidDriver(url, getUiAutomator2Options(udidDevice, appCapabilities));
                 break;
             case IOS:
-                caps.setCapability(MobileCapabilityType.PLATFORM_NAME , platformOS.platformName);
-                //caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"iPhone 14");
-                caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"XCUITest");
-                caps.setCapability(MobileCapabilityType.UDID ,udidDevice);
-                caps.setCapability("bundleId", appCapabilities.get("bundleId"));
-                caps.setCapability("autoAcceptAlerts", "true");
-                //caps.setCapability("simulatorStartupTimeout", 180000);
-                //caps.setCapability("app", appCapabilities.get("app"));    //Install the app if not pre-installed
-                driver = new IOSDriver(url, caps);
+                driver = new IOSDriver(url, getXCUITestOptions(udidDevice, appCapabilities));
                 break;
             default:
                 throw new RuntimeException("Unable to create session with platform: " + platformOS.platformName);
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         DriverManager.setDriver(driver);
+    }
+
+    /**
+     * Creates UIAutomator2Options for the Appium Driver Session
+     * @param udid UDID of the android device emulator
+     * @param appCapabilities List of app specific properties such as Url, activity and package
+     * @return new instance of UIAutomator2Options for initializing appium driver
+     */
+    private static UiAutomator2Options getUiAutomator2Options(String udid, Map<String, String> appCapabilities) {
+        return new UiAutomator2Options()
+                //.setPlatformName(platformOS.platformName) //optional
+                //.setAutomationName("UiAutomator2")  //optional
+                //.setDeviceName("pixel_5")     //not mandatory with udid
+                .setUdid(udid)
+                //.setApp(appCapabilities.get("app"))   //Install the app if not pre-installed, not needed with AppPackage and AppActivity
+                .setAppPackage(appCapabilities.get("appPackage"))
+                .setAppActivity(appCapabilities.get("appActivity"))
+                .setAutoGrantPermissions(true)
+                .setNewCommandTimeout(Duration.ofSeconds(180))
+                //.setAvd("Pixel_5")  //automatically launches the android emulator with given avdID
+                //.setAvdLaunchTimeout(Duration.ofSeconds(180))
+                ;
+    }
+
+    /**
+     * Creates XCUITestOptions for the Appium Driver Session
+     * @param udid UDID of the iOS device simulator
+     * @param appCapabilities List of app specific properties such as Url, bundleID
+     * @return new instance of XCUITestOptions for initializing appium driver
+     */
+    private static XCUITestOptions getXCUITestOptions(String udid, Map<String, String> appCapabilities) {
+        return new XCUITestOptions()
+                //.setAutomationName("XCUITest")            //optional
+                //.setPlatformName(platformOS.platformName) //optional
+                //.setDeviceName("iPhone 14")               //not mandatory when udid is provided
+                .setUdid(udid)
+                //.setApp(appCapabilities.get("app"))      //Install the app if not pre-installed
+                .setBundleId(appCapabilities.get("bundleId"))
+                //.setSimulatorStartupTimeout(Duration.ofSeconds(180))  //waits for the simulator to launch
+                .setAutoAcceptAlerts(true)
+                .setNewCommandTimeout(Duration.ofSeconds(180))
+                ;
+    }
+
+    /**
+     * Returns the Udid of the device to be initialized for appium session
+     * @param udid string udid from the test case
+     * @param deviceProperties contains the device specific info and default udid if the udid from test case is null
+     * @return string udid of the device to be initialzed
+     */
+    private static String getDeviceUdid(String udid, Properties deviceProperties) {
+        if (udid != null && !udid.isBlank()) {
+            return udid;
+        }
+
+        //If no udid is provided then the default device from properties file are setup for emulator/simulator
+        return deviceProperties.getProperty("UDID");
     }
 
 
@@ -111,7 +142,7 @@ public class DriverManager {
             case APIDEMOS:
                 return Map.of("appPackage","io.appium.android.apis",
                         "appActivity", "io.appium.android.apis.ApiDemos",
-                        "appUrl", System.getProperty("user.dir") + "/src/main/resources/apps/UIKitCatalog-iphonesimulator.app");
+                        "appUrl", System.getProperty("user.dir") + "/src/main/resources/apps/ApiDemos-debug.apk");
             case UIKITCATALOG:
                 return Map.of("bundleId","com.example.apple-samplecode.UICatalog",
                         "appUrl", System.getProperty("user.dir") + "/src/main/resources/apps/UIKitCatalog-iphonesimulator.app");
@@ -124,6 +155,9 @@ public class DriverManager {
                 return Map.of("appPackage","com.saucelabs.mydemoapp.rn",
                         "appActivity", "com.saucelabs.mydemoapp.rn.MainActivity",
                             "appUrl", System.getProperty("user.dir") + "/src/main/resources/apps/Android-MyDemoAppRN.1.3.0.build-244.apk");
+            case MYDEMOAPPIOS:
+                return Map.of("bundleId","com.saucelabs.mydemoapp.rn",
+                        "appUrl", System.getProperty("user.dir") + "/Users/ibkh/dev/demo-apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip");
             default:
                 throw new RuntimeException("Invalid app: " + appName);
         }

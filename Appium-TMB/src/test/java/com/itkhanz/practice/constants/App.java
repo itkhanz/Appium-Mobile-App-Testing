@@ -5,7 +5,8 @@ public enum App {
     UIKITCATALOG("UIKitCatalog"),
     MAPS("GoogleMaps"),
     IOSMAPS("iOSMaps"),
-    MYDEMOAPPANDROID("MyDemoApp-Android")
+    MYDEMOAPPANDROID("MyDemoApp-Android"),
+    MYDEMOAPPIOS("MyDemoApp-iOS")
     ;
     public String appName;
 

@@ -12,9 +12,18 @@ import org.testng.annotations.Test;
 public class GesturesTest {
 
     @Test
-    public void test_setup() {
+    public void test_android_setup() {
         AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.ANDROID, App.MYDEMOAPPANDROID, null, null);
         WebElement element = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView"));
         Assert.assertEquals(element.getText(), "Products");
     }
+
+    @Test
+    public void test_ios_setup() {
+        AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.IOS, App.MYDEMOAPPIOS, null, null);
+        WebElement element = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Products\"`]"));
+        Assert.assertEquals(element.getText(), "Products");
+    }
+
+    
 }
