@@ -46,6 +46,19 @@ public class DriverManager {
     }
 
     /**
+     * Closes the driver session
+     */
+    public static void shutdownDriver(){
+        if(getDriver() != null) {
+            try {
+                getDriver().quit();
+            } catch (Exception e) {
+                throw new RuntimeException("Failed to quit the Driver from thread: " + Thread.currentThread().getId());
+            }
+        }
+    }
+
+    /**
      * Creates new Appium Driver with desired capabilities and set the created driver to Driver Factory
      * @param platformOS can be ANDROID or IOS
      * @param appName can be APIDEMOS, UIKITCATALOG, MAPS, IOSMAPS, MYDEMOAPP-ANDROID

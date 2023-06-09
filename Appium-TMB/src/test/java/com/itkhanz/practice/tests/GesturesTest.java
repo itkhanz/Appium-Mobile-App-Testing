@@ -7,9 +7,14 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class GesturesTest {
+    @AfterTest (alwaysRun = true)
+    private void tearDown() {
+        DriverManager.shutdownDriver();
+    }
 
     @Test
     public void test_android_setup() {
@@ -25,5 +30,5 @@ public class GesturesTest {
         Assert.assertEquals(element.getText(), "Products");
     }
 
-    
+
 }
