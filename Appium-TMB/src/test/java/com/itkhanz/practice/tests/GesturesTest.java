@@ -139,4 +139,31 @@ public class GesturesTest {
         System.out.println("Element scrolled to and found within " + timeElapsed + " seconds");
     }
 
+    // Swipe from the center of screen
+    @Test
+    public void test_swipe() {
+        AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.ANDROID, App.APIDEMOS, null, null);
+        driver.findElement(AppiumBy.xpath(".//*[@text='Views']")).click();
+
+        GestureUtils.swipe(driver, "UP");
+
+        WebElement tabsElement = driver.findElement(AppiumBy.accessibilityId("Tabs"));
+        Assert.assertTrue(tabsElement.isDisplayed());
+    }
+
+    //performs drag and drop
+    @Test
+    public void test_dragAndDrop() {
+        AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.ANDROID, App.APIDEMOS, null, null);
+        driver.findElement(AppiumBy.accessibilityId("Views")).click();
+        driver.findElement(AppiumBy.accessibilityId("Drag and Drop")).click();
+        WebElement elementToDrag = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
+        WebElement elementToDrop = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_2"));
+
+        GestureUtils.dragAndDrop(driver, elementToDrag, elementToDrop);
+
+        WebElement status = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_result_text"));
+        Assert.assertEquals(status.getText(), "Dropped!");
+    }
+
 }

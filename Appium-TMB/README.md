@@ -114,6 +114,9 @@ appium-doctor --android
   instead.
 
 
+## Resources
+*
+
 
 ## Gestures
 
@@ -301,7 +304,54 @@ Following gestures have been covered and implemented in this repo:
 
 ### Swipe
 ```java
+/**
+     * Performs Swipe from the center of screen
+     * @param driver AppiumDriver
+     * @param direction String UP, DOWN, LEFT, RIGHT
+     */
+    public static void swipe(AppiumDriver driver, String direction) {
 
+        Dimension size = driver.manage().window().getSize();         //returns the size of window
+
+        //calculate the coordinates for swiping from center of the screen in direction
+        int startX = size.getWidth() / 2;
+        int startY = size.getHeight() / 2;
+        int endX;
+        int endY;
+        switch (direction.toUpperCase()) {
+            case "DOWN":
+                endX = startX;
+                endY = startY + 200;
+                break;
+            case "UP":
+                endX = startX;
+                endY = startY - 200;
+                break;
+            case "LEFT":
+                endX = startX - 200;
+                endY = startY;
+                break;
+            case "RIGHT":
+                endX = startX + 200;
+                endY = startY;
+                break;
+            default:
+                throw new RuntimeException("Invalid scroll direction: " + direction + " .Valid directions are UP, DOWN, LEFT, RIGHT");
+        }
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))        //Move finger to the center of screen
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                                //Press finger
+                .addAction(finger1.createPointerMove(Duration.ofMillis(50), PointerInput.Origin.viewport(), endX, endY))   //Move the finger to the quickly to swipe
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                                 //take off finger
+
+        //perform() accepts a collections of sequences
+        driver.perform(Collections.singletonList(sequence));
+    }
 ```
 
 ### Scroll
@@ -359,7 +409,32 @@ Following gestures have been covered and implemented in this repo:
 
 ### Drag and Drop
 ```java
+/**
+     * Drags the target element and drops it on to the source element
+     * @param driver AppiumDriver
+     * @param sourceElement element to drag
+     * @param targetElement element to drop on to
+     */
+    public static void dragAndDrop(AppiumDriver driver, WebElement sourceElement, WebElement targetElement) {
 
+        //Find the center of element to perform action on
+        Point sourceElementCenter = getCenterOfElement(sourceElement.getLocation(), sourceElement.getSize());
+        Point targetElementCenter = getCenterOfElement(targetElement.getLocation(), targetElement.getSize());
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), sourceElementCenter))   //Move finger to the center of source element
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                                //Press finger
+                .addAction(new Pause(finger1, Duration.ofMillis(500)))                                                      //pause for few milliseconds
+                .addAction(finger1.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), targetElementCenter))   //Move the finger to the quickly to swipe
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                                 //take off finger
+
+        //perform() accepts a collections of sequences
+        driver.perform(Collections.singletonList(sequence));
+    }
 ```
 
 
