@@ -3,11 +3,32 @@
 * This repo covers the Appium tutorials and courses from Testing Mini Bytes by Amuthan Sakthivel.
 * The code has been extended to use the custom developed `DriverManager` with custom properties files and constants and
   utils.
-*
+* Gestures are placed into separate utility class.
+* [Appium 2.0 Latest Tutorials 2023](https://www.youtube.com/playlist?list=PL9ok7C7Yn9A99LiTcemmKmupBdNB38bbo)
 
-## Appium 2.0 Latest Tutorials 2023
 
-* [Link to YT Videos](https://www.youtube.com/playlist?list=PL9ok7C7Yn9A99LiTcemmKmupBdNB38bbo)
+## Migration to Appium Java Client v8
+
+* [The transition from Touch to W3C Actions in Selenium](https://www.thegreenreport.blog/articles/the-transition-from-touch-to-w3c-actions-in-selenium/the-transition-from-touch-to-w3c-actions-in-selenium.html)
+* Last year, when Appium Java Client 8.0 released, it introduced a couple of changes, the main one being the migration
+  to Selenium 4.
+* With these changes, Appium also deprecated the use of the `TouchActions` and `MultiTouchActions` classes. Appium will
+  fully drop support for these classes in a future release, and developers are recommended to use the `W3C` actions
+  instead.
+
+## Reading Resources
+
+* [What’s New in Appium Java Client 8.0.0](https://applitools.com/blog/whats-new-appium-java-client-8/)
+* [Key learnings from Appium Java Client v7 to v8 Migration](https://blogs.halodoc.io/appium-java-client-v7-to-v8-migration/)
+* [Appium java client Deprecated APIs](https://javadoc.io/doc/io.appium/java-client/8.1.1/deprecated-list.html)
+* [W3C Actions](https://w3c.github.io/webdriver/#dfn-actions)
+* [W3C Working Draft](https://www.w3.org/TR/webdriver/#actions)
+* [Swiping your way through Appium by Wim Selles](https://www.youtube.com/watch?v=oAJ7jwMNFVU)
+* [Automating Complex Gestures with the W3C Actions API](https://appiumpro.com/editions/29-automating-complex-gestures-with-the-w3c-actions-api)
+* [iOS-Specific Touch Action Methods](https://appiumpro.com/editions/30-ios-specific-touch-action-methods)
+* [How to Automate Gesture Testing with Appium](https://applitools.com/blog/how-to-automate-gesture-testing-appium/)
+* [appium-gesture-plugin](https://github.com/AppiumTestDistribution/appium-gestures-plugin/tree/main)
+
 
 ## Tools and Libraries
 
@@ -103,19 +124,6 @@ appium-doctor --android
 * Run the desired tests from Intellij IDE.
 * `test_android_setup` and `test_ios_setup` tests will validate if the devices and apps are successfully setup and
   appium server is up and running.
-
-## Notes
-
-* [The transition from Touch to W3C Actions in Selenium](https://www.thegreenreport.blog/articles/the-transition-from-touch-to-w3c-actions-in-selenium/the-transition-from-touch-to-w3c-actions-in-selenium.html)
-* Last year, when Appium Java Client 8.0 released, it introduced a couple of changes, the main one being the migration
-  to Selenium 4.
-* With these changes, Appium also deprecated the use of the `TouchActions` and `MultiTouchActions` classes. Appium will
-  fully drop support for these classes in a future release, and developers are recommended to use the `W3C` actions
-  instead.
-
-
-## Resources
-*
 
 
 ## Gestures
