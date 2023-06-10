@@ -26,6 +26,7 @@
 * [Appium doctor](https://github.com/appium/appium/tree/master/packages/doctor)
 * Demo Apps
     * [Sauce Labs My Demo App React Native v1.3.0](https://github.com/saucelabs/my-demo-app-rn/releases/tag/v1.3.0)
+    * [ApiDemos App](https://github.com/appium/appium/tree/master/packages/appium/sample-code/apps)
 * Android Studio
     * Install android SDK with SDK Manager
         * Android 13.0
@@ -148,13 +149,70 @@ Following gestures have been covered and implemented in this repo:
 
 ### Double Tap
 ```java
+/**
+     * Performs double tap on the element (quickly tap twice)
+     * @param driver AppiumDriver
+     * @param element WebElement to perform action on
+     */
+    public static void doubleTap(AppiumDriver driver, WebElement element) {
+        Point location = element.getLocation();     //returns the top left coordinates of the element on page
+        Dimension size = element.getSize();         //returns the width and length of element
 
+        //Find the center of element to perform action on
+        Point centerOfElement = getCenterOfElement(location, size);
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerOfElement))   //Move finger to the center of element
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                            //Press finger
+                .addAction(new Pause(finger1, Duration.ofMillis(100)))                                                  //wait for few milliseconds
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()))                              //take off finger
+                .addAction(new Pause(finger1, Duration.ofMillis(300)))                                                  //wait for few milliseconds
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                            //Press finger
+                .addAction(new Pause(finger1, Duration.ofMillis(100)))                                                  //wait for few milliseconds
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()))                              //take off finger
+                ;
+
+        //perform() accepts a collections of sequences
+        driver.perform(Collections.singletonList(sequence));
+    }
 ```
 
 ### Long Press
 ```java
+/**
+     * Performs long press on the element.
+     * @param driver AppiumDriver
+     * @param element WebElement to perform action on
+     */
+    public static void longPress(AppiumDriver driver, WebElement element) {
+        Point location = element.getLocation();     //returns the top left coordinates of the element on page
+        Dimension size = element.getSize();         //returns the width and length of element
 
+        //Find the center of element to perform action on
+        Point centerOfElement = getCenterOfElement(location, size);
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerOfElement))   //Move finger to the center of element
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                            //Press finger
+                .addAction(new Pause(finger1, Duration.ofSeconds(2)))                                                   //wait for few seconds
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                             //take off finger
+
+        //perform() accepts a collections of sequences
+        driver.perform(Collections.singletonList(sequence));
+    }
 ```
+> Or alternatively instead of Sequence class, longPress can also be performed using Actions class 
+````java
+ new Actions(driver).clickAndHold(element).perform();
+````
 
 ### Zoom
 ```java
