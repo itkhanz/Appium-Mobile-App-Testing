@@ -72,4 +72,24 @@ public class GesturesTest {
         Assert.assertTrue(sampleMenu.isDisplayed());
     }
 
+    //performs Zoom In gesture with both fingers on the drawing screen which draws a diagonal line
+    @Test
+    public void test_ZoomIn() {
+        AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.ANDROID, App.MYDEMOAPPANDROID, null, null);
+        driver.findElement(AppiumBy.accessibilityId("open menu")).click();
+        driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"menu item drawing\"]")).click();
+        WebElement element = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"drawing screen\"]"));
+        GestureUtils.zoomIn(driver, element);
+    }
+
+    //performs Zoom Out gesture with both fingers on the drawing screen which draws a diagonal line
+    @Test
+    public void test_ZoomOut() {
+        AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.ANDROID, App.MYDEMOAPPANDROID, null, null);
+        driver.findElement(AppiumBy.accessibilityId("open menu")).click();
+        driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"menu item drawing\"]")).click();
+        WebElement element = driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"drawing screen\"]"));
+        GestureUtils.zoomOut(driver, element);
+    }
+
 }

@@ -214,9 +214,89 @@ Following gestures have been covered and implemented in this repo:
  new Actions(driver).clickAndHold(element).perform();
 ````
 
-### Zoom
-```java
+### Zoom (Pinch)
 
+#### Zoom In
+```java
+/**
+     * Performs pinch gesture on the element (equivalent of Zooming In).
+     * @param driver AppiumDriver
+     * @param element WebElement to perform action on
+     */
+    public static void zoomIn(AppiumDriver driver, WebElement element) {
+        Point location = element.getLocation();     //returns the top left coordinates of the element on page
+        Dimension size = element.getSize();         //returns the width and length of element
+
+        //Find the center of element to perform action on
+        Point centerOfElement = getCenterOfElement(location, size);
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+        PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH, "finger2");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence1 = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerOfElement))   //Move finger to the center of element
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                            //Press finger
+                .addAction(new Pause(finger1, Duration.ofMillis(200)))                                                   //wait for few seconds
+                .addAction(finger1.createPointerMove(Duration.ofMillis(200),                                            //Move the finger to the right in x-direction, and up in y-direction
+                                PointerInput.Origin.viewport(), centerOfElement.getX() + 300,
+                                centerOfElement.getY() - 300))
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                             //take off finger
+
+        Sequence sequence2 = new Sequence(finger2, 1)
+                .addAction(finger2.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerOfElement))
+                .addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                .addAction(new Pause(finger2, Duration.ofMillis(200)))
+                .addAction(finger2.createPointerMove(Duration.ofMillis(200),                                            //Move the finger to the left in x-direction, and bottom in y-direction
+                        PointerInput.Origin.viewport(), centerOfElement.getX() - 300,
+                        centerOfElement.getY() + 300))
+                .addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        driver.perform(Arrays.asList(sequence1, sequence2));
+    }
+```
+
+#### Zoom Out
+```java
+/**
+     * Performs pinch gesture on the element (equivalent of Zooming Out).
+     * @param driver AppiumDriver
+     * @param element WebElement to perform action on
+     */
+    public static void zoomOut(AppiumDriver driver, WebElement element) {
+        Point location = element.getLocation();     //returns the top left coordinates of the element on page
+        Dimension size = element.getSize();         //returns the width and length of element
+
+        //Find the center of element to perform action on
+        Point centerOfElement = getCenterOfElement(location, size);
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+        PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH, "finger2");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence1 = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(),                     //Move the finger to the right in x-direction, and up in y-direction
+                                                        centerOfElement.getX() + 300,   
+                                                        centerOfElement.getY() - 300))
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                            //Press finger
+                .addAction(new Pause(finger1, Duration.ofMillis(200)))                                                   //wait for few seconds
+                .addAction(finger1.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), centerOfElement))  //Move to the center
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                             //take off finger
+
+        
+        Sequence sequence2 = new Sequence(finger2, 2)
+                .addAction(finger2.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(),                     //Move the finger to the left in x-direction, and bottom in y-direction
+                        centerOfElement.getX() - 300,
+                        centerOfElement.getY() + 300))
+                .addAction(finger2.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                            //Press finger
+                .addAction(new Pause(finger2, Duration.ofMillis(200)))                                                   //wait for few seconds
+                .addAction(finger2.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), centerOfElement))  //Move to the center
+                .addAction(finger2.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                             //take off finger
+        
+        driver.perform(Arrays.asList(sequence1, sequence2));
+    }
 ```
 
 ### Swipe
