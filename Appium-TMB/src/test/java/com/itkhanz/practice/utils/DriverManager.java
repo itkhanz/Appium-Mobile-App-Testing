@@ -81,7 +81,7 @@ public class DriverManager {
             default:
                 throw new RuntimeException("Unable to create session with platform: " + platformOS.platformName);
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); use Explicit Waits or appium wait plugin
         DriverManager.setDriver(driver);
     }
 

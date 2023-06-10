@@ -181,4 +181,56 @@ public class GestureUtils {
         
         driver.perform(Arrays.asList(sequence1, sequence2));
     }
+
+    /**
+     * Performs Scrolling from the center of screen
+     * @param driver AppiumDriver
+     * @param direction String UP, DOWN, LEFT, RIGHT
+     */
+    public static void scroll(AppiumDriver driver, String direction) {
+
+        Dimension size = driver.manage().window().getSize();         //returns the size of window
+
+        //calculate the coordinates for scrolling from center of the screen in direction up
+        int startX = size.getWidth() / 2;
+        int startY = size.getHeight() / 2;
+        int endX;
+        int endY;
+        switch (direction.toUpperCase()) {
+            case "DOWN":
+                endX = startX;
+                endY = startY - 200;
+                break;
+            case "UP":
+                endX = startX;
+                endY = startY + 200;
+                break;
+            case "LEFT":
+                endX = startX + 200;
+                endY = startY;
+                break;
+            case "RIGHT":
+                endX = startX - 200;
+                endY = startY;
+                break;
+            default:
+                throw new RuntimeException("Invalid scroll direction: " + direction + " .Valid directions are UP, DOWN, LEFT, RIGHT");
+        }
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))        //Move finger to the center of screen
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                                //Press finger
+                .addAction(new Pause(finger1, Duration.ofMillis(100)))                                                      //wait for few seconds
+                .addAction(finger1.createPointerMove(Duration.ofMillis(100), PointerInput.Origin.viewport(), endX, endY))   //Move the finger to the scroll direction towards end point
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                                 //take off finger
+
+        //perform() accepts a collections of sequences
+        driver.perform(Collections.singletonList(sequence));
+    }
+
+
 }
