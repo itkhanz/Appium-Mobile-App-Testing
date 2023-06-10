@@ -3,6 +3,7 @@ package com.itkhanz.practice.tests;
 import com.itkhanz.practice.constants.App;
 import com.itkhanz.practice.constants.PlatformOS;
 import com.itkhanz.practice.utils.DriverManager;
+import com.itkhanz.practice.utils.GestureUtils;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
@@ -30,5 +31,16 @@ public class GesturesTest {
         Assert.assertEquals(element.getText(), "Products");
     }
 
+    //performs tap on the hamburger navigation icon to open the side menu
+    @Test
+    public void test_tap_gesture() {
+        AppiumDriver driver = DriverManager.initializeDriver(PlatformOS.ANDROID, App.MYDEMOAPPANDROID, null, null);
+        WebElement openMenu = driver.findElement(AppiumBy.accessibilityId("open menu"));
+        GestureUtils.tap(driver, openMenu);
+
+        //Assertion
+        WebElement logInMenuItem = driver.findElement(AppiumBy.accessibilityId("menu item log in"));
+        Assert.assertTrue(logInMenuItem.isDisplayed());
+    }
 
 }

@@ -14,7 +14,8 @@
 * Maven 3.9.2
 * Java 11
 * Selenium 4.9.1
-* Appium 2.0.0-beta.71
+* Appium Java client 8.5.1
+* Appium server 2.0.0-beta.71
     * drivers
         * uiautomator2@2.25.2
         * xcuitest@4.30.2
@@ -71,7 +72,7 @@ appium-doctor --ios
 appium-doctor --android
 ```
 
-* For the tests, we will be using [Appium Wait Plugin](https://github.com/AppiumTestDistribution/appium-wait-plugin
+* For the tests, we will be using [Appium Wait Plugin](https://github.com/AppiumTestDistribution/appium-wait-plugin)
 * Start the Appium server with the above plugins `appium --use-plugins=element-wait`
 * Run the Android Device Emulator for Pixel 5 for Android Tests (from Android Studio)
 * Run the iOS Device Simulator for iPhone 14 for iOS Tests(form XCode)
@@ -82,12 +83,100 @@ appium-doctor --android
   install app while running your tests.
 * If the apps are already installed, then you just need `AppActivity` and `AppPackage` in case of Android App,
   and `bundleId` in case of iOS app.
+* Run the command `adb shell "dumpsys window | grep -E mCurrentFocus"` to get the AppActivity and AppPackage.
+  Alternatively you can install apps like `Apk info` that can tell all the activities associated with the app, and the
+  app package.
+* The preinstalled app packages and budle iD can be found from the platform websites also.
 * By default, the tests are running in your local host with default port 4723 set in `server.properties`.
 * Similarly, the default device `UDID` are set in `android.properties` and `ios.properties`
 * To override the default device for running tests on different device, provide UDID string
   in `DriverManager.initializeDriver()`. If UDID and port is null, then it will use the default UDID and port.
+* Run the command `adb devices` to get the UDID of android devices or emulators running.
+* Run the command `xcrun simctl list` to get the UDID of iOS devices or emulators running.
+* `BundleID` of iOS can be found in `info.plist` file.
+    * Copy the .ipa file and rename the extension to .zip. (So, for example, Pages.ipa will become Pages.zip.)
+    * Unzip the ZIP file. You will get a new folder named the same way as the original ZIP file or with Payload name.
+    * Right Click the application, and select show package contents.
+    * Open the info.plist by double clicking it that opens it in XCode, and there you will find XCode.
 * Tests are located at this path: `com/itkhanz/practice/tests/GesturesTest.java`
 * Run the desired tests from Intellij IDE.
-* `test_android_setup` and `test_ios_setup` tests will validate if the devices and apps are successfully setup and appium server is up and running.
-* 
+* `test_android_setup` and `test_ios_setup` tests will validate if the devices and apps are successfully setup and
+  appium server is up and running.
+
+## Notes
+
+* [The transition from Touch to W3C Actions in Selenium](https://www.thegreenreport.blog/articles/the-transition-from-touch-to-w3c-actions-in-selenium/the-transition-from-touch-to-w3c-actions-in-selenium.html)
+* Last year, when Appium Java Client 8.0 released, it introduced a couple of changes, the main one being the migration
+  to Selenium 4.
+* With these changes, Appium also deprecated the use of the `TouchActions` and `MultiTouchActions` classes. Appium will
+  fully drop support for these classes in a future release, and developers are recommended to use the `W3C` actions
+  instead.
+
+
+
+## Gestures
+
+Following gestures have been covered and implemented in this repo:
+### Tap
+```java
+/**
+     * Performs tap on the element.
+     * @param driver AppiumDriver
+     * @param element WebElement to perform tap on
+     */
+    public static void tap(AppiumDriver driver, WebElement element) {
+        Point location = element.getLocation();     //returns the top left coordinates of the element on page
+        Dimension size = element.getSize();         //returns the width and length of element
+
+        //Find the center of element to perform tap on.
+        Point centerOfElement = getCenterOfElement(location, size);
+
+        //models a pointer input device, like mouse, pen, touch
+        PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+
+        //performs a sequence of actions for a given input source
+        Sequence sequence = new Sequence(finger1, 1)
+                .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerOfElement))   //Move finger to the center of element
+                .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))                            //Press finger
+                .addAction(new Pause(finger1, Duration.ofMillis(200)))                                                  //wait for few milliseconds
+                .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));                             //take off finger
+
+        //perform() accepts a collections of sequences
+        driver.perform(Collections.singletonList(sequence));
+    }
+```
+
+### Double Tap
+```java
+
+```
+
+### Long Press
+```java
+
+```
+
+### Zoom
+```java
+
+```
+
+### Swipe
+```java
+
+```
+
+### Scroll
+```java
+
+```
+
+### Drag and Drop
+```java
+
+```
+
+
+
+
 
