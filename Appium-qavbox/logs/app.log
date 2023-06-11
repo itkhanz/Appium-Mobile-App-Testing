@@ -1,0 +1,13 @@
+2023-06-12 01:00:29.592 [main] INFO  AppiumServer.class - Appium server started: http://127.0.0.1:4723/
+2023-06-12 01:00:29.680 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-12 01:00:29.682 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-12 01:00:41.480 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-12 01:00:41.481 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-12 01:00:41.481 [main] INFO  AppFactory.class - Application launched: MyDemoApp-Android
+2023-06-12 01:00:43.306 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-12 01:00:43.307 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-12 01:00:50.145 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-12 01:00:50.146 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-12 01:00:50.146 [main] INFO  AppFactory.class - Application launched: MyDemoApp-iOS
+2023-06-12 01:00:52.137 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-12 01:00:57.549 [main] INFO  AppiumServer.class - Appium server stopped

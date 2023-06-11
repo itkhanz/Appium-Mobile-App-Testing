@@ -2,24 +2,21 @@ package com.itkhanz.base;
 
 import com.itkhanz.constants.App;
 import com.itkhanz.constants.PlatformOS;
-import com.itkhanz.utils.PropertyUtils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Map;
-import java.util.Properties;
-
-import static com.itkhanz.base.DriverManager.getDriver;
 
 public class AppFactory {
     static AppiumDriver driver;
+    private static final Logger LOG = LoggerFactory.getLogger("AppFactory.class");
 
     /**
      * Creates new Appium Driver with specified platform and app and set the created driver to Driver Factory
@@ -27,14 +24,15 @@ public class AppFactory {
      * @param appName can be any of the constants specified in App Enum
      * @param udid udid of the emulator or simulator or real-device, if null then default device for OS is setup
      * @param port port of the appium server, if null then default port is used
-     * @throws MalformedURLException
      */
     public static void launchApp(PlatformOS platformOS, App appName, String udid, String port) {
         try {
             URL url = new URL(PropertiesManager.getFormattedUrl(port));   //Appium Server URL and port
+            LOG.info("Appium Server url: " + url.toString());
 
             Map<String, String> appCapabilities = getAppCapabilities(appName);  //app specific capabilities
             String udidDevice = PropertiesManager.getDeviceUdid(udid,platformOS);           //UDID of the device to be initialzed
+            LOG.info("Device UDID: " + udidDevice);
 
             switch(platformOS) {
                 case ANDROID:
@@ -49,24 +47,29 @@ public class AppFactory {
                     throw new RuntimeException("Unable to create session with platform: " + platformOS.platformName);
             }
         } catch (Exception e) {
+            LOG.error("Could not launch app: " + appName.appName + " on Server: " + PropertiesManager.getFormattedUrl(port));
             System.out.println("Could not launch app: " + appName.appName + " on Server: " + PropertiesManager.getFormattedUrl(port));
             System.out.println(e.getClass().getSimpleName());
             System.out.println(e.getMessage());
             e.printStackTrace();
             throw new RuntimeException("Failed to launch app and start session");
         }
+        LOG.info("Application launched: " + appName.appName);
+        //DriverManager.setupDriverTimeouts();
     }
 
     public static void launchAndroidApp(URL url, UiAutomator2Options options) {
         driver = new AndroidDriver(url, options);
         DriverManager.setDriver(driver);
         System.out.println("AndroidDriver is set");
+        LOG.info("AndroidDriver is set");
     }
 
     public static void launchiOSApp(URL url, XCUITestOptions options) {
         driver = new IOSDriver(url, options);
         DriverManager.setDriver(driver);
         System.out.println("IOSDriver is set");
+        LOG.info("IOSDriver is set");
     }
 
     /**
@@ -149,6 +152,7 @@ public class AppFactory {
                 return Map.of("bundleId","org.wdioNativeDemoApp",
                         "appUrl", APPS_DIRECTORY + "iOS-Simulator-NativeDemoApp-0.4.0.app.zip");
             default:
+                LOG.error("Invalid app: " + appName);
                 throw new RuntimeException("Invalid app: " + appName);
         }
     }

@@ -12,6 +12,18 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <selenium-java-version>4.9.1</selenium-java-version>
+        <appium-java-client-version>8.5.1</appium-java-client-version>
+        <testng.version>7.8.0</testng.version>
+<!--        <log4jcore.version>2.20.0</log4jcore.version>-->
+<!--        <log4japi.version>2.20.0</log4japi.version>-->
+<!--        <slf4j-log4j.version>2.20.0</slf4j-log4j.version>-->
+<!--        <slf4j-simple.version>2.0.7</slf4j-simple.version>-->
+        <logback-classic.version>1.4.7</logback-classic.version>
+        <maven.compiler.version>3.11.0</maven.compiler.version>
+        <java.release.version>11</java.release.version>
+        <maven.surefire.version>3.1.2</maven.surefire.version>
+        <suite-xml>test-suites/testng.xml</suite-xml>
     </properties>
 
     <dependencies>
@@ -19,22 +31,62 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.9.1</version>
+            <version>${selenium-java-version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>8.5.1</version>
+            <version>${appium-java-client-version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.8.0</version>
+            <version>${testng.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
+        </dependency>
+
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core &ndash;&gt;
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4jcore.version}</version>
+        </dependency>
+
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api &ndash;&gt;
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4japi.version}</version>
+        </dependency>
+
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl &ndash;&gt;
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${slf4j-log4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-simple &ndash;&gt;
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j-simple.version}</version>
+        </dependency>-->
+
+
+
     </dependencies>
 
     <build>
@@ -43,20 +95,20 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.11.0</version>
+                    <version>${maven.compiler.version}</version>
                     <configuration>
-                        <release>11</release>
+                        <release>${java.release.version}</release>
                     </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.1.2</version>
-                    <!--<configuration>
+                    <version>${maven.surefire.version}</version>
+                    <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                            <suiteXmlFile>${suite-xml}</suiteXmlFile>
                         </suiteXmlFiles>
-                    </configuration>-->
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>

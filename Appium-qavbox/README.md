@@ -4,6 +4,8 @@
 * The code has been extended to use the custom developed `DriverManager` and `AppFactory` with custom properties files and constants and
   utils.
 * Gestures are placed into separate utility class.
+* Original code base has been refactored and extended to improve framework structure. This enables the code repo to be
+  cloned and reused for multiple frameworks since all the custom settings can be easily configured from properties file.
 * [Gestures Using Appium](https://www.youtube.com/playlist?list=PLPO0LFyCaSo2X4NLeZsIwnRcq32asQiI9)
 * [Appium Gestures Plugin](https://www.youtube.com/watch?v=12Qx-jl34GI&list=PLPO0LFyCaSo1DKak8ZhEJ3NXrj2shNM0N)
 * [Appium Tutorial Series](https://www.youtube.com/playlist?list=PLPO0LFyCaSo1DKak8ZhEJ3NXrj2shNM0N)
@@ -27,6 +29,8 @@
 
 * Maven 3.9.2
 * Java 11
+* TestNG 7.8.0
+* SLF4J Logback 1.4.7
 * Selenium 4.9.1
 * Appium Java client 8.5.1
 * Appium server 2.0.0-beta.71
@@ -89,6 +93,7 @@ appium-doctor --android
 
 * For the tests, we will be using [Appium Wait Plugin](https://github.com/AppiumTestDistribution/appium-wait-plugin)
 * Start the Appium server with the above plugins `appium --use-plugins=element-wait`
+* Configure all the server related settings in `server.properties` file to start the appium server programmatically.
 * Run the Android Device Emulator for Pixel 5 for Android Tests (from Android Studio)
 * Run the iOS Device Simulator for iPhone 14 for iOS Tests(form XCode)
 * Make sure that the apps are already installed in these devices, otherwise you will need to provide `Apps` options
@@ -113,10 +118,22 @@ appium-doctor --android
     * Unzip the ZIP file. You will get a new folder named the same way as the original ZIP file or with Payload name.
     * Right Click the application, and select show package contents.
     * Open the info.plist by double clicking it that opens it in XCode, and there you will find XCode.
-* Tests are located at this path: `test/java/com/itkhanz/tests/SetupTest.java`
+* Place all your applications in directory `/src/main/resources/apps/`
+* Tests are located at this path: `test/java/com/itkhanz/tests/`
+* Initially `log4j2` was used for logging with configuration defined in `log4j2.properties`.
+* Then SLF4J binding with simple (`slf4j-simple`) was used for configuration defined in `simplelogger.properties`.
+* There was a limitation with `slf4j-simple` since we cannot log to multiple appenders at the same time e.g. console and
+  file. To solve this, we used `Logback`
+* `Logback` is used for logging and the logging configuration is defined in `simplelogger.properties`
+* To use Logback, include `logback-classic` dependency. Note that logback-classic transitively includes the `slf4j-api` and
+  `logback-core`, so only having the logback-classic is enough to setup logback with slf4j.
+* [SLF4J Logback Tutorial - mykong](https://mkyong.com/logging/slf4j-logback-tutorial/)
+* [SLF4J Logback Tutorial - mykong](https://mkyong.com/logging/slf4j-logback-tutorial/)
+* [A Guide To Logback](https://www.baeldung.com/logback)
 * Run the desired tests from Intellij IDE.
 * `test_androidLaunch` and `test_iOSLaunch` tests will validate if the devices and apps are successfully setup and
   appium server is up and running.
+* You can also run the tests through maven command line with `mvn test`
 
 
 

@@ -1,21 +1,36 @@
 package com.itkhanz.base;
 
-import org.openqa.selenium.WebDriver;
+import io.appium.java_client.AppiumDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.time.Duration;
 
 public class DriverManager {
-    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static final ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
+    private static final Logger LOG = LoggerFactory.getLogger("DriverManager.class");
+    //Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger("com.itkhanz");
 
-    public static WebDriver getDriver(){
+    public static AppiumDriver getDriver(){
         return driver.get();
     }
 
-    public static void setDriver(WebDriver Driver){
+    public static void setDriver(AppiumDriver Driver){
         driver.set(Driver);
+        LOG.info("Driver is initialized");
+        //logger.info("This is logged from logger");
         System.out.println("Driver is set");
     }
 
     public static void removeDriverThreadValue() {
         driver.remove();
+        LOG.info("Driver thread value is removed");
         System.out.println("Driver is removed");
+    }
+
+    public static void setupDriverTimeouts() {
+        getDriver().manage()
+                .timeouts()
+                .implicitlyWait(Duration.ofSeconds(5));
     }
 }
