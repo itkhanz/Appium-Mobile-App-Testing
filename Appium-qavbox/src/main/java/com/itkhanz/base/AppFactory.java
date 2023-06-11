@@ -28,11 +28,10 @@ public class AppFactory {
      */
     public static void launchApp(PlatformOS platformOS, App appName, String udid, String port) {
         try {
-            URL url = new URL(getFormattedUrl(port));   //Appium Server URL and port
+            URL url = new URL(PropertiesManager.getFormattedUrl(port));   //Appium Server URL and port
 
             Map<String, String> appCapabilities = getAppCapabilities(appName);  //app specific capabilities
-            Properties deviceProperties = getDeviceProperties(platformOS);      //device specific capabilities
-            String udidDevice = getDeviceUdid(udid,deviceProperties);           //UDID of the device to be initialzed
+            String udidDevice = PropertiesManager.getDeviceUdid(udid,platformOS);           //UDID of the device to be initialzed
 
             switch(platformOS) {
                 case ANDROID:
@@ -47,8 +46,11 @@ public class AppFactory {
                     throw new RuntimeException("Unable to create session with platform: " + platformOS.platformName);
             }
         } catch (Exception e) {
+            System.out.println("Could not launch app: " + appName.appName + " on Server: " + PropertiesManager.getFormattedUrl(port));
+            System.out.println(e.getClass().getSimpleName());
             System.out.println(e.getMessage());
-            throw new RuntimeException("Inavlid Appium Server Url: " + getFormattedUrl(port));
+            e.printStackTrace();
+            throw new RuntimeException("Failed to launch app and start session");
         }
     }
 
@@ -108,6 +110,7 @@ public class AppFactory {
 
     /**
      * This method generates the app specific capabilities for the appium session
+     * //TODO Move these capabilities to JSON or properties file (or yaml file and read from there)
      * @param appName Constant App identifier
      * @return Key,value pair of the app specific capabilities
      */
@@ -147,43 +150,5 @@ public class AppFactory {
         }
     }
 
-    /**
-     * Returns the Udid of the device to be initialized for appium session
-     * @param udid string udid from the test case
-     * @param deviceProperties contains the device specific info and default udid if the udid from test case is null
-     * @return string udid of the device to be initialzed
-     */
-    private static String getDeviceUdid(String udid, Properties deviceProperties) {
-        if (udid != null && !udid.isBlank()) {
-            return udid;
-        }
 
-        //If no udid is provided then the default device from properties file are setup for emulator/simulator
-        return deviceProperties.getProperty("UDID");
-    }
-
-    /**
-     * Concatenate the IP with port. If port is not specified, then default port is selected from properties file
-     * @param port appium server port
-     * @return formatted string for Appium server URL e.g. http://localhost:4723
-     */
-    private static String getFormattedUrl(String port) {
-        Properties serverProperties = PropertyUtils.propertyLoader("src/test/resources/server.properties");
-        if (port != null && !port.isBlank()) {
-            return serverProperties.getProperty("ip") + ":" + port;
-        }
-        return serverProperties.getProperty("ip") + ":" + serverProperties.getProperty("port");
-    }
-
-    /**
-     * Loads the platform specific properties for device such as udid, device name
-     * @param platformOS
-     * @return device properties
-     */
-    private static Properties getDeviceProperties(PlatformOS platformOS) {
-        if (platformOS.platformName.equalsIgnoreCase("ANDROID")) {
-            return PropertyUtils.propertyLoader("src/test/resources/android.properties");
-        }
-        return PropertyUtils.propertyLoader("src/test/resources/ios.properties");
-    }
 }
