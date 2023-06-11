@@ -8,12 +8,15 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Map;
 import java.util.Properties;
+
+import static com.itkhanz.base.DriverManager.getDriver;
 
 public class AppFactory {
     static AppiumDriver driver;

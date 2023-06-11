@@ -13,4 +13,9 @@ public class DriverManager {
         driver.set(Driver);
         System.out.println("Driver is set");
     }
+
+    public static void removeDriverThreadValue() {
+        driver.remove();
+        System.out.println("Driver is removed");
+    }
 }
