@@ -5,8 +5,6 @@ import com.itkhanz.base.DriverManager;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-import static com.itkhanz.base.DriverManager.getDriver;
-
 public class BaseTest {
     @BeforeTest
     public void startup() {
@@ -15,10 +13,7 @@ public class BaseTest {
 
     @AfterTest(alwaysRun = true)
     public void teardown() {
-        if (null != getDriver()) {
-            getDriver().quit();
-            DriverManager.removeDriverThreadValue();
-        }
+        DriverManager.removeDriver();
         AppiumServer.stop();
     }
 }

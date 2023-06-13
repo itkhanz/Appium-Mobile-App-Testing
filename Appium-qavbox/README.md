@@ -3,6 +3,7 @@
 * This repo covers the Appium tutorials and courses from qavbox by Sunil Patro.
 * The code has been extended to use the custom developed `DriverManager` and `AppFactory` with custom properties files and constants and
   utils.
+* Furthermore, the application specific options are loaded dynamically from the `applications.json` based on the ENUM App constant id.
 * Gestures are placed into separate utility class.
 * Original code base has been refactored and extended to improve framework structure. This enables the code repo to be
   cloned and reused for multiple frameworks since all the custom settings can be easily configured from properties file.
@@ -30,7 +31,6 @@
 * Maven 3.9.2
 * Java 11
 * TestNG 7.8.0
-* SLF4J Logback 1.4.7
 * Selenium 4.9.1
 * Appium Java client 8.5.1
 * Appium server 2.0.0-beta.71
@@ -41,6 +41,9 @@
         * element-wait@1.5.0
         * gestures@2.0.0
 * Appium inspector 2023.5.2
+* SLF4J Logback 1.4.7
+* Jackson databind 2.15.2
+* Lombok 1.18.28
 * [Appium doctor](https://github.com/appium/appium/tree/master/packages/doctor)
 * Demo Apps
     * [Sauce Labs My Demo App React Native v1.3.0](https://github.com/saucelabs/my-demo-app-rn/releases/tag/v1.3.0)
@@ -130,6 +133,8 @@ appium-doctor --android
 * [SLF4J Logback Tutorial - mykong](https://mkyong.com/logging/slf4j-logback-tutorial/)
 * [SLF4J Logback Tutorial - mykong](https://mkyong.com/logging/slf4j-logback-tutorial/)
 * [A Guide To Logback](https://www.baeldung.com/logback)
+* `Lombok` annotations are used to build the POJOs for `appliations.json`, and then the POJOs are converted to Map of
+  app specific options via `jackson-databind`
 * Run the desired tests from Intellij IDE.
 * `test_androidLaunch` and `test_iOSLaunch` tests will validate if the devices and apps are successfully setup and
   appium server is up and running.

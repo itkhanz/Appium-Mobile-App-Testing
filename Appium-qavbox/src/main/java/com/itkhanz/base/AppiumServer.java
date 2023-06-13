@@ -17,17 +17,18 @@ public class AppiumServer {
     private static final Logger LOG = LoggerFactory.getLogger("AppiumServer.class");
 
     public static void start(){
+        LOG.info("***********************************************************************");
+        LOG.info("******************** STARTING APPIUM SERVER ***************************");
+        LOG.info("***********************************************************************");
         getInstance().start();
-        System.out.println(server.getUrl());
-        System.out.println(server.isRunning());
-        System.out.println("Appium server started");
+        //System.out.println("Appium server started");
         LOG.info("Appium server started: " + server.getUrl());
     }
 
     public static void stop(){
         if(server != null){
             getInstance().stop();
-            System.out.println("Appium server stopped");
+            //System.out.println("Appium server stopped");
             LOG.info("Appium server stopped");
         }
     }
@@ -46,10 +47,11 @@ public class AppiumServer {
 
         AppiumServiceBuilder builder = new AppiumServiceBuilder();
         builder
-                .withAppiumJS(new File(serverProperties.getProperty("appium_path")))
-                .usingDriverExecutable(new File(serverProperties.getProperty("node_path")))
+                .withAppiumJS(new File(serverProperties.getProperty("appium_path")))    //Tell serviceBuilder where Appium is installed. Or set this path in an environment variable named APPIUM_PATH
+                .usingDriverExecutable(new File(serverProperties.getProperty("node_path"))) // Tell serviceBuilder where node is installed. Or set this path in an environment variable named NODE_PATH
                 .withIPAddress(ipAddress)
                 .usingPort(port)
+                //.usingAnyFreePort() //Use any port, in case the default 4723 is already taken (maybe by another Appium server). Use either usingPort(port) or this.
                 .withArgument(LOCAL_TIMEZONE)
                 .withArgument(USE_DRIVERS, serverProperties.getProperty("use_drivers"))
                 .withArgument(USE_PLUGINS, serverProperties.getProperty("use_plugins"))

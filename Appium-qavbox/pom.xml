@@ -15,11 +15,9 @@
         <selenium-java-version>4.9.1</selenium-java-version>
         <appium-java-client-version>8.5.1</appium-java-client-version>
         <testng.version>7.8.0</testng.version>
-<!--        <log4jcore.version>2.20.0</log4jcore.version>-->
-<!--        <log4japi.version>2.20.0</log4japi.version>-->
-<!--        <slf4j-log4j.version>2.20.0</slf4j-log4j.version>-->
-<!--        <slf4j-simple.version>2.0.7</slf4j-simple.version>-->
         <logback-classic.version>1.4.7</logback-classic.version>
+        <jackson-databind.version>2.15.2</jackson-databind.version>
+        <lombok.version>1.18.28</lombok.version>
         <maven.compiler.version>3.11.0</maven.compiler.version>
         <java.release.version>11</java.release.version>
         <maven.surefire.version>3.1.2</maven.surefire.version>
@@ -55,37 +53,19 @@
             <version>${logback-classic.version}</version>
         </dependency>
 
-
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4jcore.version}</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind.version}</version>
         </dependency>
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4japi.version}</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl &ndash;&gt;
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${slf4j-log4j.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-simple &ndash;&gt;
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j-simple.version}</version>
-        </dependency>-->
-
-
 
     </dependencies>
 

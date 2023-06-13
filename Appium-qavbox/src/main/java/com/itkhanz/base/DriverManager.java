@@ -9,7 +9,7 @@ import java.time.Duration;
 public class DriverManager {
     private static final ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
     private static final Logger LOG = LoggerFactory.getLogger("DriverManager.class");
-    //Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger("com.itkhanz");
+    //Logger logger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger("com.itkhanz");   //can also use custom log appender with different logging level
 
     public static AppiumDriver getDriver(){
         return driver.get();
@@ -19,13 +19,17 @@ public class DriverManager {
         driver.set(Driver);
         LOG.info("Driver is initialized");
         //logger.info("This is logged from logger");
-        System.out.println("Driver is set");
+        //System.out.println("Driver is set");
     }
 
-    public static void removeDriverThreadValue() {
-        driver.remove();
-        LOG.info("Driver thread value is removed");
-        System.out.println("Driver is removed");
+    public static void removeDriver() {
+        if (getDriver() != null) {
+            getDriver().quit(); //closing the driver session
+            LOG.info("Driver Session is closed");
+            driver.remove();    //removing driver thread value
+            LOG.info("Driver thread value is removed");
+            //System.out.println("Driver is removed");
+        }
     }
 
     public static void setupDriverTimeouts() {

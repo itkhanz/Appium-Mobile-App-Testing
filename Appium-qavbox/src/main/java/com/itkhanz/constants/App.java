@@ -8,11 +8,14 @@ public enum App {
     SAUCELABSANDROID("MyDemoApp-Android"),
     SAUCELABSIOS("MyDemoApp-iOS"),
     WDIOANDROID("Wdio-NativeDemoApp-Android"),
-    WDIOIOS("Wdio-NativeDemoApp-Android")
-    ;
-    public String appName;
+    WDIOIOS("Wdio-NativeDemoApp-iOS");
+    private String id;  //Identifier for the app (this must be same as   specified in applications.json id)
 
-    App(String appName) {
-        this.appName = appName;
+    App(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 }

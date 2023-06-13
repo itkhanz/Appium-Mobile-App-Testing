@@ -1,13 +1,32 @@
-2023-06-12 01:00:29.592 [main] INFO  AppiumServer.class - Appium server started: http://127.0.0.1:4723/
-2023-06-12 01:00:29.680 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
-2023-06-12 01:00:29.682 [main] INFO  AppFactory.class - Device UDID: emulator-5554
-2023-06-12 01:00:41.480 [main] INFO  DriverManager.class - Driver is initialized
-2023-06-12 01:00:41.481 [main] INFO  AppFactory.class - AndroidDriver is set
-2023-06-12 01:00:41.481 [main] INFO  AppFactory.class - Application launched: MyDemoApp-Android
-2023-06-12 01:00:43.306 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
-2023-06-12 01:00:43.307 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
-2023-06-12 01:00:50.145 [main] INFO  DriverManager.class - Driver is initialized
-2023-06-12 01:00:50.146 [main] INFO  AppFactory.class - IOSDriver is set
-2023-06-12 01:00:50.146 [main] INFO  AppFactory.class - Application launched: MyDemoApp-iOS
-2023-06-12 01:00:52.137 [main] INFO  DriverManager.class - Driver thread value is removed
-2023-06-12 01:00:57.549 [main] INFO  AppiumServer.class - Appium server stopped
+2023-06-13 14:41:09.710 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-13 14:41:09.772 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-13 14:41:09.772 [main] INFO  AppiumServer.class - ******************** STARTING APPIUM SERVER ***************************
+2023-06-13 14:41:09.772 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-13 14:41:41.386 [main] INFO  AppiumServer.class - Appium server started: http://127.0.0.1:4723/
+2023-06-13 14:41:41.442 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-13 14:41:41.736 [main] INFO  AppFactory.class - App will be loaded with following options: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-MyDemoAppRN.1.3.0.build-244.apk, appPackage=com.saucelabs.mydemoapp.rn, appActivity=com.saucelabs.mydemoapp.rn.MainActivity}]
+2023-06-13 14:41:41.737 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-13 14:41:52.316 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-13 14:41:52.317 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-13 14:41:52.317 [main] INFO  AppFactory.class - Application launched: MyDemoApp-Android
+2023-06-13 14:41:55.748 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-13 14:41:55.749 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-13 14:41:59.383 [main] INFO  AppiumServer.class - Appium server stopped
+2023-06-13 14:42:41.023 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-13 14:42:41.092 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-13 14:42:41.092 [main] INFO  AppiumServer.class - ******************** STARTING APPIUM SERVER ***************************
+2023-06-13 14:42:41.093 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-13 14:42:47.707 [main] INFO  AppiumServer.class - Appium server started: http://127.0.0.1:4723/
+2023-06-13 14:42:47.771 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-13 14:42:48.059 [main] INFO  AppFactory.class - App will be loaded with following options: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-13 14:42:48.066 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-13 14:47:00.027 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-13 14:47:00.032 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-13 14:47:00.034 [main] INFO  AppFactory.class - Application launched: MyDemoApp-iOS
+2023-06-13 14:47:03.095 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-13 14:47:03.096 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-13 14:47:06.889 [main] INFO  AppiumServer.class - Appium server stopped
