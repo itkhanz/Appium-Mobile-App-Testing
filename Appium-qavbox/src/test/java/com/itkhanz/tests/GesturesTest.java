@@ -5,12 +5,13 @@ import com.itkhanz.base.DriverManager;
 import com.itkhanz.constants.App;
 import com.itkhanz.constants.PlatformOS;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Map;
 
 import static com.itkhanz.base.DriverManager.getDriver;
 import static com.itkhanz.utils.GestureUtils.*;
@@ -18,12 +19,22 @@ import static com.itkhanz.utils.GestureUtils.ScrollDirection.*;
 import static com.itkhanz.utils.WaitUtils.waitForElementToBeVisible;
 
 
-public class GesturesTest{
+public class GesturesTest extends BaseTest{
 
     //performs long press on the element which opens up new dialog box
     @Test
     public void test_longPress() {
-        AppFactory.launchApp(PlatformOS.ANDROID, App.APIDEMOS, null, null);
+
+        //Load the capabilities of application based on platform and App constants
+        Map<String, Object> appCapabilities = AppFactory.getAppCapabilities(PlatformOS.ANDROID, App.APIDEMOS, null);
+
+        //Add test-specific custom capabilities to the application
+        appCapabilities.put(MobileCapabilityType.PLATFORM_NAME, "android");           //The type of platform hosting the app or browser
+        appCapabilities.put(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");    //The name of the Appium driver to use
+        appCapabilities.put("appWaitDuration", 30000);    //The maximum duration to wait until the appWaitActivity is focused in milliseconds (20000 by default)
+
+        //Launch the application with specified capabilities by setting platform specific driver
+        AppFactory.launchApp(PlatformOS.ANDROID, appCapabilities);
 
         getDriver().findElement(AppiumBy.xpath(".//*[@text='Views']")).click();
         getDriver().findElement(AppiumBy.xpath(".//*[@text='Expandable Lists']")).click();
@@ -37,12 +48,16 @@ public class GesturesTest{
         WebElement sampleMenu = getDriver().findElement(AppiumBy.xpath(".//android.widget.TextView[@text='Sample menu']"));
         Assert.assertTrue(sampleMenu.isDisplayed());
 
-        DriverManager.removeDriver(); //not needed when class extends from BaseTest which closes the driver in after hook
+        //DriverManager.removeDriver(); //not needed when class extends from BaseTest which closes the driver in after hook
     }
 
     @Test
     public void test_scrollTillElement() throws InterruptedException {
-        AppFactory.launchApp(PlatformOS.IOS, App.IOSCONTACTS, null, null);
+        //Load the capabilities of application based on platform and App constants
+        Map<String, Object> appCapabilities = AppFactory.getAppCapabilities(PlatformOS.IOS, App.IOSCONTACTS, null);
+
+        //Launch the application with specified capabilities by setting platform specific driver
+        AppFactory.launchApp(PlatformOS.IOS, appCapabilities);
 
         //For this test, manually add some contacts just once before running the test for first time so the list becomes longer and scrollable
         By contactLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeCell[`label == \"Olivia\"`]");
@@ -53,13 +68,15 @@ public class GesturesTest{
         } else {
             Assert.fail("Failed to find the element after scrolling for " + timeout + " seconds");
         }
-        DriverManager.removeDriver(); //not needed when class extends from BaseTest which closes the driver in after hook
     }
 
     @Test
     public void test_swipe_ios() {
+        //Load the capabilities of application based on platform and App constants
+        Map<String, Object> appCapabilities = AppFactory.getAppCapabilities(PlatformOS.IOS, App.WDIOIOS, null);
 
-        AppFactory.launchApp(PlatformOS.IOS, App.WDIOIOS, null, null);  //Launch wdio iOS app
+        //Launch the application with specified capabilities by setting platform specific driver
+        AppFactory.launchApp(PlatformOS.IOS, appCapabilities);
 
         getDriver().findElement(AppiumBy.accessibilityId("Swipe")).click();
 
@@ -77,13 +94,15 @@ public class GesturesTest{
 
         scroll(UP, 0.2, 600);    // scroll up (swipe down)
 
-        DriverManager.removeDriver(); //not needed when class extends from BaseTest which closes the driver in after hook
     }
 
     @Test
     public void test_swipe_android() {
+        //Load the capabilities of application based on platform and App constants
+        Map<String, Object> appCapabilities = AppFactory.getAppCapabilities(PlatformOS.ANDROID, App.WDIOANDROID, null);
 
-        AppFactory.launchApp(PlatformOS.ANDROID, App.WDIOANDROID, null, null);  //Launch wdio android app
+        //Launch the application with specified capabilities by setting platform specific driver
+        AppFactory.launchApp(PlatformOS.ANDROID, appCapabilities);
 
         WebElement swipeMenuBtn = waitForElementToBeVisible(getDriver(), AppiumBy.accessibilityId("Swipe"), 5000);
         swipeMenuBtn.click();
@@ -98,6 +117,5 @@ public class GesturesTest{
 
         scroll(UP, 0.2, 600);    // scroll up (swipe down)
 
-        DriverManager.removeDriver(); //not needed when class extends from BaseTest which closes the driver in after hook
     }
 }

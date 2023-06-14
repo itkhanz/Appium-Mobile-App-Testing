@@ -10,13 +10,14 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
+import io.appium.java_client.remote.MobileCapabilityType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.time.Duration;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,54 +27,68 @@ public class AppFactory {
     private static final Logger LOG = LoggerFactory.getLogger("AppFactory.class");
 
     /**
-     * Creates new Appium Driver with specified platform and app and set the created driver to Driver Factory
+     * Formats the URL from appium server ip and port, and pass it to child method to create platform based driver
      * @param platformOS can be any of the constants specified in PlatformOS Enum
-     * @param app can be any of the constants specified in App Enum
-     * @param udid udid of the emulator or simulator or real-device, if null then default device for OS is setup
-     * @param port port of the appium server, if null then default port is used
+     * @param appCapabilities application options based on platform and app loaded from test case and application.properties
      */
-    public static void launchApp(PlatformOS platformOS, App app, String udid, String port) {
-        String appID = app.getId();
+    public static void launchApp(PlatformOS platformOS, Map<String, Object> appCapabilities) {
+
         try {
-            URL url = new URL(PropertiesManager.getFormattedUrl(port));   //Appium Server URL and port
+            URL url = new URL(PropertiesManager.getFormattedUrl());   //Appium Server URL and port
             LOG.info("Appium Server url: " + url.toString());
 
-            Map<String, String> appCapabilities = getAppCapabilities(appID, platformOS);  //app specific capabilities
-            String udidDevice = PropertiesManager.getDeviceUdid(udid,platformOS);           //UDID of the device to be initialzed
-            LOG.info("Device UDID: " + udidDevice);
-
-            switch(platformOS) {
-                case ANDROID:
-                    UiAutomator2Options androidOptions = getUiAutomator2Options(udidDevice, appCapabilities);
-                    launchAndroidApp(url, androidOptions);
-                    break;
-                case IOS:
-                    XCUITestOptions iOSOptions = getXCUITestOptions(udidDevice, appCapabilities);
-                    launchiOSApp(url, iOSOptions);
-                    break;
-                default:
-                    throw new RuntimeException("Unable to create session with platform: " + platformOS.platformName);
-            }
+            createDriver(platformOS, url, appCapabilities);
         } catch (Exception e) {
-            LOG.error("Could not launch app: " + appID + " on Server: " + PropertiesManager.getFormattedUrl(port));
-            System.out.println("Could not launch app: " + appID + " on Server: " + PropertiesManager.getFormattedUrl(port));
+            LOG.error("Could not launch app on Server: " + PropertiesManager.getFormattedUrl());
+            System.out.println("Could not launch app on Server: " + PropertiesManager.getFormattedUrl());
             System.out.println(e.getClass().getSimpleName());
             System.out.println(e.getMessage());
             e.printStackTrace();
             throw new RuntimeException("Failed to launch app and start session");
         }
-        LOG.info("Application launched: " + appID);
+        LOG.info("Application launched successfully");
         //DriverManager.setupDriverTimeouts();
     }
 
-    private static void launchAndroidApp(URL url, UiAutomator2Options options) {
+    /**
+     * Gets the platform specific options for Platform and pass forwards them for setting driver
+     * @param platformOS can be any of the constants specified in PlatformOS Enum
+     * @param url ip address and port of the appium server as URL
+     * @param appCapabilities application options based on platform and app loaded from test case and application.properties
+     */
+    private static void createDriver(PlatformOS platformOS, URL url, Map<String, Object> appCapabilities) {
+        switch(platformOS) {
+            case ANDROID:
+                UiAutomator2Options androidOptions = getUiAutomator2Options(appCapabilities);
+                setAndroidDriver(url, androidOptions);
+                break;
+            case IOS:
+                XCUITestOptions iOSOptions = getXCUITestOptions(appCapabilities);
+                setIOSDriver(url, iOSOptions);
+                break;
+            default:
+                throw new RuntimeException("Unable to create session with platform: " + platformOS.platformName);
+        }
+    }
+
+    /**
+     * creates new android driver from URL and capabilities and sets the created driver to DriverManager's Appium driver
+     * @param url url ip address and port of the appium server as URL
+     * @param options android uiautomator2options (capabilities)
+     */
+    private static void setAndroidDriver(URL url, UiAutomator2Options options) {
         driver = new AndroidDriver(url, options);
         DriverManager.setDriver(driver);
         //System.out.println("AndroidDriver is set");
         LOG.info("AndroidDriver is set");
     }
 
-    private static void launchiOSApp(URL url, XCUITestOptions options) {
+    /**
+     * creates new IOS driver from URL and capabilities and sets the created driver to DriverManager's Appium driver
+     * @param url url ip address and port of the appium server as URL
+     * @param options ios XCUITestOptions (capabilities)
+     */
+    private static void setIOSDriver(URL url, XCUITestOptions options) {
         driver = new IOSDriver(url, options);
         DriverManager.setDriver(driver);
         //System.out.println("IOSDriver is set");
@@ -82,48 +97,63 @@ public class AppFactory {
 
     /**
      * Creates UIAutomator2Options for the Appium Driver Session
-     * @param udid UDID of the android device emulator
      * @param appCapabilities List of app specific properties such as Url, activity and package
      * @return new instance of UIAutomator2Options for initializing appium driver
      */
-    private static UiAutomator2Options getUiAutomator2Options(String udid, Map<String, String> appCapabilities) {
-        //TODO overload the method to add support for custom options for specific test case, and accept options as parameter
-        return new UiAutomator2Options()
-                //.setPlatformName(platformOS.platformName) //optional
-                //.setAutomationName("UiAutomator2")  //optional
-                //.setDeviceName("pixel_5")     //not mandatory with udid
-                .setUdid(udid)
-                //.setApp(appCapabilities.get("app"))   //Install the app if not pre-installed, not needed with AppPackage and AppActivity
-                .setAppPackage(appCapabilities.get("appPackage"))
-                .setAppActivity(appCapabilities.get("appActivity"))
-                .setAutoGrantPermissions(true)
-                .setNewCommandTimeout(Duration.ofSeconds(180))
-                //.setNoReset(true)
-                //.setAvd("Pixel_5")  //automatically launches the android emulator with given avdID
-                //.setAvdLaunchTimeout(Duration.ofSeconds(180))
-                ;
+    private static UiAutomator2Options getUiAutomator2Options(Map<String, Object> appCapabilities) {
+        appCapabilities.putIfAbsent(MobileCapabilityType.PLATFORM_NAME, "android"); //optional
+        appCapabilities.putIfAbsent(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2"); //optional
+        appCapabilities.putIfAbsent("autoGrantPermissions", true);
+        appCapabilities.putIfAbsent("newCommandTimeout", 180);     //in seconds
+        //appCapabilities.putIfAbsent("app", appCapabilities.get("appUrl"));     //Full path to the application to be tested (Install the app if not pre-installed, not needed with AppPackage and AppActivity)
+        //appCapabilities.putIfAbsent("avd", "Pixel_5");   //The name of Android emulator to run the test on (automatically launches the android emulator with given avdID)
+        //appCapabilities.putIfAbsent("avdLaunchTimeout", 180000);   //TMaximum number of milliseconds to wait until Android Emulator is started. 60000 ms by default
+
+        UiAutomator2Options options = new UiAutomator2Options(appCapabilities);
+        LOG.info("UIAutomator2 options set as: " + Arrays.toString(appCapabilities.entrySet().toArray()));
+        //System.out.println("UIAutomator2 options set as: " + Arrays.toString(appCapabilities.entrySet().toArray()));
+
+        return options;
     }
 
     /**
      * Creates XCUITestOptions for the Appium Driver Session
-     * @param udid UDID of the iOS device simulator
      * @param appCapabilities List of app specific properties such as Url, bundleID
      * @return new instance of XCUITestOptions for initializing appium driver
      */
-    private static XCUITestOptions getXCUITestOptions(String udid, Map<String, String> appCapabilities) {
-        //TODO overload the method to add support for custom options for specific test case, and accept options as parameter
-        return new XCUITestOptions()
-                //.setAutomationName("XCUITest")            //optional
-                //.setPlatformName(platformOS.platformName) //optional
-                //.setDeviceName("iPhone 14")               //not mandatory when udid is provided
-                .setUdid(udid)
-                //.setApp(appCapabilities.get("app"))      //Install the app if not pre-installed
-                .setBundleId(appCapabilities.get("bundleId"))
-                //.setSimulatorStartupTimeout(Duration.ofSeconds(180))  //waits for the simulator to launch
-                .setAutoAcceptAlerts(true)      //Accept all iOS alerts automatically if they pop up.
-                .setNewCommandTimeout(Duration.ofSeconds(180))  //How long (in seconds) the driver should wait for a new command from the client before assuming the client has stopped sending requests.
-                //.setNoReset(true)       //Prevents the device to be reset before the session startup if set to true.
-                ;
+    private static XCUITestOptions getXCUITestOptions(Map<String, Object> appCapabilities) {
+        appCapabilities.putIfAbsent(MobileCapabilityType.PLATFORM_NAME, "iOS"); //optional
+        appCapabilities.putIfAbsent(MobileCapabilityType.AUTOMATION_NAME, "XCUITest"); //optional
+        appCapabilities.putIfAbsent("autoAcceptAlerts", true);     //Accept all iOS alerts automatically if they pop up.
+        appCapabilities.putIfAbsent("newCommandTimeout", 180);     //How long (in seconds) the driver should wait for a new command from the client before assuming the client has stopped sending requests.
+        appCapabilities.putIfAbsent("noReset", true);              //Prevents the device to be reset before the session startup if set to true.
+        //appCapabilities.putIfAbsent("app", appCapabilities.get("appUrl"));     //Full path to the application to be tested (Install the app if not pre-installed, not needed with AppPackage and AppActivity)
+        //appCapabilities.putIfAbsent("simulatorStartupTimeout", 1800000);    //Allows to change the default timeout for Simulator startup. By default this value is set to 120000ms (2 minutes)
+
+        XCUITestOptions options = new XCUITestOptions(appCapabilities);
+        LOG.info("XCUITestOptions options set as: " + Arrays.toString(appCapabilities.entrySet().toArray()));
+        //System.out.println("XCUITestOptions options set as: " + Arrays.toString(appCapabilities.entrySet().toArray()));
+
+        return options;
+    }
+
+    /**
+     * This method creates a Map of app capabilities loaded from application.properties and also adds the test specific properties.
+     * This map is then passed in next steps to launch the app with specified capabilities
+     * @param platformOS platform constant i.e. Android or IOS
+     * @param app App constant
+     * @param udid Test Specific Device UDID. If left as null, default udid from properties file will be loaded
+     * @return Map of app capabilities
+     */
+    public static Map<String, Object> getAppCapabilities(PlatformOS platformOS, App app, String udid) {
+        String appID = app.getId();
+        Map<String, Object> appCapabilities = getAppPropertiesAsMap(appID, platformOS);  //app specific capabilities from applications.json
+
+        String udidDevice = PropertiesManager.getDeviceUdid(udid,platformOS);           //UDID of the device to be initialzed
+        LOG.info("Device UDID: " + udidDevice);
+        appCapabilities.put("udid", udidDevice);
+
+        return appCapabilities;
     }
 
     /**
@@ -134,8 +164,8 @@ public class AppFactory {
      * @param platformOS target platform
      * @return Key,value pair of the app specific capabilities
      */
-    private static Map<String, String> getAppCapabilities(String appID, PlatformOS platformOS) {
-        Map<String, String> applicationCapabilities = new HashMap<String, String>();
+    private static Map<String, Object> getAppPropertiesAsMap(String appID, PlatformOS platformOS) {
+        Map<String, Object> applicationCapabilities = new HashMap<String, Object>();
         try {
             //Deserializing JSON to POJO
             ObjectMapper mapper = new ObjectMapper();
@@ -147,7 +177,7 @@ public class AppFactory {
             applicationCapabilities = applicationsRoot.getApplications()
                     .stream()
                     .filter(app -> app.getId().equalsIgnoreCase(appID))
-                    .map(app -> mapper.convertValue(app.getProperties(), new TypeReference<Map<String, String>>() {}))
+                    .map(app -> mapper.convertValue(app.getProperties(), new TypeReference<Map<String, Object>>() {}))
                     .findFirst().orElseThrow(() -> new RuntimeException("applications.json does not have app: " + appID));
 
             //Concatenating directory path to appUrl from applications.json
@@ -162,7 +192,7 @@ public class AppFactory {
             throw new RuntimeException("Invalid app: " + appID);
         }
 
-        LOG.info("App will be loaded with following options: " + Collections.singletonList(applicationCapabilities));
+        LOG.info("Parsed options for the app from applications.json: " + Collections.singletonList(applicationCapabilities));
         //System.out.println(Collections.singletonList(applicationCapabilities));
         return applicationCapabilities;
     }

@@ -23,14 +23,10 @@ public class PropertiesManager {
 
     /**
      * Concatenate the IP with port. If port is not specified, then default port is selected from properties file
-     * @param port appium server port
      * @return formatted string for Appium server URL e.g. http://localhost:4723
      */
-    public static String getFormattedUrl(String port) {
+    public static String getFormattedUrl() {
         Properties serverProperties = PropertyUtils.propertyLoader("src/test/resources/server.properties");
-        if (port != null && !port.isBlank()) {
-            return serverProperties.getProperty("ip") + ":" + port;
-        }
         return serverProperties.getProperty("ip") + ":" + serverProperties.getProperty("port");
     }
 

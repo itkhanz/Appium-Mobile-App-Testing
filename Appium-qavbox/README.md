@@ -7,6 +7,7 @@
 * Gestures are placed into separate utility class.
 * Original code base has been refactored and extended to improve framework structure. This enables the code repo to be
   cloned and reused for multiple frameworks since all the custom settings can be easily configured from properties file.
+* Code base is refactored to support the custom application capabilities specific to the test case.
 * [Gestures Using Appium](https://www.youtube.com/playlist?list=PLPO0LFyCaSo2X4NLeZsIwnRcq32asQiI9)
 * [Appium Gestures Plugin](https://www.youtube.com/watch?v=12Qx-jl34GI&list=PLPO0LFyCaSo1DKak8ZhEJ3NXrj2shNM0N)
 * [Appium Tutorial Series](https://www.youtube.com/playlist?list=PLPO0LFyCaSo1DKak8ZhEJ3NXrj2shNM0N)

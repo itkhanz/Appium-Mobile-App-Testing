@@ -8,12 +8,12 @@ import org.testng.annotations.BeforeTest;
 public class BaseTest {
     @BeforeTest
     public void startup() {
-        AppiumServer.start();
+        //AppiumServer.start();
     }
 
     @AfterTest(alwaysRun = true)
     public void teardown() {
         DriverManager.removeDriver();
-        AppiumServer.stop();
+        //AppiumServer.stop();
     }
 }
