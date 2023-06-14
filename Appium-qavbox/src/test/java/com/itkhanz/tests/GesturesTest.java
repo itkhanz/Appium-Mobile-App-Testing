@@ -20,11 +20,39 @@ import static com.itkhanz.utils.WaitUtils.waitForElementToBeVisible;
 
 public class GesturesTest{
 
+    //performs long press on the element which opens up new dialog box
     @Test
-    public void test_swipe_iOSContacts() {
+    public void test_longPress() {
+        AppFactory.launchApp(PlatformOS.ANDROID, App.APIDEMOS, null, null);
+
+        getDriver().findElement(AppiumBy.xpath(".//*[@text='Views']")).click();
+        getDriver().findElement(AppiumBy.xpath(".//*[@text='Expandable Lists']")).click();
+        getDriver().findElement(AppiumBy.xpath(".//*[@text='1. Custom Adapter']")).click();
+        WebElement element = getDriver().findElement(AppiumBy.xpath(".//*[@text='People Names']"));
+        longPress(element, 3);
+
+        //Alternatively you can also perform longPress using Actions class instead of sequence class
+        //new Actions(driver).clickAndHold(element).perform();
+
+        WebElement sampleMenu = getDriver().findElement(AppiumBy.xpath(".//android.widget.TextView[@text='Sample menu']"));
+        Assert.assertTrue(sampleMenu.isDisplayed());
+
+        DriverManager.removeDriver(); //not needed when class extends from BaseTest which closes the driver in after hook
+    }
+
+    @Test
+    public void test_scrollTillElement() throws InterruptedException {
         AppFactory.launchApp(PlatformOS.IOS, App.IOSCONTACTS, null, null);
 
-        scroll(DOWN, 0.3, 500);
+        //For this test, manually add some contacts just once before running the test for first time so the list becomes longer and scrollable
+        By contactLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeCell[`label == \"Olivia\"`]");
+        long timeout = 30;
+        if (scrollTillElement(contactLocator, DOWN, 0.3, 500, timeout)) {
+            WebElement contact = getDriver().findElement(contactLocator);
+            Assert.assertTrue(contact.isDisplayed());
+        } else {
+            Assert.fail("Failed to find the element after scrolling for " + timeout + " seconds");
+        }
         DriverManager.removeDriver(); //not needed when class extends from BaseTest which closes the driver in after hook
     }
 

@@ -366,3 +366,376 @@
 2023-06-14 13:15:09.722 [main] INFO  AppFactory.class - Application launched: iOSContacts
 2023-06-14 13:15:13.850 [main] INFO  DriverManager.class - Driver Session is closed
 2023-06-14 13:15:13.850 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 13:26:00.438 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 13:26:00.584 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 13:26:01.051 [main] INFO  AppFactory.class - App will be loaded with following options: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp}]
+2023-06-14 13:26:01.052 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 13:26:08.844 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 13:26:08.845 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 13:26:08.845 [main] INFO  AppFactory.class - Application launched: Wdio-NativeDemoApp-iOS
+2023-06-14 13:26:18.398 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 13:26:18.398 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 13:45:10.864 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 13:45:10.990 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 13:45:11.415 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 13:45:11.416 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 13:45:23.878 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 13:45:23.879 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 13:45:23.880 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 13:46:14.177 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 13:46:14.178 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:03:33.117 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:03:33.314 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:03:33.852 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:03:33.854 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:03:40.712 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:03:40.713 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:03:40.713 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:04:31.258 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:04:31.259 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:05:02.916 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:05:03.070 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:05:03.609 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:05:03.611 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:05:10.258 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:05:10.259 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:05:10.259 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:06:01.601 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:06:01.601 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:07:02.954 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:07:03.164 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:07:03.764 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:07:03.765 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:07:10.486 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:07:10.486 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:07:10.487 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:20:18.943 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:20:19.185 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:20:19.724 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:20:19.726 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:20:27.316 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:20:27.316 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:20:27.317 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:20:38.138 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:20:38.139 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:36:42.873 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:36:43.056 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:36:43.473 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:36:43.475 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:36:50.120 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:36:50.121 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:36:50.122 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:37:00.046 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:37:00.047 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:37:41.333 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:37:41.565 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:37:42.069 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:37:42.070 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:37:48.538 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:37:48.538 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:37:48.539 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:38:31.606 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:38:31.607 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:48:21.649 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:48:21.837 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:48:22.368 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:48:22.369 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:48:28.851 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:48:28.851 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:48:28.852 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:49:12.898 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:49:12.898 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:49:51.460 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:49:51.643 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:49:52.195 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:49:52.196 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:49:58.624 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:49:58.625 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:49:58.626 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:50:26.396 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:50:26.397 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:56:07.169 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:56:07.301 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:56:07.681 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:56:07.683 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:56:14.511 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:56:14.511 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:56:14.512 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:56:19.762 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:56:19.763 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 14:57:42.643 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 14:57:42.799 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 14:57:43.246 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 14:57:43.247 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 14:57:49.926 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 14:57:49.927 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 14:57:49.927 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 14:57:59.561 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 14:57:59.561 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:01:19.784 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:01:19.970 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:01:20.562 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:01:20.563 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:01:27.127 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:01:27.128 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:01:27.128 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:01:53.640 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:01:53.640 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:04:08.966 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:04:09.100 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:04:09.516 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:04:09.518 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:04:15.733 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:04:15.733 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:04:15.734 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:04:43.485 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:04:43.485 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:05:13.960 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:05:14.176 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:05:14.593 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:05:14.594 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:05:20.796 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:05:20.796 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:05:20.797 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:05:58.790 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:05:58.791 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:11:09.363 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:11:09.516 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:11:09.966 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:11:09.967 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:11:16.498 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:11:16.498 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:11:16.498 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:12:57.678 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:12:57.864 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:12:58.340 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:12:58.341 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:13:04.990 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:13:04.990 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:13:04.991 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:13:42.034 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:13:42.034 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:15:22.387 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:15:22.592 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:15:23.053 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:15:23.054 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:15:29.481 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:15:29.481 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:15:29.482 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:16:06.349 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:16:06.350 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:16:34.585 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:16:34.778 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:16:35.261 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:16:35.262 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:16:41.508 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:16:41.508 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:16:41.508 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:17:04.672 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:17:04.672 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:22:49.458 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:22:49.824 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:22:50.356 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:22:50.363 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:23:07.128 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:23:07.129 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:23:07.130 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:24:04.294 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:24:04.296 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:38:53.431 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:38:53.641 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:38:54.176 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:38:54.177 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:39:02.078 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:39:02.079 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:39:02.080 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:39:39.728 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:39:39.728 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:41:26.935 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:41:27.102 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:41:27.547 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:41:27.548 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:41:34.418 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:41:34.419 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:41:34.420 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:42:12.062 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:42:12.063 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:42:24.871 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:42:25.004 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:42:25.518 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:42:25.521 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:42:38.069 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:42:38.069 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:42:38.069 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:43:14.995 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:43:14.995 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:43:32.559 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:43:32.761 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:43:33.196 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:43:33.199 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:43:39.765 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:43:39.765 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:43:39.766 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:44:16.941 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:44:16.941 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:44:53.339 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:44:53.555 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:44:53.976 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:44:53.978 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:45:00.550 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:45:00.551 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:45:00.551 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:45:37.839 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:45:37.839 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:50:19.523 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:50:19.820 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:50:20.577 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:50:20.578 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:50:28.199 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:50:28.200 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:50:28.201 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:50:56.686 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:50:56.687 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:51:23.666 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:51:23.892 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:51:24.353 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:51:24.354 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:51:30.907 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:51:30.908 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:51:30.908 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:52:00.553 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:52:00.553 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:53:04.469 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:53:04.655 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:53:05.132 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:53:05.133 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:53:17.028 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:53:17.029 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:53:17.030 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:54:59.410 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:54:59.558 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:55:00.296 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:55:00.297 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:55:07.051 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:55:07.051 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:55:07.051 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:55:38.226 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:55:38.361 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:55:38.872 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:55:38.874 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:55:46.066 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:55:46.067 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:55:46.067 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:56:13.952 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:56:13.953 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 15:56:21.549 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 15:56:21.711 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 15:56:22.159 [main] INFO  AppFactory.class - App will be loaded with following options: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-14 15:56:22.159 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 15:56:29.075 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 15:56:29.075 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 15:56:29.076 [main] INFO  AppFactory.class - Application launched: iOSContacts
+2023-06-14 15:57:02.809 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 15:57:02.810 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 16:28:51.882 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 16:28:52.130 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 16:28:52.539 [main] INFO  AppFactory.class - App will be loaded with following options: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/UIKitCatalog-iphonesimulator.app, bundleId=com.example.apple-samplecode.UICatalog}]
+2023-06-14 16:28:52.540 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 16:29:00.004 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 16:29:00.005 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 16:29:00.006 [main] INFO  AppFactory.class - Application launched: UIKitCatalog
+2023-06-14 16:29:46.393 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 16:29:46.524 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 16:29:46.955 [main] INFO  AppFactory.class - App will be loaded with following options: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/UIKitCatalog-iphonesimulator.app, bundleId=com.example.apple-samplecode.UICatalog}]
+2023-06-14 16:29:46.956 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-14 16:29:53.534 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 16:29:53.535 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-14 16:29:53.535 [main] INFO  AppFactory.class - Application launched: UIKitCatalog
+2023-06-14 16:31:43.994 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 16:31:44.155 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 16:31:44.749 [main] INFO  AppFactory.class - App will be loaded with following options: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos}]
+2023-06-14 16:31:44.754 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-14 16:31:56.999 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 16:31:57.000 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-14 16:31:57.001 [main] INFO  AppFactory.class - Application launched: APIDemos
+2023-06-14 16:32:13.220 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 16:32:13.220 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-14 16:32:20.582 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-14 16:32:20.902 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-14 16:32:21.616 [main] INFO  AppFactory.class - App will be loaded with following options: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos}]
+2023-06-14 16:32:21.618 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-14 16:32:32.941 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-14 16:32:32.942 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-14 16:32:32.944 [main] INFO  AppFactory.class - Application launched: APIDemos
+2023-06-14 16:32:43.325 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-14 16:32:43.325 [main] INFO  DriverManager.class - Driver thread value is removed

@@ -87,6 +87,7 @@ public class AppFactory {
      * @return new instance of UIAutomator2Options for initializing appium driver
      */
     private static UiAutomator2Options getUiAutomator2Options(String udid, Map<String, String> appCapabilities) {
+        //TODO overload the method to add support for custom options for specific test case, and accept options as parameter
         return new UiAutomator2Options()
                 //.setPlatformName(platformOS.platformName) //optional
                 //.setAutomationName("UiAutomator2")  //optional
@@ -110,6 +111,7 @@ public class AppFactory {
      * @return new instance of XCUITestOptions for initializing appium driver
      */
     private static XCUITestOptions getXCUITestOptions(String udid, Map<String, String> appCapabilities) {
+        //TODO overload the method to add support for custom options for specific test case, and accept options as parameter
         return new XCUITestOptions()
                 //.setAutomationName("XCUITest")            //optional
                 //.setPlatformName(platformOS.platformName) //optional
