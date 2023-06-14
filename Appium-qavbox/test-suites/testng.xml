@@ -3,5 +3,6 @@
 <suite name="Appium Android and iOS tests">
     <suite-files>
         <suite-file path="testng-setup.xml"/>
+        <suite-file path="testng-gestures.xml"/>
     </suite-files>
 </suite>    <!-- Suite -->

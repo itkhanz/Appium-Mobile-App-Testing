@@ -1,471 +1,262 @@
-2023-06-13 14:42:45:266 [Appium] Attempting to load plugin element-wait...
-2023-06-13 14:42:45:268 [Appium] Requiring plugin at /Users/ibkh/.appium/node_modules/appium-wait-plugin
-2023-06-13 14:42:45:345 [Appium] Welcome to Appium v2.0.0-beta.71 (REV 552db40622bb7a82d9c6d67d2d6bcf3694b47e30)
-2023-06-13 14:42:45:346 [Appium] Non-default server args:
-2023-06-13 14:42:45:348 [Appium] { address: '127.0.0.1',
-2023-06-13 14:42:45:348 [Appium]   localTimezone: true,
-2023-06-13 14:42:45:349 [Appium]   useDrivers: [ 'uiautomator2', 'xcuitest' ],
-2023-06-13 14:42:45:349 [Appium]   usePlugins: [ 'element-wait' ] }
-2023-06-13 14:42:45:349 [Appium] Attempting to load driver uiautomator2...
-2023-06-13 14:42:45:351 [Appium] Requiring driver at /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver
-2023-06-13 14:42:46:419 [Appium] Attempting to load driver xcuitest...
-2023-06-13 14:42:46:420 [Appium] Requiring driver at /Users/ibkh/.appium/node_modules/appium-xcuitest-driver
-2023-06-13 14:42:47:500 [Appium] Appium REST http interface listener started on 127.0.0.1:4723
-2023-06-13 14:42:47:500 [Appium] Available drivers:
-2023-06-13 14:42:47:500 [Appium]   - uiautomator2@2.25.2 (automationName 'UiAutomator2')
-2023-06-13 14:42:47:500 [Appium]   - xcuitest@4.30.2 (automationName 'XCUITest')
-2023-06-13 14:42:47:501 [Appium]   - espresso@2.23.1 (automationName 'Espresso')
-2023-06-13 14:42:47:501 [Appium]   - safari@3.3.3 (automationName 'Safari')
-2023-06-13 14:42:47:501 [Appium]   - gecko@1.1.9 (automationName 'Gecko')
-2023-06-13 14:42:47:501 [Appium]   - chromium@1.1.18 (automationName 'Chromium')
-2023-06-13 14:42:47:501 [Appium] Available plugins:
-2023-06-13 14:42:47:501 [Appium]   - element-wait@1.5.0 (ACTIVE)
-2023-06-13 14:42:47:501 [Appium]   - gestures@2.0.0
-2023-06-13 14:42:47:696 [HTTP] --> GET /status
-2023-06-13 14:42:47:696 [HTTP] {}
-2023-06-13 14:42:47:697 [AppiumDriver@d178] Calling AppiumDriver.getStatus() with args: []
-2023-06-13 14:42:47:697 [AppiumDriver@d178] Plugins which can handle cmd 'getStatus': element-wait
-2023-06-13 14:42:47:698 [AppiumDriver@d178] Plugin element-wait is now handling cmd 'getStatus'
-2023-06-13 14:42:47:698 [AppiumDriver@d178] Executing default handling behavior for command 'getStatus'
-2023-06-13 14:42:47:699 [AppiumDriver@d178] Responding to client with driver.getStatus() result: {"build":{"version":"2.0.0-beta.71","git-sha":"552db40622bb7a82d9c6d67d2d6bcf3694b47e30","built":"2022-12-23 12:57:56 -0800"}}
-2023-06-13 14:42:47:703 [HTTP] <-- GET /status 200 6 ms - 136
-2023-06-13 14:42:47:704 [HTTP] 
-2023-06-13 14:42:48:772 [HTTP] Request idempotency key: 0379ee6e-3f89-4062-9e33-a0b55d114c50
-2023-06-13 14:42:48:784 [HTTP] --> POST /session
-2023-06-13 14:42:48:784 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:autoAcceptAlerts":true,"appium:automationName":"XCuiTest","appium:bundleId":"com.saucelabs.mydemoapp.rn","appium:newCommandTimeout":180,"appium:udid":"6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F","platformName":"IOS"}}}
-2023-06-13 14:42:48:784 [AppiumDriver@d178] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:autoAcceptAlerts":true,"appium:automationName":"XCuiTest","appium:bundleId":"com.saucelabs.mydemoapp.rn","appium:newCommandTimeout":180,"appium:udid":"6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F","platformName":"IOS"}}]
-2023-06-13 14:42:48:784 [AppiumDriver@d178] Plugins which can handle cmd 'createSession': element-wait
-2023-06-13 14:42:48:784 [AppiumDriver@d178] Plugin element-wait is now handling cmd 'createSession'
-2023-06-13 14:42:48:784 [AppiumDriver@d178] Executing default handling behavior for command 'createSession'
-2023-06-13 14:42:48:785 [AppiumDriver@d178] Event 'newSessionRequested' logged at 1686660168785 (14:42:48 GMT+0200 (Central European Summer Time))
-2023-06-13 14:42:48:788 [Appium] Attempting to find matching driver for automationName 'XCuiTest' and platformName 'IOS'
-2023-06-13 14:42:48:789 [Appium] The 'xcuitest' driver was installed and matched caps.
-2023-06-13 14:42:48:789 [Appium] Will require it at /Users/ibkh/.appium/node_modules/appium-xcuitest-driver
-2023-06-13 14:42:48:789 [Appium] Requiring driver at /Users/ibkh/.appium/node_modules/appium-xcuitest-driver
-2023-06-13 14:42:48:789 [AppiumDriver@d178] Appium v2.0.0-beta.71 creating new XCUITestDriver (v4.30.2) session
-2023-06-13 14:42:48:789 [AppiumDriver@d178] Checking BaseDriver versions for Appium and XCUITestDriver
-2023-06-13 14:42:48:789 [AppiumDriver@d178] Appium's BaseDriver version is 9.3.10
-2023-06-13 14:42:48:789 [AppiumDriver@d178] XCUITestDriver's BaseDriver version is 9.3.10
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52] Creating session with W3C capabilities: {
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]   "alwaysMatch": {
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]     "platformName": "IOS",
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]     "appium:autoAcceptAlerts": true,
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]     "appium:automationName": "XCuiTest",
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]     "appium:bundleId": "com.saucelabs.mydemoapp.rn",
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]     "appium:newCommandTimeout": 180,
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]     "appium:udid": "6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F"
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]   },
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]   "firstMatch": [
-2023-06-13 14:42:48:793 [XCUITestDriver@4d52]     {}
-2023-06-13 14:42:48:794 [XCUITestDriver@4d52]   ]
-2023-06-13 14:42:48:794 [XCUITestDriver@4d52] }
-2023-06-13 14:42:48:800 [XCUITestDriver@4d52] 'platformVersion' capability ('undefined') is not a valid version number. Consider fixing it or be ready to experience an inconsistent driver behavior.
-2023-06-13 14:42:48:801 [XCUITestDriver@4d52 (54bd2641)] Session created with session id: 54bd2641-30a3-488f-bee5-6b32874e4bc3
-2023-06-13 14:42:48:810 [XCUITest] Current user: 'ibkh'
-2023-06-13 14:42:48:868 [XCUITestDriver@4d52 (54bd2641)] Available devices: 
-2023-06-13 14:42:48:868 [XCUITestDriver@4d52 (54bd2641)] No real device with udid '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F'. Looking for simulator
-2023-06-13 14:43:28:260 [iOSSim] Constructing iOS simulator for Xcode version 14.3 with udid '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F'
-2023-06-13 14:43:28:261 [XCUITestDriver@4d52 (54bd2641)] Determining device to run tests on: udid: '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F', real device: false
-2023-06-13 14:43:28:529 [XCUITestDriver@4d52 (54bd2641)] No platformVersion specified. Using device version: '16.4'
-2023-06-13 14:43:28:530 [XCUITestDriver@4d52 (54bd2641)] Event 'xcodeDetailsRetrieved' logged at 1686660208530 (14:43:28 GMT+0200 (Central European Summer Time))
-2023-06-13 14:43:28:531 [XCUITestDriver@4d52 (54bd2641)] Event 'appConfigured' logged at 1686660208531 (14:43:28 GMT+0200 (Central European Summer Time))
-2023-06-13 14:43:28:532 [XCUITestDriver@4d52 (54bd2641)] Event 'resetStarted' logged at 1686660208532 (14:43:28 GMT+0200 (Central European Summer Time))
-2023-06-13 14:43:28:785 [simctl] Error running 'terminate': An error was encountered processing the command (domain=com.apple.CoreSimulator.SimError, code=405):
-Unable to lookup in current state: Shutdown
-2023-06-13 14:43:28:786 [XCUITest] Reset: failed to terminate Simulator application with id "com.saucelabs.mydemoapp.rn"
-2023-06-13 14:43:29:029 [simctl] Error running 'get_app_container': An error was encountered processing the command (domain=com.apple.CoreSimulator.SimError, code=405):
-Unable to lookup in current state: Shutdown
-2023-06-13 14:43:29:030 [XCUITest] Error: Command '/usr/bin/xcrun simctl get_app_container 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F com.saucelabs.mydemoapp.rn data' exited with code 149
-2023-06-13 14:43:29:030 [XCUITest]     at ChildProcess.<anonymous> (/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/teen_process/lib/exec.js:129:19)
-2023-06-13 14:43:29:030 [XCUITest]     at ChildProcess.emit (node:events:513:28)
-2023-06-13 14:43:29:030 [XCUITest]     at maybeClose (node:internal/child_process:1091:16)
-2023-06-13 14:43:29:030 [XCUITest]     at Socket.<anonymous> (node:internal/child_process:449:11)
-2023-06-13 14:43:29:030 [XCUITest]     at Socket.emit (node:events:513:28)
-2023-06-13 14:43:29:030 [XCUITest]     at Pipe.<anonymous> (node:net:322:12)
-2023-06-13 14:43:29:030 [XCUITest] Error running 'get_app_container': An error was encountered processing the command (domain=com.apple.CoreSimulator.SimError, code=405):
-2023-06-13 14:43:29:031 [XCUITest] Unable to lookup in current state: Shutdown
-2023-06-13 14:43:29:031 [XCUITest] Reset: could not scrub application with id "com.saucelabs.mydemoapp.rn". Leaving as is.
-2023-06-13 14:43:29:031 [XCUITestDriver@4d52 (54bd2641)] Event 'resetComplete' logged at 1686660209031 (14:43:29 GMT+0200 (Central European Summer Time))
-2023-06-13 14:43:29:032 [XCUITestDriver@4d52 (54bd2641)] Using WDA path: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent'
-2023-06-13 14:43:29:032 [XCUITestDriver@4d52 (54bd2641)] Using WDA agent: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
-2023-06-13 14:43:29:372 [XCUITest] Continuing without capturing device logs: iOS Simulator with udid '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' is not running
-2023-06-13 14:43:29:372 [XCUITestDriver@4d52 (54bd2641)] Setting up simulator
-2023-06-13 14:43:29:373 [iOSSim] Setting preferences of 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F Simulator to {"ConnectHardwareKeyboard":false}
-2023-06-13 14:43:29:374 [iOSSim] Setting common Simulator preferences to {"RotateWindowWhenSignaledByGuest":true,"StartLastDeviceOnLaunch":false,"DetachOnWindowClose":false,"AttachBootedOnStart":true,"ConnectHardwareKeyboard":false,"PasteboardAutomaticSync":false}
-2023-06-13 14:43:30:170 [iOSSim] Updated 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F Simulator preferences at '/Users/ibkh/Library/Preferences/com.apple.iphonesimulator.plist' with {"RotateWindowWhenSignaledByGuest":true,"StartLastDeviceOnLaunch":false,"DetachOnWindowClose":false,"AttachBootedOnStart":true,"ConnectHardwareKeyboard":false,"PasteboardAutomaticSync":false,"DevicePreferences":{"6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F":{"ConnectHardwareKeyboard":false,"SimulatorExternalDisplay":2114,"ChromeTint":"","SimulatorWindowGeometry":{"2BA915AB-EE56-498D-990D-4C20E79F0734":{"WindowCenter":"{1386.5, 546.5}","WindowScale":0.9977477477477478},"006487F4-269F-481B-BE46-0E12B79585EF":{"WindowCenter":"{1386.5, 544.5}","WindowScale":0.9977477477477478}},"SimulatorWindowOrientation":"Portrait","SimulatorWindowRotationAngle":0}}}
-2023-06-13 14:43:30:525 [iOSSim] Starting Simulator UI: open -Fn /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
-2023-06-13 14:43:43:521 [XCUITestDriver@4d52 (54bd2641)] Parsed BUILD_DIR configuration value: '/Users/ibkh/Library/Developer/Xcode/DerivedData/WebDriverAgent-cmloeqhuqbaydofbwmkqjkvbyjnx/Build/Products'
-2023-06-13 14:43:43:521 [XCUITestDriver@4d52 (54bd2641)] Got derived data root: '/Users/ibkh/Library/Developer/Xcode/DerivedData/WebDriverAgent-cmloeqhuqbaydofbwmkqjkvbyjnx'
-2023-06-13 14:45:23:055 [iOSSim] Simulator with UDID 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F booted in 112.867s
-2023-06-13 14:45:23:107 [XCUITestDriver@4d52 (54bd2641)] Event 'simStarted' logged at 1686660323106 (14:45:23 GMT+0200 (Central European Summer Time))
-2023-06-13 14:45:24:713 [IOSSimulatorLog] Starting log capture for iOS Simulator with udid '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' using simctl
-2023-06-13 14:45:25:362 [XCUITestDriver@4d52 (54bd2641)] Event 'logCaptureStarted' logged at 1686660325362 (14:45:25 GMT+0200 (Central European Summer Time))
-2023-06-13 14:45:25:867 [XCUITestDriver@4d52 (54bd2641)] No obsolete cached processes from previous WDA sessions listening on port 8100 have been found
-2023-06-13 14:45:25:868 [DevCon Factory] Requesting connection for device 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F on local port 8100
-2023-06-13 14:45:25:868 [DevCon Factory] Cached connections count: 0
-2023-06-13 14:45:25:868 [DevCon Factory] Successfully requested the connection for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100
-2023-06-13 14:45:25:872 [XCUITestDriver@4d52 (54bd2641)] Starting WebDriverAgent initialization with the synchronization key 'XCUITestDriver'
-2023-06-13 14:45:25:876 [WD Proxy] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:25:878 [WD Proxy] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:25:902 [WD Proxy] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:25:904 [XCUITestDriver@4d52 (54bd2641)] WDA is not listening at 'http://127.0.0.1:8100/'
-2023-06-13 14:45:25:905 [XCUITestDriver@4d52 (54bd2641)] WDA is currently not running. There is nothing to cache
-2023-06-13 14:45:25:905 [XCUITestDriver@4d52 (54bd2641)] Trying to start WebDriverAgent 2 times with 10000ms interval
-2023-06-13 14:45:25:905 [XCUITestDriver@4d52 (54bd2641)] These values can be customized by changing wdaStartupRetries/wdaStartupRetryInterval capabilities
-2023-06-13 14:45:25:905 [XCUITestDriver@4d52 (54bd2641)] Event 'wdaStartAttempted' logged at 1686660325905 (14:45:25 GMT+0200 (Central European Summer Time))
-2023-06-13 14:45:25:905 [XCUITestDriver@4d52 (54bd2641)] Launching WebDriverAgent on the device
-2023-06-13 14:45:25:913 [XCUITestDriver@4d52 (54bd2641)] There is no need to perform the project cleanup. A fresh install has been detected
-2023-06-13 14:45:25:914 [XCUITestDriver@4d52 (54bd2641)] The actual module version cannot be persisted: box.createItemWithContents is not a function
-2023-06-13 14:45:25:914 [WebDriverAgent] Killing running processes 'xcodebuild.*6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F.*XCTRunner, xctest.*6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' for the device 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F...
-2023-06-13 14:45:26:004 [WebDriverAgent] 'pgrep -if 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F.*XCTRunner' didn't detect any matching processes. Return code: 1
-2023-06-13 14:45:26:008 [WebDriverAgent] 'pgrep -if xcodebuild.*6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' didn't detect any matching processes. Return code: 1
-2023-06-13 14:45:26:008 [WebDriverAgent] 'pgrep -if xctest.*6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' didn't detect any matching processes. Return code: 1
-2023-06-13 14:45:26:009 [XCUITestDriver@4d52 (54bd2641)] Beginning test with command 'xcodebuild build-for-testing test-without-building -project /Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -derivedDataPath /Users/ibkh/Library/Developer/Xcode/DerivedData/WebDriverAgent-cmloeqhuqbaydofbwmkqjkvbyjnx -destination id=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F IPHONEOS_DEPLOYMENT_TARGET=16.4 GCC_TREAT_WARNINGS_AS_ERRORS=0 COMPILER_INDEX_STORE_ENABLE=NO' in directory '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent'
-2023-06-13 14:45:26:010 [XCUITestDriver@4d52 (54bd2641)] Output from xcodebuild will only be logged if any errors are present there. To change this, use 'showXcodeLog' desired capability
-2023-06-13 14:45:30:598 [XCUITestDriver@4d52 (54bd2641)] Waiting up to 60000ms for WebDriverAgent to start
-2023-06-13 14:45:30:599 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:30:599 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:30:601 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:31:603 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:31:603 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:31:605 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:32:606 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:32:606 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:32:608 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:33:608 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:33:609 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:33:612 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:34:614 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:34:614 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:34:617 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:35:618 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:35:619 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:35:620 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:36:621 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:36:621 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:36:623 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:37:623 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:37:623 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:37:628 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:38:628 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:38:628 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:38:630 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:39:631 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:39:631 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:39:634 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:40:634 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:40:634 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:40:636 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:41:638 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:41:638 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:41:645 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:42:647 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:42:647 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:42:649 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:43:649 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:43:650 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:43:651 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:44:651 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:44:651 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:44:653 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:45:654 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:45:654 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:45:655 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:46:656 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:46:656 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:46:658 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:47:659 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:47:660 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:47:662 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:48:663 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:48:663 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:48:664 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:49:665 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:49:665 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:49:668 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:50:669 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:50:670 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:50:672 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:51:672 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:51:672 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:51:673 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:52:674 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:52:675 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:52:678 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:53:681 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:53:681 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:53:682 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:54:683 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:54:683 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:54:684 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:55:685 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:55:685 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:55:686 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:56:687 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:56:687 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:56:690 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:57:691 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:57:692 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:57:693 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:58:695 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:58:695 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:58:697 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:45:59:698 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:45:59:698 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:45:59:699 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:00:700 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:00:700 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:00:701 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:01:702 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:01:703 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:01:704 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:02:706 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:02:706 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:02:708 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:03:708 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:03:709 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:03:710 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:04:710 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:04:710 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:04:714 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:05:715 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:05:716 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:05:720 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:06:721 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:06:721 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:06:722 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:07:723 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:07:723 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:07:724 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:08:725 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:08:726 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:08:727 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:09:729 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:09:729 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:09:730 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:10:730 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:10:730 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:10:732 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:11:732 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:11:732 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:11:734 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:12:734 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:12:734 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:12:736 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:13:736 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:13:736 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:13:737 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:14:739 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:14:739 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:14:741 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:15:742 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:15:742 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:15:743 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:16:744 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:16:745 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:16:746 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:17:746 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:17:747 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:17:749 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:18:750 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:18:750 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:18:751 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:19:751 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:19:752 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:19:753 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:20:754 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:20:754 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:20:756 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:21:756 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:21:757 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:21:761 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:22:762 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:22:762 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:22:763 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:23:763 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:23:764 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:23:766 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:24:766 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:24:767 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:24:768 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:25:769 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:25:769 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:25:770 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:26:770 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:26:770 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:26:772 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:27:772 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:27:773 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:27:773 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:28:774 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:28:775 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:28:776 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:29:778 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:29:778 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:29:779 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:30:780 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:30:780 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:30:781 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:31:781 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:31:781 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:31:782 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:32:782 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:32:783 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:32:784 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:33:785 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:33:785 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:33:786 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:34:787 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:34:787 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:34:788 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:35:788 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:35:788 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:35:789 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:36:789 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:36:790 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:36:791 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:37:791 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:37:791 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:37:792 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:38:793 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:38:794 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:38:795 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:39:795 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:39:796 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:39:797 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:40:797 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:40:798 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:40:799 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:41:800 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:41:801 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:41:802 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:42:803 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:42:803 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:42:804 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:43:804 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:43:804 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:43:807 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:44:807 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:44:808 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:44:809 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:45:809 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:45:809 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:45:811 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:46:811 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:46:811 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:46:812 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:47:812 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:47:813 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:47:814 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:48:814 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:48:814 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:48:816 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:49:816 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:49:817 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:49:820 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:50:822 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:50:822 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:50:823 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:51:823 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:51:824 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:51:825 [XCUITestDriver@4d52 (54bd2641)] connect ECONNREFUSED 127.0.0.1:8100
-2023-06-13 14:46:52:826 [XCUITestDriver@4d52 (54bd2641)] Matched '/status' to command name 'getStatus'
-2023-06-13 14:46:52:826 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /status] to [GET http://127.0.0.1:8100/status] with no body
-2023-06-13 14:46:52:841 [XCUITestDriver@4d52 (54bd2641)] Got response with status 200: {"value":{"message":"WebDriverAgent is ready to accept commands","state":"success","os":{"testmanagerdVersion":28,"name":"iOS","sdkVersion":"16.4","version":"16.4"},"ios":{"simulatorVersion":"16.4","ip":"192.168.0.105"},"ready":true,"build":{"upgradedAt":"1685706987875","time":"Jun 12 2023 00:31:29","productBundleIdentifier":"com.facebook.WebDriverAgentRunner"}},"sessionId":null}
-2023-06-13 14:46:52:841 [XCUITestDriver@4d52 (54bd2641)] WebDriverAgent information:
-2023-06-13 14:46:52:841 [XCUITestDriver@4d52 (54bd2641)] {
-2023-06-13 14:46:52:841 [XCUITestDriver@4d52 (54bd2641)]   "message": "WebDriverAgent is ready to accept commands",
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]   "state": "success",
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]   "os": {
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "testmanagerdVersion": 28,
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "name": "iOS",
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "sdkVersion": "16.4",
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "version": "16.4"
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]   },
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]   "ios": {
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "simulatorVersion": "16.4",
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "ip": "192.168.0.105"
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]   },
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]   "ready": true,
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]   "build": {
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "upgradedAt": "1685706987875",
-2023-06-13 14:46:52:842 [XCUITestDriver@4d52 (54bd2641)]     "time": "Jun 12 2023 00:31:29",
-2023-06-13 14:46:52:843 [XCUITestDriver@4d52 (54bd2641)]     "productBundleIdentifier": "com.facebook.WebDriverAgentRunner"
-2023-06-13 14:46:52:843 [XCUITestDriver@4d52 (54bd2641)]   }
-2023-06-13 14:46:52:843 [XCUITestDriver@4d52 (54bd2641)] }
-2023-06-13 14:46:52:843 [XCUITestDriver@4d52 (54bd2641)] WebDriverAgent successfully started after 86832ms
-2023-06-13 14:46:52:844 [XCUITestDriver@4d52 (54bd2641)] Event 'wdaSessionAttempted' logged at 1686660412844 (14:46:52 GMT+0200 (Central European Summer Time))
-2023-06-13 14:46:52:844 [XCUITestDriver@4d52 (54bd2641)] Sending createSession command to WDA
-2023-06-13 14:46:52:846 [XCUITestDriver@4d52 (54bd2641)] Matched '/session' to command name 'createSession'
-2023-06-13 14:46:52:848 [XCUITestDriver@4d52 (54bd2641)] Proxying [POST /session] to [POST http://127.0.0.1:8100/session] with body: {"capabilities":{"firstMatch":[{"bundleId":"com.saucelabs.mydemoapp.rn","arguments":[],"environment":{},"eventloopIdleDelaySec":0,"shouldWaitForQuiescence":true,"shouldUseTestManagerForVisibilityDetection":false,"maxTypingFrequency":60,"shouldUseSingletonTestManager":true,"shouldTerminateApp":true,"forceAppLaunch":true,"useNativeCachingStrategy":true,"forceSimulatorSoftwareKeyboardPresence":true,"defaultAlertAction":"accept"}],"alwaysMatch":{}}}
-2023-06-13 14:46:59:605 [XCUITestDriver@4d52 (54bd2641)] Got response with status 200: {"value":{"sessionId":"3A0E8286-871C-4B43-9EA4-0306C8AC8ECB","capabilities":{"device":"iphone","browserName":"My Demo App","sdkVersion":"16.4","CFBundleIdentifier":"com.saucelabs.mydemoapp.rn"}},"sessionId":"3A0E8286-871C-4B43-9EA4-0306C8AC8ECB"}
-2023-06-13 14:46:59:605 [XCUITestDriver@4d52 (54bd2641)] Determined the downstream protocol as 'W3C'
-2023-06-13 14:46:59:605 [XCUITestDriver@4d52 (54bd2641)] Event 'wdaSessionStarted' logged at 1686660419605 (14:46:59 GMT+0200 (Central European Summer Time))
-2023-06-13 14:46:59:606 [XCUITestDriver@4d52 (54bd2641)] Event 'wdaStarted' logged at 1686660419606 (14:46:59 GMT+0200 (Central European Summer Time))
-2023-06-13 14:46:59:607 [BaseDriver] The value of 'elementResponseAttributes' setting did not change. Skipping the update for it
-2023-06-13 14:46:59:607 [BaseDriver] The value of 'shouldUseCompactResponses' setting did not change. Skipping the update for it
-2023-06-13 14:46:59:609 [AppiumDriver@d178] New XCUITestDriver session created successfully, session 54bd2641-30a3-488f-bee5-6b32874e4bc3 added to master session list
-2023-06-13 14:46:59:610 [AppiumDriver@d178] Event 'newSessionStarted' logged at 1686660419610 (14:46:59 GMT+0200 (Central European Summer Time))
-2023-06-13 14:46:59:610 [AppiumDriver@d178] Promoting 1 sessionless plugins to be attached to session ID 54bd2641-30a3-488f-bee5-6b32874e4bc3
-2023-06-13 14:46:59:610 [XCUITestDriver@4d52 (54bd2641)] Cached the protocol value 'W3C' for the new session 54bd2641-30a3-488f-bee5-6b32874e4bc3
-2023-06-13 14:46:59:611 [XCUITestDriver@4d52 (54bd2641)] Responding to client with driver.createSession() result: {"capabilities":{"webStorageEnabled":false,"locationContextEnabled":false,"browserName":"","platform":"MAC","javascriptEnabled":true,"databaseEnabled":false,"takesScreenshot":true,"networkConnectionEnabled":false,"platformName":"IOS","autoAcceptAlerts":true,"automationName":"XCuiTest","bundleId":"com.saucelabs.mydemoapp.rn","newCommandTimeout":180,"udid":"6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F"}}
-2023-06-13 14:46:59:635 [HTTP] <-- POST /session 200 250846 ms - 458
-2023-06-13 14:46:59:635 [HTTP] 
-2023-06-13 14:47:00:075 [HTTP] --> POST /session/54bd2641-30a3-488f-bee5-6b32874e4bc3/element
-2023-06-13 14:47:00:075 [HTTP] {"using":"-ios class chain","value":"**/XCUIElementTypeStaticText[`label == \"Products\"`]"}
-2023-06-13 14:47:00:081 [XCUITestDriver@4d52 (54bd2641)] Calling AppiumDriver.findElement() with args: ["-ios class chain","**/XCUIElementTypeStaticText[`label == \"Products\"`]","54bd2641-30a3-488f-bee5-6b32874e4bc3"]
-2023-06-13 14:47:00:082 [AppiumDriver@d178] Plugins which can handle cmd 'findElement': element-wait
-2023-06-13 14:47:00:082 [AppiumDriver@d178] Plugin element-wait is now handling cmd 'findElement'
-2023-06-13 14:47:00:083 [wait-plugin] Timeout properties not set for session 54bd2641-30a3-488f-bee5-6b32874e4bc3, trying to set one
-2023-06-13 14:47:00:083 [wait-plugin] Timeout properties set for session 54bd2641-30a3-488f-bee5-6b32874e4bc3 is {"timeout":10000,"intervalBetweenAttempts":500,"overrideTimeout":false} ms
-2023-06-13 14:47:00:094 [AppiumDriver@d178] Executing default handling behavior for command 'findElement'
-2023-06-13 14:47:00:095 [XCUITestDriver@4d52 (54bd2641)] Executing command 'findElement'
-2023-06-13 14:47:00:095 [XCUITestDriver@4d52 (54bd2641)] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id, css selector
-2023-06-13 14:47:00:096 [XCUITestDriver@4d52 (54bd2641)] Waiting up to 0 ms for condition
-2023-06-13 14:47:00:098 [XCUITestDriver@4d52 (54bd2641)] Matched '/element' to command name 'findElement'
-2023-06-13 14:47:00:098 [XCUITestDriver@4d52 (54bd2641)] Proxying [POST /element] to [POST http://127.0.0.1:8100/session/3A0E8286-871C-4B43-9EA4-0306C8AC8ECB/element] with body: {"using":"class chain","value":"**/XCUIElementTypeStaticText[`label == \"Products\"`]"}
-2023-06-13 14:47:00:735 [XCUITestDriver@4d52 (54bd2641)] Got response with status 200: {"value":{"ELEMENT":"5A000000-0000-0000-3975-000000000000","element-6066-11e4-a52e-4f735466cecf":"5A000000-0000-0000-3975-000000000000"},"sessionId":"3A0E8286-871C-4B43-9EA4-0306C8AC8ECB"}
-2023-06-13 14:47:00:735 [XCUITestDriver@4d52 (54bd2641)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"5A000000-0000-0000-3975-000000000000","ELEMENT":"5A000000-0000-0000-3975-000000000000"}
-2023-06-13 14:47:00:736 [HTTP] <-- POST /session/54bd2641-30a3-488f-bee5-6b32874e4bc3/element 200 660 ms - 137
-2023-06-13 14:47:00:736 [HTTP] 
-2023-06-13 14:47:00:750 [HTTP] --> GET /session/54bd2641-30a3-488f-bee5-6b32874e4bc3/element/5A000000-0000-0000-3975-000000000000/text
-2023-06-13 14:47:00:750 [HTTP] {}
-2023-06-13 14:47:00:751 [XCUITestDriver@4d52 (54bd2641)] Would have proxied command directly, but a plugin exists which might require its value, so will let its value be collected internally and made part of plugin chain
-2023-06-13 14:47:00:752 [XCUITestDriver@4d52 (54bd2641)] Calling AppiumDriver.getText() with args: ["5A000000-0000-0000-3975-000000000000","54bd2641-30a3-488f-bee5-6b32874e4bc3"]
-2023-06-13 14:47:00:752 [AppiumDriver@d178] Plugins which can handle cmd 'getText': element-wait
-2023-06-13 14:47:00:752 [AppiumDriver@d178] Plugin element-wait is now handling cmd 'getText'
-2023-06-13 14:47:00:752 [AppiumDriver@d178] Executing default handling behavior for command 'getText'
-2023-06-13 14:47:00:753 [XCUITestDriver@4d52 (54bd2641)] Matched '/session/54bd2641-30a3-488f-bee5-6b32874e4bc3/element/5A000000-0000-0000-3975-000000000000/text' to command name 'getText'
-2023-06-13 14:47:00:753 [XCUITestDriver@4d52 (54bd2641)] Proxying [GET /session/54bd2641-30a3-488f-bee5-6b32874e4bc3/element/5A000000-0000-0000-3975-000000000000/text] to [GET http://127.0.0.1:8100/session/3A0E8286-871C-4B43-9EA4-0306C8AC8ECB/element/5A000000-0000-0000-3975-000000000000/text] with no body
-2023-06-13 14:47:00:987 [XCUITestDriver@4d52 (54bd2641)] Got response with status 200: {"value":"Products","sessionId":"3A0E8286-871C-4B43-9EA4-0306C8AC8ECB"}
-2023-06-13 14:47:00:987 [XCUITestDriver@4d52 (54bd2641)] Responding to client with driver.getText() result: "Products"
-2023-06-13 14:47:00:989 [HTTP] <-- GET /session/54bd2641-30a3-488f-bee5-6b32874e4bc3/element/5A000000-0000-0000-3975-000000000000/text 200 238 ms - 20
-2023-06-13 14:47:00:989 [HTTP] 
-2023-06-13 14:47:00:999 [HTTP] --> DELETE /session/54bd2641-30a3-488f-bee5-6b32874e4bc3
-2023-06-13 14:47:01:000 [HTTP] {}
-2023-06-13 14:47:01:000 [XCUITestDriver@4d52 (54bd2641)] Calling AppiumDriver.deleteSession() with args: ["54bd2641-30a3-488f-bee5-6b32874e4bc3"]
-2023-06-13 14:47:01:000 [AppiumDriver@d178] Plugins which can handle cmd 'deleteSession': element-wait
-2023-06-13 14:47:01:000 [AppiumDriver@d178] Plugin element-wait is now handling cmd 'deleteSession'
-2023-06-13 14:47:01:000 [AppiumDriver@d178] Executing default handling behavior for command 'deleteSession'
-2023-06-13 14:47:01:001 [AppiumDriver@d178] Event 'quitSessionRequested' logged at 1686660421000 (14:47:01 GMT+0200 (Central European Summer Time))
-2023-06-13 14:47:01:001 [AppiumDriver@d178] Removing session 54bd2641-30a3-488f-bee5-6b32874e4bc3 from our master session list
-2023-06-13 14:47:01:002 [XCUITestDriver@4d52 (54bd2641)] Matched '/session/54bd2641-30a3-488f-bee5-6b32874e4bc3' to command name 'deleteSession'
-2023-06-13 14:47:01:002 [XCUITestDriver@4d52 (54bd2641)] Proxying [DELETE /session/54bd2641-30a3-488f-bee5-6b32874e4bc3] to [DELETE http://127.0.0.1:8100/session/3A0E8286-871C-4B43-9EA4-0306C8AC8ECB] with no body
-2023-06-13 14:47:03:066 [XCUITestDriver@4d52 (54bd2641)] Got response with status 200: {"value":null,"sessionId":null}
-2023-06-13 14:47:03:066 [DevCon Factory] Releasing connections for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F device on any port number
-2023-06-13 14:47:03:066 [DevCon Factory] Found cached connections to release: ["6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100"]
-2023-06-13 14:47:03:067 [DevCon Factory] Cached connections count: 0
-2023-06-13 14:47:03:067 [XCUITestDriver@4d52 (54bd2641)] Not clearing log files. Use `clearSystemFiles` capability to turn on.
-2023-06-13 14:47:03:067 [IOSSimulatorLog] Stopping iOS log capture
-2023-06-13 14:47:03:077 [AppiumDriver@d178] Event 'quitSessionFinished' logged at 1686660423077 (14:47:03 GMT+0200 (Central European Summer Time))
-2023-06-13 14:47:03:077 [AppiumDriver@d178] Received response: null
-2023-06-13 14:47:03:077 [AppiumDriver@d178] But deleting session, so not returning
-2023-06-13 14:47:03:077 [AppiumDriver@d178] Responding to client with driver.deleteSession() result: null
-2023-06-13 14:47:03:078 [HTTP] <-- DELETE /session/54bd2641-30a3-488f-bee5-6b32874e4bc3 200 2078 ms - 14
-2023-06-13 14:47:03:078 [HTTP] 
-2023-06-13 14:47:03:116 [Appium] Received SIGTERM - shutting down
-2023-06-13 14:47:03:116 [AppiumDriver@d178] There are no active sessions for cleanup
-2023-06-13 14:47:03:126 uncaughtException: write EPIPE
+2023-06-13 15:03:48:151 [Appium] Attempting to load plugin element-wait...
+2023-06-13 15:03:48:153 [Appium] Requiring plugin at /Users/ibkh/.appium/node_modules/appium-wait-plugin
+2023-06-13 15:03:48:258 [Appium] Welcome to Appium v2.0.0-beta.71 (REV 552db40622bb7a82d9c6d67d2d6bcf3694b47e30)
+2023-06-13 15:03:48:260 [Appium] Non-default server args:
+2023-06-13 15:03:48:262 [Appium] { address: '127.0.0.1',
+2023-06-13 15:03:48:262 [Appium]   localTimezone: true,
+2023-06-13 15:03:48:262 [Appium]   useDrivers: [ 'uiautomator2', 'xcuitest' ],
+2023-06-13 15:03:48:263 [Appium]   usePlugins: [ 'element-wait' ] }
+2023-06-13 15:03:48:263 [Appium] Attempting to load driver uiautomator2...
+2023-06-13 15:03:48:264 [Appium] Requiring driver at /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver
+2023-06-13 15:03:50:948 [Appium] Attempting to load driver xcuitest...
+2023-06-13 15:03:50:950 [Appium] Requiring driver at /Users/ibkh/.appium/node_modules/appium-xcuitest-driver
+2023-06-13 15:03:55:160 [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2023-06-13 15:03:55:160 [Appium] Available drivers:
+2023-06-13 15:03:55:160 [Appium]   - uiautomator2@2.25.2 (automationName 'UiAutomator2')
+2023-06-13 15:03:55:160 [Appium]   - xcuitest@4.30.2 (automationName 'XCUITest')
+2023-06-13 15:03:55:161 [Appium]   - espresso@2.23.1 (automationName 'Espresso')
+2023-06-13 15:03:55:161 [Appium]   - safari@3.3.3 (automationName 'Safari')
+2023-06-13 15:03:55:161 [Appium]   - gecko@1.1.9 (automationName 'Gecko')
+2023-06-13 15:03:55:161 [Appium]   - chromium@1.1.18 (automationName 'Chromium')
+2023-06-13 15:03:55:161 [Appium] Available plugins:
+2023-06-13 15:03:55:161 [Appium]   - element-wait@1.5.0 (ACTIVE)
+2023-06-13 15:03:55:161 [Appium]   - gestures@2.0.0
+2023-06-13 15:03:55:225 [HTTP] --> GET /status
+2023-06-13 15:03:55:225 [HTTP] {}
+2023-06-13 15:03:55:226 [AppiumDriver@2d82] Calling AppiumDriver.getStatus() with args: []
+2023-06-13 15:03:55:227 [AppiumDriver@2d82] Plugins which can handle cmd 'getStatus': element-wait
+2023-06-13 15:03:55:227 [AppiumDriver@2d82] Plugin element-wait is now handling cmd 'getStatus'
+2023-06-13 15:03:55:227 [AppiumDriver@2d82] Executing default handling behavior for command 'getStatus'
+2023-06-13 15:03:55:228 [AppiumDriver@2d82] Responding to client with driver.getStatus() result: {"build":{"version":"2.0.0-beta.71","git-sha":"552db40622bb7a82d9c6d67d2d6bcf3694b47e30","built":"2022-12-23 12:57:56 -0800"}}
+2023-06-13 15:03:55:242 [HTTP] <-- GET /status 200 8 ms - 136
+2023-06-13 15:03:55:243 [HTTP] 
+2023-06-13 15:03:56:735 [HTTP] Request idempotency key: 19b0bd1f-393d-482a-afb1-9d896e1c9a5b
+2023-06-13 15:03:56:751 [HTTP] --> POST /session
+2023-06-13 15:03:56:751 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appium:appPackage":"com.saucelabs.mydemoapp.rn","appium:autoGrantPermissions":true,"appium:automationName":"UIAutomator2","appium:newCommandTimeout":180,"appium:udid":"emulator-5554","platformName":"ANDROID"}}}
+2023-06-13 15:03:56:751 [AppiumDriver@2d82] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appium:appPackage":"com.saucelabs.mydemoapp.rn","appium:autoGrantPermissions":true,"appium:automationName":"UIAutomator2","appium:newCommandTimeout":180,"appium:udid":"emulator-5554","platformName":"ANDROID"}}]
+2023-06-13 15:03:56:751 [AppiumDriver@2d82] Plugins which can handle cmd 'createSession': element-wait
+2023-06-13 15:03:56:752 [AppiumDriver@2d82] Plugin element-wait is now handling cmd 'createSession'
+2023-06-13 15:03:56:752 [AppiumDriver@2d82] Executing default handling behavior for command 'createSession'
+2023-06-13 15:03:56:752 [AppiumDriver@2d82] Event 'newSessionRequested' logged at 1686661436752 (15:03:56 GMT+0200 (Central European Summer Time))
+2023-06-13 15:03:56:755 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2023-06-13 15:03:56:755 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-06-13 15:03:56:755 [Appium] Will require it at /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver
+2023-06-13 15:03:56:756 [Appium] Requiring driver at /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver
+2023-06-13 15:03:56:756 [AppiumDriver@2d82] Appium v2.0.0-beta.71 creating new AndroidUiautomator2Driver (v2.25.2) session
+2023-06-13 15:03:56:756 [AppiumDriver@2d82] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-06-13 15:03:56:756 [AppiumDriver@2d82] Appium's BaseDriver version is 9.3.10
+2023-06-13 15:03:56:756 [AppiumDriver@2d82] AndroidUiautomator2Driver's BaseDriver version is 9.3.10
+2023-06-13 15:03:56:758 [AndroidUiautomator2Driver@031f] Creating session with W3C capabilities: {
+2023-06-13 15:03:56:758 [AndroidUiautomator2Driver@031f]   "alwaysMatch": {
+2023-06-13 15:03:56:758 [AndroidUiautomator2Driver@031f]     "platformName": "ANDROID",
+2023-06-13 15:03:56:758 [AndroidUiautomator2Driver@031f]     "appium:appActivity": "com.saucelabs.mydemoapp.rn.MainActivity",
+2023-06-13 15:03:56:758 [AndroidUiautomator2Driver@031f]     "appium:appPackage": "com.saucelabs.mydemoapp.rn",
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]     "appium:autoGrantPermissions": true,
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]     "appium:automationName": "UIAutomator2",
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]     "appium:newCommandTimeout": 180,
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]     "appium:udid": "emulator-5554"
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]   },
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]   "firstMatch": [
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]     {}
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f]   ]
+2023-06-13 15:03:56:759 [AndroidUiautomator2Driver@031f] }
+2023-06-13 15:03:56:765 [AndroidUiautomator2Driver@031f (10d9611f)] Session created with session id: 10d9611f-2bc3-4d2c-8965-d72bd0ede2ff
+2023-06-13 15:03:56:766 [AndroidUiautomator2Driver@031f (10d9611f)] Starting 'com.saucelabs.mydemoapp.rn' directly on the device
+2023-06-13 15:03:56:774 [ADB] Found 2 'build-tools' folders under '/Users/ibkh/Library/Android/sdk' (newest first):
+2023-06-13 15:03:56:774 [ADB]     /Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4
+2023-06-13 15:03:56:774 [ADB]     /Users/ibkh/Library/Android/sdk/build-tools/33.0.2
+2023-06-13 15:03:56:775 [ADB] Using 'adb' from '/Users/ibkh/Library/Android/sdk/platform-tools/adb'
+2023-06-13 15:03:56:775 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-06-13 15:03:57:234 [AndroidDriver] Retrieving device list
+2023-06-13 15:03:57:235 [ADB] Trying to find a connected android device
+2023-06-13 15:03:57:235 [ADB] Getting connected devices
+2023-06-13 15:03:57:258 [ADB] Connected devices: [{"udid":"emulator-5554","state":"device"}]
+2023-06-13 15:03:57:258 [AndroidDriver] Using device: emulator-5554
+2023-06-13 15:03:57:259 [ADB] Using 'adb' from '/Users/ibkh/Library/Android/sdk/platform-tools/adb'
+2023-06-13 15:03:57:259 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+2023-06-13 15:03:57:281 [ADB] Setting device id to emulator-5554
+2023-06-13 15:03:57:281 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+2023-06-13 15:03:57:340 [ADB] Current device property 'ro.build.version.sdk': 33
+2023-06-13 15:03:57:340 [ADB] Getting device platform version
+2023-06-13 15:03:57:341 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+2023-06-13 15:03:57:388 [ADB] Current device property 'ro.build.version.release': 13
+2023-06-13 15:03:57:388 [ADB] Device API level: 33
+2023-06-13 15:03:57:388 [AndroidUiautomator2Driver@031f (10d9611f)] Relaxing hidden api policy
+2023-06-13 15:03:57:389 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+2023-06-13 15:03:57:512 [AndroidDriver] No app sent in, not parsing package/activity
+2023-06-13 15:03:57:513 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+2023-06-13 15:03:57:545 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+2023-06-13 15:03:57:578 [AndroidDriver] Pushing settings apk to device...
+2023-06-13 15:03:57:579 [ADB] Getting install status for io.appium.settings
+2023-06-13 15:03:57:579 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-06-13 15:03:57:634 [ADB] 'io.appium.settings' is installed
+2023-06-13 15:03:57:634 [ADB] Getting package info for 'io.appium.settings'
+2023-06-13 15:03:57:634 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+2023-06-13 15:03:57:703 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.0.3' >= '5.0.3')
+2023-06-13 15:03:57:704 [ADB] There is no need to install/upgrade '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2023-06-13 15:03:57:704 [ADB] Getting IDs of all 'io.appium.settings' processes
+2023-06-13 15:03:57:704 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+2023-06-13 15:03:57:753 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+2023-06-13 15:03:57:838 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2023-06-13 15:03:57:838 [Logcat] Starting logs capture with command: /Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+2023-06-13 15:03:57:889 [AndroidUiautomator2Driver@031f (10d9611f)] Forwarding UiAutomator2 Server port 6790 to local port 8200
+2023-06-13 15:03:57:890 [ADB] Forwarding system: 8200 to device: 6790
+2023-06-13 15:03:57:890 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8200 tcp:6790'
+2023-06-13 15:03:57:933 [ADB] Getting install status for io.appium.uiautomator2.server
+2023-06-13 15:03:57:933 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-06-13 15:03:57:998 [ADB] 'io.appium.uiautomator2.server' is installed
+2023-06-13 15:03:57:998 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2023-06-13 15:03:57:999 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+2023-06-13 15:03:58:461 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.10.0' >= '5.10.0')
+2023-06-13 15:03:58:461 [AndroidUiautomator2Driver@031f (10d9611f)] io.appium.uiautomator2.server installation state: sameVersionInstalled
+2023-06-13 15:03:58:462 [ADB] Checking app cert for /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk
+2023-06-13 15:03:58:526 [ADB] Using 'apksigner.jar' from '/Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4/lib/apksigner.jar'
+2023-06-13 15:03:58:527 [ADB] Starting apksigner: /Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/bin/java -Xmx1024M -Xss1m -jar /Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4/lib/apksigner.jar verify --print-certs /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk
+2023-06-13 15:04:00:162 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2023-06-13 15:04:00:162 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2023-06-13 15:04:00:162 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2023-06-13 15:04:00:162 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2023-06-13 15:04:00:162 [ADB] 
+2023-06-13 15:04:00:162 [ADB] sha256 hash did match for 'appium-uiautomator2-server-v5.10.0.apk'
+2023-06-13 15:04:00:162 [ADB] '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk' is signed with the default certificate
+2023-06-13 15:04:00:163 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2023-06-13 15:04:00:163 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server.test'
+2023-06-13 15:04:00:235 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2023-06-13 15:04:00:236 [ADB] Checking app cert for /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-06-13 15:04:00:241 [ADB] Starting apksigner: /Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/bin/java -Xmx1024M -Xss1m -jar /Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4/lib/apksigner.jar verify --print-certs /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2023-06-13 15:04:00:758 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2023-06-13 15:04:00:758 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2023-06-13 15:04:00:758 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2023-06-13 15:04:00:758 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2023-06-13 15:04:00:758 [ADB] 
+2023-06-13 15:04:00:758 [ADB] sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+2023-06-13 15:04:00:758 [ADB] '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
+2023-06-13 15:04:00:758 [AndroidUiautomator2Driver@031f (10d9611f)] Server packages are not going to be (re)installed
+2023-06-13 15:04:00:760 [AndroidUiautomator2Driver@031f (10d9611f)] Waiting up to 30000ms for services to be available
+2023-06-13 15:04:00:760 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+2023-06-13 15:04:00:812 [AndroidUiautomator2Driver@031f (10d9611f)] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2023-06-13 15:04:00:814 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-06-13 15:04:00:814 [ADB] Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+2023-06-13 15:04:00:815 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+2023-06-13 15:04:00:882 [AndroidUiautomator2Driver@031f (10d9611f)] No app capability. Assuming it is already on the device
+2023-06-13 15:04:00:882 [ADB] Getting install status for com.saucelabs.mydemoapp.rn
+2023-06-13 15:04:00:883 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package com.saucelabs.mydemoapp.rn'
+2023-06-13 15:04:00:939 [ADB] 'com.saucelabs.mydemoapp.rn' is installed
+2023-06-13 15:04:00:940 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop com.saucelabs.mydemoapp.rn'
+2023-06-13 15:04:01:013 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm clear com.saucelabs.mydemoapp.rn'
+2023-06-13 15:04:01:324 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package com.saucelabs.mydemoapp.rn'
+2023-06-13 15:04:01:375 [ADB] Retrieving requested permissions
+2023-06-13 15:04:01:379 [ADB] Retrieved 18 permissions from requested group
+2023-06-13 15:04:01:379 [ADB] Retrieving granted permissions
+2023-06-13 15:04:01:379 [ADB] Retrieved 8 permissions from install,runtime groups
+2023-06-13 15:04:01:380 [ADB] Granting permissions ["android.permission.CAMERA","android.permission.ACCESS_COARSE_LOCATION","android.permission.ACCESS_FINE_LOCATION","android.permission.READ_EXTERNAL_STORAGE","android.permission.WRITE_EXTERNAL_STORAGE","android.permission.READ_PHONE_STATE","android.permission.POST_NOTIFICATIONS","android.permission.READ_MEDIA_AUDIO","android.permission.READ_MEDIA_VIDEO","android.permission.READ_MEDIA_IMAGES"] to 'com.saucelabs.mydemoapp.rn'
+2023-06-13 15:04:01:380 [ADB] Got the following command chunks to execute: [["pm","grant","com.saucelabs.mydemoapp.rn","android.permission.CAMERA",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.ACCESS_COARSE_LOCATION",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.ACCESS_FINE_LOCATION",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.READ_EXTERNAL_STORAGE",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.WRITE_EXTERNAL_STORAGE",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.READ_PHONE_STATE",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.POST_NOTIFICATIONS",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.READ_MEDIA_AUDIO",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.READ_MEDIA_VIDEO",";","pm","grant","com.saucelabs.mydemoapp.rn","android.permission.READ_MEDIA_IMAGES",";"]]
+2023-06-13 15:04:01:380 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm grant com.saucelabs.mydemoapp.rn android.permission.CAMERA ; pm grant com.saucelabs.mydemoapp.rn android.permission.ACCESS_COARSE_LOCATION ; pm grant com.saucelabs.mydemoapp.rn android.permission.ACCESS_FINE_LOCATION ; pm grant com.saucelabs.mydemoapp.rn android.permission.READ_EXTERNAL_STORAGE ; pm grant com.saucelabs.mydemoapp.rn android.permission.WRITE_EXTERNAL_STORAGE ; pm grant com.saucelabs.mydemoapp.rn android.permission.READ_PHONE_STATE ; pm grant com.saucelabs.mydemoapp.rn android.permission.POST_NOTIFICATIONS ; pm grant com.saucelabs.mydemoapp.rn android.permission.READ_MEDIA_AUDIO ; pm grant com.saucelabs.mydemoapp.rn android.permission.READ_MEDIA_VIDEO ; pm grant com.saucelabs.mydemoapp.rn android.permission.READ_MEDIA_IMAGES ;'
+2023-06-13 15:04:01:740 [AndroidDriver] Performed fast reset on the installed 'com.saucelabs.mydemoapp.rn' application (stop and clear)
+2023-06-13 15:04:01:741 [AndroidUiautomator2Driver@031f (10d9611f)] Performing shallow cleanup of automation leftovers
+2023-06-13 15:04:01:757 [AndroidUiautomator2Driver@031f (10d9611f)] No obsolete sessions have been detected (socket hang up)
+2023-06-13 15:04:01:757 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+2023-06-13 15:04:01:820 [AndroidUiautomator2Driver@031f (10d9611f)] Starting UIAutomator2 server 5.10.0
+2023-06-13 15:04:01:820 [AndroidUiautomator2Driver@031f (10d9611f)] Using UIAutomator2 server from '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk' and test from '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-06-13 15:04:01:821 [AndroidUiautomator2Driver@031f (10d9611f)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-06-13 15:04:01:821 [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics",true,"io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+2023-06-13 15:04:01:823 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/status' to command name 'getStatus'
+2023-06-13 15:04:01:825 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-06-13 15:04:01:837 [AndroidUiautomator2Driver@031f (10d9611f)] socket hang up
+2023-06-13 15:04:02:839 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/status' to command name 'getStatus'
+2023-06-13 15:04:02:840 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-06-13 15:04:02:848 [AndroidUiautomator2Driver@031f (10d9611f)] socket hang up
+2023-06-13 15:04:02:896 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+2023-06-13 15:04:03:849 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/status' to command name 'getStatus'
+2023-06-13 15:04:03:849 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-06-13 15:04:03:857 [AndroidUiautomator2Driver@031f (10d9611f)] socket hang up
+2023-06-13 15:04:04:859 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/status' to command name 'getStatus'
+2023-06-13 15:04:04:859 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /status] to [GET http://127.0.0.1:8200/status] with no body
+2023-06-13 15:04:04:912 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+2023-06-13 15:04:04:913 [AndroidUiautomator2Driver@031f (10d9611f)] The initialization of the instrumentation process took 3092ms
+2023-06-13 15:04:04:913 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/session' to command name 'createSession'
+2023-06-13 15:04:04:913 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [POST /session] to [POST http://127.0.0.1:8200/session] with body: {"capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"ANDROID","appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appPackage":"com.saucelabs.mydemoapp.rn","autoGrantPermissions":true,"automationName":"UIAutomator2","newCommandTimeout":180,"udid":"emulator-5554"},"platformName":"ANDROID","appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appPackage":"com.saucelabs.mydemoapp.rn","autoGrantPermissions":true,"automationName":"UIAutomator2","newCommandTimeout":180,"udid":"emulator-5554","deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}}}
+2023-06-13 15:04:04:960 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":{"capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"ANDROID","appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appPackage":"com.saucelabs.mydemoapp.rn","autoGrantPermissions":true,"automationName":"UIAutomator2","newCommandTimeout":180,"udid":"emulator-5554"},"platformName":"ANDROID","appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appPackage":"com.saucelabs.mydemoapp.rn","autoGrantPermissions":true,"automationName":"UIAutomator2","newCommandTimeout":180,"udid":"emulator-5554","deviceName":"emulator-5554","deviceUDID":"emulator-5554"}],"alwaysMatch":{}},"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e"}}
+2023-06-13 15:04:04:960 [AndroidUiautomator2Driver@031f (10d9611f)] Determined the downstream protocol as 'W3C'
+2023-06-13 15:04:04:971 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8200/session/edd2dcc7-e91b-4f61-b85a-4a06c925bb2e/appium/device/info] with no body
+2023-06-13 15:04:05:000 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":{"androidId":"0ec863697b5e4073","apiVersion":"33","bluetooth":{"state":"OFF"},"brand":"google","carrierName":"T-Mobile","displayDensity":440,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_x86_64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":4300,"linkUpstreamBandwidthKbps":1800,"networkCapabilities":"NET_CAPABILITY_MMS,NET_CAPABILITY_SUPL,NET_CAPABILITY_DUN,NET_CAPABILITY_FOTA,NET_CAPABILITY_IMS,NET_CAPABILITY_CBS,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_VALIDATED,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-2147483648,"transportTypes":"TRANSPORT_CELLULAR"},"detailedState":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":10,"subtypeName":"HSPA","type":0,"typeName":"MOBILE"},{"capabilit...
+2023-06-13 15:04:05:001 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+2023-06-13 15:04:05:088 [AndroidDriver] Screen already unlocked, doing nothing
+2023-06-13 15:04:05:089 [AndroidUiautomator2Driver@031f (10d9611f)] Starting 'com.saucelabs.mydemoapp.rn/com.saucelabs.mydemoapp.rn.MainActivity and waiting for 'com.saucelabs.mydemoapp.rn/com.saucelabs.mydemoapp.rn.MainActivity'
+2023-06-13 15:04:05:089 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am start -W -n com.saucelabs.mydemoapp.rn/com.saucelabs.mydemoapp.rn.MainActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+2023-06-13 15:04:07:052 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8200/session/edd2dcc7-e91b-4f61-b85a-4a06c925bb2e/appium/device/pixel_ratio] with no body
+2023-06-13 15:04:07:070 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":2.75}
+2023-06-13 15:04:07:071 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/appium/device/system_bars' to command name 'getSystemBars'
+2023-06-13 15:04:07:072 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8200/session/edd2dcc7-e91b-4f61-b85a-4a06c925bb2e/appium/device/system_bars] with no body
+2023-06-13 15:04:07:083 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":{"statusBar":145}}
+2023-06-13 15:04:07:083 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/window/current/size' to command name 'getWindowSize'
+2023-06-13 15:04:07:083 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /window/current/size] to [GET http://127.0.0.1:8200/session/edd2dcc7-e91b-4f61-b85a-4a06c925bb2e/window/current/size] with no body
+2023-06-13 15:04:07:102 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":{"height":2138,"width":1080}}
+2023-06-13 15:04:07:103 [AppiumDriver@2d82] New AndroidUiautomator2Driver session created successfully, session 10d9611f-2bc3-4d2c-8965-d72bd0ede2ff added to master session list
+2023-06-13 15:04:07:103 [AppiumDriver@2d82] Event 'newSessionStarted' logged at 1686661447103 (15:04:07 GMT+0200 (Central European Summer Time))
+2023-06-13 15:04:07:103 [AppiumDriver@2d82] Promoting 1 sessionless plugins to be attached to session ID 10d9611f-2bc3-4d2c-8965-d72bd0ede2ff
+2023-06-13 15:04:07:104 [AndroidUiautomator2Driver@031f (10d9611f)] Cached the protocol value 'W3C' for the new session 10d9611f-2bc3-4d2c-8965-d72bd0ede2ff
+2023-06-13 15:04:07:104 [AndroidUiautomator2Driver@031f (10d9611f)] Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"ANDROID","appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appPackage":"com.saucelabs.mydemoapp.rn","autoGrantPermissions":true,"automationName":"UIAutomator2","newCommandTimeout":180,"udid":"emulator-5554"},"platformName":"ANDROID","appActivity":"com.saucelabs.mydemoapp.rn.MainActivity","appPackage":"com.saucelabs.mydemoapp.rn","autoGrantPermissions":true,"automationName":"UIAutomator2","newCommandTimeout":180,"udid":"emulator-5554","deviceName":"emulator-5554","deviceUDID":"emulator-5554","deviceApiLevel":33,"platformVersion":"13","deviceScreenSize":"1080x2340","deviceScreenDensity":440,"deviceModel":"sdk_gphone64_x86_64","deviceManufacturer":"Google","pixelRatio":2.75,"statBarHeight":145,"viewportRect":{"left":0,"top":145,"width":1080,"height":1993}}}
+2023-06-13 15:04:07:105 [HTTP] <-- POST /session 200 10354 ms - 1070
+2023-06-13 15:04:07:105 [HTTP] 
+2023-06-13 15:04:07:251 [HTTP] --> POST /session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff/element
+2023-06-13 15:04:07:251 [HTTP] {"using":"xpath","value":"//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView"}
+2023-06-13 15:04:07:254 [AndroidUiautomator2Driver@031f (10d9611f)] Calling AppiumDriver.findElement() with args: ["xpath","//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView","10d9611f-2bc3-4d2c-8965-d72bd0ede2ff"]
+2023-06-13 15:04:07:254 [AppiumDriver@2d82] Plugins which can handle cmd 'findElement': element-wait
+2023-06-13 15:04:07:254 [AppiumDriver@2d82] Plugin element-wait is now handling cmd 'findElement'
+2023-06-13 15:04:07:254 [wait-plugin] Timeout properties not set for session 10d9611f-2bc3-4d2c-8965-d72bd0ede2ff, trying to set one
+2023-06-13 15:04:07:254 [wait-plugin] Timeout properties set for session 10d9611f-2bc3-4d2c-8965-d72bd0ede2ff is {"timeout":10000,"intervalBetweenAttempts":500,"overrideTimeout":false} ms
+2023-06-13 15:04:07:265 [AppiumDriver@2d82] Executing default handling behavior for command 'findElement'
+2023-06-13 15:04:07:266 [AndroidUiautomator2Driver@031f (10d9611f)] Valid locator strategies for this request: xpath, id, class name, accessibility id, css selector, -android uiautomator
+2023-06-13 15:04:07:266 [AndroidUiautomator2Driver@031f (10d9611f)] Waiting up to 0 ms for condition
+2023-06-13 15:04:07:267 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/element' to command name 'findElement'
+2023-06-13 15:04:07:267 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [POST /element] to [POST http://127.0.0.1:8200/session/edd2dcc7-e91b-4f61-b85a-4a06c925bb2e/element] with body: {"strategy":"xpath","selector":"//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView","context":"","multiple":false}
+2023-06-13 15:04:08:932 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":{"ELEMENT":"00000000-0000-0c5c-ffff-ffff00000030","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0c5c-ffff-ffff00000030"}}
+2023-06-13 15:04:08:933 [AndroidUiautomator2Driver@031f (10d9611f)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0c5c-ffff-ffff00000030","ELEMENT":"00000000-0000-0c5c-ffff-ffff00000030"}
+2023-06-13 15:04:08:935 [HTTP] <-- POST /session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff/element 200 1683 ms - 137
+2023-06-13 15:04:08:935 [HTTP] 
+2023-06-13 15:04:08:949 [HTTP] --> GET /session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff/element/00000000-0000-0c5c-ffff-ffff00000030/text
+2023-06-13 15:04:08:949 [HTTP] {}
+2023-06-13 15:04:08:953 [AndroidUiautomator2Driver@031f (10d9611f)] Would have proxied command directly, but a plugin exists which might require its value, so will let its value be collected internally and made part of plugin chain
+2023-06-13 15:04:08:953 [AndroidUiautomator2Driver@031f (10d9611f)] Calling AppiumDriver.getText() with args: ["00000000-0000-0c5c-ffff-ffff00000030","10d9611f-2bc3-4d2c-8965-d72bd0ede2ff"]
+2023-06-13 15:04:08:953 [AppiumDriver@2d82] Plugins which can handle cmd 'getText': element-wait
+2023-06-13 15:04:08:953 [AppiumDriver@2d82] Plugin element-wait is now handling cmd 'getText'
+2023-06-13 15:04:08:953 [AppiumDriver@2d82] Executing default handling behavior for command 'getText'
+2023-06-13 15:04:08:953 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff/element/00000000-0000-0c5c-ffff-ffff00000030/text' to command name 'getText'
+2023-06-13 15:04:08:954 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [GET /session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff/element/00000000-0000-0c5c-ffff-ffff00000030/text] to [GET http://127.0.0.1:8200/session/edd2dcc7-e91b-4f61-b85a-4a06c925bb2e/element/00000000-0000-0c5c-ffff-ffff00000030/text] with no body
+2023-06-13 15:04:08:966 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":"Products"}
+2023-06-13 15:04:08:966 [AndroidUiautomator2Driver@031f (10d9611f)] Responding to client with driver.getText() result: "Products"
+2023-06-13 15:04:08:967 [HTTP] <-- GET /session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff/element/00000000-0000-0c5c-ffff-ffff00000030/text 200 18 ms - 20
+2023-06-13 15:04:08:968 [HTTP] 
+2023-06-13 15:04:08:981 [HTTP] --> DELETE /session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff
+2023-06-13 15:04:08:981 [HTTP] {}
+2023-06-13 15:04:08:982 [AndroidUiautomator2Driver@031f (10d9611f)] Calling AppiumDriver.deleteSession() with args: ["10d9611f-2bc3-4d2c-8965-d72bd0ede2ff"]
+2023-06-13 15:04:08:982 [AppiumDriver@2d82] Plugins which can handle cmd 'deleteSession': element-wait
+2023-06-13 15:04:08:982 [AppiumDriver@2d82] Plugin element-wait is now handling cmd 'deleteSession'
+2023-06-13 15:04:08:982 [AppiumDriver@2d82] Executing default handling behavior for command 'deleteSession'
+2023-06-13 15:04:08:982 [AppiumDriver@2d82] Event 'quitSessionRequested' logged at 1686661448982 (15:04:08 GMT+0200 (Central European Summer Time))
+2023-06-13 15:04:08:983 [AppiumDriver@2d82] Removing session 10d9611f-2bc3-4d2c-8965-d72bd0ede2ff from our master session list
+2023-06-13 15:04:08:983 [AndroidUiautomator2Driver@031f (10d9611f)] Deleting UiAutomator2 session
+2023-06-13 15:04:08:984 [AndroidUiautomator2Driver@031f (10d9611f)] Deleting UiAutomator2 server session
+2023-06-13 15:04:08:984 [AndroidUiautomator2Driver@031f (10d9611f)] Matched '/' to command name 'deleteSession'
+2023-06-13 15:04:08:984 [AndroidUiautomator2Driver@031f (10d9611f)] Proxying [DELETE /] to [DELETE http://127.0.0.1:8200/session/edd2dcc7-e91b-4f61-b85a-4a06c925bb2e] with no body
+2023-06-13 15:04:08:994 [AndroidUiautomator2Driver@031f (10d9611f)] Got response with status 200: {"sessionId":"edd2dcc7-e91b-4f61-b85a-4a06c925bb2e","value":null}
+2023-06-13 15:04:08:995 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity services io.appium.settings/.recorder.RecorderService'
+2023-06-13 15:04:08:997 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop com.saucelabs.mydemoapp.rn'
+2023-06-13 15:04:09:215 [Logcat] Stopping logcat capture
+2023-06-13 15:04:09:218 [ADB] Removing forwarded port socket connection: 8200 
+2023-06-13 15:04:09:218 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp:8200'
+2023-06-13 15:04:09:257 [AndroidUiautomator2Driver@031f (10d9611f)] Restoring hidden api policy to the device default configuration
+2023-06-13 15:04:09:258 [ADB] Running '/Users/ibkh/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy''
+2023-06-13 15:04:09:422 [AppiumDriver@2d82] Event 'quitSessionFinished' logged at 1686661449421 (15:04:09 GMT+0200 (Central European Summer Time))
+2023-06-13 15:04:09:422 [AppiumDriver@2d82] Received response: null
+2023-06-13 15:04:09:422 [AppiumDriver@2d82] But deleting session, so not returning
+2023-06-13 15:04:09:422 [AppiumDriver@2d82] Responding to client with driver.deleteSession() result: null
+2023-06-13 15:04:09:423 [HTTP] <-- DELETE /session/10d9611f-2bc3-4d2c-8965-d72bd0ede2ff 200 441 ms - 14
+2023-06-13 15:04:09:423 [HTTP] 
+2023-06-13 15:04:09:534 [Appium] Received SIGTERM - shutting down
+2023-06-13 15:04:09:535 [AppiumDriver@2d82] There are no active sessions for cleanup
+2023-06-13 15:04:09:585 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -495,9 +286,9 @@ Error: write EPIPE
     at EventEmitter.<anonymous> (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/lib/logsink.js:230:24)
     at EventEmitter.emit (node:events:513:28)
     at EventEmitter.<anonymous> (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/npmlog/lib/log.js:247:8)
-2023-06-13 14:47:03:127 [HTTP] Waiting until the server is closed
-2023-06-13 14:47:03:128 [HTTP] Received server close event
-2023-06-13 14:47:03:130 uncaughtException: write EPIPE
+2023-06-13 15:04:09:587 [HTTP] Waiting until the server is closed
+2023-06-13 15:04:09:588 [HTTP] Received server close event
+2023-06-13 15:04:09:589 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -527,7 +318,7 @@ Error: write EPIPE
     at EventEmitter.<anonymous> (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/lib/logsink.js:230:24)
     at EventEmitter.emit (node:events:513:28)
     at EventEmitter.<anonymous> (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/npmlog/lib/log.js:247:8)
-2023-06-13 14:47:03:131 uncaughtException: write EPIPE
+2023-06-13 15:04:09:591 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -557,7 +348,7 @@ Error: write EPIPE
     at EventEmitter.<anonymous> (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/lib/logsink.js:230:24)
     at EventEmitter.emit (node:events:513:28)
     at EventEmitter.<anonymous> (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/npmlog/lib/log.js:247:8)
-2023-06-13 14:47:03:132 uncaughtException: write EPIPE
+2023-06-13 15:04:09:592 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -587,7 +378,7 @@ Error: write EPIPE
     at ExceptionHandler._uncaughtException (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/exception-handler.js:220:17)
     at process.emit (node:events:513:28)
     at process.emit (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/source-map-support/source-map-support.js:516:21)
-2023-06-13 14:47:03:133 uncaughtException: write EPIPE
+2023-06-13 15:04:09:593 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)

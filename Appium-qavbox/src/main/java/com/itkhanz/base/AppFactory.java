@@ -66,14 +66,14 @@ public class AppFactory {
         //DriverManager.setupDriverTimeouts();
     }
 
-    public static void launchAndroidApp(URL url, UiAutomator2Options options) {
+    private static void launchAndroidApp(URL url, UiAutomator2Options options) {
         driver = new AndroidDriver(url, options);
         DriverManager.setDriver(driver);
         //System.out.println("AndroidDriver is set");
         LOG.info("AndroidDriver is set");
     }
 
-    public static void launchiOSApp(URL url, XCUITestOptions options) {
+    private static void launchiOSApp(URL url, XCUITestOptions options) {
         driver = new IOSDriver(url, options);
         DriverManager.setDriver(driver);
         //System.out.println("IOSDriver is set");
@@ -97,6 +97,7 @@ public class AppFactory {
                 .setAppActivity(appCapabilities.get("appActivity"))
                 .setAutoGrantPermissions(true)
                 .setNewCommandTimeout(Duration.ofSeconds(180))
+                //.setNoReset(true)
                 //.setAvd("Pixel_5")  //automatically launches the android emulator with given avdID
                 //.setAvdLaunchTimeout(Duration.ofSeconds(180))
                 ;
@@ -117,8 +118,9 @@ public class AppFactory {
                 //.setApp(appCapabilities.get("app"))      //Install the app if not pre-installed
                 .setBundleId(appCapabilities.get("bundleId"))
                 //.setSimulatorStartupTimeout(Duration.ofSeconds(180))  //waits for the simulator to launch
-                .setAutoAcceptAlerts(true)
-                .setNewCommandTimeout(Duration.ofSeconds(180))
+                .setAutoAcceptAlerts(true)      //Accept all iOS alerts automatically if they pop up.
+                .setNewCommandTimeout(Duration.ofSeconds(180))  //How long (in seconds) the driver should wait for a new command from the client before assuming the client has stopped sending requests.
+                //.setNoReset(true)       //Prevents the device to be reset before the session startup if set to true.
                 ;
     }
 
