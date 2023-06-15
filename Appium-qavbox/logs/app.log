@@ -892,3 +892,291 @@
 2023-06-15 00:11:57.692 [main] INFO  AppFactory.class - Application launched successfully
 2023-06-15 00:12:05.985 [main] INFO  DriverManager.class - Driver Session is closed
 2023-06-15 00:12:05.985 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 10:24:10.579 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 10:24:11.448 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 10:24:11.573 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 10:24:11.574 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 10:24:11.677 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 10:24:33.788 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 10:24:33.791 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 10:24:33.791 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 10:24:43.983 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 10:24:43.984 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 10:25:49.826 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 10:25:50.516 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 10:25:50.519 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 10:25:50.521 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 10:25:50.570 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 10:26:01.177 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 10:26:01.178 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 10:26:01.178 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 10:26:10.805 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 10:26:10.806 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 10:26:49.928 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 10:26:50.605 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 10:26:50.608 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 10:26:50.610 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 10:26:50.663 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 10:27:01.075 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 10:27:01.077 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 10:27:01.077 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 10:27:11.224 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 10:27:11.225 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 10:32:23.568 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 10:32:24.066 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos}]
+2023-06-15 10:32:24.069 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 10:32:24.071 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 10:32:24.119 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos, udid=emulator-5554, platformName=android, automationName=uiautomator2, appWaitDuration=30000, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 10:32:36.233 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 10:32:36.234 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 10:32:36.235 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 10:32:43.967 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 10:32:43.967 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 10:53:26.318 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 10:53:26.938 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-15 10:53:26.979 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-15 10:53:26.981 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 10:53:27.046 [main] INFO  AppFactory.class - XCUITestOptions options set as: [bundleId=com.apple.MobileAddressBook, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-15 10:53:34.181 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 10:53:34.181 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-15 10:53:34.181 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 10:53:34.844 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 10:53:34.844 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 10:56:15.015 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 10:56:15.555 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 10:56:15.558 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 10:56:15.560 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 10:56:15.610 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 10:56:25.979 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 10:56:25.980 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 10:56:25.980 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 10:56:29.813 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 10:56:29.813 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 10:58:08.858 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 10:58:09.379 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 10:58:09.382 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 10:58:09.383 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 10:58:09.431 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 10:58:27.105 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 10:58:27.105 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 10:58:27.106 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 10:58:31.233 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 10:58:31.233 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:00:20.451 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:00:21.039 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:00:21.042 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:00:21.043 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:00:21.088 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:00:32.996 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:00:32.997 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:00:32.997 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:00:36.838 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:00:36.838 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:02:50.808 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:02:51.368 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:02:51.371 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:02:51.372 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:02:51.419 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:02:59.411 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:02:59.412 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:02:59.412 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:03:03.438 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:03:03.439 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:03:52.968 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:03:53.555 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:03:53.558 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:03:53.561 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:03:53.615 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:04:02.728 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:04:02.729 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:04:02.729 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:04:06.492 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:04:06.492 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:08:21.037 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:08:21.630 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:08:21.633 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:08:21.635 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:08:21.683 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:08:40.019 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:08:40.020 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:08:40.020 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:08:43.702 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:08:43.702 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:09:33.235 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:09:33.750 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:09:33.753 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:09:33.755 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:09:33.806 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:09:42.265 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:09:42.266 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:09:42.266 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:09:46.145 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:09:46.145 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:15:43.013 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:15:43.543 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:15:43.546 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:15:43.548 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:15:43.597 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:15:51.849 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:15:51.850 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:15:51.850 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:15:55.713 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:15:55.713 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:17:40.648 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:17:41.191 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:17:41.193 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:17:41.195 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:17:41.248 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:17:50.175 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:17:50.176 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:17:50.176 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:18:00.461 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:18:00.462 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:18:43.767 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:18:44.271 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:18:44.274 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:18:44.276 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:18:44.325 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:18:52.628 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:18:52.628 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:18:52.628 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:19:02.579 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:19:02.579 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:19:36.199 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:19:36.721 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos}]
+2023-06-15 11:19:36.724 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:19:36.726 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:19:36.775 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:19:44.575 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:19:44.575 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:19:44.576 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:19:53.200 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:19:53.201 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:22:42.255 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:22:42.833 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:22:42.836 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:22:42.838 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:22:42.885 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:23:10.541 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:23:10.542 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:23:10.542 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:23:18.111 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:23:18.112 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:31:59.497 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:32:00.051 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos}]
+2023-06-15 11:32:00.054 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:32:00.056 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:32:00.105 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:32:08.550 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:32:08.552 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:32:08.552 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:32:14.763 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:32:14.763 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:36:53.043 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:36:53.566 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:36:53.569 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:36:53.571 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:36:53.620 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:37:11.465 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:37:11.465 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:37:11.466 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:37:15.395 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:37:15.395 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:40:39.942 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:40:40.568 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:40:40.571 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:40:40.572 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:40:40.622 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:40:59.327 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:40:59.328 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:40:59.328 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:41:03.482 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:41:03.483 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:49:18.697 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:49:19.451 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:49:19.661 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:49:19.664 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:49:19.721 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:49:42.759 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:49:42.759 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:49:42.759 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:50:20.582 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:50:20.583 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:51:14.673 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:51:15.170 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:51:15.172 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:51:15.174 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:51:15.217 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:51:27.496 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:51:27.496 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:51:27.496 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:51:31.273 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:51:31.273 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:52:00.668 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:52:01.162 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:52:01.164 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:52:01.166 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:52:01.215 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:52:09.268 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:52:09.269 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:52:09.269 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:52:12.894 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:52:12.894 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-15 11:52:26.462 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-15 11:52:26.962 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-15 11:52:26.965 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-15 11:52:26.967 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-15 11:52:27.028 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-15 11:52:34.685 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-15 11:52:34.685 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-15 11:52:34.685 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-15 11:52:38.259 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-15 11:52:38.259 [main] INFO  DriverManager.class - Driver thread value is removed

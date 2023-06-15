@@ -96,7 +96,7 @@ appium-doctor --android
 ```
 
 * For the tests, we will be using [Appium Wait Plugin](https://github.com/AppiumTestDistribution/appium-wait-plugin)
-* Start the Appium server with the above plugins `appium --use-plugins=element-wait`
+* Start the Appium server with the above plugins `appium --use-drivers=uiautomator2,xcuitest --use-plugins=element-wait,gestures`
 * Configure all the server related settings in `server.properties` file to start the appium server programmatically.
 * Run the Android Device Emulator for Pixel 5 for Android Tests (from Android Studio)
 * Run the iOS Device Simulator for iPhone 14 for iOS Tests(form XCode)
@@ -124,6 +124,9 @@ appium-doctor --android
     * Open the info.plist by double clicking it that opens it in XCode, and there you will find XCode.
 * Place all your applications in directory `/src/main/resources/apps/`
 * Tests are located at this path: `test/java/com/itkhanz/tests/`
+    * `GesuresTest` contains the code snippets from Appium W3C complaint actions with sequence class. Also
+      see `GestureUtils` which hides the implementation details of these gestures.
+    * `GesturesPluginTest` contains the code snippets for performing different gestures with `appium-gesture-plugin`
 * Initially `log4j2` was used for logging with configuration defined in `log4j2.properties`.
 * Then SLF4J binding with simple (`slf4j-simple`) was used for configuration defined in `simplelogger.properties`.
 * There was a limitation with `slf4j-simple` since we cannot log to multiple appenders at the same time e.g. console and

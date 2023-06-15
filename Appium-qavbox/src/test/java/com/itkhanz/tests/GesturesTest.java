@@ -19,6 +19,9 @@ import static com.itkhanz.utils.GestureUtils.ScrollDirection.*;
 import static com.itkhanz.utils.WaitUtils.waitForElementToBeVisible;
 
 
+/*
+Performing Gestures using Appium's W3C actions with Sequence class
+ */
 public class GesturesTest extends BaseTest{
 
     //performs long press on the element which opens up new dialog box
