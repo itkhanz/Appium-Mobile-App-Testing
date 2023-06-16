@@ -8,7 +8,12 @@ import org.openqa.selenium.Capabilities;
 
 import java.nio.file.Path;
 import java.text.MessageFormat;
+import java.time.Duration;
 
+/*
+Implements the IDriverManager<? extends AppiumDriver> with override getDriver()
+Creates an instance of the Driver with AndroidDriver and capabilities for Android app
+ */
 @Builder(builderMethodName = "createDriver", buildMethodName = "create")
 public class AndroidDriverManager implements IDriverManager<AndroidDriver> {
     private static final String USER_DIR = System.getProperty ("user.dir");
@@ -39,6 +44,7 @@ public class AndroidDriverManager implements IDriverManager<AndroidDriver> {
                 .setAutoGrantPermissions (true)
                 .setFullReset (false)
                 .setIsHeadless (this.isHeadless)
+                .setAdbExecTimeout(Duration.ofMillis(60000))    //Timeout in milliseconds used to wait for adb command execution. Defaults to 20000
                 .setCapability ("appium:settings[ignoreUnimportantViews]", true);
         return options;
     }

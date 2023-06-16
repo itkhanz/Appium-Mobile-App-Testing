@@ -11,7 +11,7 @@ import java.text.MessageFormat;
 import static io.appium.java_client.service.local.flags.GeneralServerFlag.*;
 
 /*
-This class is responsible for creating the serb
+This class is responsible for creating the Appium Server instance
  */
 @Builder(builderMethodName = "composeService", buildMethodName = "composed")
 public class AppiumServiceManager {
@@ -23,6 +23,7 @@ public class AppiumServiceManager {
     private String host = "127.0.0.1";
     @Builder.Default
     private int port = 4723;
+
 
     public AppiumDriverLocalService buildService() {
         final var logFile = Path.of(USER_DIR, "logs", MessageFormat.format("appium-{0}.log", this.driverName)).toFile();

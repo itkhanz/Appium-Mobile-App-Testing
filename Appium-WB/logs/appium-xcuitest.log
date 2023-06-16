@@ -1,0 +1,217 @@
+2023-06-16 23:13:35:056 [Appium] Welcome to Appium v2.0.0-beta.71 (REV 552db40622bb7a82d9c6d67d2d6bcf3694b47e30)
+2023-06-16 23:13:35:058 [Appium] Non-default server args:
+2023-06-16 23:13:35:061 [Appium] { address: '127.0.0.1',
+2023-06-16 23:13:35:061 [Appium]   basePath: '/wd/hub/',
+2023-06-16 23:13:35:061 [Appium]   localTimezone: true,
+2023-06-16 23:13:35:061 [Appium]   loglevel: 'info',
+2023-06-16 23:13:35:061 [Appium]   port: 4724,
+2023-06-16 23:13:35:062 [Appium]   sessionOverride: true,
+2023-06-16 23:13:35:062 [Appium]   useDrivers: [ 'xcuitest' ] }
+2023-06-16 23:13:35:062 [Appium] Attempting to load driver xcuitest...
+2023-06-16 23:13:36:000 [Appium] Appium REST http interface listener started on 127.0.0.1:4724/wd/hub/
+2023-06-16 23:13:36:000 [Appium] Available drivers:
+2023-06-16 23:13:36:001 [Appium]   - uiautomator2@2.25.2 (automationName 'UiAutomator2')
+2023-06-16 23:13:36:001 [Appium]   - xcuitest@4.30.2 (automationName 'XCUITest')
+2023-06-16 23:13:36:001 [Appium]   - espresso@2.23.1 (automationName 'Espresso')
+2023-06-16 23:13:36:001 [Appium]   - safari@3.3.3 (automationName 'Safari')
+2023-06-16 23:13:36:001 [Appium]   - gecko@1.1.9 (automationName 'Gecko')
+2023-06-16 23:13:36:001 [Appium]   - chromium@1.1.18 (automationName 'Chromium')
+2023-06-16 23:13:36:002 [Appium] Available plugins:
+2023-06-16 23:13:36:002 [Appium]   - element-wait@1.5.0
+2023-06-16 23:13:36:002 [Appium]   - gestures@2.1.0
+2023-06-16 23:13:36:002 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
+2023-06-16 23:13:36:251 [HTTP] --> GET /wd/hub/status
+2023-06-16 23:13:36:251 [HTTP] {}
+2023-06-16 23:13:36:258 [HTTP] <-- GET /wd/hub/status 200 5 ms - 136
+2023-06-16 23:13:36:258 [HTTP] 
+2023-06-16 23:13:36:894 [HTTP] --> POST /wd/hub/session
+2023-06-16 23:13:36:894 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/wdio-demo.app.zip","appium:autoAcceptAlerts":true,"appium:automationName":"XCuiTest","appium:deviceName":"iPhone 14","appium:fullReset":false,"appium:isHeadless":false,"appium:platformVersion":"16.4","platformName":"IOS"}}}
+2023-06-16 23:13:36:897 [Appium] Attempting to find matching driver for automationName 'XCuiTest' and platformName 'IOS'
+2023-06-16 23:13:36:898 [Appium] The 'xcuitest' driver was installed and matched caps.
+2023-06-16 23:13:36:898 [Appium] Will require it at /Users/ibkh/.appium/node_modules/appium-xcuitest-driver
+2023-06-16 23:13:36:898 [AppiumDriver@b7bc] Appium v2.0.0-beta.71 creating new XCUITestDriver (v4.30.2) session
+2023-06-16 23:13:36:898 [AppiumDriver@b7bc] Checking BaseDriver versions for Appium and XCUITestDriver
+2023-06-16 23:13:36:898 [AppiumDriver@b7bc] Appium's BaseDriver version is 9.3.10
+2023-06-16 23:13:36:898 [AppiumDriver@b7bc] XCUITestDriver's BaseDriver version is 9.3.10
+2023-06-16 23:13:36:908 [XCUITestDriver@1653 (3ac62290)] Session created with session id: 3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:36:926 [XCUITestDriver@1653 (3ac62290)] iOS SDK Version set to '16.4'
+2023-06-16 23:13:37:190 [iOSSim] Constructing iOS simulator for Xcode version 14.3 with udid '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F'
+2023-06-16 23:13:37:191 [XCUITestDriver@1653 (3ac62290)] Determining device to run tests on: udid: '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F', real device: false
+2023-06-16 23:13:37:193 [BaseDriver] Using local app '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/wdio-demo.app.zip'
+2023-06-16 23:13:37:478 [XCUITestDriver@1653 (3ac62290)] 'wdioNativeDemoApp.app' is the resulting application bundle selected from '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/wdio-demo.app.zip'
+2023-06-16 23:13:37:719 [XCUITest] Reset: failed to terminate Simulator application with id "org.wdioNativeDemoApp"
+2023-06-16 23:13:37:719 [XCUITest] Not scrubbing third party app in anticipation of uninstall
+2023-06-16 23:13:37:720 [XCUITestDriver@1653 (3ac62290)] Using WDA path: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent'
+2023-06-16 23:13:37:720 [XCUITestDriver@1653 (3ac62290)] Using WDA agent: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
+2023-06-16 23:13:38:262 [XCUITestDriver@1653 (3ac62290)] Setting up simulator
+2023-06-16 23:13:39:515 [iOSSim] Both Simulator with UDID '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' and the UI client are currently running
+2023-06-16 23:13:39:868 [XCUITestDriver@1653 (3ac62290)] App 'org.wdioNativeDemoApp' is already installed
+2023-06-16 23:13:42:012 [DevCon Factory] Requesting connection for device 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F on local port 8100
+2023-06-16 23:13:42:012 [DevCon Factory] Successfully requested the connection for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100
+2023-06-16 23:13:42:029 [XCUITestDriver@1653 (3ac62290)] Will reuse previously cached WDA instance at 'http://127.0.0.1:8100/' with 'com.facebook.WebDriverAgentRunner'. Set the wdaLocalPort capability to a value different from 8100 if this is an undesired behavior.
+2023-06-16 23:13:42:035 [XCUITestDriver@1653 (3ac62290)] Using provided WebdriverAgent at 'http://127.0.0.1:8100/'
+2023-06-16 23:13:43:798 [XCUITestDriver@1653 (3ac62290)] Determined the downstream protocol as 'W3C'
+2023-06-16 23:13:43:799 [AppiumDriver@b7bc] New XCUITestDriver session created successfully, session 3ac62290-307b-4d59-ac9c-d759fdac8b03 added to master session list
+2023-06-16 23:13:43:801 [HTTP] <-- POST /wd/hub/session 200 6907 ms - 564
+2023-06-16 23:13:43:801 [HTTP] 
+2023-06-16 23:13:43:970 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element
+2023-06-16 23:13:43:970 [HTTP] {"using":"accessibility id","value":"Swipe"}
+2023-06-16 23:13:44:103 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element 200 133 ms - 137
+2023-06-16 23:13:44:103 [HTTP] 
+2023-06-16 23:13:44:115 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/displayed
+2023-06-16 23:13:44:116 [HTTP] {}
+2023-06-16 23:13:44:118 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
+2023-06-16 23:13:44:189 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:44:190 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/displayed 200 74 ms - 65
+2023-06-16 23:13:44:190 [HTTP] 
+2023-06-16 23:13:44:193 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
+2023-06-16 23:13:44:194 [HTTP] {}
+2023-06-16 23:13:44:199 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
+2023-06-16 23:13:44:257 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:44:258 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 64 ms - 101
+2023-06-16 23:13:44:258 [HTTP] 
+2023-06-16 23:13:44:264 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
+2023-06-16 23:13:44:264 [HTTP] {}
+2023-06-16 23:13:44:269 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
+2023-06-16 23:13:44:325 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:44:325 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 61 ms - 101
+2023-06-16 23:13:44:325 [HTTP] 
+2023-06-16 23:13:44:331 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/window/rect
+2023-06-16 23:13:44:331 [HTTP] {}
+2023-06-16 23:13:44:368 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/window/rect 200 36 ms - 48
+2023-06-16 23:13:44:368 [HTTP] 
+2023-06-16 23:13:44:371 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
+2023-06-16 23:13:44:371 [HTTP] {}
+2023-06-16 23:13:44:372 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
+2023-06-16 23:13:44:425 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:44:426 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 54 ms - 101
+2023-06-16 23:13:44:426 [HTTP] 
+2023-06-16 23:13:44:431 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
+2023-06-16 23:13:44:431 [HTTP] {}
+2023-06-16 23:13:44:431 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
+2023-06-16 23:13:44:498 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:44:499 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 68 ms - 101
+2023-06-16 23:13:44:499 [HTTP] 
+2023-06-16 23:13:44:511 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/actions
+2023-06-16 23:13:44:511 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":292,"y":789,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-16 23:13:44:902 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/actions 200 390 ms - 14
+2023-06-16 23:13:44:902 [HTTP] 
+2023-06-16 23:13:44:908 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element
+2023-06-16 23:13:44:908 [HTTP] {"using":"accessibility id","value":"WebdriverIO logo"}
+2023-06-16 23:13:45:072 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element 200 164 ms - 137
+2023-06-16 23:13:45:072 [HTTP] 
+2023-06-16 23:13:45:084 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/execute/sync
+2023-06-16 23:13:45:084 [HTTP] {"script":"mobile: scrollToElement","args":[{"elementId":"39000000-0000-0000-A23B-000000000000"}]}
+2023-06-16 23:13:45:086 [XCUITestDriver@1653 (3ac62290)] Proxying to WDA with an unknown route: POST /wda/element/39000000-0000-0000-A23B-000000000000/scrollTo
+2023-06-16 23:13:45:283 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/execute/sync 200 199 ms - 14
+2023-06-16 23:13:45:283 [HTTP] 
+2023-06-16 23:13:45:286 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/39000000-0000-0000-A23B-000000000000/displayed
+2023-06-16 23:13:45:286 [HTTP] {}
+2023-06-16 23:13:45:286 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
+2023-06-16 23:13:45:363 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:45:363 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/39000000-0000-0000-A23B-000000000000/displayed 200 77 ms - 65
+2023-06-16 23:13:45:364 [HTTP] 
+2023-06-16 23:13:45:377 [HTTP] --> DELETE /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03
+2023-06-16 23:13:45:377 [HTTP] {}
+2023-06-16 23:13:45:378 [AppiumDriver@b7bc] Removing session 3ac62290-307b-4d59-ac9c-d759fdac8b03 from our master session list
+2023-06-16 23:13:46:415 [DevCon Factory] Releasing connections for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F device on any port number
+2023-06-16 23:13:46:415 [DevCon Factory] Found cached connections to release: ["6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100"]
+2023-06-16 23:13:46:424 [HTTP] <-- DELETE /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03 200 1047 ms - 14
+2023-06-16 23:13:46:424 [HTTP] 
+2023-06-16 23:13:46:431 [Appium] Received SIGTERM - shutting down
+2023-06-16 23:13:46:435 uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:930:11)
+    at Socket._write (node:net:942:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Console.Writable.write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:302:11)
+    at DerivedLogger.ondata (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:279:12)
+    at readableAddChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:132:32)
+    at DerivedLogger._transform (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/logger.js:313:12)
+    at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+2023-06-16 23:13:46:437 uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:930:11)
+    at Socket._write (node:net:942:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/transports/console.js:51:25)
+    at Console._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Console.Writable.write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:302:11)
+    at DerivedLogger.ondata (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:279:12)
+    at readableAddChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:132:32)
+    at DerivedLogger._transform (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/logger.js:313:12)
+    at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+2023-06-16 23:13:46:439 uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:930:11)
+    at Socket._write (node:net:942:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/transports/console.js:51:25)
+    at Console._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Console.Writable.write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:302:11)
+    at DerivedLogger.ondata (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:279:12)
+    at readableAddChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:132:32)
+    at DerivedLogger._transform (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/logger.js:313:12)
+    at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+2023-06-16 23:13:46:440 uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:930:11)
+    at Socket._write (node:net:942:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/transports/console.js:51:25)
+    at Console._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Console.Writable.write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:302:11)
+    at DerivedLogger.ondata (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at addChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:279:12)
+    at readableAddChunk (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:262:11)
+    at DerivedLogger.Readable.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_readable.js:228:10)
+    at DerivedLogger.Transform.push (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:132:32)
+    at DerivedLogger._transform (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/winston/lib/winston/logger.js:313:12)
+    at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
+    at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
+    at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)

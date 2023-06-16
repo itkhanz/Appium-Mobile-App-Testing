@@ -8,7 +8,12 @@ import org.openqa.selenium.Capabilities;
 
 import java.nio.file.Path;
 import java.text.MessageFormat;
+import java.time.Duration;
 
+/*
+Implements the IDriverManager<? extends AppiumDriver> with override getDriver()
+Creates an instance of the Driver with IOSDriver and capabilities for iOS app
+ */
 @Builder (builderMethodName = "createDriver", buildMethodName = "create")
 public class IOSDriverManager implements IDriverManager<IOSDriver> {
     private static final String USER_DIR = System.getProperty ("user.dir");
@@ -19,6 +24,7 @@ public class IOSDriverManager implements IDriverManager<IOSDriver> {
     private       boolean                  isHeadless;
     @Builder.Default
     private final String                   platformVersion = "16.4";
+
     private AppiumDriverLocalService service;
 
     @Override
@@ -35,7 +41,8 @@ public class IOSDriverManager implements IDriverManager<IOSDriver> {
                         .toString ())
                 .setAutoAcceptAlerts (true)
                 .setFullReset (false)
-                .setIsHeadless (this.isHeadless);
+                .setIsHeadless (this.isHeadless)
+        ;
         return options;
     }
 }
