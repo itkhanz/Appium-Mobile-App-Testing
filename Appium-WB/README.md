@@ -1,5 +1,28 @@
 # Appium Tutorials by Wasiq Bhamla
 
+* [Appium Tutorials](https://www.youtube.com/playlist?list=PLdZJM6yxhZyTKa7l6J5MVnJv663Wd5D3y)
+* [Beginners Guide to Appium](https://www.youtube.com/playlist?list=PLdZJM6yxhZySIufG_a_NQM9NWSvOVeAA4)
+* [Appium Tips](https://www.youtube.com/playlist?list=PLdZJM6yxhZySpolLYlBl09Q5uoXEagOfO)
+
+---
+
+## Libraries and Tools
+
+---
+
+## Project Boilerplate
+
+### Appium Service Manager
+
+### Driver Manager
+
+---
+
+## Gestures
+
+
+
+---
 
 ## Notes
 
@@ -14,5 +37,3 @@
 * Right Click on app file and click `Copy <File Name> a sPathname` to copy the path of file
 * Enter the command in terminal `emulator -list-avds` to get the name of virtual device emulators
 * Supply this device name as `avd` property which will automatically start the emulator and you do not need to start it manually
-* 
-* 
