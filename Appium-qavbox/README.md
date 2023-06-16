@@ -40,7 +40,7 @@
         * xcuitest@4.30.2
     * plugins
         * element-wait@1.5.0
-        * gestures@2.0.0
+        * gestures@2.1.0
 * Appium inspector 2023.5.2
 * SLF4J Logback 1.4.7
 * Jackson databind 2.15.2

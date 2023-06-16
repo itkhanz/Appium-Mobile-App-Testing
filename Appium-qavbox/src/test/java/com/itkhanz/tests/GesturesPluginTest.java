@@ -107,7 +107,7 @@ public class GesturesPluginTest extends BaseTest{
                 "strategy", "-ios class chain",
                 "selector", "**/XCUIElementTypeCell[`label == \"Olivia\"`]",
                 "percentage", 30,
-                "direction", "down",
+                "direction", "up",
                 "maxCount", 10));
 
         //For this test, manually add some contacts just once before running the test for first time so the list becomes longer and scrollable

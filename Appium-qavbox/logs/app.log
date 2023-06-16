@@ -1180,3 +1180,55 @@
 2023-06-15 11:52:34.685 [main] INFO  AppFactory.class - Application launched successfully
 2023-06-15 11:52:38.259 [main] INFO  DriverManager.class - Driver Session is closed
 2023-06-15 11:52:38.259 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-16 09:31:36.935 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-16 09:31:37.461 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos}]
+2023-06-16 09:31:37.464 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-16 09:31:37.465 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-16 09:31:37.525 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-16 09:31:56.424 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-16 09:31:56.425 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-16 09:31:56.425 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-16 09:32:03.153 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-16 09:32:03.155 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-16 09:32:03.158 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-16 09:32:03.159 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-16 09:32:14.758 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-16 09:32:14.758 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-16 09:32:14.759 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-16 09:32:24.780 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos}]
+2023-06-16 09:32:24.782 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-16 09:32:24.783 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-16 09:32:24.784 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/ApiDemos-debug.apk, appPackage=io.appium.android.apis, appActivity=io.appium.android.apis.ApiDemos, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-16 09:32:33.822 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-16 09:32:33.822 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-16 09:32:33.822 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-16 09:32:41.293 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-16 09:32:41.296 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-16 09:32:41.296 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-16 09:32:41.348 [main] INFO  AppFactory.class - XCUITestOptions options set as: [bundleId=com.apple.MobileAddressBook, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-16 09:32:48.900 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-16 09:32:48.901 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-16 09:32:48.901 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-16 09:33:15.901 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-16 09:33:15.902 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-16 09:33:15.903 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-16 09:33:15.903 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180]
+2023-06-16 09:33:26.050 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-16 09:33:26.051 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-16 09:33:26.052 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-16 09:33:35.855 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-16 09:33:35.855 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-16 09:33:43.646 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-16 09:33:44.272 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{bundleId=com.apple.MobileAddressBook}]
+2023-06-16 09:33:44.277 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-16 09:33:44.279 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-16 09:33:44.347 [main] INFO  AppFactory.class - XCUITestOptions options set as: [bundleId=com.apple.MobileAddressBook, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-16 09:33:49.183 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-16 09:33:49.183 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-16 09:33:49.183 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-16 09:33:53.134 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-16 09:33:53.135 [main] INFO  DriverManager.class - Driver thread value is removed
