@@ -3,7 +3,8 @@
 * [Appium Tutorials](https://www.youtube.com/playlist?list=PLdZJM6yxhZyTKa7l6J5MVnJv663Wd5D3y)
 * [Beginners Guide to Appium](https://www.youtube.com/playlist?list=PLdZJM6yxhZySIufG_a_NQM9NWSvOVeAA4)
 * [Appium Tips](https://www.youtube.com/playlist?list=PLdZJM6yxhZySpolLYlBl09Q5uoXEagOfO)
-
+* [W3C Actions](https://www.w3.org/TR/webdriver/#actions)
+*  
 ---
 
 ## Libraries and Tools
@@ -26,7 +27,7 @@
 * Google Guava 32.0.1-jre
 * [Appium doctor](https://github.com/appium/appium/tree/master/packages/doctor)
 * Demo Apps
-    * [Sauce Labs My Demo App React Native v1.3.0](https://github.com/saucelabs/my-demo-app-rn/releases/tag/v1.3.0)
+    * [Sauce Labs My Demo App React Native (2022 version)](https://github.com/saucelabs/sample-app-mobile)
     * [WDIO Native Demo App](https://github.com/webdriverio/native-demo-app/releases)
 * Android Studio
     * Install android SDK with SDK Manager
@@ -86,15 +87,99 @@
 
 ## Gestures
 
+<img src="doc/element-size-dimesions.png" width="500">
+
 ### Swipe Till an Element is Visible
 
 * There are following ways in which this gesture is implemented:
-  * Using W3C Actions and Sequence Class
-  * Using executeScript() methods
-  * Using UiScrollable scrollIntoView() method from Android UIAutomator2
+#### Using W3C Actions and Sequence Class
+**Test Method**
+```java
+    final var maxSwipe = 5;
+    var swipeCount = 0;
+    while (SwipePage.isNotDisplayed (swipePage.getPlainLogo (), this.wait) && swipeCount++ < maxSwipe) {
+        this.fingerGesture.swipe (FingerGestureUtils.Direction.UP, 70);
+    }
+```
+**Gesture Utils**
+ ```java
+     //Performs the swipe gesture in given direction with provided distance
+    //This method is overloaded in case we want to swipe from the middle of screen, the element is null
+    public void swipe(final Direction direction, final int distance) {
+            swipe(direction, null, distance);
+    }
+    
+    //Performs the swipe gesture from the middle of element in given direction with given distance
+    //Calculates the swipe start and end points based on element/screen and pass to singleFingerSwipe()
+    public void swipe(final Direction direction, final WebElement element, final int distance) {
+        final var start = getSwipeStartPosition(element);
+        final var end = getSwipeEndPosition(direction, element, distance);
+    
+        System.out.println("Swipe.....");
+        if (element != null) {
+        printDimension("Element Size: ", element.getSize());
+        printPoint("Element location: ", element.getLocation());
+        }
+        printPoint("Start: ", start);
+        printPoint("End: ", end);
+    
+        final var sequence = singleFingerSwipe(FINGER_1, 0, start, end);
+        this.driver.perform(singletonList(sequence));
+    }
+    
+    //Returns the sequence of actions for swipe or tap based on start and end point
+    private Sequence singleFingerSwipe(final String fingerName, final int index, final Point start, final Point end) {
+        final var finger = new PointerInput(PointerInput.Kind.TOUCH, fingerName);
+        final var sequence = new Sequence(finger, index);
+        
+        sequence.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), start.getX(), start.getY()));
+        sequence.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        
+        if (end != null) {
+        sequence.addAction(new Pause(finger, Duration.ofMillis(500)));
+        sequence.addAction(finger.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), end.getX(), end.getY()));
+        }
+        
+        sequence.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        
+        return sequence;
+    }
+```
+    
+#### Using executeScript() methods
+```java
+    //We pass the id of the scroll element/screen and the target element strategy and selector to executeScript()
+    final var args = new HashMap<String, Object>();
+    args.put("elementId", ((RemoteWebElement) scrollView).getId());
+    args.put("strategy", "accessibility id");
+    args.put("selector", "WebdriverIO logo");
+    this.driver.executeScript("mobile: scroll",args);
+```
+    
+#### Using UiScrollable scrollIntoView() method from Android UIAutomator2
+````java
+    private final By scrolledLogo = AppiumBy.androidUIAutomator(
+        "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().description(\"WebdriverIO logo\"))"
+        );
+    
+    //automatically scrolls to the element because the locator uses UiScrollable scrollIntoView method
+    final var logo = this.wait.until (visibilityOfElementLocated (swipePage.getScrolledLogo ()));
+    assertThat (logo.isDisplayed ()).isTrue ();
+````
 
 ### Tap/ Click
 
+* tap gesture is achieved with the help of reusable `singleFingerSwipe()` with end coordinates passed as null.
+```java
+    //Performs the tap on screen element
+    //Ending coordinates are passed as null for singleFingerSwipe so it will only move to start point, press, and lift finger
+    public void tap(final WebElement element) {
+        final var start = getElementCenter(element);
+        final var sequence = singleFingerSwipe(FINGER_1, 0, start, null);
+
+        this.driver.perform(singletonList(sequence));   //perform method requires a collection of sequence
+    }
+```
 
 ### Swipe
 
