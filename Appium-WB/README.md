@@ -185,6 +185,29 @@
 
 ### Drag and Drop
 
+* Drag and Drop is also achieved from using the swipe method (because it is also a single finger swipe from source
+  position to target position) internally as follows:
+
+```java
+/**
+     * Performs drag and drop
+     * @param source element to drag
+     * @param target element to drop on
+     */
+    public void dragTo (final WebElement source, final WebElement target) {
+        final var start = getElementCenter (source);
+        final var end = getElementCenter (target);
+
+        System.out.println ("Drag Drop...");
+        printPoint ("Start", start);
+        printPoint ("End", end);
+
+        final var sequence = singleFingerSwipe (FINGER_1, 0, start, end);
+
+        this.driver.perform (singletonList (sequence));
+    }
+```
+
 ### Zoom in and Zoom out
 
 ---

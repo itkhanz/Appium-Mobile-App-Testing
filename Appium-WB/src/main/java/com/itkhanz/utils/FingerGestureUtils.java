@@ -208,5 +208,23 @@ public class FingerGestureUtils<D extends AppiumDriver> {
         this.driver.perform(singletonList(sequence));
     }
 
+    /**
+     * Performs drag and drop
+     * @param source element to drag
+     * @param target element to drop on
+     */
+    public void dragTo (final WebElement source, final WebElement target) {
+        final var start = getElementCenter (source);
+        final var end = getElementCenter (target);
+
+        System.out.println ("Drag Drop...");
+        printPoint ("Start", start);
+        printPoint ("End", end);
+
+        final var sequence = singleFingerSwipe (FINGER_1, 0, start, end);
+
+        this.driver.perform (singletonList (sequence));
+    }
+
 
 }
