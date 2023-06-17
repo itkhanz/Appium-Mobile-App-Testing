@@ -12,8 +12,11 @@ import org.openqa.selenium.interactions.Sequence;
 
 import java.text.MessageFormat;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.Collections;
 
+import static com.itkhanz.utils.FingerGestureUtils.Direction.LEFT;
+import static com.itkhanz.utils.FingerGestureUtils.Direction.RIGHT;
 import static java.text.MessageFormat.format;
 import static java.util.Collections.singletonList;
 
@@ -224,6 +227,66 @@ public class FingerGestureUtils<D extends AppiumDriver> {
         final var sequence = singleFingerSwipe (FINGER_1, 0, start, end);
 
         this.driver.perform (singletonList (sequence));
+    }
+
+    /**
+     * Zoom In or Spread gesture
+     * @param element element to Zoom In
+     * @param distance how far both the fingers will move apart
+     */
+    public void zoomIn (final WebElement element, final int distance) {
+        System.out.println ("Zoom In...");
+        printDimension ("Screen Size", getScreenSize ());
+        printDimension ("Element Size", element.getSize ());
+        printPoint ("Element location", element.getLocation ());
+
+        final var start = getSwipeStartPosition (element);
+        final var start1 = new Point (start.getX () - 50, start.getY ());
+        final var start2 = new Point (start.getX () + 50, start.getY ());
+
+        final var end1 = getSwipeEndPosition (LEFT, element, distance);
+        final var end2 = getSwipeEndPosition (RIGHT, element, distance);
+
+        printPoint ("Start 1", start1);
+        printPoint ("Start 2", start2);
+        printPoint ("End 1", end1);
+        printPoint ("End 2", end2);
+
+        final var sequence1 = singleFingerSwipe (FINGER_1, 0, start1, end1);
+        final var sequence2 = singleFingerSwipe (FINGER_2, 0, start2, end2);
+
+        this.driver.perform (Arrays.asList (sequence1, sequence2));
+    }
+
+    /**
+     * Zoom Out or pinch gesture
+     * @param element WebElement to Zoom Out
+     * @param distance how close the fingers move to each other
+     */
+    public void zoomOut (final WebElement element, final int distance) {
+        System.out.println ("Zoom Out...");
+        printDimension ("Screen Size", getScreenSize ());
+        printDimension ("Element Size", element.getSize ());
+        printPoint ("Element location", element.getLocation ());
+
+        final var start = getSwipeStartPosition (element);
+        final var start1 = new Point (start.getX () - 50, start.getY ());
+        final var start2 = new Point (start.getX () + 50, start.getY ());
+
+        final var end1 = getSwipeEndPosition (LEFT, element, distance);
+        final var end2 = getSwipeEndPosition (RIGHT, element, distance);
+
+        //Value of end and start positions gets interchanged for Zoom out
+        printPoint ("Start 1", end1);
+        printPoint ("Start 2", end2);
+        printPoint ("End 1", start1);
+        printPoint ("End 2", start2);
+
+
+        final var sequence1 = singleFingerSwipe (FINGER_1, 0, end1, start1);
+        final var sequence2 = singleFingerSwipe (FINGER_2, 0, end2, start2);
+
+        this.driver.perform (Arrays.asList (sequence1, sequence2));
     }
 
 

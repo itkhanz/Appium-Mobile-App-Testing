@@ -193,6 +193,8 @@
 
 ### Drag and Drop
 
+<img src="doc/dragAndDrop.png" width="315">
+
 * Drag and Drop is also achieved from using the swipe method (because it is also a single finger swipe from source
   position to target position) internally as follows:
 
@@ -217,6 +219,82 @@
 ```
 
 ### Zoom in and Zoom out
+
+<img src="doc/zoom.png">
+
+* Firstly the center of the image is identified for both the fingers.
+* Afterwards the x-coordinate for the left finger is reduced, and x-coordinate ofr the right finger is increased by few
+  pixels.
+* This emulates the ZoomIn (spread) gesture since both the fingers move apart from each other.
+* Opposite of this is Zoom Out (pinch) gesture since both the fingers move close to each other.
+
+#### Zoom In
+
+```java
+/**
+     * Zoom In or Spread gesture
+     * @param element element to Zoom In
+     * @param distance how far both the fingers will move apart
+     */
+    public void zoomIn (final WebElement element, final int distance) {
+        System.out.println ("Zoom In...");
+        printDimension ("Screen Size", getScreenSize ());
+        printDimension ("Element Size", element.getSize ());
+        printPoint ("Element location", element.getLocation ());
+
+        final var start = getSwipeStartPosition (element);
+        final var start1 = new Point (start.getX () - 50, start.getY ());
+        final var start2 = new Point (start.getX () + 50, start.getY ());
+
+        final var end1 = getSwipeEndPosition (LEFT, element, distance);
+        final var end2 = getSwipeEndPosition (RIGHT, element, distance);
+
+        printPoint ("Start 1", start1);
+        printPoint ("Start 2", start2);
+        printPoint ("End 1", end1);
+        printPoint ("End 2", end2);
+
+        final var sequence1 = singleFingerSwipe (FINGER_1, 0, start1, end1);
+        final var sequence2 = singleFingerSwipe (FINGER_2, 0, start2, end2);
+
+        this.driver.perform (Arrays.asList (sequence1, sequence2));
+    }
+```
+
+#### Zoom Out
+
+```java
+ /**
+     * Zoom Out or pinch gesture
+     * @param element WebElement to Zoom Out
+     * @param distance how close the fingers move to each other
+     */
+    public void zoomOut (final WebElement element, final int distance) {
+        System.out.println ("Zoom Out...");
+        printDimension ("Screen Size", getScreenSize ());
+        printDimension ("Element Size", element.getSize ());
+        printPoint ("Element location", element.getLocation ());
+
+        final var start = getSwipeStartPosition (element);
+        final var start1 = new Point (start.getX () - 50, start.getY ());
+        final var start2 = new Point (start.getX () + 50, start.getY ());
+
+        final var end1 = getSwipeEndPosition (LEFT, element, distance);
+        final var end2 = getSwipeEndPosition (RIGHT, element, distance);
+
+        //Value of end and start positions gets interchanged for Zoom out
+        printPoint ("Start 1", end1);
+        printPoint ("Start 2", end2);
+        printPoint ("End 1", start1);
+        printPoint ("End 2", start2);
+
+
+        final var sequence1 = singleFingerSwipe (FINGER_1, 0, end1, start1);
+        final var sequence2 = singleFingerSwipe (FINGER_2, 0, end2, start2);
+
+        this.driver.perform (Arrays.asList (sequence1, sequence2));
+    }
+```
 
 ---
 

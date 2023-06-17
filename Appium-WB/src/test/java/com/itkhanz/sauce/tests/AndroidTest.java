@@ -58,6 +58,9 @@ public class AndroidTest {
         this.service.stop ();
     }
 
+    /*
+    Perfoms tap, drag and drop gestures
+     */
     @Test
     public void testAddToCart () {
         final var productItem = this.homePage.productItem ("Sauce Labs Backpack");
@@ -74,9 +77,15 @@ public class AndroidTest {
         this.fingerGesture.tap (this.homePage.productItem ("Sauce Labs Backpack")
                 .getTitle ());
 
+        this.fingerGesture.zoomIn (this.productPage.productImage (), 75);
+        this.fingerGesture.zoomOut (this.productPage.productImage (), 75);
+
         assertThat(this.productPage.productName()).isEqualTo("Sauce Labs Backpack");
     }
 
+    /*
+    performs vertical swipe in both directions, left swipe to delete cart item
+     */
     @Test (dependsOnMethods = "testProductDetailsPage")
     public void testCartDeleteOption () {
         this.fingerGesture.swipe (FingerGestureUtils.Direction.UP, 75);

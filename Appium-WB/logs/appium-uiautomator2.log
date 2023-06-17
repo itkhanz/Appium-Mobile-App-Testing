@@ -1,620 +1,925 @@
-2023-06-17 12:58:11:658 [Appium] Welcome to Appium v2.0.0-beta.71 (REV 552db40622bb7a82d9c6d67d2d6bcf3694b47e30)
-2023-06-17 12:58:11:660 [Appium] Non-default server args:
-2023-06-17 12:58:11:662 [Appium] { address: '127.0.0.1',
-2023-06-17 12:58:11:662 [Appium]   basePath: '/wd/hub/',
-2023-06-17 12:58:11:663 [Appium]   localTimezone: true,
-2023-06-17 12:58:11:663 [Appium]   loglevel: 'info',
-2023-06-17 12:58:11:663 [Appium]   sessionOverride: true,
-2023-06-17 12:58:11:663 [Appium]   useDrivers: [ 'uiautomator2' ] }
-2023-06-17 12:58:11:664 [Appium] Attempting to load driver uiautomator2...
-2023-06-17 12:58:12:350 [Appium] Appium REST http interface listener started on 127.0.0.1:4723/wd/hub/
-2023-06-17 12:58:12:350 [Appium] Available drivers:
-2023-06-17 12:58:12:350 [Appium]   - uiautomator2@2.25.2 (automationName 'UiAutomator2')
-2023-06-17 12:58:12:350 [Appium]   - xcuitest@4.30.2 (automationName 'XCUITest')
-2023-06-17 12:58:12:351 [Appium]   - espresso@2.23.1 (automationName 'Espresso')
-2023-06-17 12:58:12:351 [Appium]   - safari@3.3.3 (automationName 'Safari')
-2023-06-17 12:58:12:351 [Appium]   - gecko@1.1.9 (automationName 'Gecko')
-2023-06-17 12:58:12:351 [Appium]   - chromium@1.1.18 (automationName 'Chromium')
-2023-06-17 12:58:12:351 [Appium] Available plugins:
-2023-06-17 12:58:12:351 [Appium]   - element-wait@1.5.0
-2023-06-17 12:58:12:352 [Appium]   - gestures@2.1.0
-2023-06-17 12:58:12:352 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
-2023-06-17 12:58:12:386 [HTTP] --> GET /wd/hub/status
-2023-06-17 12:58:12:387 [HTTP] {}
-2023-06-17 12:58:12:393 [HTTP] <-- GET /wd/hub/status 200 5 ms - 136
-2023-06-17 12:58:12:393 [HTTP] 
-2023-06-17 12:58:13:063 [HTTP] --> POST /wd/hub/session
-2023-06-17 12:58:13:064 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:adbExecTimeout":60000,"appium:app":"/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.apk","appium:appWaitActivity":"com.swaglabsmobileapp.MainActivity","appium:autoGrantPermissions":true,"appium:automationName":"UIAutomator2","appium:avd":"Pixel_5","appium:deviceName":"Pixel_5","appium:fullReset":false,"appium:isHeadless":false,"appium:platformVersion":"13","appium:settings[ignoreUnimportantViews]":true,"platformName":"ANDROID"}}}
-2023-06-17 12:58:13:068 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
-2023-06-17 12:58:13:068 [Appium] The 'uiautomator2' driver was installed and matched caps.
-2023-06-17 12:58:13:068 [Appium] Will require it at /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver
-2023-06-17 12:58:13:068 [AppiumDriver@436c] Appium v2.0.0-beta.71 creating new AndroidUiautomator2Driver (v2.25.2) session
-2023-06-17 12:58:13:069 [AppiumDriver@436c] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
-2023-06-17 12:58:13:069 [AppiumDriver@436c] Appium's BaseDriver version is 9.3.10
-2023-06-17 12:58:13:069 [AppiumDriver@436c] AndroidUiautomator2Driver's BaseDriver version is 9.3.10
-2023-06-17 12:58:13:076 [AndroidUiautomator2Driver@08db (ab689e64)] Session created with session id: ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:13:077 [BaseDriver] Using local app '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.apk'
-2023-06-17 12:58:13:142 [ADB] Found 2 'build-tools' folders under '/Users/ibkh/Library/Android/sdk' (newest first):
-2023-06-17 12:58:13:142 [ADB]     /Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4
-2023-06-17 12:58:13:142 [ADB]     /Users/ibkh/Library/Android/sdk/build-tools/33.0.2
-2023-06-17 12:58:13:143 [ADB] Using 'adb' from '/Users/ibkh/Library/Android/sdk/platform-tools/adb'
-2023-06-17 12:58:13:194 [AndroidDriver] Using device: emulator-5554
-2023-06-17 12:58:13:195 [ADB] Using 'adb' from '/Users/ibkh/Library/Android/sdk/platform-tools/adb'
-2023-06-17 12:58:13:282 [ADB] Getting device platform version
-2023-06-17 12:58:13:334 [AndroidUiautomator2Driver@08db (ab689e64)] Relaxing hidden api policy
-2023-06-17 12:58:13:464 [ADB] Package name: 'com.swaglabsmobileapp'
-2023-06-17 12:58:13:465 [ADB] Main activity name: 'com.swaglabsmobileapp.SplashActivity'
-2023-06-17 12:58:14:397 [ADB] Using 'apksigner.jar' from '/Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4/lib/apksigner.jar'
-2023-06-17 12:58:15:636 [ADB] '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk' is signed with the default certificate
-2023-06-17 12:58:16:063 [ADB] '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
-2023-06-17 12:58:16:064 [AndroidUiautomator2Driver@08db (ab689e64)] Server packages are not going to be (re)installed
-2023-06-17 12:58:16:115 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
-2023-06-17 12:58:17:374 [ADB] '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.apk' is signed with a non-default certificate
-2023-06-17 12:58:17:474 [AndroidDriver] Performing fast reset on 'com.swaglabsmobileapp'
-2023-06-17 12:58:18:250 [AndroidUiautomator2Driver@08db (ab689e64)] Starting UIAutomator2 server 5.10.0
-2023-06-17 12:58:18:250 [AndroidUiautomator2Driver@08db (ab689e64)] Using UIAutomator2 server from '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk' and test from '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
-2023-06-17 12:58:18:250 [AndroidUiautomator2Driver@08db (ab689e64)] Waiting up to 30000ms for UiAutomator2 to be online...
-2023-06-17 12:58:18:265 [AndroidUiautomator2Driver@08db (ab689e64)] socket hang up
-2023-06-17 12:58:19:273 [AndroidUiautomator2Driver@08db (ab689e64)] socket hang up
-2023-06-17 12:58:20:346 [AndroidUiautomator2Driver@08db (ab689e64)] Determined the downstream protocol as 'W3C'
-2023-06-17 12:58:20:452 [AndroidDriver] Screen already unlocked, doing nothing
-2023-06-17 12:58:20:452 [AndroidUiautomator2Driver@08db (ab689e64)] Starting 'com.swaglabsmobileapp/com.swaglabsmobileapp.SplashActivity and waiting for 'com.swaglabsmobileapp/com.swaglabsmobileapp.MainActivity'
-2023-06-17 12:58:21:790 [AppiumDriver@436c] New AndroidUiautomator2Driver session created successfully, session ab689e64-912f-4633-a539-09866d79aceb added to master session list
-2023-06-17 12:58:21:791 [AppiumDriver@436c] Applying the initial values to Appium settings parsed from W3C caps: {"ignoreUnimportantViews":true}
-2023-06-17 12:58:21:805 [HTTP] <-- POST /wd/hub/session 200 8741 ms - 1285
-2023-06-17 12:58:21:806 [HTTP] 
-2023-06-17 12:58:21:959 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/timeouts
-2023-06-17 12:58:21:959 [HTTP] {"implicit":5000}
-2023-06-17 12:58:21:962 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/timeouts 200 3 ms - 14
-2023-06-17 12:58:21:962 [HTTP] 
-2023-06-17 12:58:21:999 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:21:999 [HTTP] {"using":"accessibility id","value":"test-Username"}
-2023-06-17 12:58:22:207 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:23:172 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 1172 ms - 137
-2023-06-17 12:58:23:172 [HTTP] 
-2023-06-17 12:58:23:185 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002b/displayed
-2023-06-17 12:58:23:185 [HTTP] {}
-2023-06-17 12:58:23:200 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002b/displayed 200 15 ms - 14
-2023-06-17 12:58:23:200 [HTTP] 
-2023-06-17 12:58:23:206 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002b/value
-2023-06-17 12:58:23:206 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff0000002b","text":"standard_user","value":["s","t","a","n","d","a","r","d","_","u","s","e","r"]}
-2023-06-17 12:58:23:736 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002b/value 200 530 ms - 14
-2023-06-17 12:58:23:736 [HTTP] 
-2023-06-17 12:58:23:740 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:23:741 [HTTP] {"using":"accessibility id","value":"test-Password"}
-2023-06-17 12:58:23:769 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 28 ms - 137
-2023-06-17 12:58:23:769 [HTTP] 
-2023-06-17 12:58:23:773 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002e/displayed
-2023-06-17 12:58:23:773 [HTTP] {}
-2023-06-17 12:58:24:270 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002e/displayed 200 497 ms - 14
-2023-06-17 12:58:24:270 [HTTP] 
-2023-06-17 12:58:24:276 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002e/value
-2023-06-17 12:58:24:276 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff0000002e","text":"secret_sauce","value":["s","e","c","r","e","t","_","s","a","u","c","e"]}
-2023-06-17 12:58:24:876 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002e/value 200 600 ms - 14
-2023-06-17 12:58:24:877 [HTTP] 
-2023-06-17 12:58:24:881 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:24:881 [HTTP] {"using":"accessibility id","value":"test-LOGIN"}
-2023-06-17 12:58:25:390 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 509 ms - 137
-2023-06-17 12:58:25:391 [HTTP] 
-2023-06-17 12:58:25:394 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002f/displayed
-2023-06-17 12:58:25:394 [HTTP] {}
-2023-06-17 12:58:25:411 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002f/displayed 200 16 ms - 14
-2023-06-17 12:58:25:411 [HTTP] 
-2023-06-17 12:58:25:416 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002f/click
-2023-06-17 12:58:25:417 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff0000002f"}
-2023-06-17 12:58:25:468 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000002f/click 200 52 ms - 14
-2023-06-17 12:58:25:469 [HTTP] 
-2023-06-17 12:58:25:488 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:25:488 [HTTP] {"using":"accessibility id","value":"test-PRODUCTS"}
-2023-06-17 12:58:25:525 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:26:660 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 1172 ms - 137
-2023-06-17 12:58:26:661 [HTTP] 
-2023-06-17 12:58:26:664 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/displayed
-2023-06-17 12:58:26:664 [HTTP] {}
-2023-06-17 12:58:26:675 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/displayed 200 11 ms - 14
-2023-06-17 12:58:26:675 [HTTP] 
-2023-06-17 12:58:26:680 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/elements
-2023-06-17 12:58:26:680 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000049","using":"accessibility id","value":"test-Item"}
-2023-06-17 12:58:26:697 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/elements 200 17 ms - 523
-2023-06-17 12:58:26:697 [HTTP] 
-2023-06-17 12:58:26:714 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element
-2023-06-17 12:58:26:714 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000055","using":"accessibility id","value":"test-Item title"}
-2023-06-17 12:58:26:728 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element 200 14 ms - 137
-2023-06-17 12:58:26:728 [HTTP] 
-2023-06-17 12:58:26:731 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/text
-2023-06-17 12:58:26:732 [HTTP] {}
-2023-06-17 12:58:26:732 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:26:751 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:26:752 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/text 200 20 ms - 82
-2023-06-17 12:58:26:752 [HTTP] 
-2023-06-17 12:58:26:755 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element
-2023-06-17 12:58:26:755 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000055","using":"accessibility id","value":"test-Drag Handle"}
-2023-06-17 12:58:26:768 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element 200 12 ms - 137
-2023-06-17 12:58:26:768 [HTTP] 
-2023-06-17 12:58:26:774 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/displayed
-2023-06-17 12:58:26:774 [HTTP] {}
-2023-06-17 12:58:26:784 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/displayed 200 10 ms - 14
-2023-06-17 12:58:26:784 [HTTP] 
-2023-06-17 12:58:26:787 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/enabled
-2023-06-17 12:58:26:787 [HTTP] {}
-2023-06-17 12:58:26:797 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/enabled 200 10 ms - 14
-2023-06-17 12:58:26:797 [HTTP] 
-2023-06-17 12:58:26:800 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element
-2023-06-17 12:58:26:800 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000055","using":"accessibility id","value":"test-Drag Handle"}
-2023-06-17 12:58:26:815 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element 200 15 ms - 137
-2023-06-17 12:58:26:815 [HTTP] 
-2023-06-17 12:58:26:819 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:26:820 [HTTP] {"using":"accessibility id","value":"test-Cart drop zone"}
-2023-06-17 12:58:26:846 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 26 ms - 137
-2023-06-17 12:58:26:846 [HTTP] 
-2023-06-17 12:58:26:849 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/displayed
-2023-06-17 12:58:26:849 [HTTP] {}
-2023-06-17 12:58:26:859 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/displayed 200 10 ms - 14
-2023-06-17 12:58:26:860 [HTTP] 
-2023-06-17 12:58:26:863 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect
-2023-06-17 12:58:26:863 [HTTP] {}
-2023-06-17 12:58:26:869 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:26:891 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:26:891 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect 200 28 ms - 102
-2023-06-17 12:58:26:892 [HTTP] 
-2023-06-17 12:58:26:896 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect
-2023-06-17 12:58:26:896 [HTTP] {}
-2023-06-17 12:58:26:902 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:26:919 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:26:919 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect 200 23 ms - 102
-2023-06-17 12:58:26:920 [HTTP] 
-2023-06-17 12:58:26:924 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:26:924 [HTTP] {}
-2023-06-17 12:58:26:936 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 12 ms - 50
-2023-06-17 12:58:26:936 [HTTP] 
-2023-06-17 12:58:26:941 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect
-2023-06-17 12:58:26:941 [HTTP] {}
-2023-06-17 12:58:26:941 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:26:957 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:26:958 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect 200 17 ms - 102
-2023-06-17 12:58:26:958 [HTTP] 
-2023-06-17 12:58:26:963 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect
-2023-06-17 12:58:26:963 [HTTP] {}
-2023-06-17 12:58:26:964 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:26:979 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:26:979 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000005c/rect 200 16 ms - 102
-2023-06-17 12:58:26:979 [HTTP] 
-2023-06-17 12:58:26:983 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect
-2023-06-17 12:58:26:983 [HTTP] {}
-2023-06-17 12:58:26:983 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:26:996 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:26:997 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect 200 14 ms - 102
-2023-06-17 12:58:26:997 [HTTP] 
-2023-06-17 12:58:26:999 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect
-2023-06-17 12:58:26:999 [HTTP] {}
-2023-06-17 12:58:27:000 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:27:014 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:27:015 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect 200 16 ms - 102
-2023-06-17 12:58:27:015 [HTTP] 
-2023-06-17 12:58:27:019 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:27:019 [HTTP] {}
-2023-06-17 12:58:27:029 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 10 ms - 50
-2023-06-17 12:58:27:030 [HTTP] 
-2023-06-17 12:58:27:033 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect
-2023-06-17 12:58:27:033 [HTTP] {}
-2023-06-17 12:58:27:033 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:27:046 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:27:047 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect 200 14 ms - 102
-2023-06-17 12:58:27:047 [HTTP] 
-2023-06-17 12:58:27:050 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect
-2023-06-17 12:58:27:050 [HTTP] {}
-2023-06-17 12:58:27:050 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:27:068 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:27:068 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000040/rect 200 18 ms - 102
-2023-06-17 12:58:27:069 [HTTP] 
-2023-06-17 12:58:27:092 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:27:093 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":94,"y":1535,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":540,"y":390,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:28:152 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 1059 ms - 14
-2023-06-17 12:58:28:152 [HTTP] 
-2023-06-17 12:58:28:156 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:28:156 [HTTP] {"using":"accessibility id","value":"test-Cart"}
-2023-06-17 12:58:28:793 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 636 ms - 137
-2023-06-17 12:58:28:793 [HTTP] 
-2023-06-17 12:58:28:796 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/displayed
-2023-06-17 12:58:28:796 [HTTP] {}
-2023-06-17 12:58:28:812 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/displayed 200 16 ms - 14
-2023-06-17 12:58:28:812 [HTTP] 
-2023-06-17 12:58:28:818 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/element
-2023-06-17 12:58:28:818 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000051","using":"class name","value":"android.widget.TextView"}
-2023-06-17 12:58:28:833 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/element 200 15 ms - 137
-2023-06-17 12:58:28:833 [HTTP] 
-2023-06-17 12:58:28:836 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000008d/text
-2023-06-17 12:58:28:836 [HTTP] {}
-2023-06-17 12:58:28:836 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:28:847 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:28:847 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000008d/text 200 11 ms - 64
-2023-06-17 12:58:28:847 [HTTP] 
-2023-06-17 12:58:28:874 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:28:874 [HTTP] {"using":"accessibility id","value":"test-PRODUCTS"}
-2023-06-17 12:58:28:907 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 33 ms - 137
-2023-06-17 12:58:28:907 [HTTP] 
-2023-06-17 12:58:28:909 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/displayed
-2023-06-17 12:58:28:909 [HTTP] {}
-2023-06-17 12:58:28:920 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/displayed 200 11 ms - 14
-2023-06-17 12:58:28:920 [HTTP] 
-2023-06-17 12:58:28:923 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/elements
-2023-06-17 12:58:28:923 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000049","using":"accessibility id","value":"test-Item"}
-2023-06-17 12:58:28:940 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000049/elements 200 17 ms - 523
-2023-06-17 12:58:28:940 [HTTP] 
-2023-06-17 12:58:28:943 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element
-2023-06-17 12:58:28:943 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000055","using":"accessibility id","value":"test-Item title"}
-2023-06-17 12:58:28:954 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element 200 11 ms - 137
-2023-06-17 12:58:28:954 [HTTP] 
-2023-06-17 12:58:28:956 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/text
-2023-06-17 12:58:28:956 [HTTP] {}
-2023-06-17 12:58:28:956 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:28:967 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:28:967 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/text 200 11 ms - 82
-2023-06-17 12:58:28:967 [HTTP] 
-2023-06-17 12:58:28:970 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element
-2023-06-17 12:58:28:970 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000055","using":"accessibility id","value":"test-Item title"}
-2023-06-17 12:58:28:983 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000055/element 200 13 ms - 137
-2023-06-17 12:58:28:983 [HTTP] 
-2023-06-17 12:58:28:985 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect
-2023-06-17 12:58:28:985 [HTTP] {}
-2023-06-17 12:58:28:985 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:28:996 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:28:997 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect 200 11 ms - 103
-2023-06-17 12:58:28:997 [HTTP] 
-2023-06-17 12:58:28:999 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect
-2023-06-17 12:58:28:999 [HTTP] {}
-2023-06-17 12:58:29:000 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:29:009 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:29:010 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect 200 10 ms - 103
-2023-06-17 12:58:29:010 [HTTP] 
-2023-06-17 12:58:29:013 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:29:013 [HTTP] {}
-2023-06-17 12:58:29:019 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 7 ms - 50
-2023-06-17 12:58:29:019 [HTTP] 
-2023-06-17 12:58:29:022 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect
-2023-06-17 12:58:29:022 [HTTP] {}
-2023-06-17 12:58:29:022 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:29:032 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:29:032 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect 200 10 ms - 103
-2023-06-17 12:58:29:032 [HTTP] 
-2023-06-17 12:58:29:035 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect
-2023-06-17 12:58:29:035 [HTTP] {}
-2023-06-17 12:58:29:035 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:29:044 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:29:045 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000059/rect 200 10 ms - 103
-2023-06-17 12:58:29:045 [HTTP] 
-2023-06-17 12:58:29:049 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:29:049 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":278,"y":1228,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:29:083 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 34 ms - 14
-2023-06-17 12:58:29:083 [HTTP] 
-2023-06-17 12:58:29:086 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:29:086 [HTTP] {"using":"accessibility id","value":"test-Description"}
-2023-06-17 12:58:29:126 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:30:119 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 1033 ms - 137
-2023-06-17 12:58:30:119 [HTTP] 
-2023-06-17 12:58:30:121 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000009c/displayed
-2023-06-17 12:58:30:121 [HTTP] {}
-2023-06-17 12:58:30:130 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000009c/displayed 200 9 ms - 14
-2023-06-17 12:58:30:130 [HTTP] 
-2023-06-17 12:58:30:132 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000009c/elements
-2023-06-17 12:58:30:132 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff0000009c","using":"class name","value":"android.widget.TextView"}
-2023-06-17 12:58:30:143 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000009c/elements 200 10 ms - 267
-2023-06-17 12:58:30:143 [HTTP] 
-2023-06-17 12:58:30:146 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000009d/text
-2023-06-17 12:58:30:146 [HTTP] {}
-2023-06-17 12:58:30:146 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:30:159 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:30:160 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff0000009d/text 200 14 ms - 82
-2023-06-17 12:58:30:160 [HTTP] 
-2023-06-17 12:58:30:171 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:30:171 [HTTP] {}
-2023-06-17 12:58:30:177 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 6 ms - 50
-2023-06-17 12:58:30:178 [HTTP] 
-2023-06-17 12:58:30:180 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:30:180 [HTTP] {}
-2023-06-17 12:58:30:187 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 7 ms - 50
-2023-06-17 12:58:30:187 [HTTP] 
-2023-06-17 12:58:30:189 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:30:189 [HTTP] {}
-2023-06-17 12:58:30:195 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 6 ms - 50
-2023-06-17 12:58:30:195 [HTTP] 
-2023-06-17 12:58:30:200 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:30:200 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":540,"y":1069,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":540,"y":268,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:31:235 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 1035 ms - 14
-2023-06-17 12:58:31:235 [HTTP] 
-2023-06-17 12:58:31:238 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:31:238 [HTTP] {}
-2023-06-17 12:58:31:244 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 7 ms - 50
-2023-06-17 12:58:31:245 [HTTP] 
-2023-06-17 12:58:31:248 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:31:248 [HTTP] {}
-2023-06-17 12:58:31:256 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 8 ms - 50
-2023-06-17 12:58:31:256 [HTTP] 
-2023-06-17 12:58:31:258 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:31:258 [HTTP] {}
-2023-06-17 12:58:31:268 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 10 ms - 50
-2023-06-17 12:58:31:269 [HTTP] 
-2023-06-17 12:58:31:273 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:31:273 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":540,"y":1069,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":540,"y":1870,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:32:310 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 1037 ms - 14
-2023-06-17 12:58:32:310 [HTTP] 
-2023-06-17 12:58:32:315 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:32:315 [HTTP] {"using":"accessibility id","value":"test-Cart"}
-2023-06-17 12:58:33:077 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 762 ms - 137
-2023-06-17 12:58:33:077 [HTTP] 
-2023-06-17 12:58:33:081 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/displayed
-2023-06-17 12:58:33:081 [HTTP] {}
-2023-06-17 12:58:33:119 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/displayed 200 38 ms - 14
-2023-06-17 12:58:33:119 [HTTP] 
-2023-06-17 12:58:33:122 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect
-2023-06-17 12:58:33:122 [HTTP] {}
-2023-06-17 12:58:33:122 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:33:137 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:33:138 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect 200 16 ms - 103
-2023-06-17 12:58:33:138 [HTTP] 
-2023-06-17 12:58:33:141 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect
-2023-06-17 12:58:33:141 [HTTP] {}
-2023-06-17 12:58:33:141 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:33:155 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:33:155 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect 200 15 ms - 103
-2023-06-17 12:58:33:155 [HTTP] 
-2023-06-17 12:58:33:158 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:33:158 [HTTP] {}
-2023-06-17 12:58:33:166 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 8 ms - 50
-2023-06-17 12:58:33:166 [HTTP] 
-2023-06-17 12:58:33:169 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect
-2023-06-17 12:58:33:169 [HTTP] {}
-2023-06-17 12:58:33:169 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:33:182 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:33:182 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect 200 13 ms - 103
-2023-06-17 12:58:33:182 [HTTP] 
-2023-06-17 12:58:33:185 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect
-2023-06-17 12:58:33:185 [HTTP] {}
-2023-06-17 12:58:33:185 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:33:197 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:33:198 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000b2/rect 200 13 ms - 103
-2023-06-17 12:58:33:198 [HTTP] 
-2023-06-17 12:58:33:201 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:33:201 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":998,"y":204,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:33:237 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 35 ms - 14
-2023-06-17 12:58:33:237 [HTTP] 
-2023-06-17 12:58:33:240 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:33:240 [HTTP] {"using":"accessibility id","value":"test-Cart Content"}
-2023-06-17 12:58:33:314 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:34:755 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 1515 ms - 137
-2023-06-17 12:58:34:755 [HTTP] 
-2023-06-17 12:58:34:757 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c0/displayed
-2023-06-17 12:58:34:758 [HTTP] {}
-2023-06-17 12:58:34:768 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c0/displayed 200 10 ms - 14
-2023-06-17 12:58:34:768 [HTTP] 
-2023-06-17 12:58:34:771 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c0/elements
-2023-06-17 12:58:34:771 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff000000c0","using":"accessibility id","value":"test-Item"}
-2023-06-17 12:58:34:784 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c0/elements 200 14 ms - 139
-2023-06-17 12:58:34:785 [HTTP] 
-2023-06-17 12:58:34:794 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ca/element
-2023-06-17 12:58:34:794 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff000000ca","using":"accessibility id","value":"test-Description"}
-2023-06-17 12:58:34:807 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ca/element 200 13 ms - 137
-2023-06-17 12:58:34:807 [HTTP] 
-2023-06-17 12:58:34:809 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:34:809 [HTTP] {}
-2023-06-17 12:58:34:816 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 7 ms - 50
-2023-06-17 12:58:34:816 [HTTP] 
-2023-06-17 12:58:34:818 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:34:818 [HTTP] {}
-2023-06-17 12:58:34:819 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:34:831 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:34:831 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 13 ms - 103
-2023-06-17 12:58:34:831 [HTTP] 
-2023-06-17 12:58:34:833 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:34:833 [HTTP] {}
-2023-06-17 12:58:34:834 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:34:848 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:34:848 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 15 ms - 103
-2023-06-17 12:58:34:849 [HTTP] 
-2023-06-17 12:58:34:851 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:34:851 [HTTP] {}
-2023-06-17 12:58:34:858 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 8 ms - 50
-2023-06-17 12:58:34:859 [HTTP] 
-2023-06-17 12:58:34:861 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:34:861 [HTTP] {}
-2023-06-17 12:58:34:861 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:34:872 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:34:872 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 12 ms - 103
-2023-06-17 12:58:34:872 [HTTP] 
-2023-06-17 12:58:34:874 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:34:875 [HTTP] {}
-2023-06-17 12:58:34:875 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:34:886 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:34:887 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 12 ms - 103
-2023-06-17 12:58:34:887 [HTTP] 
-2023-06-17 12:58:34:889 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:34:889 [HTTP] {}
-2023-06-17 12:58:34:896 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 7 ms - 50
-2023-06-17 12:58:34:896 [HTTP] 
-2023-06-17 12:58:34:897 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:34:898 [HTTP] {}
-2023-06-17 12:58:34:898 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:34:907 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:34:908 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 10 ms - 103
-2023-06-17 12:58:34:908 [HTTP] 
-2023-06-17 12:58:34:910 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:34:910 [HTTP] {}
-2023-06-17 12:58:34:910 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:34:952 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:34:953 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 43 ms - 103
-2023-06-17 12:58:34:953 [HTTP] 
-2023-06-17 12:58:34:955 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:34:955 [HTTP] {}
-2023-06-17 12:58:34:963 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 8 ms - 50
-2023-06-17 12:58:34:964 [HTTP] 
-2023-06-17 12:58:34:967 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:34:967 [HTTP] {}
-2023-06-17 12:58:34:967 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:35:004 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:35:005 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 38 ms - 103
-2023-06-17 12:58:35:005 [HTTP] 
-2023-06-17 12:58:35:008 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:35:008 [HTTP] {}
-2023-06-17 12:58:35:009 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:35:054 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:35:055 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 47 ms - 103
-2023-06-17 12:58:35:055 [HTTP] 
-2023-06-17 12:58:35:058 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:35:058 [HTTP] {}
-2023-06-17 12:58:35:069 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 11 ms - 50
-2023-06-17 12:58:35:069 [HTTP] 
-2023-06-17 12:58:35:072 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:35:072 [HTTP] {}
-2023-06-17 12:58:35:072 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:35:104 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:35:104 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 32 ms - 103
-2023-06-17 12:58:35:104 [HTTP] 
-2023-06-17 12:58:35:107 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:35:107 [HTTP] {}
-2023-06-17 12:58:35:107 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:35:153 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:35:153 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 46 ms - 103
-2023-06-17 12:58:35:153 [HTTP] 
-2023-06-17 12:58:35:156 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:35:156 [HTTP] {}
-2023-06-17 12:58:35:156 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:35:188 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:35:189 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 33 ms - 103
-2023-06-17 12:58:35:189 [HTTP] 
-2023-06-17 12:58:35:192 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect
-2023-06-17 12:58:35:192 [HTTP] {}
-2023-06-17 12:58:35:192 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:35:215 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:35:216 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ce/rect 200 24 ms - 103
-2023-06-17 12:58:35:216 [HTTP] 
-2023-06-17 12:58:35:223 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:35:223 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":623,"y":847,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":156,"y":847,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:36:260 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 1037 ms - 14
-2023-06-17 12:58:36:261 [HTTP] 
-2023-06-17 12:58:36:264 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:36:264 [HTTP] {"using":"accessibility id","value":"test-Delete"}
-2023-06-17 12:58:37:330 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 1066 ms - 137
-2023-06-17 12:58:37:330 [HTTP] 
-2023-06-17 12:58:37:332 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/displayed
-2023-06-17 12:58:37:333 [HTTP] {}
-2023-06-17 12:58:37:344 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/displayed 200 12 ms - 14
-2023-06-17 12:58:37:344 [HTTP] 
-2023-06-17 12:58:37:346 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/enabled
-2023-06-17 12:58:37:346 [HTTP] {}
-2023-06-17 12:58:37:356 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/enabled 200 9 ms - 14
-2023-06-17 12:58:37:356 [HTTP] 
-2023-06-17 12:58:37:358 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect
-2023-06-17 12:58:37:358 [HTTP] {}
-2023-06-17 12:58:37:359 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:37:370 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:37:370 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect 200 12 ms - 103
-2023-06-17 12:58:37:370 [HTTP] 
-2023-06-17 12:58:37:372 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect
-2023-06-17 12:58:37:372 [HTTP] {}
-2023-06-17 12:58:37:373 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:37:385 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:37:385 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect 200 13 ms - 103
-2023-06-17 12:58:37:386 [HTTP] 
-2023-06-17 12:58:37:388 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:37:388 [HTTP] {}
-2023-06-17 12:58:37:393 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 6 ms - 50
-2023-06-17 12:58:37:394 [HTTP] 
-2023-06-17 12:58:37:396 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect
-2023-06-17 12:58:37:396 [HTTP] {}
-2023-06-17 12:58:37:396 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:37:408 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:37:408 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect 200 12 ms - 103
-2023-06-17 12:58:37:408 [HTTP] 
-2023-06-17 12:58:37:410 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect
-2023-06-17 12:58:37:410 [HTTP] {}
-2023-06-17 12:58:37:411 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:37:424 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:37:424 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000c4/rect 200 14 ms - 103
-2023-06-17 12:58:37:424 [HTTP] 
-2023-06-17 12:58:37:428 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:37:429 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":946,"y":1085,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:37:469 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 41 ms - 14
-2023-06-17 12:58:37:470 [HTTP] 
-2023-06-17 12:58:37:472 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:37:472 [HTTP] {"using":"accessibility id","value":"test-CONTINUE SHOPPING"}
-2023-06-17 12:58:37:511 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 38 ms - 137
-2023-06-17 12:58:37:511 [HTTP] 
-2023-06-17 12:58:37:514 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/displayed
-2023-06-17 12:58:37:514 [HTTP] {}
-2023-06-17 12:58:38:107 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/displayed 200 593 ms - 14
-2023-06-17 12:58:38:107 [HTTP] 
-2023-06-17 12:58:38:109 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect
-2023-06-17 12:58:38:109 [HTTP] {}
-2023-06-17 12:58:38:109 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:38:128 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:38:129 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect 200 20 ms - 103
-2023-06-17 12:58:38:129 [HTTP] 
-2023-06-17 12:58:38:132 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect
-2023-06-17 12:58:38:132 [HTTP] {}
-2023-06-17 12:58:38:132 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:38:146 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:38:146 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect 200 15 ms - 103
-2023-06-17 12:58:38:147 [HTTP] 
-2023-06-17 12:58:38:149 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect
-2023-06-17 12:58:38:149 [HTTP] {}
-2023-06-17 12:58:38:158 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/window/rect 200 9 ms - 50
-2023-06-17 12:58:38:158 [HTTP] 
-2023-06-17 12:58:38:160 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect
-2023-06-17 12:58:38:160 [HTTP] {}
-2023-06-17 12:58:38:160 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:38:173 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:38:174 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect 200 14 ms - 103
-2023-06-17 12:58:38:174 [HTTP] 
-2023-06-17 12:58:38:176 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect
-2023-06-17 12:58:38:176 [HTTP] {}
-2023-06-17 12:58:38:176 [AndroidUiautomator2Driver@08db (ab689e64)] Driver proxy active, passing request on via HTTP proxy
-2023-06-17 12:58:38:188 [AndroidUiautomator2Driver@08db (ab689e64)] Replacing sessionId d7bf3b03-f436-4640-ba38-868542de07f7 with ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:38:189 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000d8/rect 200 13 ms - 103
-2023-06-17 12:58:38:189 [HTTP] 
-2023-06-17 12:58:38:193 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions
-2023-06-17 12:58:38:193 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":541,"y":778,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-17 12:58:38:236 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/actions 200 43 ms - 14
-2023-06-17 12:58:38:236 [HTTP] 
-2023-06-17 12:58:38:238 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:38:238 [HTTP] {"using":"accessibility id","value":"test-Cart"}
-2023-06-17 12:58:38:256 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 18 ms - 137
-2023-06-17 12:58:38:257 [HTTP] 
-2023-06-17 12:58:38:259 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ec/displayed
-2023-06-17 12:58:38:259 [HTTP] {}
-2023-06-17 12:58:38:312 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"stale element reference","message":"The element 'By.accessibilityId: test-Cart' is not linked to the same object in DOM anymore","stacktrace":"io.appium.uiautomator2.common.exceptions.StaleElementReferenceException: The element 'By.accessibilityId: test-Cart' is not linked to the same object in DOM anymore\n\tat io.appium.uiautomator2.model.ElementsCache.restore(ElementsCache.java:122)\n\tat io.appium.uiautomator2.model.ElementsCache.get(ElementsCache.java:153)\n\tat io.appium.uiautomator2.handler.GetElementAttribute.safeHandle(GetElementAttribute.java:23)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.Abs...
-2023-06-17 12:58:38:340 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff000000ec/displayed 404 81 ms - 3993
-2023-06-17 12:58:38:341 [HTTP] 
-2023-06-17 12:58:38:859 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element
-2023-06-17 12:58:38:859 [HTTP] {"using":"accessibility id","value":"test-Cart"}
-2023-06-17 12:58:38:988 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element 200 128 ms - 137
-2023-06-17 12:58:38:988 [HTTP] 
-2023-06-17 12:58:38:990 [HTTP] --> GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/displayed
-2023-06-17 12:58:38:990 [HTTP] {}
-2023-06-17 12:58:39:003 [HTTP] <-- GET /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/displayed 200 13 ms - 14
-2023-06-17 12:58:39:003 [HTTP] 
-2023-06-17 12:58:39:006 [HTTP] --> POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/element
-2023-06-17 12:58:39:006 [HTTP] {"id":"00000000-0000-00e5-ffff-ffff00000051","using":"class name","value":"android.widget.TextView"}
-2023-06-17 12:58:39:019 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:39:534 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:40:069 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:40:601 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:41:132 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:41:654 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:42:176 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:42:695 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:43:210 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:43:728 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:44:022 [AndroidUiautomator2Driver@08db (ab689e64)] Got response with status 404: {"sessionId":"d7bf3b03-f436-4640-ba38-868542de07f7","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
-2023-06-17 12:58:44:032 [HTTP] <-- POST /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb/element/00000000-0000-00e5-ffff-ffff00000051/element 404 5026 ms - 878
-2023-06-17 12:58:44:032 [HTTP] 
-2023-06-17 12:58:44:038 [HTTP] --> DELETE /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb
-2023-06-17 12:58:44:039 [HTTP] {}
-2023-06-17 12:58:44:040 [AppiumDriver@436c] Removing session ab689e64-912f-4633-a539-09866d79aceb from our master session list
-2023-06-17 12:58:44:293 [AndroidUiautomator2Driver@08db (ab689e64)] Restoring hidden api policy to the device default configuration
-2023-06-17 12:58:44:555 [HTTP] <-- DELETE /wd/hub/session/ab689e64-912f-4633-a539-09866d79aceb 200 516 ms - 14
-2023-06-17 12:58:44:555 [HTTP] 
-2023-06-17 12:58:44:561 [Appium] Received SIGTERM - shutting down
-2023-06-17 12:58:44:567 uncaughtException: write EPIPE
+2023-06-17 13:23:58:503 [Appium] Welcome to Appium v2.0.0-beta.71 (REV 552db40622bb7a82d9c6d67d2d6bcf3694b47e30)
+2023-06-17 13:23:58:506 [Appium] Non-default server args:
+2023-06-17 13:23:58:508 [Appium] { address: '127.0.0.1',
+2023-06-17 13:23:58:508 [Appium]   basePath: '/wd/hub/',
+2023-06-17 13:23:58:509 [Appium]   localTimezone: true,
+2023-06-17 13:23:58:509 [Appium]   loglevel: 'info',
+2023-06-17 13:23:58:509 [Appium]   sessionOverride: true,
+2023-06-17 13:23:58:510 [Appium]   useDrivers: [ 'uiautomator2' ] }
+2023-06-17 13:23:58:510 [Appium] Attempting to load driver uiautomator2...
+2023-06-17 13:23:59:364 [Appium] Appium REST http interface listener started on 127.0.0.1:4723/wd/hub/
+2023-06-17 13:23:59:364 [Appium] Available drivers:
+2023-06-17 13:23:59:365 [Appium]   - uiautomator2@2.25.2 (automationName 'UiAutomator2')
+2023-06-17 13:23:59:365 [Appium]   - xcuitest@4.30.2 (automationName 'XCUITest')
+2023-06-17 13:23:59:365 [Appium]   - espresso@2.23.1 (automationName 'Espresso')
+2023-06-17 13:23:59:365 [Appium]   - safari@3.3.3 (automationName 'Safari')
+2023-06-17 13:23:59:365 [Appium]   - gecko@1.1.9 (automationName 'Gecko')
+2023-06-17 13:23:59:366 [Appium]   - chromium@1.1.18 (automationName 'Chromium')
+2023-06-17 13:23:59:366 [Appium] Available plugins:
+2023-06-17 13:23:59:366 [Appium]   - element-wait@1.5.0
+2023-06-17 13:23:59:366 [Appium]   - gestures@2.1.0
+2023-06-17 13:23:59:366 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
+2023-06-17 13:23:59:550 [HTTP] --> GET /wd/hub/status
+2023-06-17 13:23:59:550 [HTTP] {}
+2023-06-17 13:23:59:557 [HTTP] <-- GET /wd/hub/status 200 5 ms - 136
+2023-06-17 13:23:59:557 [HTTP] 
+2023-06-17 13:24:00:415 [HTTP] --> POST /wd/hub/session
+2023-06-17 13:24:00:416 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:adbExecTimeout":60000,"appium:app":"/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.apk","appium:appWaitActivity":"com.swaglabsmobileapp.MainActivity","appium:autoGrantPermissions":true,"appium:automationName":"UIAutomator2","appium:avd":"Pixel_5","appium:deviceName":"Pixel_5","appium:fullReset":false,"appium:isHeadless":false,"appium:platformVersion":"13","appium:settings[ignoreUnimportantViews]":true,"platformName":"ANDROID"}}}
+2023-06-17 13:24:00:422 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2023-06-17 13:24:00:422 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2023-06-17 13:24:00:422 [Appium] Will require it at /Users/ibkh/.appium/node_modules/appium-uiautomator2-driver
+2023-06-17 13:24:00:422 [AppiumDriver@bf60] Appium v2.0.0-beta.71 creating new AndroidUiautomator2Driver (v2.25.2) session
+2023-06-17 13:24:00:422 [AppiumDriver@bf60] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2023-06-17 13:24:00:423 [AppiumDriver@bf60] Appium's BaseDriver version is 9.3.10
+2023-06-17 13:24:00:423 [AppiumDriver@bf60] AndroidUiautomator2Driver's BaseDriver version is 9.3.10
+2023-06-17 13:24:00:432 [AndroidUiautomator2Driver@49d8 (40310e83)] Session created with session id: 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:00:434 [BaseDriver] Using local app '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.apk'
+2023-06-17 13:24:00:510 [ADB] Found 2 'build-tools' folders under '/Users/ibkh/Library/Android/sdk' (newest first):
+2023-06-17 13:24:00:510 [ADB]     /Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4
+2023-06-17 13:24:00:510 [ADB]     /Users/ibkh/Library/Android/sdk/build-tools/33.0.2
+2023-06-17 13:24:00:511 [ADB] Using 'adb' from '/Users/ibkh/Library/Android/sdk/platform-tools/adb'
+2023-06-17 13:24:00:572 [AndroidDriver] Using device: emulator-5554
+2023-06-17 13:24:00:573 [ADB] Using 'adb' from '/Users/ibkh/Library/Android/sdk/platform-tools/adb'
+2023-06-17 13:24:00:703 [ADB] Getting device platform version
+2023-06-17 13:24:00:757 [AndroidUiautomator2Driver@49d8 (40310e83)] Relaxing hidden api policy
+2023-06-17 13:24:00:876 [ADB] Package name: 'com.swaglabsmobileapp'
+2023-06-17 13:24:00:876 [ADB] Main activity name: 'com.swaglabsmobileapp.SplashActivity'
+2023-06-17 13:24:02:067 [ADB] Using 'apksigner.jar' from '/Users/ibkh/Library/Android/sdk/build-tools/34.0.0-rc4/lib/apksigner.jar'
+2023-06-17 13:24:03:784 [ADB] '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk' is signed with the default certificate
+2023-06-17 13:24:04:265 [ADB] '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
+2023-06-17 13:24:04:265 [AndroidUiautomator2Driver@49d8 (40310e83)] Server packages are not going to be (re)installed
+2023-06-17 13:24:04:319 [ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2023-06-17 13:24:05:705 [ADB] '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.apk' is signed with a non-default certificate
+2023-06-17 13:24:05:811 [AndroidDriver] Performing fast reset on 'com.swaglabsmobileapp'
+2023-06-17 13:24:06:766 [AndroidUiautomator2Driver@49d8 (40310e83)] Starting UIAutomator2 server 5.10.0
+2023-06-17 13:24:06:766 [AndroidUiautomator2Driver@49d8 (40310e83)] Using UIAutomator2 server from '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.10.0.apk' and test from '/Users/ibkh/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+2023-06-17 13:24:06:768 [AndroidUiautomator2Driver@49d8 (40310e83)] Waiting up to 30000ms for UiAutomator2 to be online...
+2023-06-17 13:24:06:787 [AndroidUiautomator2Driver@49d8 (40310e83)] socket hang up
+2023-06-17 13:24:07:798 [AndroidUiautomator2Driver@49d8 (40310e83)] socket hang up
+2023-06-17 13:24:08:808 [AndroidUiautomator2Driver@49d8 (40310e83)] socket hang up
+2023-06-17 13:24:09:886 [AndroidUiautomator2Driver@49d8 (40310e83)] Determined the downstream protocol as 'W3C'
+2023-06-17 13:24:10:033 [AndroidDriver] Screen already unlocked, doing nothing
+2023-06-17 13:24:10:033 [AndroidUiautomator2Driver@49d8 (40310e83)] Starting 'com.swaglabsmobileapp/com.swaglabsmobileapp.SplashActivity and waiting for 'com.swaglabsmobileapp/com.swaglabsmobileapp.MainActivity'
+2023-06-17 13:24:12:474 [AppiumDriver@bf60] New AndroidUiautomator2Driver session created successfully, session 40310e83-7658-4616-b6d7-f83292393694 added to master session list
+2023-06-17 13:24:12:475 [AppiumDriver@bf60] Applying the initial values to Appium settings parsed from W3C caps: {"ignoreUnimportantViews":true}
+2023-06-17 13:24:12:499 [HTTP] <-- POST /wd/hub/session 200 12082 ms - 1285
+2023-06-17 13:24:12:499 [HTTP] 
+2023-06-17 13:24:12:674 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/timeouts
+2023-06-17 13:24:12:674 [HTTP] {"implicit":5000}
+2023-06-17 13:24:12:678 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/timeouts 200 3 ms - 14
+2023-06-17 13:24:12:678 [HTTP] 
+2023-06-17 13:24:12:725 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:12:725 [HTTP] {"using":"accessibility id","value":"test-Username"}
+2023-06-17 13:24:12:850 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:13:372 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:14:045 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 1320 ms - 137
+2023-06-17 13:24:14:045 [HTTP] 
+2023-06-17 13:24:14:058 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002b/displayed
+2023-06-17 13:24:14:058 [HTTP] {}
+2023-06-17 13:24:14:077 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002b/displayed 200 19 ms - 14
+2023-06-17 13:24:14:077 [HTTP] 
+2023-06-17 13:24:14:086 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002b/value
+2023-06-17 13:24:14:086 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff0000002b","text":"standard_user","value":["s","t","a","n","d","a","r","d","_","u","s","e","r"]}
+2023-06-17 13:24:14:113 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002b/value 200 27 ms - 14
+2023-06-17 13:24:14:113 [HTTP] 
+2023-06-17 13:24:14:117 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:14:118 [HTTP] {"using":"accessibility id","value":"test-Password"}
+2023-06-17 13:24:14:626 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 508 ms - 137
+2023-06-17 13:24:14:626 [HTTP] 
+2023-06-17 13:24:14:629 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002e/displayed
+2023-06-17 13:24:14:629 [HTTP] {}
+2023-06-17 13:24:14:641 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002e/displayed 200 12 ms - 14
+2023-06-17 13:24:14:642 [HTTP] 
+2023-06-17 13:24:14:646 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002e/value
+2023-06-17 13:24:14:646 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff0000002e","text":"secret_sauce","value":["s","e","c","r","e","t","_","s","a","u","c","e"]}
+2023-06-17 13:24:14:683 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002e/value 200 37 ms - 14
+2023-06-17 13:24:14:683 [HTTP] 
+2023-06-17 13:24:14:688 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:14:688 [HTTP] {"using":"accessibility id","value":"test-LOGIN"}
+2023-06-17 13:24:15:251 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 563 ms - 137
+2023-06-17 13:24:15:252 [HTTP] 
+2023-06-17 13:24:15:257 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002f/displayed
+2023-06-17 13:24:15:257 [HTTP] {}
+2023-06-17 13:24:15:284 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002f/displayed 200 27 ms - 14
+2023-06-17 13:24:15:284 [HTTP] 
+2023-06-17 13:24:15:291 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002f/click
+2023-06-17 13:24:15:291 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff0000002f"}
+2023-06-17 13:24:15:360 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000002f/click 200 69 ms - 14
+2023-06-17 13:24:15:360 [HTTP] 
+2023-06-17 13:24:15:385 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:15:385 [HTTP] {"using":"accessibility id","value":"test-PRODUCTS"}
+2023-06-17 13:24:15:445 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:16:686 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 1301 ms - 137
+2023-06-17 13:24:16:686 [HTTP] 
+2023-06-17 13:24:16:690 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/displayed
+2023-06-17 13:24:16:691 [HTTP] {}
+2023-06-17 13:24:16:713 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/displayed 200 22 ms - 14
+2023-06-17 13:24:16:713 [HTTP] 
+2023-06-17 13:24:16:718 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/elements
+2023-06-17 13:24:16:719 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000049","using":"accessibility id","value":"test-Item"}
+2023-06-17 13:24:16:746 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/elements 200 27 ms - 523
+2023-06-17 13:24:16:746 [HTTP] 
+2023-06-17 13:24:16:768 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element
+2023-06-17 13:24:16:768 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000055","using":"accessibility id","value":"test-Item title"}
+2023-06-17 13:24:16:789 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element 200 21 ms - 137
+2023-06-17 13:24:16:789 [HTTP] 
+2023-06-17 13:24:16:792 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/text
+2023-06-17 13:24:16:793 [HTTP] {}
+2023-06-17 13:24:16:794 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:16:811 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:16:812 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/text 200 19 ms - 82
+2023-06-17 13:24:16:812 [HTTP] 
+2023-06-17 13:24:16:817 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element
+2023-06-17 13:24:16:817 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000055","using":"accessibility id","value":"test-Drag Handle"}
+2023-06-17 13:24:16:838 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element 200 20 ms - 137
+2023-06-17 13:24:16:838 [HTTP] 
+2023-06-17 13:24:16:845 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/displayed
+2023-06-17 13:24:16:845 [HTTP] {}
+2023-06-17 13:24:16:860 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/displayed 200 14 ms - 14
+2023-06-17 13:24:16:860 [HTTP] 
+2023-06-17 13:24:16:863 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/enabled
+2023-06-17 13:24:16:864 [HTTP] {}
+2023-06-17 13:24:16:880 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/enabled 200 16 ms - 14
+2023-06-17 13:24:16:880 [HTTP] 
+2023-06-17 13:24:16:885 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element
+2023-06-17 13:24:16:885 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000055","using":"accessibility id","value":"test-Drag Handle"}
+2023-06-17 13:24:16:908 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element 200 22 ms - 137
+2023-06-17 13:24:16:908 [HTTP] 
+2023-06-17 13:24:16:913 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:16:913 [HTTP] {"using":"accessibility id","value":"test-Cart drop zone"}
+2023-06-17 13:24:16:959 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 45 ms - 137
+2023-06-17 13:24:16:960 [HTTP] 
+2023-06-17 13:24:16:964 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/displayed
+2023-06-17 13:24:16:964 [HTTP] {}
+2023-06-17 13:24:16:989 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/displayed 200 24 ms - 14
+2023-06-17 13:24:16:993 [HTTP] 
+2023-06-17 13:24:16:995 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect
+2023-06-17 13:24:16:995 [HTTP] {}
+2023-06-17 13:24:17:004 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:033 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:034 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect 200 39 ms - 102
+2023-06-17 13:24:17:035 [HTTP] 
+2023-06-17 13:24:17:039 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect
+2023-06-17 13:24:17:039 [HTTP] {}
+2023-06-17 13:24:17:045 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:062 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:063 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect 200 24 ms - 102
+2023-06-17 13:24:17:063 [HTTP] 
+2023-06-17 13:24:17:068 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:17:068 [HTTP] {}
+2023-06-17 13:24:17:082 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 13 ms - 50
+2023-06-17 13:24:17:082 [HTTP] 
+2023-06-17 13:24:17:085 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect
+2023-06-17 13:24:17:085 [HTTP] {}
+2023-06-17 13:24:17:086 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:105 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:107 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect 200 21 ms - 102
+2023-06-17 13:24:17:107 [HTTP] 
+2023-06-17 13:24:17:110 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect
+2023-06-17 13:24:17:110 [HTTP] {}
+2023-06-17 13:24:17:111 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:129 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:130 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000005c/rect 200 19 ms - 102
+2023-06-17 13:24:17:130 [HTTP] 
+2023-06-17 13:24:17:134 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect
+2023-06-17 13:24:17:134 [HTTP] {}
+2023-06-17 13:24:17:134 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:152 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:153 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect 200 19 ms - 102
+2023-06-17 13:24:17:153 [HTTP] 
+2023-06-17 13:24:17:157 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect
+2023-06-17 13:24:17:158 [HTTP] {}
+2023-06-17 13:24:17:158 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:178 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:179 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect 200 21 ms - 102
+2023-06-17 13:24:17:179 [HTTP] 
+2023-06-17 13:24:17:183 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:17:183 [HTTP] {}
+2023-06-17 13:24:17:196 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 13 ms - 50
+2023-06-17 13:24:17:196 [HTTP] 
+2023-06-17 13:24:17:200 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect
+2023-06-17 13:24:17:200 [HTTP] {}
+2023-06-17 13:24:17:200 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:219 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:219 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect 200 20 ms - 102
+2023-06-17 13:24:17:219 [HTTP] 
+2023-06-17 13:24:17:223 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect
+2023-06-17 13:24:17:223 [HTTP] {}
+2023-06-17 13:24:17:224 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:17:239 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:17:240 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000040/rect 200 16 ms - 102
+2023-06-17 13:24:17:240 [HTTP] 
+2023-06-17 13:24:17:257 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:17:257 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":94,"y":1535,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":540,"y":390,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:18:300 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 1043 ms - 14
+2023-06-17 13:24:18:300 [HTTP] 
+2023-06-17 13:24:18:307 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:18:307 [HTTP] {"using":"accessibility id","value":"test-Cart"}
+2023-06-17 13:24:18:944 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 637 ms - 137
+2023-06-17 13:24:18:944 [HTTP] 
+2023-06-17 13:24:18:947 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/displayed
+2023-06-17 13:24:18:947 [HTTP] {}
+2023-06-17 13:24:18:959 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/displayed 200 12 ms - 14
+2023-06-17 13:24:18:959 [HTTP] 
+2023-06-17 13:24:18:962 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/element
+2023-06-17 13:24:18:962 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000051","using":"class name","value":"android.widget.TextView"}
+2023-06-17 13:24:18:976 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/element 200 14 ms - 137
+2023-06-17 13:24:18:976 [HTTP] 
+2023-06-17 13:24:18:979 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000008d/text
+2023-06-17 13:24:18:979 [HTTP] {}
+2023-06-17 13:24:18:979 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:18:992 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:18:993 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000008d/text 200 14 ms - 64
+2023-06-17 13:24:18:993 [HTTP] 
+2023-06-17 13:24:19:017 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:19:017 [HTTP] {"using":"accessibility id","value":"test-PRODUCTS"}
+2023-06-17 13:24:19:053 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 36 ms - 137
+2023-06-17 13:24:19:054 [HTTP] 
+2023-06-17 13:24:19:057 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/displayed
+2023-06-17 13:24:19:057 [HTTP] {}
+2023-06-17 13:24:19:066 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/displayed 200 9 ms - 14
+2023-06-17 13:24:19:066 [HTTP] 
+2023-06-17 13:24:19:070 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/elements
+2023-06-17 13:24:19:070 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000049","using":"accessibility id","value":"test-Item"}
+2023-06-17 13:24:19:085 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000049/elements 200 15 ms - 523
+2023-06-17 13:24:19:085 [HTTP] 
+2023-06-17 13:24:19:089 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element
+2023-06-17 13:24:19:089 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000055","using":"accessibility id","value":"test-Item title"}
+2023-06-17 13:24:19:099 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element 200 10 ms - 137
+2023-06-17 13:24:19:099 [HTTP] 
+2023-06-17 13:24:19:102 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/text
+2023-06-17 13:24:19:102 [HTTP] {}
+2023-06-17 13:24:19:102 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:19:114 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:19:114 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/text 200 12 ms - 82
+2023-06-17 13:24:19:114 [HTTP] 
+2023-06-17 13:24:19:117 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element
+2023-06-17 13:24:19:117 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000055","using":"accessibility id","value":"test-Item title"}
+2023-06-17 13:24:19:128 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000055/element 200 11 ms - 137
+2023-06-17 13:24:19:128 [HTTP] 
+2023-06-17 13:24:19:130 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect
+2023-06-17 13:24:19:130 [HTTP] {}
+2023-06-17 13:24:19:130 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:19:144 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:19:144 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect 200 14 ms - 103
+2023-06-17 13:24:19:144 [HTTP] 
+2023-06-17 13:24:19:146 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect
+2023-06-17 13:24:19:146 [HTTP] {}
+2023-06-17 13:24:19:147 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:19:161 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:19:162 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect 200 15 ms - 103
+2023-06-17 13:24:19:162 [HTTP] 
+2023-06-17 13:24:19:164 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:19:164 [HTTP] {}
+2023-06-17 13:24:19:172 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 8 ms - 50
+2023-06-17 13:24:19:172 [HTTP] 
+2023-06-17 13:24:19:175 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect
+2023-06-17 13:24:19:175 [HTTP] {}
+2023-06-17 13:24:19:176 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:19:188 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:19:188 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect 200 13 ms - 103
+2023-06-17 13:24:19:188 [HTTP] 
+2023-06-17 13:24:19:191 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect
+2023-06-17 13:24:19:191 [HTTP] {}
+2023-06-17 13:24:19:191 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:19:201 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:19:202 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000059/rect 200 11 ms - 103
+2023-06-17 13:24:19:202 [HTTP] 
+2023-06-17 13:24:19:206 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:19:206 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":278,"y":1228,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:19:241 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 35 ms - 14
+2023-06-17 13:24:19:241 [HTTP] 
+2023-06-17 13:24:19:244 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:19:244 [HTTP] {"using":"accessibility id","value":"test-Image Container"}
+2023-06-17 13:24:19:290 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:20:263 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 1018 ms - 137
+2023-06-17 13:24:20:263 [HTTP] 
+2023-06-17 13:24:20:265 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/displayed
+2023-06-17 13:24:20:265 [HTTP] {}
+2023-06-17 13:24:20:277 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/displayed 200 11 ms - 14
+2023-06-17 13:24:20:277 [HTTP] 
+2023-06-17 13:24:20:279 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:279 [HTTP] {}
+2023-06-17 13:24:20:288 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 8 ms - 50
+2023-06-17 13:24:20:288 [HTTP] 
+2023-06-17 13:24:20:290 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:290 [HTTP] {}
+2023-06-17 13:24:20:291 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:304 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:305 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 14 ms - 103
+2023-06-17 13:24:20:305 [HTTP] 
+2023-06-17 13:24:20:308 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:308 [HTTP] {}
+2023-06-17 13:24:20:308 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:319 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:320 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 12 ms - 103
+2023-06-17 13:24:20:320 [HTTP] 
+2023-06-17 13:24:20:323 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:323 [HTTP] {}
+2023-06-17 13:24:20:330 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 7 ms - 50
+2023-06-17 13:24:20:330 [HTTP] 
+2023-06-17 13:24:20:332 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:332 [HTTP] {}
+2023-06-17 13:24:20:332 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:345 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:346 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 13 ms - 103
+2023-06-17 13:24:20:346 [HTTP] 
+2023-06-17 13:24:20:348 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:348 [HTTP] {}
+2023-06-17 13:24:20:349 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:362 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:363 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 15 ms - 103
+2023-06-17 13:24:20:363 [HTTP] 
+2023-06-17 13:24:20:367 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:368 [HTTP] {}
+2023-06-17 13:24:20:382 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 15 ms - 50
+2023-06-17 13:24:20:382 [HTTP] 
+2023-06-17 13:24:20:386 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:387 [HTTP] {}
+2023-06-17 13:24:20:387 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:402 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:403 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 16 ms - 103
+2023-06-17 13:24:20:403 [HTTP] 
+2023-06-17 13:24:20:406 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:406 [HTTP] {}
+2023-06-17 13:24:20:406 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:417 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:418 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 12 ms - 103
+2023-06-17 13:24:20:418 [HTTP] 
+2023-06-17 13:24:20:423 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:423 [HTTP] {}
+2023-06-17 13:24:20:430 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 7 ms - 50
+2023-06-17 13:24:20:430 [HTTP] 
+2023-06-17 13:24:20:432 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:433 [HTTP] {}
+2023-06-17 13:24:20:433 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:444 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:444 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 11 ms - 103
+2023-06-17 13:24:20:444 [HTTP] 
+2023-06-17 13:24:20:447 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:447 [HTTP] {}
+2023-06-17 13:24:20:447 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:458 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:459 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 12 ms - 103
+2023-06-17 13:24:20:459 [HTTP] 
+2023-06-17 13:24:20:461 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:461 [HTTP] {}
+2023-06-17 13:24:20:468 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 7 ms - 50
+2023-06-17 13:24:20:468 [HTTP] 
+2023-06-17 13:24:20:471 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:471 [HTTP] {}
+2023-06-17 13:24:20:471 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:486 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:487 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 15 ms - 103
+2023-06-17 13:24:20:487 [HTTP] 
+2023-06-17 13:24:20:489 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:489 [HTTP] {}
+2023-06-17 13:24:20:490 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:505 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:505 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 16 ms - 103
+2023-06-17 13:24:20:505 [HTTP] 
+2023-06-17 13:24:20:508 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:508 [HTTP] {}
+2023-06-17 13:24:20:519 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 11 ms - 50
+2023-06-17 13:24:20:520 [HTTP] 
+2023-06-17 13:24:20:523 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:523 [HTTP] {}
+2023-06-17 13:24:20:524 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:541 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:542 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 18 ms - 103
+2023-06-17 13:24:20:542 [HTTP] 
+2023-06-17 13:24:20:545 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:545 [HTTP] {}
+2023-06-17 13:24:20:545 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:565 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:566 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 21 ms - 103
+2023-06-17 13:24:20:566 [HTTP] 
+2023-06-17 13:24:20:569 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:569 [HTTP] {}
+2023-06-17 13:24:20:579 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 10 ms - 50
+2023-06-17 13:24:20:579 [HTTP] 
+2023-06-17 13:24:20:581 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:581 [HTTP] {}
+2023-06-17 13:24:20:581 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:598 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:599 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 17 ms - 103
+2023-06-17 13:24:20:599 [HTTP] 
+2023-06-17 13:24:20:602 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:602 [HTTP] {}
+2023-06-17 13:24:20:603 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:616 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:617 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 15 ms - 103
+2023-06-17 13:24:20:617 [HTTP] 
+2023-06-17 13:24:20:619 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:620 [HTTP] {}
+2023-06-17 13:24:20:628 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 8 ms - 50
+2023-06-17 13:24:20:628 [HTTP] 
+2023-06-17 13:24:20:632 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:632 [HTTP] {}
+2023-06-17 13:24:20:632 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:650 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:650 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 18 ms - 103
+2023-06-17 13:24:20:650 [HTTP] 
+2023-06-17 13:24:20:654 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:654 [HTTP] {}
+2023-06-17 13:24:20:654 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:676 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:676 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 23 ms - 103
+2023-06-17 13:24:20:677 [HTTP] 
+2023-06-17 13:24:20:679 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:20:679 [HTTP] {}
+2023-06-17 13:24:20:694 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 15 ms - 50
+2023-06-17 13:24:20:695 [HTTP] 
+2023-06-17 13:24:20:698 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:698 [HTTP] {}
+2023-06-17 13:24:20:699 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:724 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:725 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 26 ms - 103
+2023-06-17 13:24:20:725 [HTTP] 
+2023-06-17 13:24:20:731 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:20:731 [HTTP] {}
+2023-06-17 13:24:20:732 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:20:752 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:20:753 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 21 ms - 103
+2023-06-17 13:24:20:753 [HTTP] 
+2023-06-17 13:24:20:761 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:20:761 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":490,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":135,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]},{"id":"Finger 2","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":590,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":945,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:21:805 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 1043 ms - 14
+2023-06-17 13:24:21:805 [HTTP] 
+2023-06-17 13:24:21:809 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:21:809 [HTTP] {"using":"accessibility id","value":"test-Image Container"}
+2023-06-17 13:24:21:833 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 24 ms - 137
+2023-06-17 13:24:21:833 [HTTP] 
+2023-06-17 13:24:21:837 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/displayed
+2023-06-17 13:24:21:837 [HTTP] {}
+2023-06-17 13:24:21:850 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/displayed 200 13 ms - 14
+2023-06-17 13:24:21:850 [HTTP] 
+2023-06-17 13:24:21:852 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:21:852 [HTTP] {}
+2023-06-17 13:24:21:876 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 24 ms - 50
+2023-06-17 13:24:21:877 [HTTP] 
+2023-06-17 13:24:21:883 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:21:883 [HTTP] {}
+2023-06-17 13:24:21:884 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:21:910 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:21:911 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 28 ms - 103
+2023-06-17 13:24:21:911 [HTTP] 
+2023-06-17 13:24:21:914 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:21:914 [HTTP] {}
+2023-06-17 13:24:21:915 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:21:935 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:21:936 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 22 ms - 103
+2023-06-17 13:24:21:936 [HTTP] 
+2023-06-17 13:24:21:940 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:21:941 [HTTP] {}
+2023-06-17 13:24:21:953 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 12 ms - 50
+2023-06-17 13:24:21:953 [HTTP] 
+2023-06-17 13:24:21:957 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:21:957 [HTTP] {}
+2023-06-17 13:24:21:957 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:21:977 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:21:978 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 21 ms - 103
+2023-06-17 13:24:21:978 [HTTP] 
+2023-06-17 13:24:21:982 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:21:982 [HTTP] {}
+2023-06-17 13:24:21:982 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:21:999 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:21:999 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 18 ms - 103
+2023-06-17 13:24:22:000 [HTTP] 
+2023-06-17 13:24:22:003 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:22:003 [HTTP] {}
+2023-06-17 13:24:22:012 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 10 ms - 50
+2023-06-17 13:24:22:012 [HTTP] 
+2023-06-17 13:24:22:017 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:017 [HTTP] {}
+2023-06-17 13:24:22:017 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:057 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:058 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 41 ms - 103
+2023-06-17 13:24:22:058 [HTTP] 
+2023-06-17 13:24:22:064 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:064 [HTTP] {}
+2023-06-17 13:24:22:064 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:082 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:082 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 19 ms - 103
+2023-06-17 13:24:22:083 [HTTP] 
+2023-06-17 13:24:22:086 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:22:086 [HTTP] {}
+2023-06-17 13:24:22:100 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 14 ms - 50
+2023-06-17 13:24:22:100 [HTTP] 
+2023-06-17 13:24:22:104 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:104 [HTTP] {}
+2023-06-17 13:24:22:105 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:120 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:121 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 16 ms - 103
+2023-06-17 13:24:22:121 [HTTP] 
+2023-06-17 13:24:22:124 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:124 [HTTP] {}
+2023-06-17 13:24:22:124 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:136 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:136 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 12 ms - 103
+2023-06-17 13:24:22:136 [HTTP] 
+2023-06-17 13:24:22:139 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:22:139 [HTTP] {}
+2023-06-17 13:24:22:148 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 8 ms - 50
+2023-06-17 13:24:22:148 [HTTP] 
+2023-06-17 13:24:22:150 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:150 [HTTP] {}
+2023-06-17 13:24:22:150 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:165 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:166 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 16 ms - 103
+2023-06-17 13:24:22:166 [HTTP] 
+2023-06-17 13:24:22:171 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:171 [HTTP] {}
+2023-06-17 13:24:22:171 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:182 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:183 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 12 ms - 103
+2023-06-17 13:24:22:183 [HTTP] 
+2023-06-17 13:24:22:185 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:22:185 [HTTP] {}
+2023-06-17 13:24:22:193 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 8 ms - 50
+2023-06-17 13:24:22:193 [HTTP] 
+2023-06-17 13:24:22:195 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:195 [HTTP] {}
+2023-06-17 13:24:22:196 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:207 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:208 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 12 ms - 103
+2023-06-17 13:24:22:208 [HTTP] 
+2023-06-17 13:24:22:210 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:211 [HTTP] {}
+2023-06-17 13:24:22:211 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:227 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:228 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 17 ms - 103
+2023-06-17 13:24:22:228 [HTTP] 
+2023-06-17 13:24:22:230 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:22:230 [HTTP] {}
+2023-06-17 13:24:22:241 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 10 ms - 50
+2023-06-17 13:24:22:241 [HTTP] 
+2023-06-17 13:24:22:243 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:243 [HTTP] {}
+2023-06-17 13:24:22:244 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:259 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:260 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 16 ms - 103
+2023-06-17 13:24:22:260 [HTTP] 
+2023-06-17 13:24:22:263 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:263 [HTTP] {}
+2023-06-17 13:24:22:263 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:279 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:280 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 17 ms - 103
+2023-06-17 13:24:22:280 [HTTP] 
+2023-06-17 13:24:22:283 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:22:283 [HTTP] {}
+2023-06-17 13:24:22:295 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 12 ms - 50
+2023-06-17 13:24:22:295 [HTTP] 
+2023-06-17 13:24:22:298 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:298 [HTTP] {}
+2023-06-17 13:24:22:298 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:314 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:315 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 17 ms - 103
+2023-06-17 13:24:22:315 [HTTP] 
+2023-06-17 13:24:22:318 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:318 [HTTP] {}
+2023-06-17 13:24:22:318 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:334 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:335 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 17 ms - 103
+2023-06-17 13:24:22:335 [HTTP] 
+2023-06-17 13:24:22:337 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:22:337 [HTTP] {}
+2023-06-17 13:24:22:344 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 7 ms - 50
+2023-06-17 13:24:22:345 [HTTP] 
+2023-06-17 13:24:22:347 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:347 [HTTP] {}
+2023-06-17 13:24:22:348 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:360 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:360 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 13 ms - 103
+2023-06-17 13:24:22:360 [HTTP] 
+2023-06-17 13:24:22:362 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect
+2023-06-17 13:24:22:363 [HTTP] {}
+2023-06-17 13:24:22:363 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:22:375 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:22:375 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000099/rect 200 13 ms - 103
+2023-06-17 13:24:22:375 [HTTP] 
+2023-06-17 13:24:22:381 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:22:381 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":135,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":490,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]},{"id":"Finger 2","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":945,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":590,"y":1206,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:23:445 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 1064 ms - 14
+2023-06-17 13:24:23:445 [HTTP] 
+2023-06-17 13:24:23:449 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:23:449 [HTTP] {"using":"accessibility id","value":"test-Description"}
+2023-06-17 13:24:23:507 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 57 ms - 137
+2023-06-17 13:24:23:507 [HTTP] 
+2023-06-17 13:24:23:510 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000009c/displayed
+2023-06-17 13:24:23:510 [HTTP] {}
+2023-06-17 13:24:23:527 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000009c/displayed 200 17 ms - 14
+2023-06-17 13:24:23:527 [HTTP] 
+2023-06-17 13:24:23:531 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000009c/elements
+2023-06-17 13:24:23:531 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff0000009c","using":"class name","value":"android.widget.TextView"}
+2023-06-17 13:24:23:552 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000009c/elements 200 21 ms - 267
+2023-06-17 13:24:23:553 [HTTP] 
+2023-06-17 13:24:23:556 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000009d/text
+2023-06-17 13:24:23:556 [HTTP] {}
+2023-06-17 13:24:23:557 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:23:567 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:23:568 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff0000009d/text 200 11 ms - 82
+2023-06-17 13:24:23:568 [HTTP] 
+2023-06-17 13:24:23:575 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:23:575 [HTTP] {}
+2023-06-17 13:24:23:585 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 10 ms - 50
+2023-06-17 13:24:23:586 [HTTP] 
+2023-06-17 13:24:23:588 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:23:588 [HTTP] {}
+2023-06-17 13:24:23:600 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 12 ms - 50
+2023-06-17 13:24:23:600 [HTTP] 
+2023-06-17 13:24:23:602 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:23:603 [HTTP] {}
+2023-06-17 13:24:23:610 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 7 ms - 50
+2023-06-17 13:24:23:610 [HTTP] 
+2023-06-17 13:24:23:616 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:23:616 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":540,"y":1069,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":540,"y":268,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:24:695 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 1079 ms - 14
+2023-06-17 13:24:24:696 [HTTP] 
+2023-06-17 13:24:24:699 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:24:699 [HTTP] {}
+2023-06-17 13:24:24:712 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 13 ms - 50
+2023-06-17 13:24:24:712 [HTTP] 
+2023-06-17 13:24:24:714 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:24:714 [HTTP] {}
+2023-06-17 13:24:24:727 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 13 ms - 50
+2023-06-17 13:24:24:727 [HTTP] 
+2023-06-17 13:24:24:729 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:24:730 [HTTP] {}
+2023-06-17 13:24:24:743 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 13 ms - 50
+2023-06-17 13:24:24:743 [HTTP] 
+2023-06-17 13:24:24:755 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:24:755 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":540,"y":1069,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":540,"y":1870,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:25:811 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 1056 ms - 14
+2023-06-17 13:24:25:811 [HTTP] 
+2023-06-17 13:24:25:814 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:25:814 [HTTP] {"using":"accessibility id","value":"test-Cart"}
+2023-06-17 13:24:26:698 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 884 ms - 137
+2023-06-17 13:24:26:698 [HTTP] 
+2023-06-17 13:24:26:701 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/displayed
+2023-06-17 13:24:26:701 [HTTP] {}
+2023-06-17 13:24:26:744 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/displayed 200 43 ms - 14
+2023-06-17 13:24:26:744 [HTTP] 
+2023-06-17 13:24:26:746 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect
+2023-06-17 13:24:26:747 [HTTP] {}
+2023-06-17 13:24:26:747 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:26:778 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:26:779 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect 200 32 ms - 103
+2023-06-17 13:24:26:779 [HTTP] 
+2023-06-17 13:24:26:781 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect
+2023-06-17 13:24:26:781 [HTTP] {}
+2023-06-17 13:24:26:782 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:26:829 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:26:829 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect 200 48 ms - 103
+2023-06-17 13:24:26:829 [HTTP] 
+2023-06-17 13:24:26:831 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:26:831 [HTTP] {}
+2023-06-17 13:24:26:842 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 10 ms - 50
+2023-06-17 13:24:26:842 [HTTP] 
+2023-06-17 13:24:26:845 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect
+2023-06-17 13:24:26:845 [HTTP] {}
+2023-06-17 13:24:26:845 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:26:858 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:26:859 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect 200 14 ms - 103
+2023-06-17 13:24:26:859 [HTTP] 
+2023-06-17 13:24:26:862 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect
+2023-06-17 13:24:26:862 [HTTP] {}
+2023-06-17 13:24:26:862 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:26:878 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:26:878 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000b2/rect 200 16 ms - 103
+2023-06-17 13:24:26:878 [HTTP] 
+2023-06-17 13:24:26:884 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:26:884 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":998,"y":204,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:26:935 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 50 ms - 14
+2023-06-17 13:24:26:935 [HTTP] 
+2023-06-17 13:24:26:939 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:26:939 [HTTP] {"using":"accessibility id","value":"test-Cart Content"}
+2023-06-17 13:24:27:008 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:28:028 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 1089 ms - 137
+2023-06-17 13:24:28:028 [HTTP] 
+2023-06-17 13:24:28:030 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c0/displayed
+2023-06-17 13:24:28:030 [HTTP] {}
+2023-06-17 13:24:28:043 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c0/displayed 200 12 ms - 14
+2023-06-17 13:24:28:043 [HTTP] 
+2023-06-17 13:24:28:045 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c0/elements
+2023-06-17 13:24:28:045 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff000000c0","using":"accessibility id","value":"test-Item"}
+2023-06-17 13:24:28:063 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c0/elements 200 18 ms - 139
+2023-06-17 13:24:28:063 [HTTP] 
+2023-06-17 13:24:28:073 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ca/element
+2023-06-17 13:24:28:073 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff000000ca","using":"accessibility id","value":"test-Description"}
+2023-06-17 13:24:28:089 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ca/element 200 16 ms - 137
+2023-06-17 13:24:28:089 [HTTP] 
+2023-06-17 13:24:28:091 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:28:092 [HTTP] {}
+2023-06-17 13:24:28:098 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 6 ms - 50
+2023-06-17 13:24:28:098 [HTTP] 
+2023-06-17 13:24:28:100 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:100 [HTTP] {}
+2023-06-17 13:24:28:101 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:115 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:116 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 15 ms - 103
+2023-06-17 13:24:28:116 [HTTP] 
+2023-06-17 13:24:28:118 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:118 [HTTP] {}
+2023-06-17 13:24:28:118 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:130 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:131 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 13 ms - 103
+2023-06-17 13:24:28:131 [HTTP] 
+2023-06-17 13:24:28:133 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:28:133 [HTTP] {}
+2023-06-17 13:24:28:145 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 11 ms - 50
+2023-06-17 13:24:28:145 [HTTP] 
+2023-06-17 13:24:28:147 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:147 [HTTP] {}
+2023-06-17 13:24:28:148 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:162 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:162 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 15 ms - 103
+2023-06-17 13:24:28:162 [HTTP] 
+2023-06-17 13:24:28:164 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:164 [HTTP] {}
+2023-06-17 13:24:28:165 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:178 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:179 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 14 ms - 103
+2023-06-17 13:24:28:179 [HTTP] 
+2023-06-17 13:24:28:181 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:28:181 [HTTP] {}
+2023-06-17 13:24:28:191 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 10 ms - 50
+2023-06-17 13:24:28:191 [HTTP] 
+2023-06-17 13:24:28:194 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:194 [HTTP] {}
+2023-06-17 13:24:28:194 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:207 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:208 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 14 ms - 103
+2023-06-17 13:24:28:208 [HTTP] 
+2023-06-17 13:24:28:210 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:210 [HTTP] {}
+2023-06-17 13:24:28:211 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:224 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:225 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 14 ms - 103
+2023-06-17 13:24:28:225 [HTTP] 
+2023-06-17 13:24:28:227 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:28:227 [HTTP] {}
+2023-06-17 13:24:28:237 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 9 ms - 50
+2023-06-17 13:24:28:237 [HTTP] 
+2023-06-17 13:24:28:240 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:240 [HTTP] {}
+2023-06-17 13:24:28:240 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:257 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:258 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 18 ms - 103
+2023-06-17 13:24:28:258 [HTTP] 
+2023-06-17 13:24:28:260 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:261 [HTTP] {}
+2023-06-17 13:24:28:261 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:277 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:277 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 17 ms - 103
+2023-06-17 13:24:28:277 [HTTP] 
+2023-06-17 13:24:28:280 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:28:280 [HTTP] {}
+2023-06-17 13:24:28:293 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 12 ms - 50
+2023-06-17 13:24:28:293 [HTTP] 
+2023-06-17 13:24:28:296 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:297 [HTTP] {}
+2023-06-17 13:24:28:297 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:316 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:317 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 20 ms - 103
+2023-06-17 13:24:28:317 [HTTP] 
+2023-06-17 13:24:28:322 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:322 [HTTP] {}
+2023-06-17 13:24:28:322 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:346 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:346 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 25 ms - 103
+2023-06-17 13:24:28:347 [HTTP] 
+2023-06-17 13:24:28:349 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:349 [HTTP] {}
+2023-06-17 13:24:28:349 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:362 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:363 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 14 ms - 103
+2023-06-17 13:24:28:363 [HTTP] 
+2023-06-17 13:24:28:365 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect
+2023-06-17 13:24:28:365 [HTTP] {}
+2023-06-17 13:24:28:365 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:28:380 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:28:381 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000ce/rect 200 16 ms - 103
+2023-06-17 13:24:28:381 [HTTP] 
+2023-06-17 13:24:28:384 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:28:385 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":623,"y":847,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":156,"y":847,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:29:418 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 1033 ms - 14
+2023-06-17 13:24:29:418 [HTTP] 
+2023-06-17 13:24:29:421 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:29:421 [HTTP] {"using":"accessibility id","value":"test-Delete"}
+2023-06-17 13:24:30:497 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 1076 ms - 137
+2023-06-17 13:24:30:498 [HTTP] 
+2023-06-17 13:24:30:500 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/displayed
+2023-06-17 13:24:30:500 [HTTP] {}
+2023-06-17 13:24:30:511 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/displayed 200 11 ms - 14
+2023-06-17 13:24:30:511 [HTTP] 
+2023-06-17 13:24:30:513 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/enabled
+2023-06-17 13:24:30:513 [HTTP] {}
+2023-06-17 13:24:30:525 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/enabled 200 11 ms - 14
+2023-06-17 13:24:30:525 [HTTP] 
+2023-06-17 13:24:30:527 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect
+2023-06-17 13:24:30:527 [HTTP] {}
+2023-06-17 13:24:30:527 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:30:540 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:30:540 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect 200 13 ms - 103
+2023-06-17 13:24:30:540 [HTTP] 
+2023-06-17 13:24:30:542 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect
+2023-06-17 13:24:30:542 [HTTP] {}
+2023-06-17 13:24:30:543 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:30:560 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:30:561 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect 200 19 ms - 103
+2023-06-17 13:24:30:561 [HTTP] 
+2023-06-17 13:24:30:565 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:30:565 [HTTP] {}
+2023-06-17 13:24:30:575 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 11 ms - 50
+2023-06-17 13:24:30:576 [HTTP] 
+2023-06-17 13:24:30:578 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect
+2023-06-17 13:24:30:578 [HTTP] {}
+2023-06-17 13:24:30:578 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:30:593 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:30:594 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect 200 15 ms - 103
+2023-06-17 13:24:30:594 [HTTP] 
+2023-06-17 13:24:30:596 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect
+2023-06-17 13:24:30:596 [HTTP] {}
+2023-06-17 13:24:30:596 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:30:611 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:30:612 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000c4/rect 200 16 ms - 103
+2023-06-17 13:24:30:612 [HTTP] 
+2023-06-17 13:24:30:615 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:30:615 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":946,"y":1085,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:30:661 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 45 ms - 14
+2023-06-17 13:24:30:661 [HTTP] 
+2023-06-17 13:24:30:664 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:30:664 [HTTP] {"using":"accessibility id","value":"test-CONTINUE SHOPPING"}
+2023-06-17 13:24:30:736 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 72 ms - 137
+2023-06-17 13:24:30:736 [HTTP] 
+2023-06-17 13:24:30:740 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/displayed
+2023-06-17 13:24:30:740 [HTTP] {}
+2023-06-17 13:24:31:316 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/displayed 200 576 ms - 14
+2023-06-17 13:24:31:316 [HTTP] 
+2023-06-17 13:24:31:318 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect
+2023-06-17 13:24:31:318 [HTTP] {}
+2023-06-17 13:24:31:318 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:31:332 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:31:333 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect 200 15 ms - 103
+2023-06-17 13:24:31:333 [HTTP] 
+2023-06-17 13:24:31:335 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect
+2023-06-17 13:24:31:335 [HTTP] {}
+2023-06-17 13:24:31:335 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:31:346 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:31:346 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect 200 11 ms - 103
+2023-06-17 13:24:31:346 [HTTP] 
+2023-06-17 13:24:31:348 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect
+2023-06-17 13:24:31:348 [HTTP] {}
+2023-06-17 13:24:31:356 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/window/rect 200 8 ms - 50
+2023-06-17 13:24:31:356 [HTTP] 
+2023-06-17 13:24:31:358 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect
+2023-06-17 13:24:31:358 [HTTP] {}
+2023-06-17 13:24:31:358 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:31:368 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:31:368 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect 200 10 ms - 103
+2023-06-17 13:24:31:368 [HTTP] 
+2023-06-17 13:24:31:371 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect
+2023-06-17 13:24:31:371 [HTTP] {}
+2023-06-17 13:24:31:371 [AndroidUiautomator2Driver@49d8 (40310e83)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 13:24:31:382 [AndroidUiautomator2Driver@49d8 (40310e83)] Replacing sessionId b769f97e-cf90-46ad-8f2f-3989108dd119 with 40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:31:382 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff000000d8/rect 200 11 ms - 103
+2023-06-17 13:24:31:382 [HTTP] 
+2023-06-17 13:24:31:386 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions
+2023-06-17 13:24:31:386 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":541,"y":778,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 13:24:31:443 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/actions 200 57 ms - 14
+2023-06-17 13:24:31:443 [HTTP] 
+2023-06-17 13:24:31:446 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element
+2023-06-17 13:24:31:446 [HTTP] {"using":"accessibility id","value":"test-Cart"}
+2023-06-17 13:24:31:504 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element 200 58 ms - 137
+2023-06-17 13:24:31:504 [HTTP] 
+2023-06-17 13:24:31:508 [HTTP] --> GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/displayed
+2023-06-17 13:24:31:508 [HTTP] {}
+2023-06-17 13:24:32:176 [HTTP] <-- GET /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/displayed 200 668 ms - 14
+2023-06-17 13:24:32:177 [HTTP] 
+2023-06-17 13:24:32:179 [HTTP] --> POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/element
+2023-06-17 13:24:32:179 [HTTP] {"id":"00000000-0000-00ff-ffff-ffff00000051","using":"class name","value":"android.widget.TextView"}
+2023-06-17 13:24:32:200 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:32:717 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:33:233 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:33:765 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:34:292 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:34:805 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:35:318 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:35:836 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:36:355 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:36:868 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:37:199 [AndroidUiautomator2Driver@49d8 (40310e83)] Got response with status 404: {"sessionId":"b769f97e-cf90-46ad-8f2f-3989108dd119","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:70)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:270)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:264)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:68)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)\n\tat io.netty.chann...
+2023-06-17 13:24:37:213 [HTTP] <-- POST /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694/element/00000000-0000-00ff-ffff-ffff00000051/element 404 5033 ms - 878
+2023-06-17 13:24:37:213 [HTTP] 
+2023-06-17 13:24:37:225 [HTTP] --> DELETE /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694
+2023-06-17 13:24:37:225 [HTTP] {}
+2023-06-17 13:24:37:226 [AppiumDriver@bf60] Removing session 40310e83-7658-4616-b6d7-f83292393694 from our master session list
+2023-06-17 13:24:37:393 [AndroidUiautomator2Driver@49d8 (40310e83)] Restoring hidden api policy to the device default configuration
+2023-06-17 13:24:37:604 [HTTP] <-- DELETE /wd/hub/session/40310e83-7658-4616-b6d7-f83292393694 200 378 ms - 14
+2023-06-17 13:24:37:604 [HTTP] 
+2023-06-17 13:24:37:611 [Appium] Received SIGTERM - shutting down
+2023-06-17 13:24:37:615 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -638,7 +943,7 @@ Error: write EPIPE
     at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
     at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
     at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
-2023-06-17 12:58:44:568 uncaughtException: write EPIPE
+2023-06-17 13:24:37:616 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -662,7 +967,7 @@ Error: write EPIPE
     at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
     at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
     at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
-2023-06-17 12:58:44:571 uncaughtException: write EPIPE
+2023-06-17 13:24:37:618 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -686,7 +991,7 @@ Error: write EPIPE
     at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
     at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
     at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
-2023-06-17 12:58:44:572 uncaughtException: write EPIPE
+2023-06-17 13:24:37:619 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
