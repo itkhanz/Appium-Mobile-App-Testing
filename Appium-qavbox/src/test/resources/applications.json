@@ -1,0 +1,78 @@
+{
+  "appsDirectory": "/src/main/resources/apps/",
+  "applications": [
+    {
+      "id": "APIDemos",
+      "target": "Android",
+      "properties": {
+        "appUrl": "ApiDemos-debug.apk",
+        "appPackage": "io.appium.android.apis",
+        "appActivity": "io.appium.android.apis.ApiDemos"
+      }
+    },
+    {
+      "id": "UIKitCatalog",
+      "target": "iOS",
+      "properties": {
+        "appUrl": "UIKitCatalog-iphonesimulator.app",
+        "bundleId": "com.example.apple-samplecode.UICatalog"
+      }
+    },
+    {
+      "id": "GoogleMaps",
+      "target": "Android",
+      "properties": {
+        "appPackage": "com.google.android.apps.maps",
+        "appActivity": "com.google.android.maps.MapsActivity"
+      }
+    },
+    {
+      "id": "iOSMaps",
+      "target": "iOS",
+      "properties": {
+        "bundleId": "com.apple.Maps"
+      }
+    },
+    {
+      "id": "iOSContacts",
+      "target": "iOS",
+      "properties": {
+        "bundleId": "com.apple.MobileAddressBook"
+      }
+    },
+    {
+      "id": "MyDemoApp-Android",
+      "target": "Android",
+      "properties": {
+        "appUrl": "Android-MyDemoAppRN.1.3.0.build-244.apk",
+        "appPackage": "com.saucelabs.mydemoapp.rn",
+        "appActivity": "com.saucelabs.mydemoapp.rn.MainActivity"
+      }
+    },
+    {
+      "id": "MyDemoApp-iOS",
+      "target": "iOS",
+      "properties": {
+        "appUrl": "iOS-Simulator-MyRNDemoApp.1.3.0-162.zip",
+        "bundleId": "com.saucelabs.mydemoapp.rn"
+      }
+    },
+    {
+      "id": "Wdio-NativeDemoApp-Android",
+      "target": "Android",
+      "properties": {
+        "appUrl": "Android-NativeDemoApp-0.4.0.apk",
+        "appPackage": "com.wdiodemoapp",
+        "appActivity": "com.wdiodemoapp.MainActivity",
+        "appWaitActivity": "*"
+      }
+    },{
+      "id": "Wdio-NativeDemoApp-iOS",
+      "target": "iOS",
+      "properties": {
+        "appUrl": "iOS-Simulator-NativeDemoApp-0.4.0.app.zip",
+        "bundleId": "org.wdioNativeDemoApp"
+      }
+    }
+  ]
+}
