@@ -56,6 +56,8 @@ public class IOSSwipeTest {
 
         this.fingerGesture.tap (this.wait.until (visibilityOfElementLocated (homePage.getSwipeTab ())));
 
+        //In iOS we are able to find the elements without getting NoSuchElementException if the element is not yet visible in UI
+        //we pass the id of this element to the executeScript()
         final var logo = this.driver.findElement (swipePage.getPlainLogo ());
 
         final var args = new HashMap<String, Object>();

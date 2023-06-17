@@ -49,7 +49,7 @@ public class FingerGestureUtils<D extends AppiumDriver> {
     }
 
     /**
-     * This method is used to update the center point of the element if it's beyond the action area e.g. In Swipe action
+     * This method is used to update the center point of the element if it is outside the scree bounds a e.g. In Swipe action
      * In some cases, the element might be located at the edge of screen so its center could go out of the screen
      * To adjust for these edge cases, we subtract an offset of 5 from center coordinates
      *
@@ -64,7 +64,7 @@ public class FingerGestureUtils<D extends AppiumDriver> {
         var w = screenSize.getHeight();
         var h = screenSize.getHeight();
 
-        //If the element is not null (e.g. when we want to tap/swipe at specific element)
+        //If the element is not null (e.g. when we want to tap/swipe within bounds of the element)
         //then instead of the entire screen, height and width is calculated relative to element
         if (element != null) {
             final var size = element.getSize();
@@ -94,7 +94,7 @@ public class FingerGestureUtils<D extends AppiumDriver> {
 
     //Returns the center point of element based on its location and size
     private final Point getElementCenter(final WebElement element) {
-        final var location = element.getLocation();
+        final var location = element.getLocation(); //top left point of the element
         final var size = element.getSize();
         final var x = (size.getWidth() / 2) + location.getX();
         final var y = (size.getHeight() / 2) + location.getY();
@@ -181,7 +181,7 @@ public class FingerGestureUtils<D extends AppiumDriver> {
         final var start = getElementCenter(element);
         final var sequence = singleFingerSwipe(FINGER_1, 0, start, null);
 
-        this.driver.perform(singletonList(sequence));
+        this.driver.perform(singletonList(sequence));   //perform method requires a collection of sequence
     }
 
     //Performs the swipe gesture in given direction with provided distance

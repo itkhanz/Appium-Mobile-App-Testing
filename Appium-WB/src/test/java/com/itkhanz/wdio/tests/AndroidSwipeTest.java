@@ -65,6 +65,7 @@ public class AndroidSwipeTest {
 
         final var scrollView = this.wait.until(visibilityOfElementLocated(swipePage.getScrollView()));
 
+        //We pass the id of the scroll element/screen and the target element strategy and selector to executeScript()
         final var args = new HashMap<String, Object>();
         args.put("elementId", ((RemoteWebElement) scrollView).getId());
         args.put("strategy", "accessibility id");
