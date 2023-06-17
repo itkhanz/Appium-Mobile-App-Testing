@@ -24,6 +24,8 @@ public class IOSDriverManager implements IDriverManager<IOSDriver> {
     private       boolean                  isHeadless;
     @Builder.Default
     private final String                   platformVersion = "16.4";
+    @Builder.Default
+    private final int                   maxTypingFrequency = 60;
 
     private AppiumDriverLocalService service;
 
@@ -42,6 +44,7 @@ public class IOSDriverManager implements IDriverManager<IOSDriver> {
                 .setAutoAcceptAlerts (true)
                 .setFullReset (false)
                 .setIsHeadless (this.isHeadless)
+                .setMaxTypingFrequency(this.maxTypingFrequency)
         ;
         return options;
     }

@@ -1,125 +1,904 @@
-2023-06-16 23:13:35:056 [Appium] Welcome to Appium v2.0.0-beta.71 (REV 552db40622bb7a82d9c6d67d2d6bcf3694b47e30)
-2023-06-16 23:13:35:058 [Appium] Non-default server args:
-2023-06-16 23:13:35:061 [Appium] { address: '127.0.0.1',
-2023-06-16 23:13:35:061 [Appium]   basePath: '/wd/hub/',
-2023-06-16 23:13:35:061 [Appium]   localTimezone: true,
-2023-06-16 23:13:35:061 [Appium]   loglevel: 'info',
-2023-06-16 23:13:35:061 [Appium]   port: 4724,
-2023-06-16 23:13:35:062 [Appium]   sessionOverride: true,
-2023-06-16 23:13:35:062 [Appium]   useDrivers: [ 'xcuitest' ] }
-2023-06-16 23:13:35:062 [Appium] Attempting to load driver xcuitest...
-2023-06-16 23:13:36:000 [Appium] Appium REST http interface listener started on 127.0.0.1:4724/wd/hub/
-2023-06-16 23:13:36:000 [Appium] Available drivers:
-2023-06-16 23:13:36:001 [Appium]   - uiautomator2@2.25.2 (automationName 'UiAutomator2')
-2023-06-16 23:13:36:001 [Appium]   - xcuitest@4.30.2 (automationName 'XCUITest')
-2023-06-16 23:13:36:001 [Appium]   - espresso@2.23.1 (automationName 'Espresso')
-2023-06-16 23:13:36:001 [Appium]   - safari@3.3.3 (automationName 'Safari')
-2023-06-16 23:13:36:001 [Appium]   - gecko@1.1.9 (automationName 'Gecko')
-2023-06-16 23:13:36:001 [Appium]   - chromium@1.1.18 (automationName 'Chromium')
-2023-06-16 23:13:36:002 [Appium] Available plugins:
-2023-06-16 23:13:36:002 [Appium]   - element-wait@1.5.0
-2023-06-16 23:13:36:002 [Appium]   - gestures@2.1.0
-2023-06-16 23:13:36:002 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
-2023-06-16 23:13:36:251 [HTTP] --> GET /wd/hub/status
-2023-06-16 23:13:36:251 [HTTP] {}
-2023-06-16 23:13:36:258 [HTTP] <-- GET /wd/hub/status 200 5 ms - 136
-2023-06-16 23:13:36:258 [HTTP] 
-2023-06-16 23:13:36:894 [HTTP] --> POST /wd/hub/session
-2023-06-16 23:13:36:894 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/wdio-demo.app.zip","appium:autoAcceptAlerts":true,"appium:automationName":"XCuiTest","appium:deviceName":"iPhone 14","appium:fullReset":false,"appium:isHeadless":false,"appium:platformVersion":"16.4","platformName":"IOS"}}}
-2023-06-16 23:13:36:897 [Appium] Attempting to find matching driver for automationName 'XCuiTest' and platformName 'IOS'
-2023-06-16 23:13:36:898 [Appium] The 'xcuitest' driver was installed and matched caps.
-2023-06-16 23:13:36:898 [Appium] Will require it at /Users/ibkh/.appium/node_modules/appium-xcuitest-driver
-2023-06-16 23:13:36:898 [AppiumDriver@b7bc] Appium v2.0.0-beta.71 creating new XCUITestDriver (v4.30.2) session
-2023-06-16 23:13:36:898 [AppiumDriver@b7bc] Checking BaseDriver versions for Appium and XCUITestDriver
-2023-06-16 23:13:36:898 [AppiumDriver@b7bc] Appium's BaseDriver version is 9.3.10
-2023-06-16 23:13:36:898 [AppiumDriver@b7bc] XCUITestDriver's BaseDriver version is 9.3.10
-2023-06-16 23:13:36:908 [XCUITestDriver@1653 (3ac62290)] Session created with session id: 3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:36:926 [XCUITestDriver@1653 (3ac62290)] iOS SDK Version set to '16.4'
-2023-06-16 23:13:37:190 [iOSSim] Constructing iOS simulator for Xcode version 14.3 with udid '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F'
-2023-06-16 23:13:37:191 [XCUITestDriver@1653 (3ac62290)] Determining device to run tests on: udid: '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F', real device: false
-2023-06-16 23:13:37:193 [BaseDriver] Using local app '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/wdio-demo.app.zip'
-2023-06-16 23:13:37:478 [XCUITestDriver@1653 (3ac62290)] 'wdioNativeDemoApp.app' is the resulting application bundle selected from '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/wdio-demo.app.zip'
-2023-06-16 23:13:37:719 [XCUITest] Reset: failed to terminate Simulator application with id "org.wdioNativeDemoApp"
-2023-06-16 23:13:37:719 [XCUITest] Not scrubbing third party app in anticipation of uninstall
-2023-06-16 23:13:37:720 [XCUITestDriver@1653 (3ac62290)] Using WDA path: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent'
-2023-06-16 23:13:37:720 [XCUITestDriver@1653 (3ac62290)] Using WDA agent: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
-2023-06-16 23:13:38:262 [XCUITestDriver@1653 (3ac62290)] Setting up simulator
-2023-06-16 23:13:39:515 [iOSSim] Both Simulator with UDID '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' and the UI client are currently running
-2023-06-16 23:13:39:868 [XCUITestDriver@1653 (3ac62290)] App 'org.wdioNativeDemoApp' is already installed
-2023-06-16 23:13:42:012 [DevCon Factory] Requesting connection for device 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F on local port 8100
-2023-06-16 23:13:42:012 [DevCon Factory] Successfully requested the connection for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100
-2023-06-16 23:13:42:029 [XCUITestDriver@1653 (3ac62290)] Will reuse previously cached WDA instance at 'http://127.0.0.1:8100/' with 'com.facebook.WebDriverAgentRunner'. Set the wdaLocalPort capability to a value different from 8100 if this is an undesired behavior.
-2023-06-16 23:13:42:035 [XCUITestDriver@1653 (3ac62290)] Using provided WebdriverAgent at 'http://127.0.0.1:8100/'
-2023-06-16 23:13:43:798 [XCUITestDriver@1653 (3ac62290)] Determined the downstream protocol as 'W3C'
-2023-06-16 23:13:43:799 [AppiumDriver@b7bc] New XCUITestDriver session created successfully, session 3ac62290-307b-4d59-ac9c-d759fdac8b03 added to master session list
-2023-06-16 23:13:43:801 [HTTP] <-- POST /wd/hub/session 200 6907 ms - 564
-2023-06-16 23:13:43:801 [HTTP] 
-2023-06-16 23:13:43:970 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element
-2023-06-16 23:13:43:970 [HTTP] {"using":"accessibility id","value":"Swipe"}
-2023-06-16 23:13:44:103 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element 200 133 ms - 137
-2023-06-16 23:13:44:103 [HTTP] 
-2023-06-16 23:13:44:115 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/displayed
-2023-06-16 23:13:44:116 [HTTP] {}
-2023-06-16 23:13:44:118 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
-2023-06-16 23:13:44:189 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:44:190 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/displayed 200 74 ms - 65
-2023-06-16 23:13:44:190 [HTTP] 
-2023-06-16 23:13:44:193 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
-2023-06-16 23:13:44:194 [HTTP] {}
-2023-06-16 23:13:44:199 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
-2023-06-16 23:13:44:257 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:44:258 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 64 ms - 101
-2023-06-16 23:13:44:258 [HTTP] 
-2023-06-16 23:13:44:264 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
-2023-06-16 23:13:44:264 [HTTP] {}
-2023-06-16 23:13:44:269 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
-2023-06-16 23:13:44:325 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:44:325 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 61 ms - 101
-2023-06-16 23:13:44:325 [HTTP] 
-2023-06-16 23:13:44:331 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/window/rect
-2023-06-16 23:13:44:331 [HTTP] {}
-2023-06-16 23:13:44:368 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/window/rect 200 36 ms - 48
-2023-06-16 23:13:44:368 [HTTP] 
-2023-06-16 23:13:44:371 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
-2023-06-16 23:13:44:371 [HTTP] {}
-2023-06-16 23:13:44:372 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
-2023-06-16 23:13:44:425 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:44:426 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 54 ms - 101
-2023-06-16 23:13:44:426 [HTTP] 
-2023-06-16 23:13:44:431 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect
-2023-06-16 23:13:44:431 [HTTP] {}
-2023-06-16 23:13:44:431 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
-2023-06-16 23:13:44:498 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:44:499 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/17000000-0000-0000-A23B-000000000000/rect 200 68 ms - 101
-2023-06-16 23:13:44:499 [HTTP] 
-2023-06-16 23:13:44:511 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/actions
-2023-06-16 23:13:44:511 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":292,"y":789,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
-2023-06-16 23:13:44:902 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/actions 200 390 ms - 14
-2023-06-16 23:13:44:902 [HTTP] 
-2023-06-16 23:13:44:908 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element
-2023-06-16 23:13:44:908 [HTTP] {"using":"accessibility id","value":"WebdriverIO logo"}
-2023-06-16 23:13:45:072 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element 200 164 ms - 137
-2023-06-16 23:13:45:072 [HTTP] 
-2023-06-16 23:13:45:084 [HTTP] --> POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/execute/sync
-2023-06-16 23:13:45:084 [HTTP] {"script":"mobile: scrollToElement","args":[{"elementId":"39000000-0000-0000-A23B-000000000000"}]}
-2023-06-16 23:13:45:086 [XCUITestDriver@1653 (3ac62290)] Proxying to WDA with an unknown route: POST /wda/element/39000000-0000-0000-A23B-000000000000/scrollTo
-2023-06-16 23:13:45:283 [HTTP] <-- POST /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/execute/sync 200 199 ms - 14
-2023-06-16 23:13:45:283 [HTTP] 
-2023-06-16 23:13:45:286 [HTTP] --> GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/39000000-0000-0000-A23B-000000000000/displayed
-2023-06-16 23:13:45:286 [HTTP] {}
-2023-06-16 23:13:45:286 [XCUITestDriver@1653 (3ac62290)] Driver proxy active, passing request on via HTTP proxy
-2023-06-16 23:13:45:363 [XCUITestDriver@1653 (3ac62290)] Replacing sessionId 0BEF676A-37F7-47E3-A541-630231CF3B02 with 3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:45:363 [HTTP] <-- GET /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03/element/39000000-0000-0000-A23B-000000000000/displayed 200 77 ms - 65
-2023-06-16 23:13:45:364 [HTTP] 
-2023-06-16 23:13:45:377 [HTTP] --> DELETE /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03
-2023-06-16 23:13:45:377 [HTTP] {}
-2023-06-16 23:13:45:378 [AppiumDriver@b7bc] Removing session 3ac62290-307b-4d59-ac9c-d759fdac8b03 from our master session list
-2023-06-16 23:13:46:415 [DevCon Factory] Releasing connections for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F device on any port number
-2023-06-16 23:13:46:415 [DevCon Factory] Found cached connections to release: ["6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100"]
-2023-06-16 23:13:46:424 [HTTP] <-- DELETE /wd/hub/session/3ac62290-307b-4d59-ac9c-d759fdac8b03 200 1047 ms - 14
-2023-06-16 23:13:46:424 [HTTP] 
-2023-06-16 23:13:46:431 [Appium] Received SIGTERM - shutting down
-2023-06-16 23:13:46:435 uncaughtException: write EPIPE
+2023-06-17 14:15:50:605 [Appium] Welcome to Appium v2.0.0-beta.71 (REV 552db40622bb7a82d9c6d67d2d6bcf3694b47e30)
+2023-06-17 14:15:50:607 [Appium] Non-default server args:
+2023-06-17 14:15:50:609 [Appium] { address: '127.0.0.1',
+2023-06-17 14:15:50:610 [Appium]   basePath: '/wd/hub/',
+2023-06-17 14:15:50:610 [Appium]   localTimezone: true,
+2023-06-17 14:15:50:610 [Appium]   loglevel: 'info',
+2023-06-17 14:15:50:610 [Appium]   sessionOverride: true,
+2023-06-17 14:15:50:610 [Appium]   useDrivers: [ 'xcuitest' ] }
+2023-06-17 14:15:50:611 [Appium] Attempting to load driver xcuitest...
+2023-06-17 14:15:52:061 [Appium] Appium REST http interface listener started on 127.0.0.1:4723/wd/hub/
+2023-06-17 14:15:52:061 [Appium] Available drivers:
+2023-06-17 14:15:52:062 [Appium]   - uiautomator2@2.25.2 (automationName 'UiAutomator2')
+2023-06-17 14:15:52:062 [Appium]   - xcuitest@4.30.2 (automationName 'XCUITest')
+2023-06-17 14:15:52:062 [Appium]   - espresso@2.23.1 (automationName 'Espresso')
+2023-06-17 14:15:52:062 [Appium]   - safari@3.3.3 (automationName 'Safari')
+2023-06-17 14:15:52:062 [Appium]   - gecko@1.1.9 (automationName 'Gecko')
+2023-06-17 14:15:52:063 [Appium]   - chromium@1.1.18 (automationName 'Chromium')
+2023-06-17 14:15:52:063 [Appium] Available plugins:
+2023-06-17 14:15:52:063 [Appium]   - element-wait@1.5.0
+2023-06-17 14:15:52:063 [Appium]   - gestures@2.1.0
+2023-06-17 14:15:52:063 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
+2023-06-17 14:15:52:228 [HTTP] --> GET /wd/hub/status
+2023-06-17 14:15:52:228 [HTTP] {}
+2023-06-17 14:15:52:234 [HTTP] <-- GET /wd/hub/status 200 5 ms - 136
+2023-06-17 14:15:52:234 [HTTP] 
+2023-06-17 14:15:53:065 [HTTP] --> POST /wd/hub/session
+2023-06-17 14:15:53:066 [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.app.zip","appium:autoAcceptAlerts":true,"appium:automationName":"XCuiTest","appium:deviceName":"iPhone 14","appium:fullReset":false,"appium:isHeadless":false,"appium:maxTypingFrequency":20,"appium:platformVersion":"16.4","platformName":"IOS"}}}
+2023-06-17 14:15:53:070 [Appium] Attempting to find matching driver for automationName 'XCuiTest' and platformName 'IOS'
+2023-06-17 14:15:53:070 [Appium] The 'xcuitest' driver was installed and matched caps.
+2023-06-17 14:15:53:070 [Appium] Will require it at /Users/ibkh/.appium/node_modules/appium-xcuitest-driver
+2023-06-17 14:15:53:071 [AppiumDriver@1750] Appium v2.0.0-beta.71 creating new XCUITestDriver (v4.30.2) session
+2023-06-17 14:15:53:071 [AppiumDriver@1750] Checking BaseDriver versions for Appium and XCUITestDriver
+2023-06-17 14:15:53:071 [AppiumDriver@1750] Appium's BaseDriver version is 9.3.10
+2023-06-17 14:15:53:071 [AppiumDriver@1750] XCUITestDriver's BaseDriver version is 9.3.10
+2023-06-17 14:15:53:082 [XCUITestDriver@2b80 (a1d7dc76)] Session created with session id: a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:15:53:108 [XCUITestDriver@2b80 (a1d7dc76)] iOS SDK Version set to '16.4'
+2023-06-17 14:15:53:540 [iOSSim] Constructing iOS simulator for Xcode version 14.3 with udid '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F'
+2023-06-17 14:15:53:541 [XCUITestDriver@2b80 (a1d7dc76)] Determining device to run tests on: udid: '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F', real device: false
+2023-06-17 14:15:53:543 [BaseDriver] Using local app '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.app.zip'
+2023-06-17 14:15:53:964 [XCUITestDriver@2b80 (a1d7dc76)] 'iOS.Simulator.SauceLabs.Mobile.Sample.app.2.7.0.app' is the resulting application bundle selected from '/Users/ibkh/dev/appium/Appium-WB/src/test/resources/apps/sauce-demo.app.zip'
+2023-06-17 14:15:54:221 [XCUITest] Reset: failed to terminate Simulator application with id "com.saucelabs.SwagLabsMobileApp"
+2023-06-17 14:15:54:222 [XCUITest] Not scrubbing third party app in anticipation of uninstall
+2023-06-17 14:15:54:222 [XCUITestDriver@2b80 (a1d7dc76)] Using WDA path: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent'
+2023-06-17 14:15:54:222 [XCUITestDriver@2b80 (a1d7dc76)] Using WDA agent: '/Users/ibkh/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
+2023-06-17 14:15:54:821 [XCUITestDriver@2b80 (a1d7dc76)] Setting up simulator
+2023-06-17 14:15:56:015 [iOSSim] Both Simulator with UDID '6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F' and the UI client are currently running
+2023-06-17 14:15:56:422 [XCUITestDriver@2b80 (a1d7dc76)] App 'com.saucelabs.SwagLabsMobileApp' is already installed
+2023-06-17 14:15:58:809 [DevCon Factory] Requesting connection for device 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F on local port 8100
+2023-06-17 14:15:58:809 [DevCon Factory] Successfully requested the connection for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100
+2023-06-17 14:15:58:826 [XCUITestDriver@2b80 (a1d7dc76)] Will reuse previously cached WDA instance at 'http://127.0.0.1:8100/' with 'com.facebook.WebDriverAgentRunner'. Set the wdaLocalPort capability to a value different from 8100 if this is an undesired behavior.
+2023-06-17 14:15:58:827 [XCUITestDriver@2b80 (a1d7dc76)] Using provided WebdriverAgent at 'http://127.0.0.1:8100/'
+2023-06-17 14:16:00:853 [XCUITestDriver@2b80 (a1d7dc76)] Determined the downstream protocol as 'W3C'
+2023-06-17 14:16:00:854 [AppiumDriver@1750] New XCUITestDriver session created successfully, session a1d7dc76-961a-41d0-9207-a53af8c0901d added to master session list
+2023-06-17 14:16:00:856 [HTTP] <-- POST /wd/hub/session 200 7790 ms - 589
+2023-06-17 14:16:00:856 [HTTP] 
+2023-06-17 14:16:00:978 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/timeouts
+2023-06-17 14:16:00:978 [HTTP] {"implicit":5000}
+2023-06-17 14:16:00:981 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/timeouts 200 3 ms - 14
+2023-06-17 14:16:00:981 [HTTP] 
+2023-06-17 14:16:01:025 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:01:025 [HTTP] {"using":"accessibility id","value":"test-Username"}
+2023-06-17 14:16:01:261 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 236 ms - 137
+2023-06-17 14:16:01:261 [HTTP] 
+2023-06-17 14:16:01:269 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/47000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:01:270 [HTTP] {}
+2023-06-17 14:16:01:272 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:01:387 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:01:388 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/47000000-0000-0000-F5AE-000000000000/displayed 200 118 ms - 65
+2023-06-17 14:16:01:388 [HTTP] 
+2023-06-17 14:16:01:396 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/47000000-0000-0000-F5AE-000000000000/value
+2023-06-17 14:16:01:397 [HTTP] {"id":"47000000-0000-0000-F5AE-000000000000","text":"standard_user","value":["s","t","a","n","d","a","r","d","_","u","s","e","r"]}
+2023-06-17 14:16:03:159 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/47000000-0000-0000-F5AE-000000000000/value 200 1762 ms - 14
+2023-06-17 14:16:03:159 [HTTP] 
+2023-06-17 14:16:03:164 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:03:164 [HTTP] {"using":"accessibility id","value":"test-Password"}
+2023-06-17 14:16:03:658 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 494 ms - 137
+2023-06-17 14:16:03:658 [HTTP] 
+2023-06-17 14:16:03:661 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/48000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:03:661 [HTTP] {}
+2023-06-17 14:16:03:662 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:03:820 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:03:821 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/48000000-0000-0000-F5AE-000000000000/displayed 200 160 ms - 65
+2023-06-17 14:16:03:821 [HTTP] 
+2023-06-17 14:16:03:826 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/48000000-0000-0000-F5AE-000000000000/value
+2023-06-17 14:16:03:826 [HTTP] {"id":"48000000-0000-0000-F5AE-000000000000","text":"secret_sauce","value":["s","e","c","r","e","t","_","s","a","u","c","e"]}
+2023-06-17 14:16:05:441 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/48000000-0000-0000-F5AE-000000000000/value 200 1615 ms - 14
+2023-06-17 14:16:05:441 [HTTP] 
+2023-06-17 14:16:05:448 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:05:448 [HTTP] {"using":"accessibility id","value":"test-LOGIN"}
+2023-06-17 14:16:05:890 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 442 ms - 137
+2023-06-17 14:16:05:890 [HTTP] 
+2023-06-17 14:16:05:893 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/3D000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:05:893 [HTTP] {}
+2023-06-17 14:16:05:894 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:06:051 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:06:051 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/3D000000-0000-0000-F5AE-000000000000/displayed 200 158 ms - 65
+2023-06-17 14:16:06:051 [HTTP] 
+2023-06-17 14:16:06:055 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/3D000000-0000-0000-F5AE-000000000000/click
+2023-06-17 14:16:06:055 [HTTP] {"id":"3D000000-0000-0000-F5AE-000000000000"}
+2023-06-17 14:16:06:055 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:06:781 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:06:782 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/3D000000-0000-0000-F5AE-000000000000/click 200 727 ms - 65
+2023-06-17 14:16:06:782 [HTTP] 
+2023-06-17 14:16:06:807 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:06:807 [HTTP] {"using":"accessibility id","value":"test-PRODUCTS"}
+2023-06-17 14:16:07:536 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 729 ms - 137
+2023-06-17 14:16:07:536 [HTTP] 
+2023-06-17 14:16:07:539 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:07:539 [HTTP] {}
+2023-06-17 14:16:07:540 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:07:810 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:07:811 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/displayed 200 271 ms - 65
+2023-06-17 14:16:07:811 [HTTP] 
+2023-06-17 14:16:07:818 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/elements
+2023-06-17 14:16:07:819 [HTTP] {"id":"A4000000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Item"}
+2023-06-17 14:16:09:988 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/elements 200 2169 ms - 779
+2023-06-17 14:16:09:988 [HTTP] 
+2023-06-17 14:16:10:008 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element
+2023-06-17 14:16:10:008 [HTTP] {"id":"BB000000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Item title"}
+2023-06-17 14:16:11:038 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element 200 1030 ms - 137
+2023-06-17 14:16:11:038 [HTTP] 
+2023-06-17 14:16:11:042 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/text
+2023-06-17 14:16:11:042 [HTTP] {}
+2023-06-17 14:16:11:042 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:11:303 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:11:304 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/text 200 262 ms - 82
+2023-06-17 14:16:11:304 [HTTP] 
+2023-06-17 14:16:11:308 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element
+2023-06-17 14:16:11:308 [HTTP] {"id":"BB000000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Drag Handle"}
+2023-06-17 14:16:12:078 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element 200 770 ms - 137
+2023-06-17 14:16:12:078 [HTTP] 
+2023-06-17 14:16:12:085 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:12:085 [HTTP] {}
+2023-06-17 14:16:12:085 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:12:356 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:12:357 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/displayed 200 272 ms - 65
+2023-06-17 14:16:12:357 [HTTP] 
+2023-06-17 14:16:12:361 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/enabled
+2023-06-17 14:16:12:361 [HTTP] {}
+2023-06-17 14:16:12:361 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:12:788 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:12:788 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/enabled 200 428 ms - 65
+2023-06-17 14:16:12:788 [HTTP] 
+2023-06-17 14:16:12:793 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element
+2023-06-17 14:16:12:793 [HTTP] {"id":"BB000000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Drag Handle"}
+2023-06-17 14:16:13:569 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element 200 776 ms - 137
+2023-06-17 14:16:13:569 [HTTP] 
+2023-06-17 14:16:13:573 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:13:573 [HTTP] {"using":"accessibility id","value":"test-Cart drop zone"}
+2023-06-17 14:16:14:069 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 496 ms - 137
+2023-06-17 14:16:14:069 [HTTP] 
+2023-06-17 14:16:14:072 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:14:072 [HTTP] {}
+2023-06-17 14:16:14:072 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:14:334 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:14:335 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/displayed 200 262 ms - 65
+2023-06-17 14:16:14:335 [HTTP] 
+2023-06-17 14:16:14:337 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:14:337 [HTTP] {}
+2023-06-17 14:16:14:343 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:14:650 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:14:651 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect 200 313 ms - 100
+2023-06-17 14:16:14:651 [HTTP] 
+2023-06-17 14:16:14:656 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:14:656 [HTTP] {}
+2023-06-17 14:16:14:661 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:15:088 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:15:089 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect 200 433 ms - 100
+2023-06-17 14:16:15:089 [HTTP] 
+2023-06-17 14:16:15:094 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:15:094 [HTTP] {}
+2023-06-17 14:16:15:175 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 81 ms - 48
+2023-06-17 14:16:15:175 [HTTP] 
+2023-06-17 14:16:15:178 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:15:178 [HTTP] {}
+2023-06-17 14:16:15:178 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:15:473 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:15:473 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect 200 296 ms - 100
+2023-06-17 14:16:15:474 [HTTP] 
+2023-06-17 14:16:15:477 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:15:477 [HTTP] {}
+2023-06-17 14:16:15:477 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:15:744 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:15:745 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/E1000000-0000-0000-F5AE-000000000000/rect 200 268 ms - 100
+2023-06-17 14:16:15:745 [HTTP] 
+2023-06-17 14:16:15:749 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:15:749 [HTTP] {}
+2023-06-17 14:16:15:750 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:16:015 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:16:015 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect 200 266 ms - 100
+2023-06-17 14:16:16:015 [HTTP] 
+2023-06-17 14:16:16:018 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:16:018 [HTTP] {}
+2023-06-17 14:16:16:019 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:16:279 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:16:280 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect 200 262 ms - 100
+2023-06-17 14:16:16:280 [HTTP] 
+2023-06-17 14:16:16:283 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:16:283 [HTTP] {}
+2023-06-17 14:16:16:367 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 84 ms - 48
+2023-06-17 14:16:16:367 [HTTP] 
+2023-06-17 14:16:16:371 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:16:371 [HTTP] {}
+2023-06-17 14:16:16:371 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:16:639 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:16:639 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect 200 268 ms - 100
+2023-06-17 14:16:16:639 [HTTP] 
+2023-06-17 14:16:16:643 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:16:643 [HTTP] {}
+2023-06-17 14:16:16:643 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:16:908 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:16:909 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A3000000-0000-0000-F5AE-000000000000/rect 200 266 ms - 100
+2023-06-17 14:16:16:909 [HTTP] 
+2023-06-17 14:16:16:928 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:16:929 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":34,"y":565,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":195,"y":142,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:18:656 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 1727 ms - 14
+2023-06-17 14:16:18:656 [HTTP] 
+2023-06-17 14:16:18:660 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:18:661 [HTTP] {"using":"accessibility id","value":"test-Cart"}
+2023-06-17 14:16:19:169 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 509 ms - 137
+2023-06-17 14:16:19:170 [HTTP] 
+2023-06-17 14:16:19:173 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:19:173 [HTTP] {}
+2023-06-17 14:16:19:174 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:19:603 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:19:604 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/displayed 200 430 ms - 65
+2023-06-17 14:16:19:604 [HTTP] 
+2023-06-17 14:16:19:608 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/element
+2023-06-17 14:16:19:608 [HTTP] {"id":"A1000000-0000-0000-F5AE-000000000000","using":"class name","value":"android.widget.TextView"}
+2023-06-17 14:16:19:609 [XCUITestDriver@2b80 (a1d7dc76)] Rewrote incoming selector from 'android.widget.TextView' to 'XCUIElementTypeandroid.widget.Text' to match XCUI type. You should consider updating your tests to use the new selectors directly
+2023-06-17 14:16:20:087 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/element 200 478 ms - 137
+2023-06-17 14:16:20:087 [HTTP] 
+2023-06-17 14:16:20:092 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/text
+2023-06-17 14:16:20:092 [HTTP] {}
+2023-06-17 14:16:20:092 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:20:347 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:20:348 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/text 200 256 ms - 64
+2023-06-17 14:16:20:348 [HTTP] 
+2023-06-17 14:16:20:369 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:20:369 [HTTP] {"using":"accessibility id","value":"test-PRODUCTS"}
+2023-06-17 14:16:20:865 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 496 ms - 137
+2023-06-17 14:16:20:865 [HTTP] 
+2023-06-17 14:16:20:868 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:20:868 [HTTP] {}
+2023-06-17 14:16:20:868 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:21:103 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:21:104 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/displayed 200 236 ms - 65
+2023-06-17 14:16:21:104 [HTTP] 
+2023-06-17 14:16:21:108 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/elements
+2023-06-17 14:16:21:108 [HTTP] {"id":"A4000000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Item"}
+2023-06-17 14:16:22:937 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A4000000-0000-0000-F5AE-000000000000/elements 200 1830 ms - 779
+2023-06-17 14:16:22:937 [HTTP] 
+2023-06-17 14:16:22:943 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element
+2023-06-17 14:16:22:943 [HTTP] {"id":"BB000000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Item title"}
+2023-06-17 14:16:23:781 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element 200 838 ms - 137
+2023-06-17 14:16:23:781 [HTTP] 
+2023-06-17 14:16:23:783 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/text
+2023-06-17 14:16:23:783 [HTTP] {}
+2023-06-17 14:16:23:784 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:24:016 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:24:017 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/text 200 233 ms - 82
+2023-06-17 14:16:24:017 [HTTP] 
+2023-06-17 14:16:24:019 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element
+2023-06-17 14:16:24:020 [HTTP] {"id":"BB000000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Item title"}
+2023-06-17 14:16:24:703 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/BB000000-0000-0000-F5AE-000000000000/element 200 684 ms - 137
+2023-06-17 14:16:24:703 [HTTP] 
+2023-06-17 14:16:24:706 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:24:706 [HTTP] {}
+2023-06-17 14:16:24:707 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:24:939 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:24:940 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect 200 234 ms - 101
+2023-06-17 14:16:24:940 [HTTP] 
+2023-06-17 14:16:24:943 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:24:943 [HTTP] {}
+2023-06-17 14:16:24:943 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:25:191 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:25:191 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect 200 248 ms - 101
+2023-06-17 14:16:25:191 [HTTP] 
+2023-06-17 14:16:25:195 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:25:196 [HTTP] {}
+2023-06-17 14:16:25:457 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 261 ms - 48
+2023-06-17 14:16:25:457 [HTTP] 
+2023-06-17 14:16:25:461 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:25:461 [HTTP] {}
+2023-06-17 14:16:25:461 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:25:705 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:25:706 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect 200 245 ms - 101
+2023-06-17 14:16:25:706 [HTTP] 
+2023-06-17 14:16:25:709 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:25:709 [HTTP] {}
+2023-06-17 14:16:25:709 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:25:949 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:25:950 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/DD000000-0000-0000-F5AE-000000000000/rect 200 241 ms - 101
+2023-06-17 14:16:25:950 [HTTP] 
+2023-06-17 14:16:25:956 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:25:956 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":100,"y":446,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:26:449 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 493 ms - 14
+2023-06-17 14:16:26:449 [HTTP] 
+2023-06-17 14:16:26:454 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:26:454 [HTTP] {"using":"accessibility id","value":"test-Image Container"}
+2023-06-17 14:16:26:788 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 334 ms - 137
+2023-06-17 14:16:26:788 [HTTP] 
+2023-06-17 14:16:26:791 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:26:791 [HTTP] {}
+2023-06-17 14:16:26:791 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:26:960 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:26:960 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/displayed 200 170 ms - 65
+2023-06-17 14:16:26:960 [HTTP] 
+2023-06-17 14:16:26:963 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:26:963 [HTTP] {}
+2023-06-17 14:16:27:034 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 71 ms - 48
+2023-06-17 14:16:27:034 [HTTP] 
+2023-06-17 14:16:27:037 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:27:037 [HTTP] {}
+2023-06-17 14:16:27:038 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:27:206 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:27:207 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 169 ms - 102
+2023-06-17 14:16:27:207 [HTTP] 
+2023-06-17 14:16:27:210 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:27:210 [HTTP] {}
+2023-06-17 14:16:27:211 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:27:387 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:27:387 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 177 ms - 102
+2023-06-17 14:16:27:387 [HTTP] 
+2023-06-17 14:16:27:391 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:27:391 [HTTP] {}
+2023-06-17 14:16:27:539 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 147 ms - 48
+2023-06-17 14:16:27:539 [HTTP] 
+2023-06-17 14:16:27:542 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:27:542 [HTTP] {}
+2023-06-17 14:16:27:542 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:27:708 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:27:709 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 167 ms - 102
+2023-06-17 14:16:27:709 [HTTP] 
+2023-06-17 14:16:27:711 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:27:712 [HTTP] {}
+2023-06-17 14:16:27:712 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:27:876 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:27:876 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 165 ms - 102
+2023-06-17 14:16:27:876 [HTTP] 
+2023-06-17 14:16:27:879 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:27:879 [HTTP] {}
+2023-06-17 14:16:27:935 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 56 ms - 48
+2023-06-17 14:16:27:935 [HTTP] 
+2023-06-17 14:16:27:938 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:27:939 [HTTP] {}
+2023-06-17 14:16:27:939 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:28:148 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:28:149 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 210 ms - 102
+2023-06-17 14:16:28:149 [HTTP] 
+2023-06-17 14:16:28:152 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:28:152 [HTTP] {}
+2023-06-17 14:16:28:153 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:28:324 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:28:325 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 173 ms - 102
+2023-06-17 14:16:28:325 [HTTP] 
+2023-06-17 14:16:28:335 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:28:335 [HTTP] {}
+2023-06-17 14:16:28:392 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 57 ms - 48
+2023-06-17 14:16:28:392 [HTTP] 
+2023-06-17 14:16:28:395 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:28:395 [HTTP] {}
+2023-06-17 14:16:28:396 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:28:574 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:28:575 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 179 ms - 102
+2023-06-17 14:16:28:575 [HTTP] 
+2023-06-17 14:16:28:577 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:28:577 [HTTP] {}
+2023-06-17 14:16:28:577 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:28:755 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:28:755 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 178 ms - 102
+2023-06-17 14:16:28:755 [HTTP] 
+2023-06-17 14:16:28:758 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:28:758 [HTTP] {}
+2023-06-17 14:16:28:825 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 66 ms - 48
+2023-06-17 14:16:28:825 [HTTP] 
+2023-06-17 14:16:28:829 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:28:829 [HTTP] {}
+2023-06-17 14:16:28:829 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:29:013 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:29:014 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 185 ms - 102
+2023-06-17 14:16:29:014 [HTTP] 
+2023-06-17 14:16:29:017 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:29:017 [HTTP] {}
+2023-06-17 14:16:29:017 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:29:179 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:29:179 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 163 ms - 102
+2023-06-17 14:16:29:179 [HTTP] 
+2023-06-17 14:16:29:182 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:29:182 [HTTP] {}
+2023-06-17 14:16:29:249 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 67 ms - 48
+2023-06-17 14:16:29:249 [HTTP] 
+2023-06-17 14:16:29:252 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:29:252 [HTTP] {}
+2023-06-17 14:16:29:253 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:29:448 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:29:449 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 196 ms - 102
+2023-06-17 14:16:29:449 [HTTP] 
+2023-06-17 14:16:29:452 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:29:452 [HTTP] {}
+2023-06-17 14:16:29:452 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:29:652 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:29:653 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 201 ms - 102
+2023-06-17 14:16:29:653 [HTTP] 
+2023-06-17 14:16:29:658 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:29:658 [HTTP] {}
+2023-06-17 14:16:29:867 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 208 ms - 48
+2023-06-17 14:16:29:867 [HTTP] 
+2023-06-17 14:16:29:869 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:29:870 [HTTP] {}
+2023-06-17 14:16:29:870 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:30:074 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:30:075 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 205 ms - 102
+2023-06-17 14:16:30:075 [HTTP] 
+2023-06-17 14:16:30:077 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:30:078 [HTTP] {}
+2023-06-17 14:16:30:078 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:30:270 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:30:271 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 193 ms - 102
+2023-06-17 14:16:30:271 [HTTP] 
+2023-06-17 14:16:30:273 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:30:273 [HTTP] {}
+2023-06-17 14:16:30:342 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 69 ms - 48
+2023-06-17 14:16:30:342 [HTTP] 
+2023-06-17 14:16:30:346 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:30:346 [HTTP] {}
+2023-06-17 14:16:30:347 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:30:568 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:30:569 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 223 ms - 102
+2023-06-17 14:16:30:569 [HTTP] 
+2023-06-17 14:16:30:572 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:30:572 [HTTP] {}
+2023-06-17 14:16:30:572 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:30:819 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:30:820 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 248 ms - 102
+2023-06-17 14:16:30:820 [HTTP] 
+2023-06-17 14:16:30:825 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:30:825 [HTTP] {}
+2023-06-17 14:16:30:910 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 84 ms - 48
+2023-06-17 14:16:30:910 [HTTP] 
+2023-06-17 14:16:30:912 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:30:913 [HTTP] {}
+2023-06-17 14:16:30:913 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:31:197 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:31:199 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 286 ms - 102
+2023-06-17 14:16:31:200 [HTTP] 
+2023-06-17 14:16:31:203 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:31:203 [HTTP] {}
+2023-06-17 14:16:31:203 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:31:364 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:31:365 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 162 ms - 102
+2023-06-17 14:16:31:365 [HTTP] 
+2023-06-17 14:16:31:371 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:31:371 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":145,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":49,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]},{"id":"Finger 2","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":245,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":341,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:33:044 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 1673 ms - 14
+2023-06-17 14:16:33:044 [HTTP] 
+2023-06-17 14:16:33:049 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:33:049 [HTTP] {"using":"accessibility id","value":"test-Image Container"}
+2023-06-17 14:16:33:502 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 453 ms - 137
+2023-06-17 14:16:33:502 [HTTP] 
+2023-06-17 14:16:33:505 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:33:506 [HTTP] {}
+2023-06-17 14:16:33:506 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:33:713 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:33:713 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/displayed 200 208 ms - 65
+2023-06-17 14:16:33:714 [HTTP] 
+2023-06-17 14:16:33:717 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:33:717 [HTTP] {}
+2023-06-17 14:16:33:781 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 64 ms - 48
+2023-06-17 14:16:33:781 [HTTP] 
+2023-06-17 14:16:33:784 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:33:784 [HTTP] {}
+2023-06-17 14:16:33:784 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:33:957 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:33:958 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 174 ms - 102
+2023-06-17 14:16:33:958 [HTTP] 
+2023-06-17 14:16:33:961 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:33:961 [HTTP] {}
+2023-06-17 14:16:33:961 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:34:162 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:34:163 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 201 ms - 102
+2023-06-17 14:16:34:163 [HTTP] 
+2023-06-17 14:16:34:166 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:34:166 [HTTP] {}
+2023-06-17 14:16:34:231 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 65 ms - 48
+2023-06-17 14:16:34:231 [HTTP] 
+2023-06-17 14:16:34:234 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:34:234 [HTTP] {}
+2023-06-17 14:16:34:234 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:34:408 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:34:408 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 174 ms - 102
+2023-06-17 14:16:34:408 [HTTP] 
+2023-06-17 14:16:34:411 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:34:411 [HTTP] {}
+2023-06-17 14:16:34:412 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:34:586 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:34:587 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 175 ms - 102
+2023-06-17 14:16:34:587 [HTTP] 
+2023-06-17 14:16:34:589 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:34:590 [HTTP] {}
+2023-06-17 14:16:34:654 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 65 ms - 48
+2023-06-17 14:16:34:654 [HTTP] 
+2023-06-17 14:16:34:657 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:34:657 [HTTP] {}
+2023-06-17 14:16:34:657 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:34:831 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:34:832 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 174 ms - 102
+2023-06-17 14:16:34:832 [HTTP] 
+2023-06-17 14:16:34:834 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:34:834 [HTTP] {}
+2023-06-17 14:16:34:834 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:35:027 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:35:028 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 194 ms - 102
+2023-06-17 14:16:35:028 [HTTP] 
+2023-06-17 14:16:35:031 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:35:031 [HTTP] {}
+2023-06-17 14:16:35:086 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 55 ms - 48
+2023-06-17 14:16:35:086 [HTTP] 
+2023-06-17 14:16:35:090 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:35:090 [HTTP] {}
+2023-06-17 14:16:35:090 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:35:247 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:35:247 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 157 ms - 102
+2023-06-17 14:16:35:247 [HTTP] 
+2023-06-17 14:16:35:251 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:35:251 [HTTP] {}
+2023-06-17 14:16:35:251 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:35:586 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:35:587 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 336 ms - 102
+2023-06-17 14:16:35:587 [HTTP] 
+2023-06-17 14:16:35:590 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:35:591 [HTTP] {}
+2023-06-17 14:16:35:654 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 64 ms - 48
+2023-06-17 14:16:35:654 [HTTP] 
+2023-06-17 14:16:35:657 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:35:657 [HTTP] {}
+2023-06-17 14:16:35:657 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:35:826 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:35:827 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 170 ms - 102
+2023-06-17 14:16:35:827 [HTTP] 
+2023-06-17 14:16:35:830 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:35:830 [HTTP] {}
+2023-06-17 14:16:35:831 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:36:009 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:36:009 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 179 ms - 102
+2023-06-17 14:16:36:010 [HTTP] 
+2023-06-17 14:16:36:012 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:36:012 [HTTP] {}
+2023-06-17 14:16:36:076 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 64 ms - 48
+2023-06-17 14:16:36:076 [HTTP] 
+2023-06-17 14:16:36:079 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:36:079 [HTTP] {}
+2023-06-17 14:16:36:079 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:36:292 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:36:293 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 214 ms - 102
+2023-06-17 14:16:36:293 [HTTP] 
+2023-06-17 14:16:36:295 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:36:296 [HTTP] {}
+2023-06-17 14:16:36:296 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:36:461 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:36:462 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 166 ms - 102
+2023-06-17 14:16:36:462 [HTTP] 
+2023-06-17 14:16:36:464 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:36:464 [HTTP] {}
+2023-06-17 14:16:36:533 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 69 ms - 48
+2023-06-17 14:16:36:533 [HTTP] 
+2023-06-17 14:16:36:536 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:36:536 [HTTP] {}
+2023-06-17 14:16:36:536 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:36:715 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:36:716 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 180 ms - 102
+2023-06-17 14:16:36:716 [HTTP] 
+2023-06-17 14:16:36:718 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:36:718 [HTTP] {}
+2023-06-17 14:16:36:718 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:36:925 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:36:925 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 207 ms - 102
+2023-06-17 14:16:36:925 [HTTP] 
+2023-06-17 14:16:36:928 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:36:928 [HTTP] {}
+2023-06-17 14:16:36:999 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 72 ms - 48
+2023-06-17 14:16:36:999 [HTTP] 
+2023-06-17 14:16:37:002 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:37:002 [HTTP] {}
+2023-06-17 14:16:37:002 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:37:181 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:37:181 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 179 ms - 102
+2023-06-17 14:16:37:181 [HTTP] 
+2023-06-17 14:16:37:183 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:37:183 [HTTP] {}
+2023-06-17 14:16:37:184 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:37:350 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:37:350 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 167 ms - 102
+2023-06-17 14:16:37:350 [HTTP] 
+2023-06-17 14:16:37:352 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:37:352 [HTTP] {}
+2023-06-17 14:16:37:405 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 52 ms - 48
+2023-06-17 14:16:37:405 [HTTP] 
+2023-06-17 14:16:37:410 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:37:410 [HTTP] {}
+2023-06-17 14:16:37:410 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:37:689 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:37:690 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 280 ms - 102
+2023-06-17 14:16:37:690 [HTTP] 
+2023-06-17 14:16:37:693 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:37:693 [HTTP] {}
+2023-06-17 14:16:37:693 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:37:865 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:37:865 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/32010000-0000-0000-F5AE-000000000000/rect 200 172 ms - 102
+2023-06-17 14:16:37:865 [HTTP] 
+2023-06-17 14:16:37:870 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:37:870 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":49,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":145,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]},{"id":"Finger 2","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":341,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":245,"y":439,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:39:555 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 1684 ms - 14
+2023-06-17 14:16:39:555 [HTTP] 
+2023-06-17 14:16:39:562 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:39:562 [HTTP] {}
+2023-06-17 14:16:39:747 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 185 ms - 48
+2023-06-17 14:16:39:747 [HTTP] 
+2023-06-17 14:16:39:755 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:39:755 [HTTP] {}
+2023-06-17 14:16:39:816 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 61 ms - 48
+2023-06-17 14:16:39:816 [HTTP] 
+2023-06-17 14:16:39:819 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:39:819 [HTTP] {}
+2023-06-17 14:16:39:876 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 56 ms - 48
+2023-06-17 14:16:39:876 [HTTP] 
+2023-06-17 14:16:39:880 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:39:880 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":187,"y":406,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":187,"y":102,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:41:361 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 1481 ms - 14
+2023-06-17 14:16:41:361 [HTTP] 
+2023-06-17 14:16:41:364 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:41:364 [HTTP] {}
+2023-06-17 14:16:41:421 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 58 ms - 48
+2023-06-17 14:16:41:421 [HTTP] 
+2023-06-17 14:16:41:424 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:41:424 [HTTP] {}
+2023-06-17 14:16:41:487 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 63 ms - 48
+2023-06-17 14:16:41:487 [HTTP] 
+2023-06-17 14:16:41:490 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:41:490 [HTTP] {}
+2023-06-17 14:16:41:544 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 54 ms - 48
+2023-06-17 14:16:41:544 [HTTP] 
+2023-06-17 14:16:41:548 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:41:548 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":187,"y":406,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":187,"y":710,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:43:003 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 1454 ms - 14
+2023-06-17 14:16:43:003 [HTTP] 
+2023-06-17 14:16:43:006 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:43:007 [HTTP] {"using":"accessibility id","value":"test-Cart"}
+2023-06-17 14:16:43:442 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 436 ms - 137
+2023-06-17 14:16:43:442 [HTTP] 
+2023-06-17 14:16:43:445 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:43:445 [HTTP] {}
+2023-06-17 14:16:43:445 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:43:609 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:43:610 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/displayed 200 164 ms - 65
+2023-06-17 14:16:43:610 [HTTP] 
+2023-06-17 14:16:43:612 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:43:612 [HTTP] {}
+2023-06-17 14:16:43:612 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:43:804 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:43:805 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect 200 193 ms - 100
+2023-06-17 14:16:43:805 [HTTP] 
+2023-06-17 14:16:43:807 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:43:807 [HTTP] {}
+2023-06-17 14:16:43:808 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:43:971 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:43:972 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect 200 165 ms - 100
+2023-06-17 14:16:43:972 [HTTP] 
+2023-06-17 14:16:43:974 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:43:974 [HTTP] {}
+2023-06-17 14:16:44:040 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 66 ms - 48
+2023-06-17 14:16:44:041 [HTTP] 
+2023-06-17 14:16:44:043 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:44:043 [HTTP] {}
+2023-06-17 14:16:44:043 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:44:224 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:44:225 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect 200 182 ms - 100
+2023-06-17 14:16:44:225 [HTTP] 
+2023-06-17 14:16:44:227 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:44:227 [HTTP] {}
+2023-06-17 14:16:44:227 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:44:404 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:44:404 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/A1000000-0000-0000-F5AE-000000000000/rect 200 177 ms - 100
+2023-06-17 14:16:44:404 [HTTP] 
+2023-06-17 14:16:44:407 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:44:407 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":353,"y":76,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:44:842 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 435 ms - 14
+2023-06-17 14:16:44:842 [HTTP] 
+2023-06-17 14:16:44:845 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:44:846 [HTTP] {"using":"accessibility id","value":"test-Cart Content"}
+2023-06-17 14:16:45:266 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 420 ms - 137
+2023-06-17 14:16:45:266 [HTTP] 
+2023-06-17 14:16:45:269 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/4E010000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:45:269 [HTTP] {}
+2023-06-17 14:16:45:269 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:45:595 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:45:596 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/4E010000-0000-0000-F5AE-000000000000/displayed 200 327 ms - 65
+2023-06-17 14:16:45:596 [HTTP] 
+2023-06-17 14:16:45:599 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/4E010000-0000-0000-F5AE-000000000000/elements
+2023-06-17 14:16:45:599 [HTTP] {"id":"4E010000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Item"}
+2023-06-17 14:16:46:291 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/4E010000-0000-0000-F5AE-000000000000/elements 200 692 ms - 139
+2023-06-17 14:16:46:291 [HTTP] 
+2023-06-17 14:16:46:302 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6F010000-0000-0000-F5AE-000000000000/element
+2023-06-17 14:16:46:302 [HTTP] {"id":"6F010000-0000-0000-F5AE-000000000000","using":"accessibility id","value":"test-Description"}
+2023-06-17 14:16:46:878 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6F010000-0000-0000-F5AE-000000000000/element 200 576 ms - 137
+2023-06-17 14:16:46:878 [HTTP] 
+2023-06-17 14:16:46:881 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:46:881 [HTTP] {}
+2023-06-17 14:16:46:947 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 66 ms - 48
+2023-06-17 14:16:46:947 [HTTP] 
+2023-06-17 14:16:46:949 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:46:949 [HTTP] {}
+2023-06-17 14:16:46:949 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:47:170 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:47:171 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 221 ms - 102
+2023-06-17 14:16:47:171 [HTTP] 
+2023-06-17 14:16:47:172 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:47:172 [HTTP] {}
+2023-06-17 14:16:47:173 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:47:378 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:47:378 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 206 ms - 102
+2023-06-17 14:16:47:378 [HTTP] 
+2023-06-17 14:16:47:380 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:47:380 [HTTP] {}
+2023-06-17 14:16:47:452 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 72 ms - 48
+2023-06-17 14:16:47:452 [HTTP] 
+2023-06-17 14:16:47:455 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:47:455 [HTTP] {}
+2023-06-17 14:16:47:455 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:47:775 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:47:776 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 321 ms - 102
+2023-06-17 14:16:47:776 [HTTP] 
+2023-06-17 14:16:47:778 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:47:778 [HTTP] {}
+2023-06-17 14:16:47:778 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:47:967 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:47:968 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 190 ms - 102
+2023-06-17 14:16:47:968 [HTTP] 
+2023-06-17 14:16:47:970 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:47:970 [HTTP] {}
+2023-06-17 14:16:48:043 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 73 ms - 48
+2023-06-17 14:16:48:043 [HTTP] 
+2023-06-17 14:16:48:045 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:48:046 [HTTP] {}
+2023-06-17 14:16:48:046 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:48:262 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:48:262 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 217 ms - 102
+2023-06-17 14:16:48:262 [HTTP] 
+2023-06-17 14:16:48:264 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:48:264 [HTTP] {}
+2023-06-17 14:16:48:265 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:48:460 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:48:460 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 196 ms - 102
+2023-06-17 14:16:48:460 [HTTP] 
+2023-06-17 14:16:48:462 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:48:462 [HTTP] {}
+2023-06-17 14:16:48:537 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 75 ms - 48
+2023-06-17 14:16:48:537 [HTTP] 
+2023-06-17 14:16:48:540 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:48:540 [HTTP] {}
+2023-06-17 14:16:48:541 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:48:757 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:48:757 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 217 ms - 102
+2023-06-17 14:16:48:758 [HTTP] 
+2023-06-17 14:16:48:760 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:48:760 [HTTP] {}
+2023-06-17 14:16:48:760 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:48:954 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:48:955 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 195 ms - 102
+2023-06-17 14:16:48:955 [HTTP] 
+2023-06-17 14:16:48:957 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:48:957 [HTTP] {}
+2023-06-17 14:16:49:027 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 70 ms - 48
+2023-06-17 14:16:49:027 [HTTP] 
+2023-06-17 14:16:49:031 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:49:031 [HTTP] {}
+2023-06-17 14:16:49:032 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:49:257 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:49:258 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 226 ms - 102
+2023-06-17 14:16:49:258 [HTTP] 
+2023-06-17 14:16:49:260 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:49:260 [HTTP] {}
+2023-06-17 14:16:49:260 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:49:451 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:49:451 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 191 ms - 102
+2023-06-17 14:16:49:451 [HTTP] 
+2023-06-17 14:16:49:453 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:49:453 [HTTP] {}
+2023-06-17 14:16:49:453 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:49:674 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:49:675 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 222 ms - 102
+2023-06-17 14:16:49:675 [HTTP] 
+2023-06-17 14:16:49:678 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:49:678 [HTTP] {}
+2023-06-17 14:16:49:678 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:49:982 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:49:982 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/74010000-0000-0000-F5AE-000000000000/rect 200 304 ms - 102
+2023-06-17 14:16:49:982 [HTTP] 
+2023-06-17 14:16:49:986 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:49:986 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":226,"y":313,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":500,"type":"pause"},{"duration":500,"x":57,"y":313,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:51:470 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 1485 ms - 14
+2023-06-17 14:16:51:471 [HTTP] 
+2023-06-17 14:16:51:475 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:51:475 [HTTP] {"using":"accessibility id","value":"test-Delete"}
+2023-06-17 14:16:52:022 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 546 ms - 137
+2023-06-17 14:16:52:022 [HTTP] 
+2023-06-17 14:16:52:027 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:52:027 [HTTP] {}
+2023-06-17 14:16:52:028 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:52:518 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:52:519 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/displayed 200 491 ms - 65
+2023-06-17 14:16:52:519 [HTTP] 
+2023-06-17 14:16:52:521 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/enabled
+2023-06-17 14:16:52:521 [HTTP] {}
+2023-06-17 14:16:52:521 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:52:705 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:52:705 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/enabled 200 184 ms - 65
+2023-06-17 14:16:52:705 [HTTP] 
+2023-06-17 14:16:52:707 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:52:707 [HTTP] {}
+2023-06-17 14:16:52:707 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:52:931 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:52:931 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect 200 224 ms - 102
+2023-06-17 14:16:52:931 [HTTP] 
+2023-06-17 14:16:52:933 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:52:933 [HTTP] {}
+2023-06-17 14:16:52:934 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:53:131 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:53:132 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect 200 198 ms - 102
+2023-06-17 14:16:53:132 [HTTP] 
+2023-06-17 14:16:53:134 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:53:135 [HTTP] {}
+2023-06-17 14:16:53:209 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 75 ms - 48
+2023-06-17 14:16:53:209 [HTTP] 
+2023-06-17 14:16:53:211 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:53:211 [HTTP] {}
+2023-06-17 14:16:53:212 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:53:435 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:53:436 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect 200 224 ms - 102
+2023-06-17 14:16:53:436 [HTTP] 
+2023-06-17 14:16:53:438 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:53:438 [HTTP] {}
+2023-06-17 14:16:53:438 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:53:624 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:53:625 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/6E010000-0000-0000-F5AE-000000000000/rect 200 187 ms - 102
+2023-06-17 14:16:53:625 [HTTP] 
+2023-06-17 14:16:53:628 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:53:628 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":339,"y":404,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:54:077 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 449 ms - 14
+2023-06-17 14:16:54:077 [HTTP] 
+2023-06-17 14:16:54:080 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element
+2023-06-17 14:16:54:080 [HTTP] {"using":"accessibility id","value":"test-CONTINUE SHOPPING"}
+2023-06-17 14:16:54:472 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element 200 392 ms - 137
+2023-06-17 14:16:54:472 [HTTP] 
+2023-06-17 14:16:54:475 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/displayed
+2023-06-17 14:16:54:475 [HTTP] {}
+2023-06-17 14:16:54:475 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:54:813 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:54:814 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/displayed 200 338 ms - 65
+2023-06-17 14:16:54:814 [HTTP] 
+2023-06-17 14:16:54:816 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:54:816 [HTTP] {}
+2023-06-17 14:16:54:816 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:55:008 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:55:009 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect 200 192 ms - 101
+2023-06-17 14:16:55:009 [HTTP] 
+2023-06-17 14:16:55:012 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:55:012 [HTTP] {}
+2023-06-17 14:16:55:012 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:55:242 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:55:242 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect 200 231 ms - 101
+2023-06-17 14:16:55:242 [HTTP] 
+2023-06-17 14:16:55:244 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect
+2023-06-17 14:16:55:244 [HTTP] {}
+2023-06-17 14:16:55:300 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/window/rect 200 55 ms - 48
+2023-06-17 14:16:55:300 [HTTP] 
+2023-06-17 14:16:55:302 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:55:303 [HTTP] {}
+2023-06-17 14:16:55:303 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:55:492 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:55:493 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect 200 190 ms - 101
+2023-06-17 14:16:55:493 [HTTP] 
+2023-06-17 14:16:55:495 [HTTP] --> GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect
+2023-06-17 14:16:55:495 [HTTP] {}
+2023-06-17 14:16:55:496 [XCUITestDriver@2b80 (a1d7dc76)] Driver proxy active, passing request on via HTTP proxy
+2023-06-17 14:16:55:696 [XCUITestDriver@2b80 (a1d7dc76)] Replacing sessionId A66A847D-02EE-4721-A145-FC8302A1702B with a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:55:696 [HTTP] <-- GET /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/element/65010000-0000-0000-F5AE-000000000000/rect 200 201 ms - 101
+2023-06-17 14:16:55:696 [HTTP] 
+2023-06-17 14:16:55:700 [HTTP] --> POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions
+2023-06-17 14:16:55:700 [HTTP] {"actions":[{"id":"Finger 1","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":195,"y":286,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"button":0,"type":"pointerUp"}]}]}
+2023-06-17 14:16:56:145 [HTTP] <-- POST /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d/actions 200 445 ms - 14
+2023-06-17 14:16:56:145 [HTTP] 
+2023-06-17 14:16:56:153 [HTTP] --> DELETE /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d
+2023-06-17 14:16:56:153 [HTTP] {}
+2023-06-17 14:16:56:154 [AppiumDriver@1750] Removing session a1d7dc76-961a-41d0-9207-a53af8c0901d from our master session list
+2023-06-17 14:16:57:223 [DevCon Factory] Releasing connections for 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F device on any port number
+2023-06-17 14:16:57:223 [DevCon Factory] Found cached connections to release: ["6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F:8100"]
+2023-06-17 14:16:57:232 [HTTP] <-- DELETE /wd/hub/session/a1d7dc76-961a-41d0-9207-a53af8c0901d 200 1079 ms - 14
+2023-06-17 14:16:57:232 [HTTP] 
+2023-06-17 14:16:57:239 [Appium] Received SIGTERM - shutting down
+2023-06-17 14:16:57:242 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -143,7 +922,7 @@ Error: write EPIPE
     at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
     at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
     at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
-2023-06-16 23:13:46:437 uncaughtException: write EPIPE
+2023-06-17 14:16:57:243 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -167,7 +946,7 @@ Error: write EPIPE
     at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
     at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
     at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
-2023-06-16 23:13:46:439 uncaughtException: write EPIPE
+2023-06-17 14:16:57:244 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)
@@ -191,7 +970,7 @@ Error: write EPIPE
     at DerivedLogger.Transform._read (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:166:10)
     at DerivedLogger.Transform._write (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_transform.js:155:83)
     at doWrite (/Users/ibkh/.nvm/versions/node/v18.16.0/lib/node_modules/appium/node_modules/readable-stream/lib/_stream_writable.js:390:139)
-2023-06-16 23:13:46:440 uncaughtException: write EPIPE
+2023-06-17 14:16:57:245 uncaughtException: write EPIPE
 Error: write EPIPE
     at afterWriteDispatched (node:internal/stream_base_commons:160:15)
     at writeGeneric (node:internal/stream_base_commons:151:3)

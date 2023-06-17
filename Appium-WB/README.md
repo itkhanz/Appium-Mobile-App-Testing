@@ -25,6 +25,7 @@
 * Lombok 1.18.28
 * Google Truth 1.1.4
 * Google Guava 32.0.1-jre
+* Maven surefire plugin 3.1.2
 * [Appium doctor](https://github.com/appium/appium/tree/master/packages/doctor)
 * Demo Apps
     * [Sauce Labs My Demo App React Native (2022 version)](https://github.com/saucelabs/sample-app-mobile)
@@ -40,6 +41,21 @@
         * Pixel 5 with Android 13.0 Google Play | x86_64
 * XCode 14.3 (with XCode commandline)
 * IntelliJ IDEA
+
+---
+
+## Running Tests
+
+* Maven surefire plugin enables to execute the tests from commandline.
+* Test suites are configured in `test-suites/` folder for both the applications.
+* Running command `mvn clean test` will execute all the tests from both wdio and sauce labs application.
+* To execute the Sauce Labs Demo app tests:
+    * for Android, execute command `mvn test -Dtest=AndroidTest`
+    * for iOS, execute command `mvn test -Dtest=IOSTest`
+* To execute the WDIO native demo app tests:
+    * for Android, execute command `mvn test -Dtest=AndroidSwipeTest`
+    * for iOS, execute command `mvn test -Dtest=IOSSwipeTest`
+* Alternatively you can execute the tests from  Intellij IDE by hitting the play icon next to test or class.
 
 ---
 

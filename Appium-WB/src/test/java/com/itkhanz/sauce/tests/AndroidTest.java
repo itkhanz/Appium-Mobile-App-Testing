@@ -92,7 +92,7 @@ public class AndroidTest {
         this.fingerGesture.swipe (FingerGestureUtils.Direction.DOWN, 75);
         this.fingerGesture.tap (this.homePage.cart ());
 
-        final var cartItem = this.cartPage.cartItem (0);
+        var cartItem = this.cartPage.cartItem (0);
         this.fingerGesture.swipe (FingerGestureUtils.Direction.LEFT, cartItem.description (), 75);
 
         this.fingerGesture.tap (this.cartPage.delete ());

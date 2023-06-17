@@ -18,6 +18,11 @@ public class LoginPage<D extends AppiumDriver> extends BasePage<D> {
         final var passwordField = accessibilityId("test-Password");
         final var loginButton = accessibilityId("test-LOGIN");
 
+        System.out.println("*****************");
+        System.out.println(email);
+        System.out.println(password);
+        System.out.println("*****************");
+
         getWait().until(visibilityOfElementLocated(userName))
                 .sendKeys(email);
         getWait().until(visibilityOfElementLocated(passwordField))
