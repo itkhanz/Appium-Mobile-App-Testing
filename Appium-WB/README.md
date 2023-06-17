@@ -328,6 +328,18 @@
 * Enter the command in terminal `emulator -list-avds` to get the name of virtual device emulators
 * Supply this device name as `avd` property which will automatically start the emulator and you do not need to start it
   manually
+* Inspect the element without closing the application in emulator, add the `autoLaunch` boolean capability and set it to
+  false and start the session. It will launch the appium inspector session on already running application screen in
+  appium without restarting the appium. Remove the `app` and `appActiviity` related capabilities to use this option.
+* you can also add `alias` commands in `.zshrc` to start the appium server with your preferences:
+  * Open your `.zshrc` and add following lines. You can name your alias however you want.
+    * `alias appium-android="appium server --address localhost --port 4723 --use-drivers=uiautomator2"`
+    * `alias appium-ios="appium server --address localhost --port 4723 --use-drivers xcuitest"`
+    * `alias appium-all="appium server --address localhost --port 4723 --use-drivers uiautomator2,xcuitest"`
+    * `alias appium-with-plugins="appium server --address localhost --port 4723 --use-drivers uiautomator2,xcuitest --use-plugins element-wait,gestures"`
+  * Now enter command `source ~/.zshrc`
+  * Now you can simply run alias commands e.g. `appium-android` or `appium-ios` or `appium-with-plugins`
+* 
 * Debugging finger gestures with Appium Inspector:
   * We can build all these gestures and check them on application directly before writing the code.
   * Go to Actions tab, and build the actions.
