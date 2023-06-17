@@ -89,6 +89,16 @@
 
 <img src="doc/element-size-dimesions.png" width="500">
 
+### Swipe
+
+<img src="doc/swipeDown-scrollUp.png" width="543">
+
+<img src="doc/swipeUp-scrollDown.png" width="510">
+
+* Swipe and scroll are inverse actions of each other. In the appium, we perform swipe gesture to emulate scroll results.
+* Swiping up will result in scrolling downward, and vice-versa.
+* Similarly swiping to the left will result in scrolling towards right and vice-versa.
+
 ### Swipe Till an Element is Visible
 
 * There are following ways in which this gesture is implemented:
@@ -180,8 +190,6 @@
         this.driver.perform(singletonList(sequence));   //perform method requires a collection of sequence
     }
 ```
-
-### Swipe
 
 ### Drag and Drop
 

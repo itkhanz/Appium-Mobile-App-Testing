@@ -13,6 +13,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import static com.google.common.truth.Truth.assertThat;
 import static java.time.Duration.ofSeconds;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 import static org.testng.Assert.assertEquals;
@@ -64,6 +65,33 @@ public class AndroidTest {
                 .until (elementToBeClickable (productItem.dragHandle ()));
         this.fingerGesture.dragTo (productItem.dragHandle (), this.homePage.cartDropZone ());
 
-        assertEquals (this.homePage.cartCount (), 1);
+        assertThat(this.homePage.cartCount()).isEqualTo(1);
+        //assertEquals (this.homePage.cartCount (), 1);
     }
+
+    @Test (dependsOnMethods = "testAddToCart")
+    public void testProductDetailsPage () {
+        this.fingerGesture.tap (this.homePage.productItem ("Sauce Labs Backpack")
+                .getTitle ());
+
+        assertThat(this.productPage.productName()).isEqualTo("Sauce Labs Backpack");
+    }
+
+    @Test (dependsOnMethods = "testProductDetailsPage")
+    public void testCartDeleteOption () {
+        this.fingerGesture.swipe (FingerGestureUtils.Direction.UP, 75);
+        this.fingerGesture.swipe (FingerGestureUtils.Direction.DOWN, 75);
+        this.fingerGesture.tap (this.homePage.cart ());
+
+        final var cartItem = this.cartPage.cartItem (0);
+        this.fingerGesture.swipe (FingerGestureUtils.Direction.LEFT, cartItem.description (), 75);
+
+        this.fingerGesture.tap (this.cartPage.delete ());
+
+        this.fingerGesture.tap (this.cartPage.continueShopping ());
+
+        assertThat(this.homePage.cartCount()).isEqualTo(0);
+    }
+
+
 }

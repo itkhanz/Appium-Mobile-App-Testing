@@ -3,6 +3,7 @@ package com.itkhanz.sauce.pages;
 import com.itkhanz.sauce.objects.ProductItem;
 import io.appium.java_client.AppiumDriver;
 import lombok.Getter;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import static io.appium.java_client.AppiumBy.accessibilityId;
@@ -16,14 +17,18 @@ public class HomePage<D extends AppiumDriver> extends BasePage<D> {
     }
 
     public WebElement cart() {
-        final var cart = accessibilityId("test-Cart");
+        var cart = accessibilityId("test-Cart");
         return getWait().until(visibilityOfElementLocated(cart));
     }
 
     public int cartCount() {
-        final var countText = cart().findElement(className("android.widget.TextView"))
-                .getText();
-        return Integer.parseInt(countText);
+        try {
+            var countText = cart().findElement(className("android.widget.TextView")).getText();
+            return Integer.parseInt(countText);
+        } catch (NoSuchElementException e) {
+            System.out.println("Cart is Empty");
+            return 0;
+        }
     }
 
     public WebElement cartDropZone() {

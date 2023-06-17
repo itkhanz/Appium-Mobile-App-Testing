@@ -132,7 +132,7 @@ public class FingerGestureUtils<D extends AppiumDriver> {
      *
      * @param direction Direction of the swipe (with X and Y for Dimensions since enum is annotated with @Getter)
      * @param element   WebElement for the swipe
-     * @param distance  How far to swipe in px (must be in range 0-100)
+     * @param distance  How far to swipe in px (must be in range 1-99)
      * @return ending point of the swipe with adjustment applied for any offset beyond screen/element
      */
     private Point getSwipeEndPosition(final Direction direction, final WebElement element, final int distance) {
@@ -149,8 +149,8 @@ public class FingerGestureUtils<D extends AppiumDriver> {
         return getCorrectedCoordinates(element, new Point(x, y));
     }
 
-    //If the distance is above 100, the end point of the swipe will go out of the screen
-    //if the distance is below O, then the calculation will not be correct because multiplication with negative will invert sign
+    //If the distance is >= 100, the end point of the swipe will go out of the screen
+    //if the distance is <= O, then the calculation will not be correct because multiplication with negative will invert sign
     private void verifyDistance(final int distance) {
         if (distance <= 0 || distance >= 100) {
             throw new IllegalArgumentException("Distance should be between 0 and 100 exclusive...");
