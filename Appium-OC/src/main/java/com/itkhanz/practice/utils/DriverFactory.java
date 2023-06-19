@@ -124,6 +124,8 @@ public class DriverFactory {
                 .setNewCommandTimeout(Duration.ofSeconds(180))
                 //.setAvd("Pixel_5")  //automatically launches the android emulator with given avdID
                 //.setAvdLaunchTimeout(Duration.ofSeconds(180))
+                .setUnlockType("fingerprint")   //['pin', 'password', 'pattern', 'fingerprint', 'pinWithKeyEvent'] Set one of the possible types of Android lock screens to unlock.
+                .setUnlockKey("1")  //Allows to set an unlock key. e.g. 1235789 for Z pattern or if pin then e.g. 1234
                 ;
     }
 
