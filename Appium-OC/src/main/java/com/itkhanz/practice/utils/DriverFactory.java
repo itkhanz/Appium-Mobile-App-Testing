@@ -10,6 +10,7 @@ import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,6 +18,7 @@ import java.sql.DriverManager;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class DriverFactory {
 
@@ -38,19 +40,21 @@ public class DriverFactory {
                 throw new RuntimeException("Failed to initialize the DriverFactory");
             }
         }
+        System.out.println("Session ID: " + ((RemoteWebDriver)getDriver()).getSessionId());
         return DriverFactory.getDriver();
     }
 
     public static void shutdownDriver(){
-        if(getDriver() != null  || ((RemoteWebDriver)getDriver()).getSessionId() != null) {
+        if(getDriver() != null) {
             try {
                 getDriver().quit();
                 driver.remove();
-                driver = null;
             } catch (Exception e) {
                 throw new RuntimeException("Failed to quit the Driver from thread: " + Thread.currentThread().getId());
             }
         }
+        Optional<RemoteWebDriver> remoteDriver = Optional.ofNullable(((RemoteWebDriver)getDriver()));
+        if (remoteDriver.isEmpty()) System.out.println("Driver session terminated successfully");
     }
 
 
