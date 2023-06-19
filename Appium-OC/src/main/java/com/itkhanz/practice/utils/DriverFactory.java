@@ -4,54 +4,52 @@ import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.DriverManager;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DriverFactory {
 
-    public static AppiumDriver initializeDriver(Platform platform, Apps appName) throws MalformedURLException {
-        URL url = new URL("http://0.0.0.0:4723");   //Appium Server URL and port
-        Map<String, String> appCapabilities = getAppCapabilities(appName);
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("newCommandTimeout", 300);
+    private static ThreadLocal<AppiumDriver> driver = new ThreadLocal<AppiumDriver>();
 
-        switch(platform) {
-            case ANDROID:
-                caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,platform.platformName);
-                caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"pixel_5");
-                caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"UiAutomator2");
-                caps.setCapability(MobileCapabilityType.UDID ,"emulator-5554");
-                caps.setCapability("appPackage", appCapabilities.get("appPackage"));
-                caps.setCapability("appActivity", appCapabilities.get("appActivity"));
-                caps.setCapability("autoGrantPermissions", "true");
-                //No need to reinstall the app with Appium as it is already installed in emulator so APP capability is commented out
-                //String appUrlAndroid = System.getProperty("user.dir") + "/src/main/resources/apps/ApiDemos-debug.apk";
-                //caps.setCapability(MobileCapabilityType.APP, appUrlAndroid);
-                //caps.setCapability("avd", "Pixel_5"); //automatically launches the android emulator with given avdID
-                //caps.setCapability("app", appCapabilities.get("app"));
-                //caps.setCapability("avdLaunchTimeout", 180000);
-                return new AndroidDriver(url, caps);
-            case IOS:
-                caps.setCapability(MobileCapabilityType.PLATFORM_NAME ,platform.platformName);
-                caps.setCapability(MobileCapabilityType.DEVICE_NAME ,"iPhone 14");
-                caps.setCapability(MobileCapabilityType.AUTOMATION_NAME ,"XCUITest");
-                caps.setCapability(MobileCapabilityType.UDID ,"6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F");
-                caps.setCapability("bundleId", appCapabilities.get("bundleId"));
-                caps.setCapability("autoAcceptAlerts", "true");
-                //No need to reinstall the app with Appium as it is already installed in emulator so APP capability is commented out
-                //String appUrliOS = System.getProperty("user.dir") + "/src/main/resources/apps/UIKitCatalog-iphonesimulator.app";
-                //caps.setCapability(MobileCapabilityType.APP, appUrliOS);
-                //caps.setCapability("app", appCapabilities.get("app"));
-                //caps.setCapability("simulatorStartupTimeout", 180000);
-                return new IOSDriver(url, caps);
-            default:
-                throw new RuntimeException("Unable to create session with platform: " + platform.platformName);
+    private static AppiumDriver getDriver() {
+        return driver.get();
+    }
+
+    private static void setDriver(AppiumDriver dr) {
+        driver.set(dr);
+    }
+
+    public static AppiumDriver initializeDriver(Platform platform, Apps appName){
+        if(DriverFactory.getDriver()==null) {
+            try {
+                new DriverFactory(platform, appName);
+            } catch (Exception e) {
+                throw new RuntimeException("Failed to initialize the DriverFactory");
+            }
+        }
+        return DriverFactory.getDriver();
+    }
+
+    public static void shutdownDriver(){
+        if(getDriver() != null  || ((RemoteWebDriver)getDriver()).getSessionId() != null) {
+            try {
+                getDriver().quit();
+                driver.remove();
+                driver = null;
+            } catch (Exception e) {
+                throw new RuntimeException("Failed to quit the Driver from thread: " + Thread.currentThread().getId());
+            }
         }
     }
 
@@ -78,5 +76,54 @@ public class DriverFactory {
             default:
                 throw new RuntimeException("Invalid app: " + appName);
         }
+    }
+
+    private DriverFactory(Platform platform, Apps appName) throws MalformedURLException {
+        AppiumDriver driver;
+        URL url = new URL("http://0.0.0.0:4723");   //Appium Server URL and port
+        Map<String, String> appCapabilities = getAppCapabilities(appName);
+
+        switch(platform) {
+            case ANDROID:
+                driver = new AndroidDriver(url, getUiAutomator2Options(appCapabilities));
+                break;
+            case IOS:
+                driver = new IOSDriver(url, getUiAutomator2Options(appCapabilities));
+                break;
+            default:
+                throw new RuntimeException("Unable to create session with platform: " + platform.platformName);
+        }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //use Explicit Waits or appium wait plugin
+        DriverFactory.setDriver(driver);
+    }
+
+    private static UiAutomator2Options getUiAutomator2Options(Map<String, String> appCapabilities) {
+        return new UiAutomator2Options()
+                .setPlatformName("android") //optional
+                .setAutomationName("UiAutomator2")  //optional
+                .setDeviceName("pixel_5")     //not mandatory with udid
+                .setUdid("emulator-5554")
+                //.setApp(appCapabilities.get("app"))   //Install the app if not pre-installed, not needed with AppPackage and AppActivity
+                .setAppPackage(appCapabilities.get("appPackage"))
+                .setAppActivity(appCapabilities.get("appActivity"))
+                .setAutoGrantPermissions(true)
+                .setNewCommandTimeout(Duration.ofSeconds(180))
+                //.setAvd("Pixel_5")  //automatically launches the android emulator with given avdID
+                //.setAvdLaunchTimeout(Duration.ofSeconds(180))
+                ;
+    }
+
+    private static XCUITestOptions getXCUITestOptions(Map<String, String> appCapabilities) {
+        return new XCUITestOptions()
+                .setAutomationName("XCUITest")            //optional
+                .setPlatformName("iOS") //optional
+                .setDeviceName("iPhone 14")               //not mandatory when udid is provided
+                .setUdid("6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F")
+                //.setApp(appCapabilities.get("app"))      //Install the app if not pre-installed
+                .setBundleId(appCapabilities.get("bundleId"))
+                //.setSimulatorStartupTimeout(Duration.ofSeconds(180))  //waits for the simulator to launch
+                .setAutoAcceptAlerts(true)
+                .setNewCommandTimeout(Duration.ofSeconds(180))
+                ;
     }
 }
