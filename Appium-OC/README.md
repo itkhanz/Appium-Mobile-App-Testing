@@ -10,7 +10,7 @@
 
 ## Appium Setup on Windows
 
-## Appium Setup on Mac - Common [Android / iOS]
+## Appium Setup on Mac - Common (Android / iOS)
 
 ## Appium Setup on Mac - Android
 
@@ -27,6 +27,8 @@
 ## Automating Android Gestures
 
 ## Automating iOS Gestures
+
+## Appium Driver Commands
 
 
 
