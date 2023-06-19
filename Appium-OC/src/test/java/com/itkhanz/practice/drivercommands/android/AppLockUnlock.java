@@ -5,12 +5,16 @@ import com.itkhanz.practice.constants.Platform;
 import com.itkhanz.practice.utils.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 
 public class AppLockUnlock {
@@ -21,16 +25,30 @@ public class AppLockUnlock {
         driver = DriverFactory.initializeDriver(Platform.ANDROID, Apps.APIDEMOS);
     }
 
-    /*@AfterTest(alwaysRun = true)
+    @AfterTest(alwaysRun = true)
     public void tearDown() {
         DriverFactory.shutdownDriver();
-    }*/
+    }
 
     /*
     lockDevice(Duration duration) locks the dveice for duration and then unlocks it
      */
     @Test
     public void test_deviceLockForDuration() throws InterruptedException {
+        /*DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+        caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+
+        caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+        String appUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main"
+                + File.separator + "resources" + File.separator + "apps" + File.separator + "ApiDemos-debug.apk";
+        caps.setCapability(MobileCapabilityType.APP, appUrl);
+
+        URL url = new URL("http://0.0.0.0:4723/");
+
+        driver = new AndroidDriver(url, caps);*/
+
        ((AndroidDriver) driver).lockDevice(Duration.ofMillis(5000));
         Thread.sleep(10000);
 
