@@ -7,6 +7,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
+import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
@@ -74,7 +76,7 @@ public class DriverFactory {
                 driver = new AndroidDriver(url, getUiAutomator2Options(appCapabilities));
                 break;
             case IOS:
-                driver = new IOSDriver(url, getUiAutomator2Options(appCapabilities));
+                driver = new IOSDriver(url, getXCUITestOptions(appCapabilities));
                 break;
             default:
                 throw new RuntimeException("Unable to create session with platform: " + platform.platformName);
@@ -124,14 +126,14 @@ public class DriverFactory {
                 .setNewCommandTimeout(Duration.ofSeconds(180))
                 //.setAvd("Pixel_5")  //automatically launches the android emulator with given avdID
                 //.setAvdLaunchTimeout(Duration.ofSeconds(180))
-                .setUnlockType("fingerprint")   //['pin', 'password', 'pattern', 'fingerprint', 'pinWithKeyEvent'] Set one of the possible types of Android lock screens to unlock.
-                .setUnlockKey("1")  //Allows to set an unlock key. e.g. 1235789 for Z pattern or if pin then e.g. 1234
+                //.setUnlockType("fingerprint")   //['pin', 'password', 'pattern', 'fingerprint', 'pinWithKeyEvent'] Set one of the possible types of Android lock screens to unlock.
+                //.setUnlockKey("1")  //Allows to set an unlock key. e.g. 1235789 for Z pattern or if pin then e.g. 1234
                 ;
     }
 
     private static XCUITestOptions getXCUITestOptions(Map<String, String> appCapabilities) {
         return new XCUITestOptions()
-                .setAutomationName("XCUITest")            //optional
+                .setAutomationName("XCuiTest")            //optional
                 .setPlatformName("iOS") //optional
                 .setDeviceName("iPhone 14")               //not mandatory when udid is provided
                 .setUdid("6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F")

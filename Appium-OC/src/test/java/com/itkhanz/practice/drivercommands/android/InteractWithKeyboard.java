@@ -1,6 +1,5 @@
 package com.itkhanz.practice.drivercommands.android;
 
-import com.google.common.collect.ImmutableMap;
 import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
 import com.itkhanz.practice.utils.DriverFactory;
@@ -11,7 +10,6 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
