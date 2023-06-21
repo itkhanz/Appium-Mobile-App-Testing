@@ -20,6 +20,9 @@ To enable it, switch from Native App mode to Web/Hybrid App Mode by clicking on 
 Switch to Current Webview context from the dropdown on the right-side
 Appium Inspector is not always reliable for the element locators in webview, using browser is recommended
 Webview context switch is currently only working till iOS 16.2
+https://github.com/appium/appium/tree/1.x/docs/en/writing-running-appium/web
+https://github.com/appium/appium/blob/1.x/docs/en/writing-running-appium/web/hybrid.md
+https://github.com/appium/appium/blob/1.x/docs/en/writing-running-appium/web/mobile-web.md
  */
 public class IOSHybridTest extends BaseTest {
     @Test
