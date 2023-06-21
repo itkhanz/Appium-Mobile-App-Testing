@@ -4,5 +4,6 @@
     <suite-files>
         <suite-file path="testng-setup.xml"/>
         <suite-file path="testng-gestures.xml"/>
+        <suite-file path="testng-webview.xml"/>
     </suite-files>
 </suite>    <!-- Suite -->

@@ -105,9 +105,11 @@ public class AppFactory {
         appCapabilities.putIfAbsent(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2"); //optional
         appCapabilities.putIfAbsent("autoGrantPermissions", true);
         appCapabilities.putIfAbsent("newCommandTimeout", 180);     //in seconds
-        //appCapabilities.putIfAbsent("app", appCapabilities.get("appUrl"));     //Full path to the application to be tested (Install the app if not pre-installed, not needed with AppPackage and AppActivity)
+        appCapabilities.putIfAbsent("app", appCapabilities.get("appUrl"));     //Full path to the application to be tested (Install the app if not pre-installed, not needed with AppPackage and AppActivity)
         //appCapabilities.putIfAbsent("avd", "Pixel_5");   //The name of Android emulator to run the test on (automatically launches the android emulator with given avdID)
         //appCapabilities.putIfAbsent("avdLaunchTimeout", 180000);   //TMaximum number of milliseconds to wait until Android Emulator is started. 60000 ms by default
+        appCapabilities.put("settings[ignoreUnimportantViews]", true);  //Android can be set to ignore elements in the View Hierarchy which it deems irrelevant.
+
 
         UiAutomator2Options options = new UiAutomator2Options(appCapabilities);
         LOG.info("UIAutomator2 options set as: " + Arrays.toString(appCapabilities.entrySet().toArray()));
@@ -126,8 +128,8 @@ public class AppFactory {
         appCapabilities.putIfAbsent(MobileCapabilityType.AUTOMATION_NAME, "XCUITest"); //optional
         appCapabilities.putIfAbsent("autoAcceptAlerts", true);     //Accept all iOS alerts automatically if they pop up.
         appCapabilities.putIfAbsent("newCommandTimeout", 180);     //How long (in seconds) the driver should wait for a new command from the client before assuming the client has stopped sending requests.
-        appCapabilities.putIfAbsent("noReset", true);              //Prevents the device to be reset before the session startup if set to true.
-        //appCapabilities.putIfAbsent("app", appCapabilities.get("appUrl"));     //Full path to the application to be tested (Install the app if not pre-installed, not needed with AppPackage and AppActivity)
+        appCapabilities.putIfAbsent("app", appCapabilities.get("appUrl"));     //Full path to the application to be tested (Install the app if not pre-installed, not needed with AppPackage and AppActivity)
+        //appCapabilities.putIfAbsent("noReset", true);              //Prevents the device to be reset before the session startup if set to true.
         //appCapabilities.putIfAbsent("simulatorStartupTimeout", 1800000);    //Allows to change the default timeout for Simulator startup. By default this value is set to 120000ms (2 minutes)
 
         XCUITestOptions options = new XCUITestOptions(appCapabilities);
