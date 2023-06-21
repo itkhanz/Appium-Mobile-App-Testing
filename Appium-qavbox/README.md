@@ -34,13 +34,13 @@
 * TestNG 7.8.0
 * Selenium 4.9.1
 * Appium Java client 8.5.1
-* Appium server 2.0.0-beta.71
+* Appium server 2.0.0-rc.3
     * drivers
-        * uiautomator2@2.25.2
-        * xcuitest@4.30.2
+        * uiautomator2@2.26.2
+        * xcuitest@4.32.5
     * plugins
         * element-wait@1.5.0
-        * gestures@2.1.0
+        * gestures@3.0.0
 * Appium inspector 2023.5.2
 * SLF4J Logback 1.4.7
 * Jackson databind 2.15.2
@@ -58,6 +58,7 @@
     * Setup Emulators with Virtual Device Manager
         * Pixel 5 with Android 13.0 Google Play | x86_64
 * XCode 14.3 (with XCode commandline)
+  * iPhone 14 iOS 16.2 Simulator
 * IntelliJ IDEA
 * To execute tests from cmd, add maven surefire plugin and maven compiler plugin in `POM.xml`
 

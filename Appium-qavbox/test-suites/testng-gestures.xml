@@ -3,8 +3,8 @@
 <suite name="Appium Gestures for Android and iOS" verbose="1" thread-count="3" parallel="none">
     <test name="Android Gesture Tests" enabled="true">
         <classes>
-            <class name="com.itkhanz.tests.GesturesTest"/>
-            <class name="com.itkhanz.tests.GesturesPluginTest"/>
+            <class name="com.itkhanz.tests.gestures.GesturesTest"/>
+            <class name="com.itkhanz.tests.gestures.GesturesPluginTest"/>
         </classes>
     </test>
 </suite>

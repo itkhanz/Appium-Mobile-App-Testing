@@ -1232,3 +1232,243 @@
 2023-06-16 09:33:49.183 [main] INFO  AppFactory.class - Application launched successfully
 2023-06-16 09:33:53.134 [main] INFO  DriverManager.class - Driver Session is closed
 2023-06-16 09:33:53.135 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 08:29:55.505 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:29:55.961 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 08:29:55.963 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 08:29:55.964 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:29:56.030 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-21 08:30:04.933 [main] ERROR AppFactory.class - Could not launch app on Server: http://localhost:4723
+2023-06-21 08:31:03.312 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:31:03.866 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 08:31:03.869 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 08:31:03.871 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:31:03.928 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-21 08:31:07.369 [main] ERROR AppFactory.class - Could not launch app on Server: http://localhost:4723
+2023-06-21 08:32:07.700 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:32:08.186 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip}]
+2023-06-21 08:32:08.189 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 08:32:08.191 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:32:08.252 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-21 08:32:11.779 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 08:32:11.780 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 08:32:11.780 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 08:32:12.302 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 08:32:12.302 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 08:33:05.242 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:33:05.693 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 08:33:05.695 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 08:33:05.697 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:33:05.755 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-21 08:33:09.188 [main] ERROR AppFactory.class - Could not launch app on Server: http://localhost:4723
+2023-06-21 08:33:46.554 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:33:47.110 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip}]
+2023-06-21 08:33:47.112 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 08:33:47.114 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:33:47.178 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true]
+2023-06-21 08:33:50.248 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 08:33:50.248 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 08:33:50.248 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 08:33:50.422 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 08:33:50.423 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 08:34:54.376 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:34:54.896 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip}]
+2023-06-21 08:34:54.898 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 08:34:54.900 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:34:54.959 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip]
+2023-06-21 08:35:04.506 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 08:35:04.506 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 08:35:04.506 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 08:35:05.370 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 08:35:05.370 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 08:35:44.972 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:35:45.499 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 08:35:45.501 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 08:35:45.503 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:35:45.561 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip]
+2023-06-21 08:35:52.527 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 08:35:52.527 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 08:35:52.527 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 08:35:53.345 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 08:35:53.345 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 08:42:01.663 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 08:42:02.421 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-MyDemoAppRN.1.3.0.build-244.apk, appPackage=com.saucelabs.mydemoapp.rn, appActivity=com.saucelabs.mydemoapp.rn.MainActivity}]
+2023-06-21 08:42:02.426 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-21 08:42:02.429 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 08:42:02.517 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-MyDemoAppRN.1.3.0.build-244.apk, appPackage=com.saucelabs.mydemoapp.rn, appActivity=com.saucelabs.mydemoapp.rn.MainActivity, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-MyDemoAppRN.1.3.0.build-244.apk, settings[ignoreUnimportantViews]=true]
+2023-06-21 08:42:40.414 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 08:42:40.414 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-21 08:42:40.415 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 08:42:43.880 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 08:42:43.880 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 10:02:18.935 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 10:02:19.517 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 10:02:19.521 [main] INFO  AppFactory.class - Device UDID: CB67B3F1-7D6C-486D-BB43-6B18F1E7EB92
+2023-06-21 10:02:19.551 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 10:02:19.666 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=CB67B3F1-7D6C-486D-BB43-6B18F1E7EB92, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip]
+2023-06-21 10:04:24.524 [main] ERROR AppFactory.class - Could not launch app on Server: http://localhost:4723
+2023-06-21 10:06:31.446 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 10:06:31.987 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 10:06:31.990 [main] INFO  AppFactory.class - Device UDID: CB67B3F1-7D6C-486D-BB43-6B18F1E7EB92
+2023-06-21 10:06:31.991 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 10:06:32.052 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=CB67B3F1-7D6C-486D-BB43-6B18F1E7EB92, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip]
+2023-06-21 10:07:37.364 [main] ERROR AppFactory.class - Could not launch app on Server: http://localhost:4723
+2023-06-21 10:10:30.674 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 10:10:31.179 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 10:10:31.182 [main] INFO  AppFactory.class - Device UDID: CB67B3F1-7D6C-486D-BB43-6B18F1E7EB92
+2023-06-21 10:10:31.184 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 10:10:31.243 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=CB67B3F1-7D6C-486D-BB43-6B18F1E7EB92, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip]
+2023-06-21 10:10:47.207 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 10:10:47.208 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 10:10:47.208 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 10:10:48.020 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 10:10:48.021 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 10:41:00.531 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 10:41:01.129 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn}]
+2023-06-21 10:41:01.131 [main] INFO  AppFactory.class - Device UDID: 1E8FE39B-1118-4117-B02B-66A390AECB3F
+2023-06-21 10:41:01.134 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 10:41:01.209 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip, bundleId=com.saucelabs.mydemoapp.rn, udid=1E8FE39B-1118-4117-B02B-66A390AECB3F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-MyRNDemoApp.1.3.0-162.zip]
+2023-06-21 10:41:52.306 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 10:41:52.307 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 10:41:52.307 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 10:41:53.193 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 10:41:53.193 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 11:00:48.107 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:00:49.594 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp}]
+2023-06-21 11:00:49.603 [main] INFO  AppFactory.class - Device UDID: 1E8FE39B-1118-4117-B02B-66A390AECB3F
+2023-06-21 11:00:49.607 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 11:00:49.776 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp, udid=1E8FE39B-1118-4117-B02B-66A390AECB3F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip]
+2023-06-21 11:01:00.800 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 11:01:00.801 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 11:01:00.801 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 11:01:06.736 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 11:01:06.738 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 11:03:00.555 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:03:02.594 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp}]
+2023-06-21 11:03:02.601 [main] INFO  AppFactory.class - Device UDID: 1E8FE39B-1118-4117-B02B-66A390AECB3F
+2023-06-21 11:03:02.605 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 11:03:02.799 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp, udid=1E8FE39B-1118-4117-B02B-66A390AECB3F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip]
+2023-06-21 11:03:05.101 [main] ERROR AppFactory.class - Could not launch app on Server: http://localhost:4723
+2023-06-21 11:03:20.130 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:03:22.419 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp}]
+2023-06-21 11:03:22.434 [main] INFO  AppFactory.class - Device UDID: 1E8FE39B-1118-4117-B02B-66A390AECB3F
+2023-06-21 11:03:22.439 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 11:03:22.685 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp, udid=1E8FE39B-1118-4117-B02B-66A390AECB3F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, noReset=true, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip]
+2023-06-21 11:03:44.325 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 11:03:44.326 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 11:03:44.327 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 11:04:19.681 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 11:04:19.681 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 11:08:34.957 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:08:35.077 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-21 11:08:35.078 [main] INFO  AppiumServer.class - ******************** STARTING APPIUM SERVER ***************************
+2023-06-21 11:08:35.078 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-21 11:13:39.128 [main] INFO  AppiumServer.class - Appium server stopped
+2023-06-21 11:15:17.551 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:15:17.615 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-21 11:15:17.615 [main] INFO  AppiumServer.class - ******************** STARTING APPIUM SERVER ***************************
+2023-06-21 11:15:17.615 [main] INFO  AppiumServer.class - ***********************************************************************
+2023-06-21 11:17:23.025 [main] INFO  AppiumServer.class - Appium server stopped
+2023-06-21 11:18:25.044 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:18:25.950 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp}]
+2023-06-21 11:18:25.954 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 11:18:25.956 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 11:18:26.026 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip]
+2023-06-21 11:20:56.881 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 11:20:56.881 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 11:20:56.882 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 11:21:29.676 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 11:21:29.676 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 11:25:17.780 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:25:18.327 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp}]
+2023-06-21 11:25:18.331 [main] INFO  AppFactory.class - Device UDID: 6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F
+2023-06-21 11:25:18.365 [main] INFO  AppFactory.class - Appium Server url: http://localhost:4723
+2023-06-21 11:25:18.426 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp, udid=6B4B083D-5F01-4B6D-88D1-175A4AFA3C4F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip]
+2023-06-21 11:25:27.086 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 11:25:27.087 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 11:25:27.087 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 11:25:58.722 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 11:25:58.722 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 11:40:51.546 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 11:40:52.103 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp}]
+2023-06-21 11:40:52.107 [main] INFO  AppFactory.class - Device UDID: 1E8FE39B-1118-4117-B02B-66A390AECB3F
+2023-06-21 11:40:52.109 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-21 11:40:52.190 [main] INFO  AppFactory.class - XCUITestOptions options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip, bundleId=org.wdioNativeDemoApp, udid=1E8FE39B-1118-4117-B02B-66A390AECB3F, platformName=iOS, automationName=XCUITest, autoAcceptAlerts=true, newCommandTimeout=180, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip]
+2023-06-21 11:46:56.519 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 11:46:56.520 [main] INFO  AppFactory.class - IOSDriver is set
+2023-06-21 11:46:56.520 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 11:47:26.890 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 11:47:26.891 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 12:32:44.367 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 12:32:45.928 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-21 12:32:46.019 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-21 12:32:46.100 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-21 12:32:46.336 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, settings[ignoreUnimportantViews]=true]
+2023-06-21 12:33:12.936 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 12:33:12.937 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-21 12:33:12.938 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 12:36:00.124 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 12:36:01.141 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-21 12:36:01.144 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-21 12:36:01.147 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-21 12:36:01.225 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, settings[ignoreUnimportantViews]=true]
+2023-06-21 12:36:16.366 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 12:36:16.366 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-21 12:36:16.367 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 12:36:49.453 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 12:36:49.454 [main] INFO  DriverManager.class - Driver thread value is removed
+2023-06-21 12:37:33.222 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/ibkh/Library/Caches/JetBrains/IntelliJIdea2023.1/temp-testng-customsuite.xml
+
+2023-06-21 12:37:34.382 [main] INFO  AppFactory.class - Parsed options for the app from applications.json: [{appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*}]
+2023-06-21 12:37:34.390 [main] INFO  AppFactory.class - Device UDID: emulator-5554
+2023-06-21 12:37:34.398 [main] INFO  AppFactory.class - Appium Server url: http://127.0.0.1:4723
+2023-06-21 12:37:34.757 [main] INFO  AppFactory.class - UIAutomator2 options set as: [appUrl=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, appPackage=com.wdiodemoapp, appActivity=com.wdiodemoapp.MainActivity, appWaitActivity=*, udid=emulator-5554, platformName=android, automationName=uiautomator2, autoGrantPermissions=true, newCommandTimeout=180, app=/Users/ibkh/dev/appium/Appium-qavbox/src/main/resources/apps/Android-NativeDemoApp-0.4.0.apk, settings[ignoreUnimportantViews]=true]
+2023-06-21 12:38:05.310 [main] INFO  DriverManager.class - Driver is initialized
+2023-06-21 12:38:05.310 [main] INFO  AppFactory.class - AndroidDriver is set
+2023-06-21 12:38:05.311 [main] INFO  AppFactory.class - Application launched successfully
+2023-06-21 12:39:32.396 [main] INFO  DriverManager.class - Driver Session is closed
+2023-06-21 12:39:32.397 [main] INFO  DriverManager.class - Driver thread value is removed
