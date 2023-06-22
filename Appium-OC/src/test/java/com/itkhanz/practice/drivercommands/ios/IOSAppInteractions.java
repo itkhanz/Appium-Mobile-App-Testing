@@ -3,7 +3,7 @@ package com.itkhanz.practice.drivercommands.ios;
 import com.google.common.collect.ImmutableMap;
 import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
-import com.itkhanz.practice.utils.DriverFactory;
+import com.itkhanz.practice.base.DriverFactory;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -16,6 +16,8 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.itkhanz.practice.constants.Paths.APPS_DIR;
 
 /*
 Either you can use the Appium wrapper methods that are same for both andorid and iOS
@@ -65,7 +67,7 @@ public class IOSAppInteractions {
         By activityIndicators = AppiumBy.accessibilityId("Activity Indicators");
         driver.findElement(activityIndicators).click();
 
-        String appUrl = DriverFactory.APPS_DIR + "UIKitCatalog-iphonesimulator.app";
+        String appUrl = APPS_DIR + "UIKitCatalog-iphonesimulator.app";
         //((IOSDriver) driver).installApp(appUrl);
 
         ((IOSDriver) driver).executeScript(
@@ -104,7 +106,7 @@ public class IOSAppInteractions {
         Assert.assertFalse(isAppInstalled);
 
         //re-install the app and check if it is reinstalled
-        String appUrl = DriverFactory.APPS_DIR + "UIKitCatalog-iphonesimulator.app";
+        String appUrl = APPS_DIR + "UIKitCatalog-iphonesimulator.app";
         ((IOSDriver) driver).installApp(appUrl);
         boolean isReInstalled = ((IOSDriver) driver).isAppInstalled("com.example.apple-samplecode.UICatalog");
         Assert.assertTrue(isReInstalled);

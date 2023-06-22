@@ -2,7 +2,7 @@ package com.itkhanz.practice.drivercommands.android;
 
 import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
-import com.itkhanz.practice.utils.DriverFactory;
+import com.itkhanz.practice.base.DriverFactory;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -19,6 +19,8 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.time.Duration;
+
+import static com.itkhanz.practice.constants.Paths.APPS_DIR;
 
 /*
 AppiumDriver methods like resetApp, closeApp and launchApp have been deprecated
@@ -63,7 +65,7 @@ public class AppInteractions {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         //installApp() takes the app capability as first argument
-        String appUrl = DriverFactory.APPS_DIR + "ApiDemos-debug.apk";
+        String appUrl = APPS_DIR + "ApiDemos-debug.apk";
         ((AndroidDriver) driver).installApp(appUrl, new AndroidInstallApplicationOptions().withReplaceEnabled());
 
 
@@ -184,7 +186,7 @@ public class AppInteractions {
             Assert.assertFalse(isInstalled2);
 
             //re-install the app and check if it is installed
-            String appUrl = DriverFactory.APPS_DIR + "ApiDemos-debug.apk";
+            String appUrl = APPS_DIR + "ApiDemos-debug.apk";
             ((AndroidDriver) driver).installApp(appUrl, new AndroidInstallApplicationOptions().withReplaceEnabled());
             Thread.sleep(5000);
 

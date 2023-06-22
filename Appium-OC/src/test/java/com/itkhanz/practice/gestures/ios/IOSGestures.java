@@ -1,14 +1,11 @@
 package com.itkhanz.practice.gestures.ios;
 
-import com.google.common.collect.ImmutableMap;
 import com.itkhanz.practice.annotations.TestMetaData;
 import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
-import com.itkhanz.practice.utils.DriverFactory;
+import com.itkhanz.practice.base.DriverFactory;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.Assert;
@@ -18,12 +15,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.*;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 /**
  * iOS Gestures documentation
