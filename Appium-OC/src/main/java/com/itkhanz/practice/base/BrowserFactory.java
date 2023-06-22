@@ -57,7 +57,7 @@ public class BrowserFactory extends DriverManager {
                 .setPlatformName("android")
                 .setAutomationName("UiAutomator2")
                 //.setDeviceName("pixel_5")
-                .setUdid("RF8N90E8ZBR")
+                .setUdid("emulator-5554")
                 .setAutoGrantPermissions(true)  //Have Appium automatically determine which permissions your app requires and grant them to the app on install.
                 .setNewCommandTimeout(Duration.ofSeconds(180))  //How long (in seconds) Appium will wait for a new command from the client before assuming the client quit and ending the session. Setting to 0 will disable the new command timeout. Default 60s
                 .setUiautomator2ServerLaunchTimeout(Duration.ofSeconds(60)) //Sometimes it takes too much time to launch uiAutomator2. Defaults to 20s

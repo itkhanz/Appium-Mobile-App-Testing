@@ -49,6 +49,7 @@ public class AppLockUnlock {
         Thread.sleep(10000);
 
         //Not working for me: Appium fails to unlock the device after set duration automatically
+        //works after reinstalling the uiautomator2 driver
         Assert.assertFalse(((AndroidDriver) driver).isDeviceLocked());
     }
 

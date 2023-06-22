@@ -3,7 +3,6 @@ package com.itkhanz.practice.webview.android;
 import com.itkhanz.practice.constants.Browsers;
 import com.itkhanz.practice.base.BrowserFactory;
 import com.itkhanz.practice.base.DriverManager;
-import com.itkhanz.practice.utils.Gestures;
 import io.appium.java_client.AppiumDriver;
 
 import org.openqa.selenium.By;
@@ -17,7 +16,6 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.time.Duration;
 
-import static com.itkhanz.practice.utils.Gestures.ScrollDirection.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 /*
@@ -36,7 +34,7 @@ https://github.com/appium/appium/tree/1.x/docs/en/writing-running-appium/web
 https://appium.readthedocs.io/en/latest/en/writing-running-appium/web/hybrid/
 */
 
-public class BrowserAutomation {
+public class ChromeBrowserSession {
     private AppiumDriver driver;
     private WebDriverWait wait;
 

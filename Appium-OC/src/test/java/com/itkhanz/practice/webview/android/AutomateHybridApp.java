@@ -20,7 +20,19 @@ import java.net.MalformedURLException;
 import java.util.Set;
 
 /*
+Start the appium server with uiautomator2 driver (and better also with wait plugin)
+appium --use-drivers=uiautomator2 --use-plugins=element-wait
+Launch Hybrid app and Launch Chrome browser and navigate to the webpage  chrome://inspect#devices
+ChromeDriver needs to be installed (a default version comes with Appium) and configured for automating the specific version of Chrome available on the device.
+Use chromedriverExecutable capability to provide path to the ChromeDriver version.
+Alternatively there is no need to manage ChromeDriver versions!
+Appium can automatically download the compatible ChromeDriver and use it for automating the browser.
+appium --allow-insecure chromedriver_autodownload
+use chromedriverExecutableDir capability to provide path for appium to download and copy the browser executables
 
+Documentation:-
+https://github.com/appium/appium/tree/1.x/docs/en/writing-running-appium/web
+https://appium.readthedocs.io/en/latest/en/writing-running-appium/web/hybrid/
  */
 public class AutomateHybridApp {
     private static AppiumDriver driver;

@@ -96,6 +96,7 @@ public class DriverFactory extends DriverManager {
                 //.setAvdLaunchTimeout(Duration.ofSeconds(180))
                 //.setUnlockType("fingerprint")   //['pin', 'password', 'pattern', 'fingerprint', 'pinWithKeyEvent'] Set one of the possible types of Android lock screens to unlock.
                 //.setUnlockKey("1")  //Allows to set an unlock key. e.g. 1235789 for Z pattern or if pin then e.g. 1234
+                .setAutoWebviewTimeout(Duration.ofSeconds(30))  //Set the maximum number of milliseconds to wait until a web view is available if autoWebview capability is set to true. 2000 ms by default.
                 .setChromedriverExecutableDir(BROWSER_DIR)  //Download the chromeDriver compatible with the chrome version on your device/emulator from https://chromedriver.chromium.org/downloads
                 ;
     }
@@ -111,6 +112,8 @@ public class DriverFactory extends DriverManager {
                 //.setSimulatorStartupTimeout(Duration.ofSeconds(180))  //waits for the simulator to launch
                 .setAutoAcceptAlerts(true)
                 .setNewCommandTimeout(Duration.ofSeconds(180))
+                .setWebviewConnectTimeout(Duration.ofSeconds(30))   //The time to wait, in ms, for the initial presence of webviews in MobileSafari or hybrid apps. Defaults to 0
+                .includeSafariInWebviews()  //Add Safari web contexts to the list of contexts available during a native/webview app test.
                 ;
     }
 }
