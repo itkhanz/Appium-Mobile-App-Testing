@@ -4,10 +4,9 @@ import com.google.common.collect.ImmutableMap;
 import com.itkhanz.practice.annotations.TestMetaData;
 import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
-import com.itkhanz.practice.utils.DriverFactory;
+import com.itkhanz.practice.base.DriverFactory;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.PullsFiles;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebElement;
@@ -18,7 +17,6 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 

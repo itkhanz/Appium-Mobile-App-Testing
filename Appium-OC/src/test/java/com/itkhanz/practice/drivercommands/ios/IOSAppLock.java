@@ -3,7 +3,7 @@ package com.itkhanz.practice.drivercommands.ios;
 import com.google.common.collect.ImmutableMap;
 import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
-import com.itkhanz.practice.utils.DriverFactory;
+import com.itkhanz.practice.base.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.testng.Assert;

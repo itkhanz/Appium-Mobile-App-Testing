@@ -2,7 +2,7 @@ package com.itkhanz.practice.drivercommands.android;
 
 import com.itkhanz.practice.constants.Apps;
 import com.itkhanz.practice.constants.Platform;
-import com.itkhanz.practice.utils.DriverFactory;
+import com.itkhanz.practice.base.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.testng.Assert;
@@ -49,6 +49,7 @@ public class AppLockUnlock {
         Thread.sleep(10000);
 
         //Not working for me: Appium fails to unlock the device after set duration automatically
+        //works after reinstalling the uiautomator2 driver
         Assert.assertFalse(((AndroidDriver) driver).isDeviceLocked());
     }
 
