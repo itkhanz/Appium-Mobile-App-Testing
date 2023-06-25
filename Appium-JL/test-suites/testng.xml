@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test suite for advanced appium" verbose="1" thread-count="3" parallel="none">
+    <test name="Advanced Appium Tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.linkedin.advancedappium.tests.AppDeviceManagementTest">
+                <methods>
+                    <include name="testHybridApp"/>
+                    <include name="testFilesTransfer"/>
+                    <include name="testScreenMethods"/>
+                    <include name="testPhoneAndSMS"/>
+                </methods>
+            </class>
+            <class name="com.itkhanz.linkedin.advancedappium.tests.AppStateTest">
+                <methods>
+                    <include name="testLoginNormally"/>
+                    <include name="testLoginWithDeepLink"/>
+                </methods>
+            </class>
+            <class name="com.itkhanz.linkedin.advancedappium.tests.BackDoorTest">
+                <methods>
+                    <exclude name="testBackdoorToast"/>
+                    <exclude name="testRating"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Appium Espresso Grey-box tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.espresso.tests.EspressoBackdoorTest">
+                <methods>
+                    <include name="testBackdoorRating"/>
+                    <include name="testScrollToBottom"/>
+                    <include name="testCountListViewItems"/>
+                    <exclude name="testBackdoorToast"/>
+                    <include name="testUIAutomatorCommands"/>
+                    <include name="testColor"/>
+                    <include name="testFlashElement"/>
+                    <include name="testProgressBar"/>
+                    <include name="testTouchSubString"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
