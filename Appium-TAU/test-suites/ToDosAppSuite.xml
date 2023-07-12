@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Appium Test for ToDo app" verbose="1" thread-count="3" parallel="none" configfailurepolicy="continue" >
+    <test name="POM Tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.tests.todoapp.chap7.ToDoAndroidTest"/>
+            <class name="com.itkhanz.tests.todoapp.chap7.ToDoIOSTest"/>
+        </classes>
+    </test>
+    <test name="Data Driven tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.tests.todoapp.chap8.DataDrivenAndroidTest"/>
+            <class name="com.itkhanz.tests.todoapp.chap8.DataDrivenIOSTest"/>
+        </classes>
+    </test>
+    <test name="Cucumber BDD tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.tests.todoapp.chap9.runner.SimpleRunner"/>
+            <class name="com.itkhanz.tests.todoapp.chap9.runner.TableRunner"/>
+        </classes>
+    </test>
+</suite>

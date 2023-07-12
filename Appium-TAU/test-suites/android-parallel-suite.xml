@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Appium Automation with Java" verbose="1" configfailurepolicy="continue" >
+    <test name="Parallel Android tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.tests.todoapp.chap10.AndroidParallelTests"/>
+        </classes>
+    </test>
+</suite>

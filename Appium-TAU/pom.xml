@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.itkhanz</groupId>
+    <artifactId>Appium-TAU</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <selenium-java-version>4.10.0</selenium-java-version>
+        <appium-java-client-version>8.5.1</appium-java-client-version>
+        <testng.version>7.8.0</testng.version>
+        <gson.version>2.10.1</gson.version>
+        <cucumber-java.version>7.13.0</cucumber-java.version>
+        <cucumber-testng.version>7.13.0</cucumber-testng.version>
+        <maven.compiler.version>3.11.0</maven.compiler.version>
+        <java.release.version>11</java.release.version>
+        <maven.surefire.version>3.1.2</maven.surefire.version>
+        <suite-xml>test-suites/testng.xml</suite-xml>
+    </properties>
+
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium-java-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appium-java-client-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber-java.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber-testng.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.version}</version>
+                    <configuration>
+                        <release>${java.release.version}</release>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.version}</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${suite-xml}</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>interactions</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${maven.surefire.version}</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>test-suites/AppiumInteractionsSuite.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>todo</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${maven.surefire.version}</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>test-suites/ToDosAppSuite.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>ios-parallel</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${maven.surefire.version}</version>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <threadCount>4</threadCount>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>test-suites/ios-parallel-suite.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>android-parallel</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${maven.surefire.version}</version>
+                        <configuration>
+                            <parallel>methods</parallel>
+                            <threadCount>4</threadCount>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>test-suites/android-parallel-suite.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+
+</project>

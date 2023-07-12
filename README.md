@@ -9,3 +9,5 @@
 * Appium-qavbox folder contains the code snippets and notes taken from qavbox youtube videos.
 
 * Appium-JL folder contains the code snippets from Jonathan Lipps advanced appium course and Espresso grey box testing.
+
+* Appium-TAU folder contains the code snippets from Moataz Nabil Test Automation University courses on Mobile Testing with Appium and Java

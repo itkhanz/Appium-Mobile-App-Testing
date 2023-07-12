@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Appium Interacting with Elements" verbose="1" configfailurepolicy="continue" thread-count="3" parallel="none">
+    <test name="Android tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.tests.chap5.android.SendingSMSTest"/>
+            <class name="com.itkhanz.tests.chap5.android.SendingPhotosTest"/>
+            <class name="com.itkhanz.tests.chap5.android.ClipboardTest"/>
+        </classes>
+    </test>
+    <test name="iOS tests" enabled="true">
+        <classes>
+            <class name="com.itkhanz.tests.chap5.ios.SendingPhotosTest"/>
+            <class name="com.itkhanz.tests.chap5.ios.PickerViewTest"/>
+            <class name="com.itkhanz.tests.chap5.ios.AlertsTest"/>
+            <class name="com.itkhanz.tests.chap5.ios.SliderTest"/>
+        </classes>
+    </test>
+</suite>
