@@ -1,0 +1,66 @@
+Important note on OTPs (MFA)
+I keep getting queries on how to automate SMS-based OTPs.
+
+
+
+I can think of four ways to handle OTPs (MFA).
+
+Remove the OTP requirement for test accounts and test environments.
+
+Allow static OTP for test accounts and test environments.
+
+Get the OTP from the database or via API. There could be a security concern here, but the team should still try to do this in test environments.
+
+Fetch the OTP from the real mobile device.
+
+
+
+Many folks go with option 4, mainly because they don't get the required support from their team for options 1, 2, and 3.
+
+Some folks also think it would be simple to automate OTPs through the mobile UI. But it is not!
+
+Option 4 is the worst option.
+
+
+
+Why? Let me explain.
+
+OTP is typically generated and validated by the backend notification service. The only role of the app's UI is to receive the OTP from the user and send it to the backend API. So, we should only be validating this functionality through the UI. For this, all you need is any OTP that the app can accept. For the app, it doesn't really matter how you generate the OTP.
+
+For the remaining flow of generating and validating the OTP, this can be automated through the API channels or through lower-level automation like the component tests or the unit tests.
+
+The notification service generates the OTP and sends it over to the network carrier (or mobile service provider), which triggers the actual SMS. The SMS travels through the network and arrives on your device, where the messaging app receives and stores it. You don't really have to automate this functionality, as it's outside your app's scope. The app isn't responsible if the mobile service provider fails to send the SMS or if the device fails to receive the SMS. You can test these functionalities separately through your other integration-level tests.
+
+
+
+Now, why it's a bad idea to fetch the OTP from the device. Here are the reasons:
+
+This flow has nothing to do with your app.
+
+This flow ties your test account to your device.
+
+This is not reliable. This is susceptible to frequent failures.
+
+Different implementations are needed for iOS and Android. Even for Android, there could be variations in the flow based on the mobile OEM.
+
+So think twice before you go with Option 4. In my view, options 1, 2, or 3 are best suited for SMS OTPs. Also, if you send your OTP via email, then you may want to go for that option to fetch the OTP, as it's comparatively reliable and easy.
+
+Course content
+Start
+13. Important Appium links
+1min
+Start
+14. Steps to follow
+2min
+Play
+15. Important Setup Pre-requisites
+5min
+Start
+99. Important note on React Native apps
+1min
+Start
+100. Important note on Flutter apps
+2min
+Start
+101. Important note on OTPs (MFA)
+2min

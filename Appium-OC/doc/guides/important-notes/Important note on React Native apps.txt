@@ -1,0 +1,14 @@
+Important note on React Native apps
+React native apps can very well be automated with Appium.
+
+React native apps are native apps, not hybrid apps. The Sauce Lab demo app used in this course is a React Native app.
+
+If you are automating a React Native app and cannot find UI elements uniquely, then ask your developer to add a "testID" attribute for each UI element. This attribute is mapped to resource-id (or content-desc) in the case of Android and accessibility-identifier (or label) in the case of iOS.
+
+Devs might be hesitant to add an "accessibilityLabel" attribute because it can create problems with accessibility reader tools.
+
+With "testID," this problem can be avoided.
+
+You can even have both "accessibilityLabel" and "testID" set if your developer agrees to this.
+
+If you get this done, you will not need XPath in most cases, and your life will become easy. Trust me on this.

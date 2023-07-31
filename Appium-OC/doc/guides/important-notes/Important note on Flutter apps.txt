@@ -1,0 +1,40 @@
+Important note on Flutter apps
+I'm getting a lot of queries around Flutter app support. Unfortunately, the current options to automate Flutter-based apps are limited, and each option has some pros and some cons. So, please go through the below options and evaluate them as per your project requirements.
+
+ 
+
+Option 1: Appium's UiAutomator2/XCUITest driver
+
+Appium's traditional drivers, UIAutomator2 for Android and XCUITest for iOS, can be used to automate Flutter-based applications. However, you may observe issues while using these drivers. The primary issue is that many UI elements are not identifiable using their attributes. Many times, long, fragile XPath has to be used. This is because all the element attributes used for UI elements in the Flutter app may not be visible to Appium's UiAutomator2 or XCUITest driver. So, if you plan to use these drivers, please try to build optimised XPaths using axes and other XPath features. This way, the tests will be less flaky.
+
+ 
+
+Option 2: Appium's Flutter Driver
+
+Appium has a Flutter driver that may solve the above issue, but it is still in the experimental phase. Here's the GitHub link for the driver: https://github.com/truongsinh/appium-flutter-driver
+
+With this driver, you may be able to use Flutter's element attributes to find the elements. Since this is still in the experimental phase, you may observe other issues or there may be some limitations. Please do a small POC and see if this works for you.
+
+Here's the Flutter element attributes list: https://api.flutter.dev/flutter/flutter_driver/CommonFinders-class.html
+
+You can work with your developers to get the unique attributes added so that those are visible to the Appium's Flutter driver.
+
+ 
+
+Option 3: Flutter's Flutter Driver
+
+Flutter has its own driver for automating Flutter apps. It's called the "Flutter driver", but it only supports the Dart language, which can be alien to many of us. The good thing is that it can be used for integration testing. However, there could still be some limitations around what end-to-end scenarios you can automate. Here's the link to the official documentation: https://flutter.dev/docs/cookbook/testing/integration/introduction
+
+If you prefer, you can use this driver to automate your app. Please consult with your developer and the team before deciding on using this driver. You may have to spend some time learning the Dart programming language before you can use this driver.
+
+ 
+
+Option 4: Maestro
+
+There is one emerging no-code tool called Maestro that supports Flutter apps. Currently, it supports only emulators and simulators. You might want to check it out here: https://maestro.mobile.dev
+
+I have heard good things about this tool. Also, note that it's purely a no-code tool and doesn't use any underlying framework like Appium to interact with the UI. In a way, this is a good thing, as it doesn't have all the limitations that Appium has when it comes to finding UI elements and also the overall speed of execution.
+
+ 
+
+At this point, I do not have any recommendations on which driver to use for Flutter apps. Use whichever works for you. You will need to talk with your developer or team and decide on this.
